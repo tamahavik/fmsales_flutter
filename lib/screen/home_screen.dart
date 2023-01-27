@@ -10,14 +10,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  
   @override
   void initState() {
+    print('init home');
     super.initState();
   }
 
   @override
   void dispose() {
+    print('dispose home');
     super.dispose();
   }
 

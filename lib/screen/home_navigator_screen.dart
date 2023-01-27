@@ -14,10 +14,10 @@ class HomeNavigationScreen extends StatefulWidget {
 }
 
 class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
-  BottomAppBarEnums _currentIndex = BottomAppBarEnums.home;
-  late Map<BottomAppBarEnums, Widget> _screen;
+  int _currentIndex = BottomAppBarEnums.home.value;
+  late Map<int, Widget> _screen;
 
-  void _onItemTap(BottomAppBarEnums value) {
+  void _onItemTap(int value) {
     setState(() {
       _currentIndex = value;
     });
@@ -26,8 +26,8 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
   @override
   void initState() {
     _screen = {
-      BottomAppBarEnums.home: HomeScreen(),
-      BottomAppBarEnums.history: HistoryScreen(),
+      BottomAppBarEnums.home.value: const HomeScreen(),
+      BottomAppBarEnums.history.value: const HistoryScreen(),
     };
     super.initState();
   }
@@ -37,10 +37,10 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[600],
-        title: Text('TAMAMI'),
+        title: const Text('TAMAMI'),
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
             onPressed: () {},
           ),
         ],
@@ -58,17 +58,17 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
                 builder: (context) => const VerificationScreen(),
               ));
             },
-            child: Icon(
+            child: const Icon(
               Icons.article_outlined,
               color: Colors.white,
             ),
             backgroundColor: Colors.blue[600],
           ),
           SpeedDialChild(
-            visible: _currentIndex == BottomAppBarEnums.home,
+            visible: _currentIndex == BottomAppBarEnums.home.value,
             onTap: () {},
             backgroundColor: Colors.blue[600],
-            child: Icon(
+            child: const Icon(
               Icons.refresh,
               color: Colors.white,
             ),
@@ -78,7 +78,7 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.blue[600],
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 5,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -87,25 +87,25 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
               flex: 1,
               child: IconButton(
                 onPressed: () {
-                  _onItemTap(BottomAppBarEnums.home);
+                  _onItemTap(BottomAppBarEnums.home.value);
                 },
-                icon: Icon(Icons.home),
-                color: _currentIndex == BottomAppBarEnums.home
+                icon: const Icon(Icons.home),
+                color: _currentIndex == BottomAppBarEnums.home.value
                     ? Colors.white
                     : Colors.grey[800],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 50,
             ),
             Expanded(
               flex: 1,
               child: IconButton(
                 onPressed: () {
-                  _onItemTap(BottomAppBarEnums.history);
+                  _onItemTap(BottomAppBarEnums.history.value);
                 },
-                icon: Icon(Icons.history),
-                color: _currentIndex == BottomAppBarEnums.history
+                icon: const Icon(Icons.history),
+                color: _currentIndex == BottomAppBarEnums.history.value
                     ? Colors.white
                     : Colors.grey[800],
               ),
