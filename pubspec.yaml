@@ -51,7 +51,24 @@ dependencies:
 
   #Help with date
   intl: ^0.18.0
+
+  #Help with animation
   flutter_animate: ^3.0.0
+
+  #package bloc for state management
+  bloc: ^8.1.0
+
+  #package bloc for widget state management
+  flutter_bloc: ^8.1.1
+
+  #package for dialog and route
+  get: ^4.6.5
+
+  #Using either
+  dartz: ^0.10.1
+
+  #get device info
+  device_info_plus: ^8.0.0
 
 dev_dependencies:
   flutter_test:
