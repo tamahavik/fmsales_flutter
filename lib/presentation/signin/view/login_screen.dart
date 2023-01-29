@@ -16,6 +16,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _hideText = true;
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 20,
           ),
           TextFormField(
+            controller: _username,
             style: style.kFormFieldWhiteFontStyle,
             cursorColor: Colors.white,
             keyboardType: TextInputType.text,
@@ -71,6 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 10,
           ),
           TextFormField(
+            controller: _password,
             style: const TextStyle(
               color: Colors.white,
             ),
@@ -149,8 +153,8 @@ class _LoginScreenState extends State<LoginScreen> {
     return ElevatedButton(
       onPressed: () {
         context.read<SigninBloc>().add(SigninEvent.login(
-              username: "O129925",
-              password: "123456Aa",
+              username: _username.text,
+              password: _password.text,
             ));
       },
       child: const Text(string.kSignInCapital),
