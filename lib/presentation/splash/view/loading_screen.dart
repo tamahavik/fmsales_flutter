@@ -43,7 +43,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
               Container(
                 margin: const EdgeInsets.only(top: 150),
                 child: Image.asset(
-                  "assets/images/mobile-sales.png",
+                  'assets/images/mobile-sales.png',
                   height: 150,
                   width: 150,
                 ),

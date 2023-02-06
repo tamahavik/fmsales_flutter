@@ -32,6 +32,29 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  void _stateController(BuildContext context, SigninState state) {
+    state.maybeMap(
+      orElse: () {},
+      success: (value) => {
+        Get.off(() => const HomeNavigationScreen()),
+      },
+      error: (value) => {
+        Get.defaultDialog(
+            title: string.kLoginFailed,
+            middleText: value.message ?? string.kLoginFailedMessage,
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Get.back();
+                },
+                child: const Text("Close"),
+              )
+            ]),
+      },
+      togglePassword: (value) => _hideText = value.visibility,
+    );
+  }
+
   Background _buildSigninScreen(BuildContext context, SigninState state) {
     return Background(
       child: Column(
@@ -130,22 +153,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ],
       ),
-    );
-  }
-
-  void _stateController(BuildContext context, SigninState state) {
-    state.maybeMap(
-      orElse: () {},
-      success: (value) => {
-        Get.off(() => const HomeNavigationScreen()),
-      },
-      error: (value) => {
-        Get.defaultDialog(
-          title: string.kLoginFailed,
-          middleText: value.message ?? string.kLoginFailedMessage,
-        ),
-      },
-      togglePassword: (value) => _hideText = value.visibility,
     );
   }
 
