@@ -1,0 +1,12 @@
+[
+  {
+    "objectGroup": "G201",
+    "objectDescription": "MOTOR SMH",
+    "collType": "1"
+  },
+  {
+    "objectGroup": "G204",
+    "objectDescription": "MOTOR NON SMH",
+    "collType": "1"
+  }
+]

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:ufi/components/remove_scroll_glow.dart';
 import 'package:ufi/presentation/signin/view/login_screen.dart';
+import 'package:ufi/presentation/splash/view/loading_screen.dart';
 
 class MainWidget extends StatefulWidget {
   const MainWidget({super.key});
@@ -25,7 +26,7 @@ class _MainWidgetState extends State<MainWidget> {
       builder: (context, child) {
         return ScrollConfiguration(behavior: RemoveScrollGlow(), child: child!);
       },
-      home: LoginScreen(),
+      home: LoadingScreen(),
     );
   }
 }

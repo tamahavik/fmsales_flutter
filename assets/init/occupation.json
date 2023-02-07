@@ -1,0 +1,187 @@
+[
+  {
+    "occuCode": "01",
+    "occuDesc": "WIRASWASTA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "02",
+    "occuDesc": "ABRI",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "03",
+    "occuDesc": "PENGACARA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "04",
+    "occuDesc": "PEGAWAI SWASTA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "05",
+    "occuDesc": "PEGAWAI NEGERI",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "08",
+    "occuDesc": "PETANI",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "07",
+    "occuDesc": "IBU RUMAH TANGGA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "09",
+    "occuDesc": "NELAYAN",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "10",
+    "occuDesc": "SENIMAN",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "11",
+    "occuDesc": "PENSIUNAN/PURNAWIRAWAN",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "12",
+    "occuDesc": "PELAYARAN/PELAUT",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "13",
+    "occuDesc": "GURU/PENDIDIKAN",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "14",
+    "occuDesc": "JASA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "15",
+    "occuDesc": "DOKTER/BIDAN/MANTRI",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "16",
+    "occuDesc": "OJEK MOTOR",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "17",
+    "occuDesc": "SOPIR",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "18",
+    "occuDesc": "PETERNAK",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "19",
+    "occuDesc": "PELAJAR/MAHASISWA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "20",
+    "occuDesc": "BURUH/PRT",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "21",
+    "occuDesc": "PENGRAJIN TANGAN",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "22",
+    "occuDesc": "LAIN-LAIN",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "24",
+    "occuDesc": "PRODUKSI",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "23",
+    "occuDesc": "PEDAGANG",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "25",
+    "occuDesc": "LIMBAH",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "26",
+    "occuDesc": "SEWA/RENT",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "27",
+    "occuDesc": "TRANSPORTASI & KOMUNIKASI",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "28",
+    "occuDesc": "HIBURAN",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "29",
+    "occuDesc": "PENDIDIKAN NON FORMAL",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "30",
+    "occuDesc": "HOTEL",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "31",
+    "occuDesc": "PERANGKAT DESA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "32",
+    "occuDesc": "POLISI",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "33",
+    "occuDesc": "ATLET",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "201",
+    "occuDesc": "OCCUPATION TES",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "202",
+    "occuDesc": "OCCUPATION TEST DUA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "203",
+    "occuDesc": "OCCUPATION TES TIGA",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "204",
+    "occuDesc": "OCCUPATION TES EMPAT",
+    "visible": "Y"
+  },
+  {
+    "occuCode": "35",
+    "occuDesc": "TEST CRM",
+    "visible": "Y"
+  }
+]

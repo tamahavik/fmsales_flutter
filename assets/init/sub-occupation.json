@@ -1,0 +1,2342 @@
+[
+  {
+  "occuSubCode": "2001",
+  "occuSubDesc": "BURUH  BULANAN",
+  "visible": "Y",
+  "occuCode": "20"
+},
+{
+"occuSubCode": "2002",
+"occuSubDesc": "CALO",
+"visible": "Y",
+"occuCode": "20"
+},
+{
+"occuSubCode": "2003",
+"occuSubDesc": "BABY SISTER",
+"visible": "Y",
+"occuCode": "20"
+},
+{
+"occuSubCode": "2004",
+"occuSubDesc": "KONDEKTUR ANGKUTAN",
+"visible": "Y",
+"occuCode": "20"
+},
+{
+"occuSubCode": "2005",
+"occuSubDesc": "BURUH HARIAN",
+"visible": "Y",
+"occuCode": "20"
+},
+{
+"occuSubCode": "1501",
+"occuSubDesc": "DOKTER",
+"visible": "Y",
+"occuCode": "15"
+},
+{
+"occuSubCode": "1502",
+"occuSubDesc": "APOTEKER",
+"visible": "Y",
+"occuCode": "15"
+},
+{
+"occuSubCode": "1503",
+"occuSubDesc": "ASISTEN DOKTER",
+"visible": "Y",
+"occuCode": "15"
+},
+{
+"occuSubCode": "1504",
+"occuSubDesc": "BIDAN HONORER",
+"visible": "Y",
+"occuCode": "15"
+},
+{
+"occuSubCode": "1505",
+"occuSubDesc": "BIDAN PNS",
+"visible": "Y",
+"occuCode": "15"
+},
+{
+"occuSubCode": "1506",
+"occuSubDesc": "TENAGA MEDIS",
+"visible": "Y",
+"occuCode": "15"
+},
+{
+"occuSubCode": "1301",
+"occuSubDesc": "GURU HONORER",
+"visible": "Y",
+"occuCode": "13"
+},
+{
+"occuSubCode": "1302",
+"occuSubDesc": "GURU SWASTA",
+"visible": "Y",
+"occuCode": "13"
+},
+{
+"occuSubCode": "1303",
+"occuSubDesc": "DOSEN",
+"visible": "Y",
+"occuCode": "13"
+},
+{
+"occuSubCode": "1304",
+"occuSubDesc": "GURU PNS",
+"visible": "Y",
+"occuCode": "13"
+},
+{
+"occuSubCode": "2701",
+"occuSubDesc": "AGEN BIS",
+"visible": "Y",
+"occuCode": "27"
+},
+{
+"occuSubCode": "2702",
+"occuSubDesc": "ANGKUTAN  BARANG",
+"visible": "Y",
+"occuCode": "27"
+},
+{
+"occuSubCode": "2703",
+"occuSubDesc": "ANGKUTAN ANDONG",
+"visible": "Y",
+"occuCode": "27"
+},
+{
+"occuSubCode": "2704",
+"occuSubDesc": "ANGKUTAN ANTAR KOTA",
+"visible": "Y",
+"occuCode": "27"
+},
+{
+"occuSubCode": "2705",
+"occuSubDesc": "ANGKUTAN LAUT",
+"visible": "Y",
+"occuCode": "27"
+},
+{
+"occuSubCode": "2706",
+"occuSubDesc": "ANGKUTAN MATERIAL",
+"visible": "Y",
+"occuCode": "27"
+},
+{
+"occuSubCode": "2707",
+"occuSubDesc": "WARUNG TELEKOMUNIKASI",
+"visible": "Y",
+"occuCode": "27"
+},
+{
+"occuSubCode": "1701",
+"occuSubDesc": "SOPIR ANGKOT",
+"visible": "Y",
+"occuCode": "17"
+},
+{
+"occuSubCode": "1702",
+"occuSubDesc": "SOPIR BUS ANTAR PROPINSI",
+"visible": "Y",
+"occuCode": "17"
+},
+{
+"occuSubCode": "1703",
+"occuSubDesc": "SOPIR BUS DALAM KOTA",
+"visible": "Y",
+"occuCode": "17"
+},
+{
+"occuSubCode": "1704",
+"occuSubDesc": "SOPIR TRAVEL",
+"visible": "Y",
+"occuCode": "17"
+},
+{
+"occuSubCode": "1705",
+"occuSubDesc": "SOPIR TRUK",
+"visible": "Y",
+"occuCode": "17"
+},
+{
+"occuSubCode": "2601",
+"occuSubDesc": "ALAT BERAT",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2602",
+"occuSubDesc": "KONTRAK RUMAH",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2603",
+"occuSubDesc": "KOST",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2604",
+"occuSubDesc": "PENYEWAAN BECAK",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2605",
+"occuSubDesc": "PENYEWAAN KAPAL",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2606",
+"occuSubDesc": "PENYEWAAN KAPAL NELAYAN",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2607",
+"occuSubDesc": "PENYEWAAN MOBIL",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2608",
+"occuSubDesc": "PENYEWAAN ODONG-ODONG",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2609",
+"occuSubDesc": "PENYEWAAN PERALATAN PESTA",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2610",
+"occuSubDesc": "PENYEWAAN PLAMPANG",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2611",
+"occuSubDesc": "PENYEWAAN PLAYSTATION",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2612",
+"occuSubDesc": "PENYEWAAN TRAKTOR",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2613",
+"occuSubDesc": "PENYEWAN SOUND SYSTEM",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2614",
+"occuSubDesc": "PERSEWAAN TENDA,KURSI DLL",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2615",
+"occuSubDesc": "PERSEWAAN TRAKTOR",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2616",
+"occuSubDesc": "RENTAL BECAK",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2617",
+"occuSubDesc": "RENTAL BUKU",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "2618",
+"occuSubDesc": "RENTAL KOMPUTER/VCD/PS",
+"visible": "Y",
+"occuCode": "26"
+},
+{
+"occuSubCode": "1001",
+"occuSubDesc": "ANIMATOR FILM",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1002",
+"occuSubDesc": "ARTIS",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1003",
+"occuSubDesc": "DALANG / SINDEN",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1004",
+"occuSubDesc": "FOTOGRAFER",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1005",
+"occuSubDesc": "MUSISI",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1006",
+"occuSubDesc": "PELUKIS",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1007",
+"occuSubDesc": "PEMAHAT",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1008",
+"occuSubDesc": "PEMAIN BAND",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1009",
+"occuSubDesc": "PEMAIN KETOPRAK",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1010",
+"occuSubDesc": "PEMAIN MUSIK",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1011",
+"occuSubDesc": "PEMAIN SINETRON",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1012",
+"occuSubDesc": "PEMATUNG",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1013",
+"occuSubDesc": "PEMUSIK/PAGELARAN SENI",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1014",
+"occuSubDesc": "PENARI",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1015",
+"occuSubDesc": "PENCIPTA LAGU",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1016",
+"occuSubDesc": "PENGUKIR KAYU",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1017",
+"occuSubDesc": "PENGUKIR POT BUNGA",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1018",
+"occuSubDesc": "PENULIS",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1019",
+"occuSubDesc": "PENYAIR",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1020",
+"occuSubDesc": "PENYANYI",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1021",
+"occuSubDesc": "SASTRAWAN",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1022",
+"occuSubDesc": "SENI TANAH LIAT",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1023",
+"occuSubDesc": "SUTRADARA",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "1024",
+"occuSubDesc": "WARTAWAN",
+"visible": "Y",
+"occuCode": "10"
+},
+{
+"occuSubCode": "2401",
+"occuSubDesc": "PABRIK BATU BATA & GENTENG",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2402",
+"occuSubDesc": "PABRIK BENANG",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2403",
+"occuSubDesc": "PABRIK BOLA KARET",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2404",
+"occuSubDesc": "PABRIK BONEKA",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2405",
+"occuSubDesc": "PABRIK GARAM",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2406",
+"occuSubDesc": "PABRIK GULA CAKAR",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2407",
+"occuSubDesc": "PABRIK JAMUR",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2408",
+"occuSubDesc": "PABRIK KALENG",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2409",
+"occuSubDesc": "PABRIK KAPAS",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2410",
+"occuSubDesc": "PABRIK KAPUR",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2411",
+"occuSubDesc": "PABRIK KARTON",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2412",
+"occuSubDesc": "PABRIK KECAP",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2413",
+"occuSubDesc": "PABRIK KERUPUK",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2414",
+"occuSubDesc": "PABRIK KOPI",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2415",
+"occuSubDesc": "PABRIK KUE BOLU",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2416",
+"occuSubDesc": "PABRIK KUE DONAT",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2417",
+"occuSubDesc": "PABRIK KUE KERING",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2418",
+"occuSubDesc": "PABRIK KURSI",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2419",
+"occuSubDesc": "PABRIK MAINAN ANAK-ANAK",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2420",
+"occuSubDesc": "PABRIK MAKANAN & MINUMAN",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2421",
+"occuSubDesc": "PABRIK MIE",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2422",
+"occuSubDesc": "PABRIK PALET",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2423",
+"occuSubDesc": "PABRIK PENGOLAHAN PLASTIK",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2424",
+"occuSubDesc": "PABRIK PERCETAKAN",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2425",
+"occuSubDesc": "PABRIK PERMEN",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2426",
+"occuSubDesc": "PABRIK PLASTIK",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2427",
+"occuSubDesc": "PABRIK ROKOK",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2428",
+"occuSubDesc": "PABRIK SANDAL",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2429",
+"occuSubDesc": "PABRIK SAOS",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2430",
+"occuSubDesc": "PABRIK TAHU & TEMPE",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2431",
+"occuSubDesc": "PABRIK TEPUNG",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2432",
+"occuSubDesc": "PABRIK TOGE",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2433",
+"occuSubDesc": "PELEBURAN LOGAM",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2434",
+"occuSubDesc": "PELEBURAN TIMAH",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2435",
+"occuSubDesc": "PEMBUAT MEUBEL",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2436",
+"occuSubDesc": "PEMBUAT MIE",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2437",
+"occuSubDesc": "PRODUKSI BAKSO & MIE",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2438",
+"occuSubDesc": "PRODUKSI JAKET KULIT",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2439",
+"occuSubDesc": "PRODUKSI JAMU",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2440",
+"occuSubDesc": "PRODUKSI JAMUR",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "1801",
+"occuSubDesc": "AYAM",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1802",
+"occuSubDesc": "BEBEK",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1803",
+"occuSubDesc": "BUDI DAYA KERANG",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1804",
+"occuSubDesc": "BUDIDAYA CACING",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1805",
+"occuSubDesc": "BUDIDAYA IKAN AIR TAWAR",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1806",
+"occuSubDesc": "BUDIDAYA IKAN CUPANG",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1807",
+"occuSubDesc": "BUDIDAYA JAMUR",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1808",
+"occuSubDesc": "BUDIDAYA UDANG",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1809",
+"occuSubDesc": "BURUNG PUYUH",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1810",
+"occuSubDesc": "BURUNG WALET",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1811",
+"occuSubDesc": "IKAN HIAS",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1812",
+"occuSubDesc": "IKAN KONSUMSI",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1813",
+"occuSubDesc": "KAMBING",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1814",
+"occuSubDesc": "KELINCI",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1815",
+"occuSubDesc": "PETERNAK BABI",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1816",
+"occuSubDesc": "PETERNAK KUDA",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1817",
+"occuSubDesc": "PETERNAK LEBAH",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1818",
+"occuSubDesc": "PETERNAK LELE",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1819",
+"occuSubDesc": "PETERNAK LEMBU",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1820",
+"occuSubDesc": "PETERNAK SAPI",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1821",
+"occuSubDesc": "PETERNAK UDANG",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1822",
+"occuSubDesc": "PETRNAK KERBAU",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "1823",
+"occuSubDesc": "UDANG",
+"visible": "Y",
+"occuCode": "18"
+},
+{
+"occuSubCode": "0801",
+"occuSubDesc": "BUDIDAYA MENGKUDU",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0802",
+"occuSubDesc": "PETANI AGAR-AGAR",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0803",
+"occuSubDesc": "PETANI AGROBISNIS",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0804",
+"occuSubDesc": "PETANI ANGGUR",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0805",
+"occuSubDesc": "PETANI APEL",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0806",
+"occuSubDesc": "PETANI AREN",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0807",
+"occuSubDesc": "PETANI BAWANG MERAH",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0808",
+"occuSubDesc": "PETANI BAWANG PUTIH",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0809",
+"occuSubDesc": "PETANI BUAH-BUAHAN",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0810",
+"occuSubDesc": "PETANI BUNCIS",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0811",
+"occuSubDesc": "PETANI BUNGA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0812",
+"occuSubDesc": "PETANI BURKOL",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0813",
+"occuSubDesc": "PETANI CABE",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0814",
+"occuSubDesc": "PETANI CENGKEH",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0815",
+"occuSubDesc": "PETANI COKLAT",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0816",
+"occuSubDesc": "PETANI DAMAR",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0817",
+"occuSubDesc": "PETANI GAMBIR",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0818",
+"occuSubDesc": "PETANI JAGUNG",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0819",
+"occuSubDesc": "PETANI JAMBU METE",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0820",
+"occuSubDesc": "PETANI JAMUR",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0821",
+"occuSubDesc": "PETANI JERUK",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0822",
+"occuSubDesc": "PETANI KACANG  HIJAU",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0823",
+"occuSubDesc": "PETANI KACANG  TANAH",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0824",
+"occuSubDesc": "PETANI KACANG MERAH",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0825",
+"occuSubDesc": "PETANI KAPUK",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0826",
+"occuSubDesc": "PETANI KARET",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0827",
+"occuSubDesc": "PETANI KEDELAI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0828",
+"occuSubDesc": "PETANI KELAPA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0829",
+"occuSubDesc": "PETANI KELAPA SAWIT",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0830",
+"occuSubDesc": "PETANI KENTANG",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0831",
+"occuSubDesc": "PETANI KOL",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0832",
+"occuSubDesc": "PETANI KOPI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0833",
+"occuSubDesc": "PETANI KOPRA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0834",
+"occuSubDesc": "PETANI LADA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0835",
+"occuSubDesc": "PETANI MANGGA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0836",
+"occuSubDesc": "PETANI MELON",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0837",
+"occuSubDesc": "PETANI MERICA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0838",
+"occuSubDesc": "PETANI NANAS",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0839",
+"occuSubDesc": "PETANI NILAM",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0840",
+"occuSubDesc": "PETANI PADI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0841",
+"occuSubDesc": "PETANI PALAWIJA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0842",
+"occuSubDesc": "PETANI PAPRIKA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0843",
+"occuSubDesc": "PETANI PECAY/KAPRI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0844",
+"occuSubDesc": "PETANI PEPAYA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0845",
+"occuSubDesc": "PETANI PETAI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0846",
+"occuSubDesc": "PETANI PISANG",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0847",
+"occuSubDesc": "PETANI ROTAN",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0848",
+"occuSubDesc": "PETANI RUMPUT LAUT",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0849",
+"occuSubDesc": "PETANI SAGU",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0850",
+"occuSubDesc": "PETANI SALADA BOKOR",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0851",
+"occuSubDesc": "PETANI SALAK",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0852",
+"occuSubDesc": "PETANI SAYURAN",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0853",
+"occuSubDesc": "PETANI SELADA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0854",
+"occuSubDesc": "PETANI SELEDRI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0855",
+"occuSubDesc": "PETANI SEMANGKA",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0856",
+"occuSubDesc": "PETANI SINGKONG",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0857",
+"occuSubDesc": "PETANI SOSIN",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0858",
+"occuSubDesc": "PETANI STRAWBERRY",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0859",
+"occuSubDesc": "PETANI TEBU",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0860",
+"occuSubDesc": "PETANI TEMBAKAU",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0861",
+"occuSubDesc": "PETANI TOMAT",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0862",
+"occuSubDesc": "PETANI TUMPANGSARI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0863",
+"occuSubDesc": "PETANI UBI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0864",
+"occuSubDesc": "PETANI VANILI",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0865",
+"occuSubDesc": "PETANI WORTEL",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "0866",
+"occuSubDesc": "PETANI_TEH",
+"visible": "Y",
+"occuCode": "08"
+},
+{
+"occuSubCode": "3101",
+"occuSubDesc": "KEPALA DESA",
+"visible": "Y",
+"occuCode": "31"
+},
+{
+"occuSubCode": "3102",
+"occuSubDesc": "PERANGKAT DESA",
+"visible": "Y",
+"occuCode": "31"
+},
+{
+"occuSubCode": "3103",
+"occuSubDesc": "SEKDES",
+"visible": "Y",
+"occuCode": "31"
+},
+{
+"occuSubCode": "1101",
+"occuSubDesc": "PENSIUNAN ABRI",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1102",
+"occuSubDesc": "PENSIUNAN BANK",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1103",
+"occuSubDesc": "PENSIUNAN BUMN",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1104",
+"occuSubDesc": "PENSIUNAN DIKBUD",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1105",
+"occuSubDesc": "PENSIUNAN DINAS KEHUTANAN",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1106",
+"occuSubDesc": "PENSIUNAN DINKES",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1107",
+"occuSubDesc": "PENSIUNAN DOKTER",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1108",
+"occuSubDesc": "PENSIUNAN DOSEN",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1109",
+"occuSubDesc": "PENSIUNAN DPRD",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1110",
+"occuSubDesc": "PENSIUNAN DPU",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1111",
+"occuSubDesc": "PENSIUNAN GURU",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1112",
+"occuSubDesc": "PENSIUNAN GURU",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1113",
+"occuSubDesc": "PENSIUNAN GURU",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1114",
+"occuSubDesc": "PENSIUNAN HOTEL",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1115",
+"occuSubDesc": "PENSIUNAN PEGAWAI NEGERI",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1116",
+"occuSubDesc": "PENSIUNAN PEGAWAI NEGERI",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1117",
+"occuSubDesc": "PENSIUNAN PEGAWAI NEGERI",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1118",
+"occuSubDesc": "PENSIUNAN PEGAWAI NEGERI SIPIL",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1119",
+"occuSubDesc": "PENSIUNAN PEGAWAI SWASTA",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1120",
+"occuSubDesc": "PENSIUNAN PEMKOT",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1121",
+"occuSubDesc": "PENSIUNAN PERTAMINA",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1122",
+"occuSubDesc": "PENSIUNAN POLRI",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "1123",
+"occuSubDesc": "PENSIUNAN TNI-AD",
+"visible": "Y",
+"occuCode": "11"
+},
+{
+"occuSubCode": "3001",
+"occuSubDesc": "HOTEL BERBINTANG",
+"visible": "Y",
+"occuCode": "30"
+},
+{
+"occuSubCode": "3002",
+"occuSubDesc": "HOTEL NON BINTANG",
+"visible": "Y",
+"occuCode": "30"
+},
+{
+"occuSubCode": "3003",
+"occuSubDesc": "VILLA",
+"visible": "Y",
+"occuCode": "30"
+},
+{
+"occuSubCode": "2801",
+"occuSubDesc": "ARENA BERMAIN/REKREASI",
+"visible": "Y",
+"occuCode": "28"
+},
+{
+"occuSubCode": "2802",
+"occuSubDesc": "BILLIARD",
+"visible": "Y",
+"occuCode": "28"
+},
+{
+"occuSubCode": "2803",
+"occuSubDesc": "CAFE , DISKOTIK AND BAR",
+"visible": "Y",
+"occuCode": "28"
+},
+{
+"occuSubCode": "2804",
+"occuSubDesc": "EVENT ORGANIZER",
+"visible": "Y",
+"occuCode": "28"
+},
+{
+"occuSubCode": "2805",
+"occuSubDesc": "FITNESS DAN AEROBIK",
+"visible": "Y",
+"occuCode": "28"
+},
+{
+"occuSubCode": "2806",
+"occuSubDesc": "GROUP BAND",
+"visible": "Y",
+"occuCode": "28"
+},
+{
+"occuSubCode": "2807",
+"occuSubDesc": "JARINGAN TV KABEL",
+"visible": "Y",
+"occuCode": "28"
+},
+{
+"occuSubCode": "2101",
+"occuSubDesc": "KERAJINAN ANYAMAN",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2102",
+"occuSubDesc": "KERAJINAN KERAMIK",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2103",
+"occuSubDesc": "KERAJINAN LOGAM",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2104",
+"occuSubDesc": "KERAJINAN LUKISAN",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2105",
+"occuSubDesc": "KERAJINAN MEUBEL",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2106",
+"occuSubDesc": "KERAJINAN PATUNG",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2107",
+"occuSubDesc": "KERAJINAN PENYAMAKAN KULIT",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2108",
+"occuSubDesc": "KERAJINAN ROTAN",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2109",
+"occuSubDesc": "PEMAHAT BATU",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2110",
+"occuSubDesc": "PEMBUAT SOUVENIR",
+"visible": "Y",
+"occuCode": "21"
+},
+{
+"occuSubCode": "2901",
+"occuSubDesc": "BIMBINGAN BELAJAR",
+"visible": "Y",
+"occuCode": "29"
+},
+{
+"occuSubCode": "2902",
+"occuSubDesc": "GURU LES PRIVAT",
+"visible": "Y",
+"occuCode": "29"
+},
+{
+"occuSubCode": "2903",
+"occuSubDesc": "LEMBAGA KURSUS",
+"visible": "Y",
+"occuCode": "29"
+},
+{
+"occuSubCode": "2301",
+"occuSubDesc": "AGEN TAS",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2302",
+"occuSubDesc": "AGEN TIKET",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2303",
+"occuSubDesc": "APOTEK / TOKO OBAT",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2304",
+"occuSubDesc": "PEDAGANG ACCU",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2305",
+"occuSubDesc": "PEDAGANG AGEN ALAT-ALAT KONVEKSI",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2306",
+"occuSubDesc": "PEDAGANG AIR MINERAL",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2307",
+"occuSubDesc": "PEDAGANG ALAT ALAT GOLF",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2308",
+"occuSubDesc": "PEDAGANG ALAT KESEHATAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2309",
+"occuSubDesc": "PEDAGANG ALAT MUSIK",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2310",
+"occuSubDesc": "PEDAGANG ALAT OLAH RAGA",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2311",
+"occuSubDesc": "PEDAGANG ALAT TULIS KANTOR",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2312",
+"occuSubDesc": "PEDAGANG ALAT-ALAT BERAT",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2313",
+"occuSubDesc": "PEDAGANG ALAT-ALAT LISTRIK",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2314",
+"occuSubDesc": "PEDAGANG ALAT-ALAT PERTANIAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2315",
+"occuSubDesc": "PEDAGANG ALAT-ALAT TEKNIK",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2316",
+"occuSubDesc": "PEDAGANG AYAM",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2317",
+"occuSubDesc": "PEDAGANG BAHAN BANGUNAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2318",
+"occuSubDesc": "PEDAGANG BAHAN KIMIA",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2319",
+"occuSubDesc": "PEDAGANG BAHAN ROTI & KUE",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2320",
+"occuSubDesc": "PEDAGANG BARANG ANTIK",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2321",
+"occuSubDesc": "PEDAGANG BARANG BEKAS",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2322",
+"occuSubDesc": "PEDAGANG BUAH",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2323",
+"occuSubDesc": "PEDAGANG DAGING",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2324",
+"occuSubDesc": "PEDAGANG ES",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2325",
+"occuSubDesc": "PEDAGANG FURNITURE RT",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2326",
+"occuSubDesc": "PEDAGANG GAS ELPIJI",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2327",
+"occuSubDesc": "PEDAGANG HASIL LAUT",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2328",
+"occuSubDesc": "PEDAGANG HP & ACCECORIS",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2329",
+"occuSubDesc": "PEDAGANG KAKI LIMA",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2330",
+"occuSubDesc": "PEDAGANG KAMBING",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2331",
+"occuSubDesc": "PEDAGANG KAYU",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2332",
+"occuSubDesc": "PEDAGANG KOMPUTER",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2333",
+"occuSubDesc": "PEDAGANG KOPI",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2334",
+"occuSubDesc": "PEDAGANG KOSMETIK",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2335",
+"occuSubDesc": "PEDAGANG KUDA",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2336",
+"occuSubDesc": "PEDAGANG MAINAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2337",
+"occuSubDesc": "PEDAGANG MAKANAN & MINUMAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2338",
+"occuSubDesc": "PEDAGANG MINYAK",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2339",
+"occuSubDesc": "PEDAGANG PAKAIAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2340",
+"occuSubDesc": "PEDAGANG SAPI",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2341",
+"occuSubDesc": "PEDAGANG SAYUR",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2342",
+"occuSubDesc": "PEDAGANG SEMBAKO",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2343",
+"occuSubDesc": "PEDAGANG SEPATU & SANDAL",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2344",
+"occuSubDesc": "PEDAGANG SPARE PART",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2345",
+"occuSubDesc": "PEDAGANG SUSU",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2346",
+"occuSubDesc": "PEDAGANG TANAMAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2347",
+"occuSubDesc": "RESTORAN PADANG",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2348",
+"occuSubDesc": "RESTORAN SEA FOOD",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "0901",
+"occuSubDesc": "NELAYAN BAGAN",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0902",
+"occuSubDesc": "NELAYAN IKAN DANAU",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0903",
+"occuSubDesc": "NELAYAN IKAN LAUT",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0904",
+"occuSubDesc": "NELAYAN MODERN",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0905",
+"occuSubDesc": "NELAYAN PUKAT APUNG",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0906",
+"occuSubDesc": "NELAYAN PUKAT LANGGAR",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0907",
+"occuSubDesc": "NELAYAN PUKAT TARIK",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0908",
+"occuSubDesc": "NELAYAN RUMPUT LAUT",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0909",
+"occuSubDesc": "NELAYAN SUNGAI",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0910",
+"occuSubDesc": "NELAYAN TONDA",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0911",
+"occuSubDesc": "NELAYAN TRADISIONAL",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0912",
+"occuSubDesc": "NELAYAN UBUR-UBUR",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0913",
+"occuSubDesc": "PENGUMPUL HASIL LAUT",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0914",
+"occuSubDesc": "TAMBAK IKAN",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0915",
+"occuSubDesc": "TAMBAK KERAPU",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "0916",
+"occuSubDesc": "TAMBAK UDANG",
+"visible": "Y",
+"occuCode": "09"
+},
+{
+"occuSubCode": "1401",
+"occuSubDesc": "ADVERTISING",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1402",
+"occuSubDesc": "AGEN TANAGA KERJA",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1403",
+"occuSubDesc": "AHLI PASANG GIGI",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1404",
+"occuSubDesc": "AHLI PATAH TULANG",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1405",
+"occuSubDesc": "BENGKEL BUBUT",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1406",
+"occuSubDesc": "BENGKEL LAS",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1407",
+"occuSubDesc": "BENGKEL MOBIL",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1408",
+"occuSubDesc": "BENGKEL MOTOR",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1409",
+"occuSubDesc": "BIRO JASA",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1410",
+"occuSubDesc": "BIRO REKLAME",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1411",
+"occuSubDesc": "BIRO TEKNIK LISTRIK",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1412",
+"occuSubDesc": "BROKER PROPERTY",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1413",
+"occuSubDesc": "CARWASH",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1414",
+"occuSubDesc": "CATERING",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1415",
+"occuSubDesc": "CLEANING SERVICE",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1416",
+"occuSubDesc": "DEBT COLECTOR (DC)",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1417",
+"occuSubDesc": "DEKOR TAMAN",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1418",
+"occuSubDesc": "FOTO COPY",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1419",
+"occuSubDesc": "FOTO STUDIO",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1420",
+"occuSubDesc": "GUIDE FREELANCE",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1421",
+"occuSubDesc": "GUIDE TURIS",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1422",
+"occuSubDesc": "IKLAN DAN PERCETAKAN",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1423",
+"occuSubDesc": "INSTALASI",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1424",
+"occuSubDesc": "JASA PARANORMAL",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1425",
+"occuSubDesc": "JASA PENITIPAN ANAK",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1426",
+"occuSubDesc": "JASA PENITIPAN KENDARAAN",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1427",
+"occuSubDesc": "LAUNDRY",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1428",
+"occuSubDesc": "MAKELAR MOBIL",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1429",
+"occuSubDesc": "MAKELAR MOTOR",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1430",
+"occuSubDesc": "MAKELAR SAMSAT",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1431",
+"occuSubDesc": "MAKELAR TANAH",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1432",
+"occuSubDesc": "MONTIR",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1433",
+"occuSubDesc": "PENGELOLA SALON",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1434",
+"occuSubDesc": "PENGGILINGAN",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1435",
+"occuSubDesc": "PENJAHIT",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1436",
+"occuSubDesc": "SALON",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1437",
+"occuSubDesc": "SERVICE ELEKTRONIK",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1438",
+"occuSubDesc": "SERVICE JOK KURSI",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "3201",
+"occuSubDesc": "POLISI",
+"visible": "Y",
+"occuCode": "32"
+},
+{
+"occuSubCode": "001",
+"occuSubDesc": "PEGAWAI HONORER",
+"visible": "Y",
+"occuCode": "04"
+},
+{
+"occuSubCode": "002",
+"occuSubDesc": "PEGAWAI TETAP",
+"visible": "Y",
+"occuCode": "04"
+},
+{
+"occuSubCode": "1439",
+"occuSubDesc": "KOPERASI SIMPAN PINJAM",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1440",
+"occuSubDesc": "KONTRAKTOR",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "2441",
+"occuSubDesc": "PRODUKSI PAKAIAN/KONVEKSI",
+"visible": "Y",
+"occuCode": "24"
+},
+{
+"occuSubCode": "2349",
+"occuSubDesc": "PEDAGANG PERHIASAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "1706",
+"occuSubDesc": "SOPIR PRIBADI",
+"visible": "Y",
+"occuCode": "17"
+},
+{
+"occuSubCode": "2350",
+"occuSubDesc": "PEDAGANG KACAMATA",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2351",
+"occuSubDesc": "PEDAGANG HASIL BUMI",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2352",
+"occuSubDesc": "PECEL LELE",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2353",
+"occuSubDesc": "MOBIL",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2354",
+"occuSubDesc": "MOTOR",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2355",
+"occuSubDesc": "IKAN",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2356",
+"occuSubDesc": "NASI UDUK",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2357",
+"occuSubDesc": "WARTEG",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "2358",
+"occuSubDesc": "JAM",
+"visible": "Y",
+"occuCode": "23"
+},
+{
+"occuSubCode": "001",
+"occuSubDesc": "PENGACARA UMUM",
+"visible": "Y",
+"occuCode": "03"
+},
+{
+"occuSubCode": "001",
+"occuSubDesc": "ANGKATAN DARAT",
+"visible": "Y",
+"occuCode": "02"
+},
+{
+"occuSubCode": "002",
+"occuSubDesc": "ANGKATAN UDARA",
+"visible": "Y",
+"occuCode": "02"
+},
+{
+"occuSubCode": "003",
+"occuSubDesc": "ANGKATAN LAUT",
+"visible": "Y",
+"occuCode": "02"
+},
+{
+"occuSubCode": "2201",
+"occuSubDesc": "PEMUKA AGAMA",
+"visible": "Y",
+"occuCode": "22"
+},
+{
+"occuSubCode": "1442",
+"occuSubDesc": "KREDIT BARANG ELEKTRONIK",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1443",
+"occuSubDesc": "PENJAGA MAKAM",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "1507",
+"occuSubDesc": "PENGUSAHA KLINIK",
+"visible": "Y",
+"occuCode": "15"
+},
+{
+"occuSubCode": "3301",
+"occuSubDesc": "PROFESIONAL",
+"visible": "Y",
+"occuCode": "33"
+},
+{
+"occuSubCode": "3302",
+"occuSubDesc": "AMATIR",
+"visible": "Y",
+"occuCode": "33"
+},
+{
+"occuSubCode": "3401",
+"occuSubDesc": "IJIN RESMI DEPKES",
+"visible": "Y",
+"occuCode": "34"
+},
+{
+"occuSubCode": "3402",
+"occuSubDesc": "NON IJIN DEPKES",
+"visible": "Y",
+"occuCode": "34"
+},
+{
+"occuSubCode": "3104",
+"occuSubDesc": "HANSIP",
+"visible": "Y",
+"occuCode": "31"
+},
+{
+"occuSubCode": "1444",
+"occuSubDesc": "WASIT OLAHRAGA",
+"visible": "Y",
+"occuCode": "14"
+},
+{
+"occuSubCode": "2010",
+"occuSubDesc": "SUB OCC TEST SATU",
+"visible": "Y",
+"occuCode": "201"
+},
+{
+"occuSubCode": "2011",
+"occuSubDesc": "SUB OCC TEST DUA",
+"visible": "Y",
+"occuCode": "201"
+},
+{
+"occuSubCode": "1901",
+"occuSubDesc": "PELAJAR SETINGKAT SMU",
+"visible": "Y",
+"occuCode": "19"
+},
+{
+"occuSubCode": "1902",
+"occuSubDesc": "MAHASISWA",
+"visible": "Y",
+"occuCode": "19"
+},
+{
+"occuSubCode": "001",
+"occuSubDesc": "IBU RUMAH TANGGA",
+"visible": "Y",
+"occuCode": "07"
+},
+{
+"occuSubCode": "001",
+"occuSubDesc": "PEGAWAI TETAP (SK PENGANGKATAN)",
+"visible": "Y",
+"occuCode": "05"
+},
+{
+"occuSubCode": "002",
+"occuSubDesc": "HONORER",
+"visible": "Y",
+"occuCode": "05"
+},
+{
+"occuSubCode": "2020",
+"occuSubDesc": "SATU",
+"visible": "Y",
+"occuCode": "202"
+},
+{
+"occuSubCode": "002",
+"occuSubDesc": "PENGACARA KHUSUS",
+"visible": "Y",
+"occuCode": "03"
+},
+{
+"occuSubCode": "3501",
+"occuSubDesc": "CRM TEST",
+"visible": "Y",
+"occuCode": "35"
+}
+  ]

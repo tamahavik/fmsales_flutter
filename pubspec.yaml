@@ -70,6 +70,9 @@ dependencies:
   #get device info
   device_info_plus: ^8.0.0
 
+  #get package info
+  package_info_plus: ^3.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

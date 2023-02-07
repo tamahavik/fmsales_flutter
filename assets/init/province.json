@@ -1,0 +1,308 @@
+[
+  {
+    "action": null,
+    "provCode": "011",
+    "provinsi": "Prov Nanggroe Aceh Darussalam (NAD)",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "012",
+    "provinsi": "Prov Sumatera Utara",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "013",
+    "provinsi": "Prov Sumatera Barat",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "014",
+    "provinsi": "Prov Riau",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "015",
+    "provinsi": "Prov Jambi",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "016",
+    "provinsi": "Prov Sumatera Selatan",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "017",
+    "provinsi": "Prov Bengkulu",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "018",
+    "provinsi": "Prov Lampung",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "019",
+    "provinsi": "Prov Bangka Belitung",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "021",
+    "provinsi": "Prov Kepulauan Riau",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "031",
+    "provinsi": "Prov DKI Jakarta",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "032",
+    "provinsi": "Prov Jawa Barat",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "033",
+    "provinsi": "Prov Jawa Tengah",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "034",
+    "provinsi": "Prov DI Yogyakarta",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "035",
+    "provinsi": "Prov Jawa Timur",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "036",
+    "provinsi": "Prov Banten",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "051",
+    "provinsi": "Prov Bali",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "052",
+    "provinsi": "Prov Nusa Tenggara Barat (NTB)",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "053",
+    "provinsi": "Prov Nusa Tenggara Timur (NTT)",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "061",
+    "provinsi": "Prov Kalimantan Barat",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "062",
+    "provinsi": "Prov Kalimantan Tengah",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "063",
+    "provinsi": "Prov Kalimantan Selatan",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "064",
+    "provinsi": "Prov Kalimantan Timur",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "065",
+    "provinsi": "Prov Kalimantan Utara",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "071",
+    "provinsi": "Prov Sulawesi Utara",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "072",
+    "provinsi": "Prov Sulawesi Tengah",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "073",
+    "provinsi": "Prov Sulawesi Selatan",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "074",
+    "provinsi": "Prov Sulawesi Tenggara",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "075",
+    "provinsi": "Prov Gorontalo",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "076",
+    "provinsi": "Prov Sulawesi Barat",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "081",
+    "provinsi": "Prov Maluku",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "082",
+    "provinsi": "Prov Maluku Utara",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "091",
+    "provinsi": "Prov Papua",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  },
+  {
+    "action": null,
+    "provCode": "092",
+    "provinsi": "Prov Papua Barat",
+    "create_by": "SYS_CTM",
+    "create_date": 1553187600000,
+    "update_by": null,
+    "update_date": 1558026000000
+  }
+]

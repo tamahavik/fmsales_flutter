@@ -26,16 +26,12 @@ class SigninBloc extends Bloc<SigninEvent, SigninState> {
 
     String deviceId = await _deviceInfo.getDeviceId();
 
-    print(deviceId);
-
     SigninRequest request = SigninRequest(
       username: event.username,
       password: event.password,
-      deviceId: "",
+      deviceId: deviceId,
       tokenId: null,
     );
-
-    print(request.toString());
 
     final result = await _service.doLogin(request: request);
 

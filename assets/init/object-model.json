@@ -1,0 +1,3971 @@
+[
+  {
+    "objectCode": "V05798",
+    "objectGroup": "G204",
+    "objectDescription": "VIAR",
+    "branchId": "00001",
+    "objectBrand": "VIAR",
+    "objectModel": "KARYA 200 CC",
+    "objectType": "VIAR"
+  },
+  {
+    "objectCode": "V00188",
+    "objectGroup": "G201",
+    "objectDescription": "ASTREA STAR",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "ASTREA STAR",
+    "objectType": "C800"
+  },
+  {
+    "objectCode": "V04093",
+    "objectGroup": "G204",
+    "objectDescription": "YAMAHA NEW VIXION",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "NEW VIXION",
+    "objectType": "IPA023606"
+  },
+  {
+    "objectCode": "V05534",
+    "objectGroup": "G204",
+    "objectDescription": "KAWASAKI NINJA  ZX 6R",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "NINJA",
+    "objectType": "NINJA ZX 6R"
+  },
+  {
+    "objectCode": "V06304",
+    "objectGroup": "G204",
+    "objectDescription": "KAWASAKI NINJA  NEW 250R INJECTION",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "NINJA250 INJECT",
+    "objectType": "EX250L"
+  },
+  {
+    "objectCode": "V06488",
+    "objectGroup": "G204",
+    "objectDescription": "MIO J GT",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO",
+    "objectType": "2BJ"
+  },
+  {
+    "objectCode": "V06724",
+    "objectGroup": "G204",
+    "objectDescription": "SUZUKI SHOOTER 115FI",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "SUZUKISHOOTER",
+    "objectType": "115 FI SR"
+  },
+  {
+    "objectCode": "V06474",
+    "objectGroup": "G204",
+    "objectDescription": "KAWASAKI Z 250",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "NINJA Z 250",
+    "objectType": "KAWASAKI Z 250"
+  },
+  {
+    "objectCode": "V06614",
+    "objectGroup": "G204",
+    "objectDescription": "X RIDE 115",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "X RIDE 115",
+    "objectType": "X RIDE 115"
+  },
+  {
+    "objectCode": "V06377",
+    "objectGroup": "G204",
+    "objectDescription": "SUZUKI INAZUMA 250",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "SUZUKI 250",
+    "objectType": "INAZUMA 250 INJ"
+  },
+  {
+    "objectCode": "V05494",
+    "objectGroup": "G204",
+    "objectDescription": "PIAGGIO",
+    "branchId": "00001",
+    "objectBrand": "PIAGGIO",
+    "objectModel": "PIAGGIO",
+    "objectType": "ZIP 100 AT"
+  },
+  {
+    "objectCode": "V06768",
+    "objectGroup": "G204",
+    "objectDescription": "FORCE 115 SPORTY",
+    "branchId": "20100",
+    "objectBrand": "YAMAHA",
+    "objectModel": "SPM R 2",
+    "objectType": "1FD"
+  },
+  {
+    "objectCode": "V06769",
+    "objectGroup": "G204",
+    "objectDescription": "FORCE 115 ELEGANT",
+    "branchId": "20100",
+    "objectBrand": "YAMAHA",
+    "objectModel": "SPM R 2",
+    "objectType": "1FD"
+  },
+  {
+    "objectCode": "V07357",
+    "objectGroup": "G204",
+    "objectDescription": "R 15 2 PK",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "R 15",
+    "objectType": "R 15 2 PK"
+  },
+  {
+    "objectCode": "V06767",
+    "objectGroup": "G204",
+    "objectDescription": "KAWASAKI B PSAR",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "KAWASAKI B PSAR",
+    "objectType": "200N S"
+  },
+  {
+    "objectCode": "V06342",
+    "objectGroup": "G204",
+    "objectDescription": "KAWASAKI SPM R2",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "SPM R2",
+    "objectType": "KL110C"
+  },
+  {
+    "objectCode": "V07171",
+    "objectGroup": "G204",
+    "objectDescription": "XEON 125 GT",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "XEON",
+    "objectType": "XEON 125 GT"
+  },
+  {
+    "objectCode": "V06448",
+    "objectGroup": "G204",
+    "objectDescription": "XEON RC",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "XEON RC",
+    "objectType": "XEON RC"
+  },
+  {
+    "objectCode": "V04274",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE",
+    "objectType": "NF11A1C"
+  },
+  {
+    "objectCode": "GH0",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE R 125 FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE R 125 FI",
+    "objectType": "AFP12W21C08 MT"
+  },
+  {
+    "objectCode": "DSC",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR250R ABS S",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR250R ABS S",
+    "objectType": "CBR250RAF5INMT"
+  },
+  {
+    "objectCode": "GHA",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE R 125 REP",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADER125R",
+    "objectType": "AFP12W21C08A MT"
+  },
+  {
+    "objectCode": "GJ0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEWVARIOFI",
+    "objectType": "ATI1I21B01 A/T"
+  },
+  {
+    "objectCode": "GK0",
+    "objectGroup": "G201",
+    "objectDescription": "VTECHNO 125 CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VTECHNOCBS",
+    "objectType": "ACB2J21B02 A/T"
+  },
+  {
+    "objectCode": "GL0",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO TECH 125 CBS ISS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO T125 ISS",
+    "objectType": "ACB2J21B03 A/T"
+  },
+  {
+    "objectCode": "DE5",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO SPOKE STREETFIGHT",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO S",
+    "objectType": "GL15A1D1 M/T SF"
+  },
+  {
+    "objectCode": "DE6",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO SPOKE STREETFIGHT",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO S",
+    "objectType": "GL15A1D1 M/T SF"
+  },
+  {
+    "objectCode": "DE7",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO SPOKE STREETFIGHT",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO S",
+    "objectType": "GL15A1D1 M/T SF"
+  },
+  {
+    "objectCode": "DF5",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO CW STREET FIGHTER",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO C",
+    "objectType": "GL15A1RR1 M/T S"
+  },
+  {
+    "objectCode": "DF6",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO CW STREET FIGHTER",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO C",
+    "objectType": "GL15A1RR1 M/T S"
+  },
+  {
+    "objectCode": "DF7",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO CW STREET FIGHTER",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO C",
+    "objectType": "GL15A1RR1 M/T S"
+  },
+  {
+    "objectCode": "FS7",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO TECHNO PGMFI ADVANT",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO T PGM",
+    "objectType": "NC12A1CF A/T"
+  },
+  {
+    "objectCode": "FS9",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO 125 TECHNO PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 125 T P",
+    "objectType": "NC12A1CF1 A/T"
+  },
+  {
+    "objectCode": "FX7",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW - HIP TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI C H",
+    "objectType": "NC11BF1CB A/T"
+  },
+  {
+    "objectCode": "FX6",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW - HIP TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI C H",
+    "objectType": "NC11BF1CB A/T"
+  },
+  {
+    "objectCode": "FW7",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW HIP TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI C H",
+    "objectType": "NC11BF1C A/T"
+  },
+  {
+    "objectCode": "FW6",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW HIP TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI C H",
+    "objectType": "NC11BF1C A/T"
+  },
+  {
+    "objectCode": "FV7",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI SPOKE HIP TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI S H",
+    "objectType": "NC11BF1D A/T"
+  },
+  {
+    "objectCode": "FX8",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW - CBS PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI CBS",
+    "objectType": "NC11BF1CB A/T"
+  },
+  {
+    "objectCode": "FW8",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI C P",
+    "objectType": "NC11BF1C A/T"
+  },
+  {
+    "objectCode": "FV6",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI SPOKE HIP TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI S H",
+    "objectType": "NC11BF1D A/T"
+  },
+  {
+    "objectCode": "FN8",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SCOOPY FI CLASSIC METRO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SCOOPY FI C",
+    "objectType": "NC11CF1C A/T"
+  },
+  {
+    "objectCode": "FN9",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SCOOPY FI CLASSIC METRO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SCOOPY FI C",
+    "objectType": "NC11CF1C A/T"
+  },
+  {
+    "objectCode": "FNG",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SCOOPY FI SPTY METRO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SCOOPY FI C",
+    "objectType": "NC11CF1CS A/T"
+  },
+  {
+    "objectCode": "FNR",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SCOOPY FI SPORTY METRO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SCOOPY FI C",
+    "objectType": "NC11CF1CS A/T"
+  },
+  {
+    "objectCode": "DKW",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE DELUXE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R STREET F",
+    "objectType": "CB15A1RRF M/T D"
+  },
+  {
+    "objectCode": "DKB",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE DELUXE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R STREET F",
+    "objectType": "CB15A1RRF M/T D"
+  },
+  {
+    "objectCode": "DKR",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE DELUXE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R STREET F",
+    "objectType": "CB15A1RRF M/T D"
+  },
+  {
+    "objectCode": "DRB",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR250R STD R",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR250R STD R",
+    "objectType": "CBR250RF 4IN MT"
+  },
+  {
+    "objectCode": "DR0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW CBR250R STD",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW CBR250R STD",
+    "objectType": "CBR250RF IN MT"
+  },
+  {
+    "objectCode": "FR2",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY H I FI MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY HI FI MMC",
+    "objectType": "NC11D1CF2 AT"
+  },
+  {
+    "objectCode": "DRA",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR250R STD T",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR250R STD T",
+    "objectType": "CBR250RF 2IN MT"
+  },
+  {
+    "objectCode": "DSO",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR2504 ABS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR2504 ABS",
+    "objectType": "CBR250RAF IN MT"
+  },
+  {
+    "objectCode": "GMJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT SW FI MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT SWFI MMC P",
+    "objectType": "ACH1M21B04ATPLS"
+  },
+  {
+    "objectCode": "GNJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CW FI MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CWFI MMC P",
+    "objectType": "ACH1M21B04A AT"
+  },
+  {
+    "objectCode": "GNK",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CW FI SPORTY PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CW FI SPP",
+    "objectType": "ACH1M21B04SAT"
+  },
+  {
+    "objectCode": "GPJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CBS FI MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEATCBSFIMMC",
+    "objectType": "ACH1M21B05"
+  },
+  {
+    "objectCode": "GPK",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CBS FI SPORTY PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CBS FISP P",
+    "objectType": "ACH1M21B05SATPL"
+  },
+  {
+    "objectCode": "DT0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW PCX 150",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW PCX 150",
+    "objectType": "WW150EXF IN AT"
+  },
+  {
+    "objectCode": "DP0",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR150R STD",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR150R STD",
+    "objectType": "T5E02R11L0  MT"
+  },
+  {
+    "objectCode": "DPB",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR150R TCLR",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR150R TCLR",
+    "objectType": "T5E02R11L0B MT"
+  },
+  {
+    "objectCode": "DPA",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR150R REP",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR150R REP",
+    "objectType": "T5E02R11L0A MT"
+  },
+  {
+    "objectCode": "GLX",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO CBS ISS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO CBS ISS",
+    "objectType": "ACB2J22B03"
+  },
+  {
+    "objectCode": "HA0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 125 ESP CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N VARIO 125 CBS",
+    "objectType": "E1F02N11M2 AT"
+  },
+  {
+    "objectCode": "HB0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 125 ESP CBS ISS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N VAR 125CBSISS",
+    "objectType": "E1F02N12M2 AT"
+  },
+  {
+    "objectCode": "V07765",
+    "objectGroup": "G201",
+    "objectDescription": "CB NEW 500 F",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB NEW 500 F",
+    "objectType": "CB NEW 500 F"
+  },
+  {
+    "objectCode": "V07766",
+    "objectGroup": "G201",
+    "objectDescription": "CB NEW 500 X",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB NEW 500 X",
+    "objectType": "CB NEW 500 X"
+  },
+  {
+    "objectCode": "V07860",
+    "objectGroup": "G201",
+    "objectDescription": "CB NEW 650 F",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB NEW 650 F",
+    "objectType": "CB NEW 650 F"
+  },
+  {
+    "objectCode": "V07764",
+    "objectGroup": "G201",
+    "objectDescription": "CBR NEW 650 F",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR NEW 650 F",
+    "objectType": "CBR NEW 650 F"
+  },
+  {
+    "objectCode": "V07859",
+    "objectGroup": "G201",
+    "objectDescription": "NM4 VULTUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NM4 VULTUS",
+    "objectType": "NM4 VULTUS"
+  },
+  {
+    "objectCode": "V07858",
+    "objectGroup": "G201",
+    "objectDescription": "CBR NEW 1000 RR",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR NEW 1000 RR",
+    "objectType": "CBR NEW 1000 RR"
+  },
+  {
+    "objectCode": "DS0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW CBR250R ABS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW CBR250R ABS",
+    "objectType": "CBR250RAF IN MT"
+  },
+  {
+    "objectCode": "DSA",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR250R ABS TC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR250R ABS T",
+    "objectType": "CBR250RAF 2INMT"
+  },
+  {
+    "objectCode": "DSB",
+    "objectGroup": "G201",
+    "objectDescription": "N CBR250R ABS RL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N CBR250R ABS R",
+    "objectType": "CBR250RAF 4INMT"
+  },
+  {
+    "objectCode": "FM3",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA H IN FI MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA HIN FIMMC",
+    "objectType": "NF12A1CF3 MT"
+  },
+  {
+    "objectCode": "DKM",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R MMC SE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R MMC SE",
+    "objectType": "CB15A1RRF2 MT"
+  },
+  {
+    "objectCode": "GS0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI SP CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI SP CW",
+    "objectType": "X1B02N04L0 AT"
+  },
+  {
+    "objectCode": "GV0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI SP CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI SP CBS",
+    "objectType": "X1B02N04L0A AT"
+  },
+  {
+    "objectCode": "GT0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI SP CBS ISS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FISP CBISS",
+    "objectType": "X1B02R07L0 AT"
+  },
+  {
+    "objectCode": "GW0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI POP CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI POP CW",
+    "objectType": "Y1G02N02L0 AT"
+  },
+  {
+    "objectCode": "GX0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI POP CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI POP CBS",
+    "objectType": "Y1G02N02L0A AT"
+  },
+  {
+    "objectCode": "GY0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI POP CBS ISS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FIP CBSISS",
+    "objectType": "Y1G02N15L0 AT"
+  },
+  {
+    "objectCode": "HC0",
+    "objectGroup": "G201",
+    "objectDescription": "SCOOPY STYLISH",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY STYLISH",
+    "objectType": "C1C02N16M2 AT"
+  },
+  {
+    "objectCode": "HCA",
+    "objectGroup": "G201",
+    "objectDescription": "SCOOPY SPORTY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY SPORTY",
+    "objectType": "C1C02N16M2S AT"
+  },
+  {
+    "objectCode": "HDA",
+    "objectGroup": "G201",
+    "objectDescription": "SONIC 150R REP",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SONIC 150R REP",
+    "objectType": "Y3802R17L0A MT"
+  },
+  {
+    "objectCode": "GTX",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT S CBSISS A",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT S CBSISS A",
+    "objectType": "X1B02R07LO AT A"
+  },
+  {
+    "objectCode": "GYX",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT P CBSISS A",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT P CBSISS A",
+    "objectType": "Y1G02N15L0 AT"
+  },
+  {
+    "objectCode": "GYY",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT P CBSISS A",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT P CBSISS A",
+    "objectType": "Y1G02N15L0 AT A2"
+  },
+  {
+    "objectCode": "GJX",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO F1",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO F1",
+    "objectType": "AT I1I21B01 AT A"
+  },
+  {
+    "objectCode": "GZX",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO 150A",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 150A",
+    "objectType": "K1H02N14L0M ATA"
+  },
+  {
+    "objectCode": "HDX",
+    "objectGroup": "G201",
+    "objectDescription": "SONIC A",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SONIC A",
+    "objectType": "Y3B02R17L0 MT A"
+  },
+  {
+    "objectCode": "V02375",
+    "objectGroup": "G201",
+    "objectDescription": "HONDA CBR 600 RR",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 600 RR",
+    "objectType": "CBR 600 RR"
+  },
+  {
+    "objectCode": "GSJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI SPORTY CW PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI SP CW P",
+    "objectType": "X1B02N04L0ATPLS"
+  },
+  {
+    "objectCode": "GVJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI SPORTY CBS PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI SP CBSP",
+    "objectType": "X1B02N04L0AATPL"
+  },
+  {
+    "objectCode": "GTJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI SPORTY CBS ISS PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI SP ISSP",
+    "objectType": "X1B02R07L0ATPLS"
+  },
+  {
+    "objectCode": "GWJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI POP CW PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI POP CWP",
+    "objectType": "Y1G02N02L0ATPLS"
+  },
+  {
+    "objectCode": "GXJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI POP CBS PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI POP CBS",
+    "objectType": "Y1G02N02L0A"
+  },
+  {
+    "objectCode": "GYJ",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FI POP CBS ISS PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI POP ISS",
+    "objectType": "Y1G02N15L0ATPLS"
+  },
+  {
+    "objectCode": "HAJ",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 125 CBS PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "N VARIO 125CBSP",
+    "objectType": "E1F02N11M2ATPLS"
+  },
+  {
+    "objectCode": "HBJ",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 125 CBS ISS PLUS",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "N VARIO 125ISSP",
+    "objectType": "E1F02N12M2ATPLS"
+  },
+  {
+    "objectCode": "GZJ",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 150  SPORTY CHROME",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "N VAR 150 SP CR",
+    "objectType": "K1H02N14L0ATCHR"
+  },
+  {
+    "objectCode": "GZK",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 150  EXCLVE CHROME",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "N VAR 150 EX CR",
+    "objectType": "K1H02N14L0MATCR"
+  },
+  {
+    "objectCode": "GZL",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 150  SPORTY GOLD",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "N VAR 150 SP GO",
+    "objectType": "K1H02N14L0 AT G"
+  },
+  {
+    "objectCode": "GZM",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 150  EXCLUSIVE GOLD",
+    "branchId": "10300",
+    "objectBrand": "HONDA",
+    "objectModel": "N VAR 150 EX GO",
+    "objectType": "K1H02N14L0M ATG"
+  },
+  {
+    "objectCode": "GC1",
+    "objectGroup": "G201",
+    "objectDescription": "REVO SW MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO SW MMC",
+    "objectType": "NF11T13C02 MT"
+  },
+  {
+    "objectCode": "HH0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW PCX 150",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW PCX 150",
+    "objectType": "WW150EXG IN AT"
+  },
+  {
+    "objectCode": "HD0",
+    "objectGroup": "G201",
+    "objectDescription": "SONIC 150 R",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SONIC 150 R",
+    "objectType": "Y3B02R17L0 MT"
+  },
+  {
+    "objectCode": "GE1",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 SW FI MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N SUPRA X 125 F",
+    "objectType": "AFX12U22C07 MT"
+  },
+  {
+    "objectCode": "GF1",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 CW FI MMC SPORTY AGGRESSIVE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N SUPRAX125 FSP",
+    "objectType": "AFX12U22C08 MT"
+  },
+  {
+    "objectCode": "GFA",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 CW FI MMC SPORTY LUXURY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N SUPRAX125 FSL",
+    "objectType": "AFX12U22C08A MT"
+  },
+  {
+    "objectCode": "GH1",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BLADE 125 FI R",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N BLADE 125FI S",
+    "objectType": "AFP12W22C08 MT"
+  },
+  {
+    "objectCode": "GHB",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BLADE 125 FI REPSOL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N BLADE 125FI R",
+    "objectType": "AFP12W22CO8A MT"
+  },
+  {
+    "objectCode": "GZ0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 150 SPORTY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO 150SP",
+    "objectType": "K1H02N14L0 AT"
+  },
+  {
+    "objectCode": "GZA",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO 150 EXCLUSIVE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO 150EX",
+    "objectType": "K1H02N14L0M A"
+  },
+  {
+    "objectCode": "EC0",
+    "objectGroup": "G201",
+    "objectDescription": "CB500X",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB500X",
+    "objectType": "CB500XAF ED MT"
+  },
+  {
+    "objectCode": "DW0",
+    "objectGroup": "G201",
+    "objectDescription": "CB650F",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB650F",
+    "objectType": "CB650FAE ED MT"
+  },
+  {
+    "objectCode": "EB0",
+    "objectGroup": "G201",
+    "objectDescription": "CB500F",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB500F",
+    "objectType": "CB500FF 3ED MT"
+  },
+  {
+    "objectCode": "DX0",
+    "objectGroup": "G201",
+    "objectDescription": "CBR650F",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR650F",
+    "objectType": "CBR650FAE ED MT"
+  },
+  {
+    "objectCode": "DXA",
+    "objectGroup": "G201",
+    "objectDescription": "CBR650F",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR650F",
+    "objectType": "CBR650FAE ED MT"
+  },
+  {
+    "objectCode": "HG0",
+    "objectGroup": "G201",
+    "objectDescription": "NM4 VULTUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NM4 VULTUS",
+    "objectType": "NC750JF ED AT"
+  },
+  {
+    "objectCode": "DZ0",
+    "objectGroup": "G201",
+    "objectDescription": "CBR1000RR SP",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR1000RR SP",
+    "objectType": "CBR1000SAF EDMT"
+  },
+  {
+    "objectCode": "GD1",
+    "objectGroup": "G201",
+    "objectDescription": "REVO CW FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO CW FI",
+    "objectType": "NF11T13C03 MT"
+  },
+  {
+    "objectCode": "GB1",
+    "objectGroup": "G201",
+    "objectDescription": "REVO FIT FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO FIT FI",
+    "objectType": "NF11T13C01"
+  },
+  {
+    "objectCode": "HE0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO ESP CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N VARIO ESP CBS",
+    "objectType": "D1A02N18M1 AT"
+  },
+  {
+    "objectCode": "HEA",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO ESP CBS ADVANCE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N VARIO ECBS AD",
+    "objectType": "D1A02N18M1A AT"
+  },
+  {
+    "objectCode": "HF0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO ESP CBS ISS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N VARIO ECBS IS",
+    "objectType": "D1A02N19M1 AT"
+  },
+  {
+    "objectCode": "HFA",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO ESP CBS ISS ADVANCE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N VAR ECBSISSAD",
+    "objectType": "D1A02N19M1A AT"
+  },
+  {
+    "objectCode": "DM2",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA CW MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA CW MMC",
+    "objectType": "GL15B1CF2 MT"
+  },
+  {
+    "objectCode": "DN2",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA CW MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA CW MMC",
+    "objectType": "GL15B1DF2 MT"
+  },
+  {
+    "objectCode": "DK2",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R STRETFR",
+    "objectType": "CB15A1RRF2 MT"
+  },
+  {
+    "objectCode": "DV0",
+    "objectGroup": "G201",
+    "objectDescription": "ALL NEW CB150R STREETFIRE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "AN CB150R STFR",
+    "objectType": "HSC02R20M1 MT"
+  },
+  {
+    "objectCode": "V04562",
+    "objectGroup": "G201",
+    "objectDescription": "REVO 110 SPOKE WHEEL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO 110 SPOKE",
+    "objectType": "REVO 110 SPOKE"
+  },
+  {
+    "objectCode": "V04563",
+    "objectGroup": "G201",
+    "objectDescription": "REVO 110 CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO 110 CW",
+    "objectType": "REVO 110 CW"
+  },
+  {
+    "objectCode": "V04564",
+    "objectGroup": "G201",
+    "objectDescription": "REVO 110 DELUXE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO 110 DELUXE",
+    "objectType": "REVO 110 DELUXE"
+  },
+  {
+    "objectCode": "V04270",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FUNKY CUSTIC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FUNKY CUST",
+    "objectType": "AT110FUNKYCUST"
+  },
+  {
+    "objectCode": "V04807",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT SE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT SE",
+    "objectType": "BEAT SE"
+  },
+  {
+    "objectCode": "V04808",
+    "objectGroup": "G201",
+    "objectDescription": "ABSOLUTE REVO SPOKE SE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO SPOKE SE",
+    "objectType": "REVO SPOKE SE"
+  },
+  {
+    "objectCode": "V04809",
+    "objectGroup": "G201",
+    "objectDescription": "ABSOLUTE REVO CW SE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO CW SE",
+    "objectType": "REVO CW SE"
+  },
+  {
+    "objectCode": "V04810",
+    "objectGroup": "G201",
+    "objectDescription": "ABSOLUTE REVO DLX SE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO DLX SE",
+    "objectType": "REVO DLX SE"
+  },
+  {
+    "objectCode": "V04972",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT NEW CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT NEW CW",
+    "objectType": "BEAT NEW CW"
+  },
+  {
+    "objectCode": "V04971",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT NEW SW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT NEW SW",
+    "objectType": "BEAT NEW SW"
+  },
+  {
+    "objectCode": "V04751",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO TECHNO",
+    "objectType": "NC110DCW"
+  },
+  {
+    "objectCode": "V05312",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 150 R INJECTION",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 150 R",
+    "objectType": "CS150"
+  },
+  {
+    "objectCode": "V05023",
+    "objectGroup": "G201",
+    "objectDescription": "REVO NEW ABSOLUTE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO NEW 110 DX",
+    "objectType": "110 DX"
+  },
+  {
+    "objectCode": "V04753",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT NEW 110",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT NEW 110",
+    "objectType": "BEAT NEW 110"
+  },
+  {
+    "objectCode": "V04754",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO ABS MATIC CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO CW",
+    "objectType": "NC 110CW2 A/T"
+  },
+  {
+    "objectCode": "V03236",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO CW",
+    "objectType": "GL160CW2"
+  },
+  {
+    "objectCode": "V05009",
+    "objectGroup": "G201",
+    "objectDescription": "PCX 125 MATIC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "PCX 125 MATIC",
+    "objectType": "CBU MATIC"
+  },
+  {
+    "objectCode": "V05562",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE NEW 110 REPSOL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE NEW REPSO",
+    "objectType": "NF11C1CA/M/T"
+  },
+  {
+    "objectCode": "V05561",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE NEW 110 R",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE NEW 110 R",
+    "objectType": "NF11C1C/M/T"
+  },
+  {
+    "objectCode": "V05398",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA X MMC",
+    "objectType": "NF 125 TD3"
+  },
+  {
+    "objectCode": "V05399",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 CW MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA X CW",
+    "objectType": "NF 125 TR3"
+  },
+  {
+    "objectCode": "V05878",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA NEW X 125 HELM IN PGM FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA NEW X 125",
+    "objectType": "NF12A1CF  M/T"
+  },
+  {
+    "objectCode": "V05877",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY HELM IN PGM-FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY",
+    "objectType": "NC11D1CF A/T"
+  },
+  {
+    "objectCode": "D00001",
+    "objectGroup": "G201",
+    "objectDescription": "DUCATI SUPER BIKE",
+    "branchId": "00001",
+    "objectBrand": "DUCATI",
+    "objectModel": "SUPER BIKE",
+    "objectType": "848CC"
+  },
+  {
+    "objectCode": "V05174",
+    "objectGroup": "G201",
+    "objectDescription": "REVO TECHNO MATIC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO TECHNO",
+    "objectType": "MATIC AT"
+  },
+  {
+    "objectCode": "V05215",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA CW",
+    "objectType": "GL15A1RR"
+  },
+  {
+    "objectCode": "V05216",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO SPOKE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA SPOKE",
+    "objectType": "GL15A1D"
+  },
+  {
+    "objectCode": "V05221",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO CW",
+    "objectType": "NC110A1C"
+  },
+  {
+    "objectCode": "V05222",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO TECHNO CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO TECHN",
+    "objectType": "NC11A3CB"
+  },
+  {
+    "objectCode": "V05354",
+    "objectGroup": "G201",
+    "objectDescription": "CBR SPORT CBU",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR SPORT CBU",
+    "objectType": "CBR 250 CBU"
+  },
+  {
+    "objectCode": "V05369",
+    "objectGroup": "G201",
+    "objectDescription": "REVO FIT 110",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO FIT 110",
+    "objectType": "NF11B2D1"
+  },
+  {
+    "objectCode": "V05396",
+    "objectGroup": "G201",
+    "objectDescription": "REVO NEW ABSOLUTE SPOKE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO NEW ABS",
+    "objectType": "NF11B2DA1"
+  },
+  {
+    "objectCode": "V05397",
+    "objectGroup": "G201",
+    "objectDescription": "REVO NEW ABSOLUTE CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO NEW ABS CW",
+    "objectType": "NF11B2C1"
+  },
+  {
+    "objectCode": "V05454",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY SPOKE WHEEL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY SPOKE",
+    "objectType": "NC11D1D"
+  },
+  {
+    "objectCode": "V05455",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY CASTING WHEEL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY CASTING",
+    "objectType": "NC11D1C"
+  },
+  {
+    "objectCode": "V05088",
+    "objectGroup": "G201",
+    "objectDescription": "SCOOPY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY CZ0",
+    "objectType": "NC11C1C A/T"
+  },
+  {
+    "objectCode": "V05361",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 250 R ABS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 250 R ABS",
+    "objectType": "CBR250RAB"
+  },
+  {
+    "objectCode": "V05362",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 250 R",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 250 R",
+    "objectType": "CBR 250 R"
+  },
+  {
+    "objectCode": "V05220",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT NEW CW GROOVY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "GROOVY",
+    "objectType": "NC11B3CA/T"
+  },
+  {
+    "objectCode": "V05112",
+    "objectGroup": "G201",
+    "objectDescription": "TIGER CW SHL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "TIGER CW SHL",
+    "objectType": "GL200RA1 M/T"
+  },
+  {
+    "objectCode": "V05805",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA NEW X 125 HELM IN",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA NEW X 125",
+    "objectType": "NF12A1C M/T"
+  },
+  {
+    "objectCode": "V06048",
+    "objectGroup": "G201",
+    "objectDescription": "CBR NEW 150 R REPSOL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 150 REPSOL",
+    "objectType": "CBR 150 REPSOL"
+  },
+  {
+    "objectCode": "V05526",
+    "objectGroup": "G201",
+    "objectDescription": "CBR NEW 150",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR",
+    "objectType": "CBR NEW 150"
+  },
+  {
+    "objectCode": "V06071",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO ABS MATIC CBS TECHNO",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO ABS",
+    "objectType": "NC12A1CBF A/T"
+  },
+  {
+    "objectCode": "V06072",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO ABS MATIC NON CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO ABS",
+    "objectType": "NC12A1CF A/T"
+  },
+  {
+    "objectCode": "V06374",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT ALL NEW FI CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI CW",
+    "objectType": "NC11BF1CAT"
+  },
+  {
+    "objectCode": "V06375",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT ALL NEW FI CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI CBS",
+    "objectType": "NC11BF1CB"
+  },
+  {
+    "objectCode": "V06396",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT ALL NEW FI SW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI SW",
+    "objectType": "NC 11BF1D A/T"
+  },
+  {
+    "objectCode": "V06428",
+    "objectGroup": "G201",
+    "objectDescription": "CB 150 R STREETFIRE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB 150 R",
+    "objectType": "CB150R"
+  },
+  {
+    "objectCode": "V06221",
+    "objectGroup": "G201",
+    "objectDescription": "PCX 150 MATIC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "PCX 150 MATIC",
+    "objectType": "CBU MATIC"
+  },
+  {
+    "objectCode": "V06479",
+    "objectGroup": "G201",
+    "objectDescription": "SCOOPY SPORTY FI",
+    "branchId": "50100",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY FI",
+    "objectType": "SCOOPY SPORT FI"
+  },
+  {
+    "objectCode": "V06480",
+    "objectGroup": "G201",
+    "objectDescription": "SCOOPY STYLISH FI",
+    "branchId": "50100",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY FI STYLE",
+    "objectType": "SCOOPY STYLE FI"
+  },
+  {
+    "objectCode": "V06452",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA 150 SW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA 150 SW",
+    "objectType": "VERZA 150 SW"
+  },
+  {
+    "objectCode": "V06453",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA 150 CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA 150 CW",
+    "objectType": "VERZA 150 CW"
+  },
+  {
+    "objectCode": "V06442",
+    "objectGroup": "G201",
+    "objectDescription": "HONDA BLADE NEW 110 S",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "HONDA BLADE S",
+    "objectType": "BLADE 110 S"
+  },
+  {
+    "objectCode": "V06435",
+    "objectGroup": "G201",
+    "objectDescription": "HONDA TRAIL CRF 250 LD",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "TRAIL",
+    "objectType": "CRF 250 LD"
+  },
+  {
+    "objectCode": "V06610",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO TECHNO 125 CBS ISS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO125CBS ISS",
+    "objectType": "NC12AF2CB1"
+  },
+  {
+    "objectCode": "GB0",
+    "objectGroup": "G201",
+    "objectDescription": "REVO FIT FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO FIT FI",
+    "objectType": "NF11T11C01 MT"
+  },
+  {
+    "objectCode": "GC0",
+    "objectGroup": "G201",
+    "objectDescription": "REVO SPOKE FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO SPOKE FI",
+    "objectType": "NF11T11C02 MT"
+  },
+  {
+    "objectCode": "GD0",
+    "objectGroup": "G201",
+    "objectDescription": "REVO CW FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO CW FI",
+    "objectType": "NF11T11C03 MT"
+  },
+  {
+    "objectCode": "FZ0",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE S (SINGLE DISK BRAKE)",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE S",
+    "objectType": "NF11C1CD MT"
+  },
+  {
+    "objectCode": "FP1",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE R (DOUBLE DISK BRAKE)",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE R",
+    "objectType": "NF11C1C1 MT"
+  },
+  {
+    "objectCode": "FPA",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE REPSOL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE REPSOL",
+    "objectType": "NF11C1CA MT"
+  },
+  {
+    "objectCode": "FV0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI SPOKE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI SPOKE",
+    "objectType": "NC11BF1D AT"
+  },
+  {
+    "objectCode": "FS6",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO 125 TECHNO ADVANTECH",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 125 TECHN",
+    "objectType": "NC12A1CF1 A/T A"
+  },
+  {
+    "objectCode": "FW0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI CW",
+    "objectType": "NC11BF1C AT"
+  },
+  {
+    "objectCode": "FX0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI CW - CBS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FI CW CBS",
+    "objectType": "NC11BF1CB AT"
+  },
+  {
+    "objectCode": "FR1",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY HELM IN FI MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY MMC",
+    "objectType": "NC11D1CF1 AT"
+  },
+  {
+    "objectCode": "FE2",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO CW MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO CW MMC",
+    "objectType": "NC110A1C2 AT"
+  },
+  {
+    "objectCode": "GA0",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO 125 CBS IDLING STOP FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 125 CBS",
+    "objectType": "NC12AF2CBI AT"
+  },
+  {
+    "objectCode": "DE1",
+    "objectGroup": "G201",
+    "objectDescription": "MEGA PRO SP",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "MEGA PRO SP",
+    "objectType": "GL 15A1D1 MT"
+  },
+  {
+    "objectCode": "DF1",
+    "objectGroup": "G201",
+    "objectDescription": "MEGA PRO CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "MEGA PRO CW",
+    "objectType": "GL 15A1RR1 MT"
+  },
+  {
+    "objectCode": "FY0",
+    "objectGroup": "G201",
+    "objectDescription": "PCX",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "PCX",
+    "objectType": "WW150D(IN) A/T"
+  },
+  {
+    "objectCode": "DG1",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 250 MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 250",
+    "objectType": "CBR250RB1"
+  },
+  {
+    "objectCode": "DH1",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 250 ABS MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 250 ABS",
+    "objectType": "CBR250RAB1"
+  },
+  {
+    "objectCode": "DJ1",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 150RE - STANDAR",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 150RE",
+    "objectType": "CBR150RE IN M/T"
+  },
+  {
+    "objectCode": "DJC",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 150RE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR150RE",
+    "objectType": "CBR150RE"
+  },
+  {
+    "objectCode": "DJB",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 150RE - REPSOL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR150RE",
+    "objectType": "CBR3IN M/T"
+  },
+  {
+    "objectCode": "DK1",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB 150R",
+    "objectType": "CB15A1RRF1 M/T"
+  },
+  {
+    "objectCode": "FNA",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SCOOPY SPORTY FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY SPORTY",
+    "objectType": "NC11CF1CS A/T"
+  },
+  {
+    "objectCode": "DN0",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA 150 SPOKE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA 150 SPOKE",
+    "objectType": "GL15B1DF M/T"
+  },
+  {
+    "objectCode": "DM0",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA 150 CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA 150 CW",
+    "objectType": "GL15B1CF M/T"
+  },
+  {
+    "objectCode": "FE8",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO CW PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO CW",
+    "objectType": "NC110A1C"
+  },
+  {
+    "objectCode": "FS8",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO TECHNO PGMFI P",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 125 TECHN",
+    "objectType": "NC12A1CF"
+  },
+  {
+    "objectCode": "GA8",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO 125 CBS IDLI STOP PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 125 TECHN",
+    "objectType": "NC12AF2CB"
+  },
+  {
+    "objectCode": "V07205",
+    "objectGroup": "G201",
+    "objectDescription": "REVO FIT FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO FIT FI",
+    "objectType": "NF 11T11CO1"
+  },
+  {
+    "objectCode": "GRA",
+    "objectGroup": "G201",
+    "objectDescription": "SCOOPY FI MMC SPORTY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY FI",
+    "objectType": "ACF1L21B06S A/T"
+  },
+  {
+    "objectCode": "XXX1",
+    "objectGroup": "G201",
+    "objectDescription": "ZOOMER",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "ZOOMER",
+    "objectType": "ZOOMER X"
+  },
+  {
+    "objectCode": "GR0",
+    "objectGroup": "G201",
+    "objectDescription": "SCOOPY FI MMC STYLISH",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SCOOPY FI NMC S",
+    "objectType": "ACF1L21B06 AT"
+  },
+  {
+    "objectCode": "DL0",
+    "objectGroup": "G201",
+    "objectDescription": "MEGA PRO CW FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "MEGA PRO CW FI",
+    "objectType": "GL 15C21A07 M/T"
+  },
+  {
+    "objectCode": "GM0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT SW FI MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT SW FI MMC",
+    "objectType": "ACH1M21B04 A/T"
+  },
+  {
+    "objectCode": "GN0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CW FI MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CW FI MMC",
+    "objectType": "ACH1M21B04A A/T"
+  },
+  {
+    "objectCode": "GNA",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CW FI SPORTY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CW FI SPOR",
+    "objectType": "ACH1M21B04S A/T"
+  },
+  {
+    "objectCode": "GP0",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CBS FI MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CBS FI MMC",
+    "objectType": "ACH1M21B05 A/T"
+  },
+  {
+    "objectCode": "GPA",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CBS FI SPORTY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CBS FI SPO",
+    "objectType": "ACH1M21B05S A/T"
+  },
+  {
+    "objectCode": "FMJ",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 HELM-IN FI MMC PLS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125",
+    "objectType": "NF12A1CF2"
+  },
+  {
+    "objectCode": "GJJ",
+    "objectGroup": "G201",
+    "objectDescription": "NEW VARIO FI PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW VARIO FI",
+    "objectType": "ATI1I21B01"
+  },
+  {
+    "objectCode": "GKJ",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO TECH 125CBS PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VTECH125CBS",
+    "objectType": "ACB2J21B02"
+  },
+  {
+    "objectCode": "GLJ",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO TECHNO 125 CBS ISS PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VTECH 125CBSI",
+    "objectType": "ACB2J21B03"
+  },
+  {
+    "objectCode": "DKJ",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STRE FIRE MMC DLX",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R STRF MMC",
+    "objectType": "CB15A1RRF1"
+  },
+  {
+    "objectCode": "DKK",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE MMC DELUXE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R STRFMMC",
+    "objectType": "CB15A1RRF"
+  },
+  {
+    "objectCode": "DKL",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE MMC DELUXE",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150RSTRFMMC",
+    "objectType": "CB15A1RRF1MT"
+  },
+  {
+    "objectCode": "V07497",
+    "objectGroup": "G201",
+    "objectDescription": "ZOOMER 110 X",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "ZOOMER 110 X",
+    "objectType": "ZOOMER 110 X"
+  },
+  {
+    "objectCode": "V07203",
+    "objectGroup": "G201",
+    "objectDescription": "REVO PGM FI SW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVOPGMFISW",
+    "objectType": "NF11T11C02 M/T"
+  },
+  {
+    "objectCode": "V07204",
+    "objectGroup": "G201",
+    "objectDescription": "REVO PGM-FI CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "REVO PGM-FI CW",
+    "objectType": "NF11T11C03 M/T"
+  },
+  {
+    "objectCode": "GE0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 FI SW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRAX125FISW",
+    "objectType": "AFX12U21C07 M/T"
+  },
+  {
+    "objectCode": "GF0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 FI CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N SUPRAX125FICW",
+    "objectType": "AFX12U21C08 M/T"
+  },
+  {
+    "objectCode": "DN1",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA 150 SPOKE MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA150 SP",
+    "objectType": "GL15B1DF1 M/T"
+  },
+  {
+    "objectCode": "DM1",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA 150 CW MMC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA 150 CW",
+    "objectType": "GL15B1CF1 M/T"
+  },
+  {
+    "objectCode": "CH8",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 CW PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125CWP",
+    "objectType": "NF 125 TR2/TR3"
+  },
+  {
+    "objectCode": "FS1",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO 125 TECHNO PGM FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 125 TECHN",
+    "objectType": "NC12A1CF1 A/T"
+  },
+  {
+    "objectCode": "DHA",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 250 ABS MMC - REPSOL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 250 ABS M R",
+    "objectType": "CBR250RAB1 M/T"
+  },
+  {
+    "objectCode": "DGA",
+    "objectGroup": "G201",
+    "objectDescription": "CBR 250 MMC - REPSOL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CBR 250 M C",
+    "objectType": "CBR250RB1 M/T"
+  },
+  {
+    "objectCode": "FN0",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SCOOPY FI CLASSIC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SCOOPY FI C",
+    "objectType": "NC11CF1C A/T"
+  },
+  {
+    "objectCode": "FM8",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 HELM IN PLUS INJEC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 H I",
+    "objectType": "NF12A1CF M/T"
+  },
+  {
+    "objectCode": "CG8",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 SPOKE MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA X 125",
+    "objectType": "NF 125 TD4 PLUS"
+  },
+  {
+    "objectCode": "CH9",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 CW MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA X 125",
+    "objectType": "NF 125 TR4 PLUS"
+  },
+  {
+    "objectCode": "FM9",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 HELM IN INJECT",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA X 125",
+    "objectType": "NF12A1CF1 M/T"
+  },
+  {
+    "objectCode": "CG5",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 TD",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 TD",
+    "objectType": "NF 125 TD5"
+  },
+  {
+    "objectCode": "CH5",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 TR",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 TR",
+    "objectType": "NF 125 TR5"
+  },
+  {
+    "objectCode": "FM2",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 HELM IN FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 FI",
+    "objectType": "NF12A1CF2 M/T"
+  },
+  {
+    "objectCode": "CHJ",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X 125 CW MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "N SUPRA X 125CW",
+    "objectType": "NF 125 TR5 PLUS"
+  },
+  {
+    "objectCode": "V06175",
+    "objectGroup": "G204",
+    "objectDescription": "VESPA",
+    "branchId": "00001",
+    "objectBrand": "PIAGGIO",
+    "objectModel": "VESPA",
+    "objectType": "VESPA"
+  },
+  {
+    "objectCode": "V02990",
+    "objectGroup": "G204",
+    "objectDescription": "YAMAHA YZF R6",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "YAMAHA YZF R6",
+    "objectType": "YZF R 6"
+  },
+  {
+    "objectCode": "V05499",
+    "objectGroup": "G204",
+    "objectDescription": "VESPA LX 125 PIAGGIO",
+    "branchId": "10300",
+    "objectBrand": "PIAGGIO",
+    "objectModel": "PIAGGIO",
+    "objectType": "PIAGGIO"
+  },
+  {
+    "objectCode": "GA6",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO 125 CBS IDL STOP ADVTECH",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO 125 CBS I",
+    "objectType": "NC12AF2CBI A/TA"
+  },
+  {
+    "objectCode": "DN8",
+    "objectGroup": "G201",
+    "objectDescription": "VERZA SPOKE VARIAN TRAIL",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VERZA SPOKE TRL",
+    "objectType": "GL15B1DF M/T VT"
+  },
+  {
+    "objectCode": "FRR",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY HELM IN FI MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY HELM IN F",
+    "objectType": "NC11D1CF1 A/T"
+  },
+  {
+    "objectCode": "FRS",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY HELM IN FI MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY HELM IN F",
+    "objectType": "NC11D1CF1 A/T"
+  },
+  {
+    "objectCode": "FRB",
+    "objectGroup": "G201",
+    "objectDescription": "SPACY HELM IN FI MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "SPACY HELM IN F",
+    "objectType": "NC11D1CF1 A/T"
+  },
+  {
+    "objectCode": "FE9",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO CW MMC PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO CW NMC PL",
+    "objectType": "NC110A1C2 A/T"
+  },
+  {
+    "objectCode": "DK5",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150 STREETFI",
+    "objectType": "CB15A1RRF"
+  },
+  {
+    "objectCode": "DK6",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150R STREETFI",
+    "objectType": "CB15A1RRF M/T"
+  },
+  {
+    "objectCode": "DK7",
+    "objectGroup": "G201",
+    "objectDescription": "CB150R STREETFIRE PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CB150 STREETFI",
+    "objectType": "CB15A1RRF M/T"
+  },
+  {
+    "objectCode": "FV8",
+    "objectGroup": "G201",
+    "objectDescription": "NEW BEAT FI SPOKE PLUS",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW BEAT FI SPO",
+    "objectType": "NC11BF1D A/T"
+  },
+  {
+    "objectCode": "GG0",
+    "objectGroup": "G201",
+    "objectDescription": "BLADE S 125 FI",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BLADE S 125 FI",
+    "objectType": "AFP12W21C03 MT"
+  },
+  {
+    "objectCode": "V06777",
+    "objectGroup": "G204",
+    "objectDescription": "VESPA LXV 150",
+    "branchId": "00001",
+    "objectBrand": "PIAGGIO",
+    "objectModel": "VESPA LXV",
+    "objectType": "VESPA LXV"
+  },
+  {
+    "objectCode": "V07568",
+    "objectGroup": "G204",
+    "objectDescription": "BURGMAN 200",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "BURGMAN 200",
+    "objectType": "BURGMAN 200"
+  },
+  {
+    "objectCode": "V00198",
+    "objectGroup": "G201",
+    "objectDescription": "MEGA PRO",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "MEGA PRO",
+    "objectType": "GL PRO 2"
+  },
+  {
+    "objectCode": "V00747",
+    "objectGroup": "G201",
+    "objectDescription": "SONIC",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SONIC",
+    "objectType": "FS1254CM"
+  },
+  {
+    "objectCode": "V00646",
+    "objectGroup": "G204",
+    "objectDescription": "KAZE-R",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "KAZE-R",
+    "objectType": "KAZE R"
+  },
+  {
+    "objectCode": "V00647",
+    "objectGroup": "G204",
+    "objectDescription": "SPM",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SPM",
+    "objectType": "RC 100 S"
+  },
+  {
+    "objectCode": "V00650",
+    "objectGroup": "G204",
+    "objectDescription": "RXKING",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "RXKING",
+    "objectType": "RXK"
+  },
+  {
+    "objectCode": "V00759",
+    "objectGroup": "G201",
+    "objectDescription": "PHANTOM",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "PHANTOM",
+    "objectType": "TA200"
+  },
+  {
+    "objectCode": "V00820",
+    "objectGroup": "G201",
+    "objectDescription": "LEGENDA",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "LEGENDA",
+    "objectType": "C100ML"
+  },
+  {
+    "objectCode": "V00910",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA XX",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA XX",
+    "objectType": "NF100Y"
+  },
+  {
+    "objectCode": "V00822",
+    "objectGroup": "G204",
+    "objectDescription": "VEGA",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "VEGA",
+    "objectType": "T105E"
+  },
+  {
+    "objectCode": "V00879",
+    "objectGroup": "G204",
+    "objectDescription": "CRYPTON",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "CRYPTON",
+    "objectType": "5LM/T105E"
+  },
+  {
+    "objectCode": "V00911",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA V",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA V",
+    "objectType": "NF100V"
+  },
+  {
+    "objectCode": "V01939",
+    "objectGroup": "G201",
+    "objectDescription": "KARISMA",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "KARISMA",
+    "objectType": "NF125"
+  },
+  {
+    "objectCode": "V00971",
+    "objectGroup": "G204",
+    "objectDescription": "SPM SOLO",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SPM SOLO",
+    "objectType": "RC 110"
+  },
+  {
+    "objectCode": "V00974",
+    "objectGroup": "G204",
+    "objectDescription": "TORNADO GS",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "TORNADO GS",
+    "objectType": "RC 110"
+  },
+  {
+    "objectCode": "V01066",
+    "objectGroup": "G204",
+    "objectDescription": "NEW SHOGUN",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "NEW SHOGUN",
+    "objectType": "FD 110 XSD"
+  },
+  {
+    "objectCode": "V01098",
+    "objectGroup": "G204",
+    "objectDescription": "NINJA 150",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "NINJA 150",
+    "objectType": "S010"
+  },
+  {
+    "objectCode": "V01114",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER Z",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER Z",
+    "objectType": "5-LM"
+  },
+  {
+    "objectCode": "V01131",
+    "objectGroup": "G204",
+    "objectDescription": "NEW SHOGUN DB",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "NEW SHOGUN DB",
+    "objectType": "FD 110 XSD CV"
+  },
+  {
+    "objectCode": "V01153",
+    "objectGroup": "G204",
+    "objectDescription": "NINJA 150 VR",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "NINJA 150 VR",
+    "objectType": "S010"
+  },
+  {
+    "objectCode": "V01162",
+    "objectGroup": "G204",
+    "objectDescription": "SPM SOLO",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SPM SOLO",
+    "objectType": "A 100 X"
+  },
+  {
+    "objectCode": "V01186",
+    "objectGroup": "G204",
+    "objectDescription": "NOUVO",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "NOUVO",
+    "objectType": "5MX"
+  },
+  {
+    "objectCode": "V01188",
+    "objectGroup": "G204",
+    "objectDescription": "THUNDER",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "THUNDER",
+    "objectType": "GSX 260"
+  },
+  {
+    "objectCode": "V01218",
+    "objectGroup": "G204",
+    "objectDescription": "KAZE-E",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "KAZE-E",
+    "objectType": "KAZE E"
+  },
+  {
+    "objectCode": "V01226",
+    "objectGroup": "G204",
+    "objectDescription": "SATRIA LU",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SATRIA LU",
+    "objectType": "RU 120 LU"
+  },
+  {
+    "objectCode": "V01798",
+    "objectGroup": "G204",
+    "objectDescription": "SHOGUN F",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SHOGUN F",
+    "objectType": "FD-110"
+  },
+  {
+    "objectCode": "V01875",
+    "objectGroup": "G204",
+    "objectDescription": "FIZ-RHE",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "FIZ-RHE",
+    "objectType": "FIZH"
+  },
+  {
+    "objectCode": "V01928",
+    "objectGroup": "G204",
+    "objectDescription": "FIZ-RCW",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "FIZ-RCW",
+    "objectType": "FIZC"
+  },
+  {
+    "objectCode": "V01940",
+    "objectGroup": "G201",
+    "objectDescription": "KARISMA X",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "KARISMA X",
+    "objectType": "NF125D"
+  },
+  {
+    "objectCode": "V02031",
+    "objectGroup": "G201",
+    "objectDescription": "KIRANA",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "KIRANA",
+    "objectType": "ND125"
+  },
+  {
+    "objectCode": "V01959",
+    "objectGroup": "G204",
+    "objectDescription": "RGR",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "RGR",
+    "objectType": "150SS"
+  },
+  {
+    "objectCode": "V01995",
+    "objectGroup": "G204",
+    "objectDescription": "SOLO",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "SOLO",
+    "objectType": "S BP/SCORPIO"
+  },
+  {
+    "objectCode": "V01996",
+    "objectGroup": "G204",
+    "objectDescription": "SIGMA",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "SIGMA",
+    "objectType": "100"
+  },
+  {
+    "objectCode": "V01997",
+    "objectGroup": "G204",
+    "objectDescription": "TIARA",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "TIARA",
+    "objectType": "SOLO"
+  },
+  {
+    "objectCode": "V02024",
+    "objectGroup": "G204",
+    "objectDescription": "SATRIA LSC",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SATRIA LSC",
+    "objectType": "RU 120 LSC"
+  },
+  {
+    "objectCode": "V02422",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA FIT",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA FIT",
+    "objectType": "NF 100 L"
+  },
+  {
+    "objectCode": "V02052",
+    "objectGroup": "G204",
+    "objectDescription": "RXS",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "RXS",
+    "objectType": "SPM"
+  },
+  {
+    "objectCode": "V02056",
+    "objectGroup": "G204",
+    "objectDescription": "SMASH 110 CC",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SMASH 110 CC",
+    "objectType": "FD 110 XCD"
+  },
+  {
+    "objectCode": "V02082",
+    "objectGroup": "G204",
+    "objectDescription": "VEGA-R",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "VEGA R",
+    "objectType": "T105ER-VEGAR"
+  },
+  {
+    "objectCode": "V02147",
+    "objectGroup": "G204",
+    "objectDescription": "SUZUKI COOL",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SUZUKI COOL",
+    "objectType": "RK 110 SC-Z"
+  },
+  {
+    "objectCode": "V02177",
+    "objectGroup": "G204",
+    "objectDescription": "RAIDER",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "RAIDER",
+    "objectType": "FU125SC"
+  },
+  {
+    "objectCode": "V02244",
+    "objectGroup": "G204",
+    "objectDescription": "SEPEDA MOTOR",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SEPEDA MOTOR",
+    "objectType": "S FX 150R"
+  },
+  {
+    "objectCode": "V02251",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER Z",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER Z",
+    "objectType": "5TP"
+  },
+  {
+    "objectCode": "V02266",
+    "objectGroup": "G204",
+    "objectDescription": "SMASH 110 CC",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SMASH 110 CC",
+    "objectType": "FD 110 XCSDF"
+  },
+  {
+    "objectCode": "V02287",
+    "objectGroup": "G204",
+    "objectDescription": "BLITZ R",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "BLITZ R",
+    "objectType": "AN112D"
+  },
+  {
+    "objectCode": "V02357",
+    "objectGroup": "G204",
+    "objectDescription": "FORCE ONE",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "FORCE ONE",
+    "objectType": "V110"
+  },
+  {
+    "objectCode": "V02424",
+    "objectGroup": "G201",
+    "objectDescription": "CBR150R",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "CBR150R",
+    "objectType": "NCB150"
+  },
+  {
+    "objectCode": "V02483",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA FIT DB",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA FIT DB",
+    "objectType": "NF 100 LD"
+  },
+  {
+    "objectCode": "V02450",
+    "objectGroup": "G204",
+    "objectDescription": "Alfa II-R",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "Alfa II-R",
+    "objectType": "V100E"
+  },
+  {
+    "objectCode": "V02463",
+    "objectGroup": "G204",
+    "objectDescription": "BLITZ TROMOL",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "BLITZ TROMOL",
+    "objectType": "AN 112 B"
+  },
+  {
+    "objectCode": "V02660",
+    "objectGroup": "G201",
+    "objectDescription": "KARISMA X 125",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "KARISMA X 125",
+    "objectType": "NF 125-2"
+  },
+  {
+    "objectCode": "V02485",
+    "objectGroup": "G204",
+    "objectDescription": "SHOGUN",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SHOGUN",
+    "objectType": "FD 125 XSD"
+  },
+  {
+    "objectCode": "V02486",
+    "objectGroup": "G204",
+    "objectDescription": "NEW VEGA-R DB",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "NEW VEGA R DB",
+    "objectType": "T 105 R"
+  },
+  {
+    "objectCode": "V02487",
+    "objectGroup": "G204",
+    "objectDescription": "SOLO",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "SOLO",
+    "objectType": "MIO"
+  },
+  {
+    "objectCode": "V02520",
+    "objectGroup": "G204",
+    "objectDescription": "SEPEDA MOTOR",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "SEPEDA MOTOR",
+    "objectType": "AN 125 D BLITZ"
+  },
+  {
+    "objectCode": "V02616",
+    "objectGroup": "G204",
+    "objectDescription": "FXST",
+    "branchId": null,
+    "objectBrand": "HARLEY DAVIDSON",
+    "objectModel": "FXST",
+    "objectType": "SOFTTELL"
+  },
+  {
+    "objectCode": "V02643",
+    "objectGroup": "G204",
+    "objectDescription": "SOLO",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "SOLO",
+    "objectType": "RXZ 135"
+  },
+  {
+    "objectCode": "V02644",
+    "objectGroup": "G204",
+    "objectDescription": "SPORT THUNDER",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SPORT THUNDER",
+    "objectType": "EH 125"
+  },
+  {
+    "objectCode": "V02646",
+    "objectGroup": "G204",
+    "objectDescription": "SHOGUN",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SHOGUN",
+    "objectType": "FD 125 XRM"
+  },
+  {
+    "objectCode": "V02650",
+    "objectGroup": "G204",
+    "objectDescription": "D S GLIDE T",
+    "branchId": null,
+    "objectBrand": "HARLEY DAVIDSON",
+    "objectModel": "D S GLIDE T",
+    "objectType": "FXDXT"
+  },
+  {
+    "objectCode": "V02661",
+    "objectGroup": "G201",
+    "objectDescription": "KARISMA X 125 D",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "KARISMA X 125 D",
+    "objectType": "NF 125-D2"
+  },
+  {
+    "objectCode": "V02802",
+    "objectGroup": "G201",
+    "objectDescription": "MEGA PRO CW",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "MEGA PRO CW",
+    "objectType": "GL P III 1 CW"
+  },
+  {
+    "objectCode": "V02775",
+    "objectGroup": "G204",
+    "objectDescription": "SUZUKI SATRIA",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SUZUKI SATRIA",
+    "objectType": "FU 150 SC"
+  },
+  {
+    "objectCode": "V02776",
+    "objectGroup": "G204",
+    "objectDescription": "SCORPIO Z",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "SCORPIO Z",
+    "objectType": "5BPZ"
+  },
+  {
+    "objectCode": "V02875",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X TROMOL",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X TROMOL",
+    "objectType": "NF 125 S"
+  },
+  {
+    "objectCode": "V02836",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER Z CW",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER Z CW",
+    "objectType": "2P2"
+  },
+  {
+    "objectCode": "V02877",
+    "objectGroup": "G204",
+    "objectDescription": "KAZE ZX",
+    "branchId": null,
+    "objectBrand": "KAWASAKI",
+    "objectModel": "KAZE ZX",
+    "objectType": "AN130B"
+  },
+  {
+    "objectCode": "V02969",
+    "objectGroup": "G204",
+    "objectDescription": "MIO  SPOKE",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO  SPOKE",
+    "objectType": "5 TL"
+  },
+  {
+    "objectCode": "V02876",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X CAKRAM",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X CAKRAM",
+    "objectType": "NF 125 SD"
+  },
+  {
+    "objectCode": "V03006",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 RAC",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 RAC",
+    "objectType": "NF 125 SC"
+  },
+  {
+    "objectCode": "V03016",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA FIT N SL",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA FIT N SL",
+    "objectType": "NF 100 SL"
+  },
+  {
+    "objectCode": "V03017",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA FIT N SLD",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA FIT N SLD",
+    "objectType": "NF 100 SLD"
+  },
+  {
+    "objectCode": "V03092",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 DPG",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 DPG",
+    "objectType": "NF 125 SF"
+  },
+  {
+    "objectCode": "V03093",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 RPG",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 RPG",
+    "objectType": "NF 125 SFC"
+  },
+  {
+    "objectCode": "V03212",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA FIT R",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA FIT R",
+    "objectType": "NF 100 SLC"
+  },
+  {
+    "objectCode": "V03235",
+    "objectGroup": "G201",
+    "objectDescription": "NEW MEGA PRO",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "NEW MEGA PRO",
+    "objectType": "GL 160 D"
+  },
+  {
+    "objectCode": "V03246",
+    "objectGroup": "G201",
+    "objectDescription": "CLICK BUILD UP",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "CLICK BUILD UP",
+    "objectType": "NC 110 BC"
+  },
+  {
+    "objectCode": "V03248",
+    "objectGroup": "G201",
+    "objectDescription": "MEGAPRO CW NEW",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "MEGAPRO CW NEW",
+    "objectType": "GL160CW NEW"
+  },
+  {
+    "objectCode": "V03007",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER MX",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER MX",
+    "objectType": "2S6"
+  },
+  {
+    "objectCode": "V03348",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO",
+    "objectType": "NC110D"
+  },
+  {
+    "objectCode": "V03349",
+    "objectGroup": "G201",
+    "objectDescription": "VARIO CW",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "VARIO CW",
+    "objectType": "NC110CW"
+  },
+  {
+    "objectCode": "V03073",
+    "objectGroup": "G204",
+    "objectDescription": "THUNDER SPORT",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "THUNDER SPORT",
+    "objectType": "EN125"
+  },
+  {
+    "objectCode": "V03366",
+    "objectGroup": "G201",
+    "objectDescription": "NEW TIGER",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "NEW TIGER",
+    "objectType": "GLS 200 D"
+  },
+  {
+    "objectCode": "V03367",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA X 125 DD",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA X 125 DD",
+    "objectType": "NF 125 DD"
+  },
+  {
+    "objectCode": "V03154",
+    "objectGroup": "G204",
+    "objectDescription": "ARASHI",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "ARASHI",
+    "objectType": "FH 125 D"
+  },
+  {
+    "objectCode": "V03368",
+    "objectGroup": "G201",
+    "objectDescription": "NEW TIGER CW",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "NEW TIGER",
+    "objectType": "GLS 200 R"
+  },
+  {
+    "objectCode": "V03438",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA FIT N SLF",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA FIT N SLF",
+    "objectType": "NF 100 SLF"
+  },
+  {
+    "objectCode": "V03591",
+    "objectGroup": "G201",
+    "objectDescription": "REVO CW",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "REVO CW",
+    "objectType": "NF 100 TC"
+  },
+  {
+    "objectCode": "V03593",
+    "objectGroup": "G201",
+    "objectDescription": "REVO SPOKE",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "REVO SPOKE",
+    "objectType": "NF 100 TD"
+  },
+  {
+    "objectCode": "V03269",
+    "objectGroup": "G204",
+    "objectDescription": "NEW VEGA-R",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "NEW VEGA R",
+    "objectType": "350"
+  },
+  {
+    "objectCode": "V03281",
+    "objectGroup": "G204",
+    "objectDescription": "TRISEDA",
+    "branchId": null,
+    "objectBrand": "KAISAR",
+    "objectModel": "TRISEDA",
+    "objectType": "BAK TERBUKA"
+  },
+  {
+    "objectCode": "V03855",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA FIT N SE",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA FIT N SE",
+    "objectType": "NF 100 SE"
+  },
+  {
+    "objectCode": "V03867",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X D",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA X D",
+    "objectType": "NF 125 TD"
+  },
+  {
+    "objectCode": "V03350",
+    "objectGroup": "G204",
+    "objectDescription": "SUZUKI SPIN",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "SUZUKI SPIN",
+    "objectType": "UY125 S AT"
+  },
+  {
+    "objectCode": "V03868",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA X R",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA X R",
+    "objectType": "NF 125 TR"
+  },
+  {
+    "objectCode": "V03869",
+    "objectGroup": "G201",
+    "objectDescription": "NEW SUPRA R PGM",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "NEW SUPRA R PGM",
+    "objectType": "NF 125 TRF"
+  },
+  {
+    "objectCode": "V04095",
+    "objectGroup": "G201",
+    "objectDescription": "CS1",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "CS1",
+    "objectType": "CS125"
+  },
+  {
+    "objectCode": "V03565",
+    "objectGroup": "G204",
+    "objectDescription": "NEW SMASH",
+    "branchId": null,
+    "objectBrand": "SUZUKI",
+    "objectModel": "NEW SMASH",
+    "objectType": "FK110 SD K6"
+  },
+  {
+    "objectCode": "V04174",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT AT 110",
+    "branchId": "40100",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT AT 110",
+    "objectType": "AT 110"
+  },
+  {
+    "objectCode": "V04185",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT FUNKY",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT FUNKY",
+    "objectType": "AT 110 FUNKY"
+  },
+  {
+    "objectCode": "V04186",
+    "objectGroup": "G201",
+    "objectDescription": "BEAT CUSTIC",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "BEAT CUSTIC",
+    "objectType": "AT 110 CUSTIC"
+  },
+  {
+    "objectCode": "V04192",
+    "objectGroup": "G201",
+    "objectDescription": "AIR BLADE",
+    "branchId": "80200",
+    "objectBrand": "HONDA",
+    "objectModel": "AIR BLADE",
+    "objectType": "AIR BLADE"
+  },
+  {
+    "objectCode": "V100E",
+    "objectGroup": "G204",
+    "objectDescription": "SPM SOLO",
+    "branchId": null,
+    "objectBrand": "YAMAHA",
+    "objectModel": "SPM SOLO",
+    "objectType": "V100K"
+  },
+  {
+    "objectCode": "V04110",
+    "objectGroup": "G204",
+    "objectDescription": "NINJA 250R",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "NINJA 250R",
+    "objectType": "NINJA 250R"
+  },
+  {
+    "objectCode": "V00194",
+    "objectGroup": "G201",
+    "objectDescription": "WIN",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "WIN",
+    "objectType": "MCP WIN"
+  },
+  {
+    "objectCode": "V00195",
+    "objectGroup": "G201",
+    "objectDescription": "TIGER 2000",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "TIGER 2000",
+    "objectType": "GLS 200"
+  },
+  {
+    "objectCode": "V00196",
+    "objectGroup": "G201",
+    "objectDescription": "TIGER 2000 CW",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "TIGER 2000 CW",
+    "objectType": "GLS 200 CW"
+  },
+  {
+    "objectCode": "V02640",
+    "objectGroup": "G204",
+    "objectDescription": "NEW SMASH CW",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "NEW SMASH CW",
+    "objectType": "FK 110 SCD K 6"
+  },
+  {
+    "objectCode": "V03818",
+    "objectGroup": "G204",
+    "objectDescription": "SKYWAVE 125",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "SKYWAVE 125",
+    "objectType": "UW 125 SC"
+  },
+  {
+    "objectCode": "V00189",
+    "objectGroup": "G201",
+    "objectDescription": "SUPRA",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "SUPRA",
+    "objectType": "NF100"
+  },
+  {
+    "objectCode": "V04532",
+    "objectGroup": "G204",
+    "objectDescription": "VIAR RODA TIGA",
+    "branchId": "00001",
+    "objectBrand": "VIAR",
+    "objectModel": "RODA TIGA",
+    "objectType": "KARYA"
+  },
+  {
+    "objectCode": "V00190",
+    "objectGroup": "G201",
+    "objectDescription": "D SUPRA X",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "D SUPRA X",
+    "objectType": "NF100 D"
+  },
+  {
+    "objectCode": "V00192",
+    "objectGroup": "G201",
+    "objectDescription": "GL PRO",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "GL PRO",
+    "objectType": "CDI"
+  },
+  {
+    "objectCode": "V00193",
+    "objectGroup": "G201",
+    "objectDescription": "GL MAX",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "GL MAX",
+    "objectType": "CDI"
+  },
+  {
+    "objectCode": "V04210",
+    "objectGroup": "G204",
+    "objectDescription": "NEW MIO SPORTY CW",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "NEW MIO CW",
+    "objectType": "28D AL 115 S"
+  },
+  {
+    "objectCode": "V04224",
+    "objectGroup": "G204",
+    "objectDescription": "NEW MIO STD",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "NEW MIO STD",
+    "objectType": "28D AL 115 S"
+  },
+  {
+    "objectCode": "V03905",
+    "objectGroup": "G204",
+    "objectDescription": "SUZUKI SPIN 125 R CW",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "SPIN 125R CW",
+    "objectType": "UY 125 SC"
+  },
+  {
+    "objectCode": "V04645",
+    "objectGroup": "G204",
+    "objectDescription": "SKYDRIVE 125",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "SKYDRIVE 125",
+    "objectType": "UK 125 SC AT"
+  },
+  {
+    "objectCode": "V04423",
+    "objectGroup": "G204",
+    "objectDescription": "VEGA ZR 115",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "VEGA ZR 115",
+    "objectType": "VEGA ZR 115"
+  },
+  {
+    "objectCode": "V04685",
+    "objectGroup": "G204",
+    "objectDescription": "TRAIL KLX 150S",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "TRAIL",
+    "objectType": "KLX 150S"
+  },
+  {
+    "objectCode": "V03824",
+    "objectGroup": "G204",
+    "objectDescription": "MIO SOUL",
+    "branchId": "30200",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO SOUL",
+    "objectType": "MIO SOUL"
+  },
+  {
+    "objectCode": "V03111",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER MX CW",
+    "branchId": "10100",
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER MX CW",
+    "objectType": "2S6"
+  },
+  {
+    "objectCode": "V03646",
+    "objectGroup": "G204",
+    "objectDescription": "V-IXION 150",
+    "branchId": "62100",
+    "objectBrand": "YAMAHA",
+    "objectModel": "VIXION",
+    "objectType": "3C1"
+  },
+  {
+    "objectCode": "V03877",
+    "objectGroup": "G204",
+    "objectDescription": "SHOGUN 125 RR",
+    "branchId": "62100",
+    "objectBrand": "SUZUKI",
+    "objectModel": "SHOGUN 125 RR",
+    "objectType": "FL125RCD"
+  },
+  {
+    "objectCode": "V02835",
+    "objectGroup": "G204",
+    "objectDescription": "MIO CW",
+    "branchId": "10200",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO CW SPM SOLO",
+    "objectType": "5TL MIO"
+  },
+  {
+    "objectCode": "V05809",
+    "objectGroup": "G204",
+    "objectDescription": "KAWASAKI SUPER CROSS LX 150 D",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "SUPER CROSS LX",
+    "objectType": "LX 150 D"
+  },
+  {
+    "objectCode": "V05884",
+    "objectGroup": "G204",
+    "objectDescription": "NEX 110 MATIC",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "NEX",
+    "objectType": "UD 110 E"
+  },
+  {
+    "objectCode": "V06185",
+    "objectGroup": "G204",
+    "objectDescription": "HARLEY DAVIDSON",
+    "branchId": "00001",
+    "objectBrand": "HARLEY DAVIDSON",
+    "objectModel": "SPD MOTOR",
+    "objectType": "FLHT"
+  },
+  {
+    "objectCode": "V06397",
+    "objectGroup": "G204",
+    "objectDescription": "DUKE 200",
+    "branchId": "00001",
+    "objectBrand": "KTM",
+    "objectModel": "TRAIL",
+    "objectType": "DUKE 200"
+  },
+  {
+    "objectCode": "V05067",
+    "objectGroup": "G204",
+    "objectDescription": "D TRACKER 150",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "D TRACKER 150",
+    "objectType": "D TRACKER 150"
+  },
+  {
+    "objectCode": "V05240",
+    "objectGroup": "G204",
+    "objectDescription": "SCORPIO NEW Z 225 CW",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "SX225CC",
+    "objectType": "54D"
+  },
+  {
+    "objectCode": "V06132",
+    "objectGroup": "G204",
+    "objectDescription": "MIO SOUL GT",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO SOUL",
+    "objectType": "A/T"
+  },
+  {
+    "objectCode": "V04183",
+    "objectGroup": "G204",
+    "objectDescription": "KLX 250",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "SOLO",
+    "objectType": "KLX 250"
+  },
+  {
+    "objectCode": "V05376",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER NEW MX KOPLING",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER NEW",
+    "objectType": "MX KOPLING"
+  },
+  {
+    "objectCode": "V04181",
+    "objectGroup": "G204",
+    "objectDescription": "ATHLETE",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "ATHLETE",
+    "objectType": "AX 125 B"
+  },
+  {
+    "objectCode": "V04973",
+    "objectGroup": "G204",
+    "objectDescription": "NEW V-IXION",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "NEW V IXION",
+    "objectType": "NEW V IXION"
+  },
+  {
+    "objectCode": "V05247",
+    "objectGroup": "G204",
+    "objectDescription": "BYSON 150",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "BYSON 150",
+    "objectType": "BYSON 150"
+  },
+  {
+    "objectCode": "V04904",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER NEW Z 115",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER NEW Z",
+    "objectType": "JUPITER NEW Z"
+  },
+  {
+    "objectCode": "V03196",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER NEW Z 110 AIS",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER NEW Z",
+    "objectType": "30C"
+  },
+  {
+    "objectCode": "V03197",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER NEW Z 110 AIS CW",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER NEW Z C",
+    "objectType": "30C"
+  },
+  {
+    "objectCode": "V02890",
+    "objectGroup": "G204",
+    "objectDescription": "NOUVO Z",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "NOUVO Z",
+    "objectType": "5MX/Z"
+  },
+  {
+    "objectCode": "V04422",
+    "objectGroup": "G204",
+    "objectDescription": "NEW SATRIA FU",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "NEW SATRIA FU",
+    "objectType": "NEW SATRIA FU"
+  },
+  {
+    "objectCode": "V05327",
+    "objectGroup": "G204",
+    "objectDescription": "LEXAM 115 CVT MATIC",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "LEXAM",
+    "objectType": "40D TK 115 AT"
+  },
+  {
+    "objectCode": "V06061",
+    "objectGroup": "G204",
+    "objectDescription": "MIO J FI",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO J FI",
+    "objectType": "54P AT"
+  },
+  {
+    "objectCode": "V05992",
+    "objectGroup": "G204",
+    "objectDescription": "MIO FINO SPORTY",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO FINO SPORTY",
+    "objectType": "A/T"
+  },
+  {
+    "objectCode": "V05993",
+    "objectGroup": "G204",
+    "objectDescription": "MIO FINO CLASSIC",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO FINO KLASIK",
+    "objectType": "A/T"
+  },
+  {
+    "objectCode": "V06184",
+    "objectGroup": "G204",
+    "objectDescription": "MIO FINO FASHION",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MIO FINO FESYEN",
+    "objectType": "A/T"
+  },
+  {
+    "objectCode": "V04697",
+    "objectGroup": "G204",
+    "objectDescription": "D TRACKER X 250",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "TRACKER",
+    "objectType": "D TRACKER X 250"
+  },
+  {
+    "objectCode": "V05093",
+    "objectGroup": "G204",
+    "objectDescription": "TITAN 115",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "TITAN 115",
+    "objectType": "FW 110 SD"
+  },
+  {
+    "objectCode": "V05095",
+    "objectGroup": "G204",
+    "objectDescription": "TITAN 115 R",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "TITAN 115 R",
+    "objectType": "FW 110 SD"
+  },
+  {
+    "objectCode": "V05096",
+    "objectGroup": "G204",
+    "objectDescription": "TITAN 115 SR",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "TITAN 115 SR",
+    "objectType": "FW 110 SD"
+  },
+  {
+    "objectCode": "V00197",
+    "objectGroup": "G201",
+    "objectDescription": "NSR",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "NSR",
+    "objectType": "NSR 150"
+  },
+  {
+    "objectCode": "V03904",
+    "objectGroup": "G204",
+    "objectDescription": "NEW SHOGUN 125 R",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "SHOGUN SP",
+    "objectType": "FL125RCND"
+  },
+  {
+    "objectCode": "V05377",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER NEW MX",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER NEW MX",
+    "objectType": "T135HC"
+  },
+  {
+    "objectCode": "V04363",
+    "objectGroup": "G201",
+    "objectDescription": "NEW TIGER REV. CRUISER CW",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "NEW TIGER CW",
+    "objectType": "GL 200 R1"
+  },
+  {
+    "objectCode": "V04903",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER Z CW",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "JUPITER Z CW",
+    "objectType": "31 B"
+  },
+  {
+    "objectCode": "V03955",
+    "objectGroup": "G204",
+    "objectDescription": "JUPITER MX 135 LC CW  KOP",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "MX135 KOP",
+    "objectType": "MX135 KOP"
+  },
+  {
+    "objectCode": "V05533",
+    "objectGroup": "G204",
+    "objectDescription": "HAYATE 125",
+    "branchId": "10100",
+    "objectBrand": "SUZUKI",
+    "objectModel": "HAYATE 125",
+    "objectType": "UW 125 SC"
+  },
+  {
+    "objectCode": "V05042",
+    "objectGroup": "G204",
+    "objectDescription": "XEON 125",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "XEON 125",
+    "objectType": "44D"
+  },
+  {
+    "objectCode": "V04931",
+    "objectGroup": "G204",
+    "objectDescription": "SPM SOLO STD",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "SPM SOLO STD",
+    "objectType": "AN 112 S"
+  },
+  {
+    "objectCode": "V04932",
+    "objectGroup": "G204",
+    "objectDescription": "SPM SOLO CW",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "SPM SOLO CW",
+    "objectType": "AN 112 S"
+  },
+  {
+    "objectCode": "V01984",
+    "objectGroup": "G204",
+    "objectDescription": "NINJA 150 RR (CBU)",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "NINJA150RR",
+    "objectType": "NINJA150RR"
+  },
+  {
+    "objectCode": "V05315",
+    "objectGroup": "G204",
+    "objectDescription": "SHOGUN AXELO CW",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "AXELO CW",
+    "objectType": "AXELO CW"
+  },
+  {
+    "objectCode": "V05316",
+    "objectGroup": "G204",
+    "objectDescription": "SHOGUN AXELO CW DD/S",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "AXELO CW DD/S",
+    "objectType": "AXELO CW DD/S"
+  },
+  {
+    "objectCode": "V05317",
+    "objectGroup": "G204",
+    "objectDescription": "SHOGUN AXELO CW DD KOP/R",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "AXELO CW DD R",
+    "objectType": "AXELO CW DD R"
+  },
+  {
+    "objectCode": "V00184",
+    "objectGroup": "G201",
+    "objectDescription": "GRAND ASTREA",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "GRAND ASTREA",
+    "objectType": "C100"
+  },
+  {
+    "objectCode": "V00187",
+    "objectGroup": "G201",
+    "objectDescription": "GRAND IMPRESSA",
+    "branchId": null,
+    "objectBrand": "HONDA",
+    "objectModel": "GRAND IMPRESSA",
+    "objectType": "C100"
+  },
+  {
+    "objectCode": "V06284",
+    "objectGroup": "G204",
+    "objectDescription": "NEW JUPITER Z INJECTION",
+    "branchId": "00001",
+    "objectBrand": "YAMAHA",
+    "objectModel": "YAMAHA 1DY",
+    "objectType": "NW JPTR Z INJC"
+  },
+  {
+    "objectCode": "V06424",
+    "objectGroup": "G204",
+    "objectDescription": "SUZUKI LETS SPORTY 110",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": null,
+    "objectType": "UF 100 NE"
+  },
+  {
+    "objectCode": "V05879",
+    "objectGroup": "G204",
+    "objectDescription": "KAWASAKI NINJA  NEW 650R",
+    "branchId": "00001",
+    "objectBrand": "KAWASAKI",
+    "objectModel": "KAWASAKI NINJA",
+    "objectType": "ER650E"
+  },
+  {
+    "objectCode": "V06425",
+    "objectGroup": "G204",
+    "objectDescription": "LETS PREMIUM",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "LETS PREMIUM",
+    "objectType": "UF 110 NZ"
+  },
+  {
+    "objectCode": "V06209",
+    "objectGroup": "G204",
+    "objectDescription": "NEX NEW SUPER FI",
+    "branchId": "00001",
+    "objectBrand": "SUZUKI",
+    "objectModel": "NEX SUPER FI",
+    "objectType": "UD 110 FI"
+  },
+  {
+    "objectCode": "HH1",
+    "objectGroup": "G201",
+    "objectDescription": "PCX 150",
+    "branchId": "00001",
+    "objectBrand": "HONDA",
+    "objectModel": "WW150EXH IN AT",
+    "objectType": "WW150EXH IN AT"
+  }
+]
