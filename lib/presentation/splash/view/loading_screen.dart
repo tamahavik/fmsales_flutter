@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -88,6 +86,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             ]),
       },
       successSync: (value) => {
+        print(value.value),
         _value = value.value,
       },
     );
