@@ -2,52 +2,40 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:intl/intl.dart';
 import 'package:ufi/presentation/splash/service/sync_category.dart';
 import 'package:ufi/presentation/splash/service/sync_city.dart';
+import 'package:ufi/presentation/splash/service/sync_holiday.dart';
+import 'package:ufi/presentation/splash/service/sync_interval_location.dart';
 import 'package:ufi/presentation/splash/service/sync_kecamatan.dart';
 import 'package:ufi/presentation/splash/service/sync_kelurahan.dart';
 import 'package:ufi/presentation/splash/service/sync_lov.dart';
 import 'package:ufi/presentation/splash/service/sync_model.dart';
 import 'package:ufi/presentation/splash/service/sync_occupation.dart';
+import 'package:ufi/presentation/splash/service/sync_priority_leads.dart';
 import 'package:ufi/presentation/splash/service/sync_province.dart';
+import 'package:ufi/presentation/splash/service/sync_sla_color.dart';
 import 'package:ufi/presentation/splash/service/sync_sla_opportunity.dart';
+import 'package:ufi/presentation/splash/service/sync_start_end_location.dart';
 import 'package:ufi/presentation/splash/service/sync_sub_occupation.dart';
+import 'package:ufi/presentation/splash/service/sync_time_setup.dart';
 import 'package:ufi/presentation/splash/service/sync_version_app.dart';
 import 'package:ufi/presentation/splash/service/sync_zipcode.dart';
+import 'package:ufi/services/session_manager.dart';
 import 'package:ufi/services/shared_preferences._client.dart';
 import 'package:ufi/utils/device_info.dart';
 
 part 'splash_bloc.freezed.dart';
-
 part 'splash_event.dart';
-
 part 'splash_state.dart';
 
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
   final DeviceInfo _info = DeviceInfo();
-  final SharedPreferencesClient _prefsClient = SharedPreferencesClient();
+  final SharedPreferencesClient _prefs = SharedPreferencesClient();
+  final SessionManager _session = SessionManager();
 
   SplashBloc() : super(const _Initial()) {
     on<_StartSync>(_process);
-    on<_VersionApp>(_versionApp);
-    on<_Lov>(_lov);
-    on<_Occupation>(_occupation);
-    on<_SubOccupation>(_subOccupation);
-    on<_Category>(_category);
-    on<_Model>(_model);
-    on<_Province>(_province);
-    on<_City>(_city);
-    on<_Kecamatan>(_kecamatan);
-    on<_Kelurahan>(_kelurahan);
-    on<_ZipCode>(_zipCode);
-    on<_SlaOpportunity>(_slaOpportunity);
-    on<_PriorityLeads>(_priorityLeads);
-    on<_ParameterPriority>(_parameterPriority);
-    on<_SlaColor>(_slaColor);
-    on<_Holiday>(_holiday);
-    on<_TimeSetup>(_timeSetup);
-    on<_StartEndLocation>(_startEndLocation);
-    on<_IntervalLocation>(_intervalLocation);
     on<_TryAgain>(_retry);
   }
 
@@ -55,73 +43,133 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    add(_VersionApp(event.value));
+    switch (event.value) {
+      case 0:
+        await _versionApp(event, emit);
+        break;
+      case 1:
+        await _lov(event, emit);
+        break;
+      case 2:
+        await _occupation(event, emit);
+        break;
+      case 3:
+        await _subOccupation(event, emit);
+        break;
+      case 4:
+        await _category(event, emit);
+        break;
+      case 5:
+        await _model(event, emit);
+        break;
+      case 6:
+        await _province(event, emit);
+        break;
+      case 7:
+        await _city(event, emit);
+        break;
+      case 8:
+        await _kecamatan(event, emit);
+        break;
+      case 9:
+        await _kelurahan(event, emit);
+        break;
+      case 10:
+        await _zipCode(event, emit);
+        break;
+      case 11:
+        await _slaOpportunity(event, emit);
+        break;
+      case 12:
+        await _priorityLeads(event, emit);
+        break;
+      case 13:
+        await _slaColor(event, emit);
+        break;
+      case 14:
+        await _holiday(event, emit);
+        break;
+      case 15:
+        await _timeSetup(event, emit);
+        break;
+      case 16:
+        await _startEndLocation(event, emit);
+        break;
+      case 17:
+        await _intervalLocation(event, emit);
+        break;
+      default:
+        await _default(event, emit);
+    }
   }
 
+  Future<void> _retry(
+    _TryAgain event,
+    Emitter<SplashState> emit,
+  ) async {}
+
   FutureOr<void> _versionApp(
-    _VersionApp event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefsClient.getAppVersionSync()) {
+    if (!await _prefs.getAppVersionSync()) {
       SyncVersionApp appSync = SyncVersionApp();
       var version = await appSync.process();
       String ver = await _info.getVersion();
       version.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          if (r.value == ver) {
-            _prefsClient.setAppVersionSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.lov(next));
+          if (r.value == "1.3.0") {
+            _prefs.setAppVersionSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           } else {
             emit(SplashState.failedSync("Version", "Version Tidak sama"));
           }
         },
       );
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.lov(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _lov(
-    _Lov event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefsClient.getLovSync()) {
-      SyncLov lovSync = SyncLov();
-      var data = await lovSync.process();
+    if (!await _prefs.getLovSync()) {
+      SyncLov syncLov = SyncLov();
+      var data = await syncLov.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefsClient.setLovSync(true);
-          emit(SplashState.successSync(next));
-          add(SplashEvent.occupation(next));
+          _prefs.setLovSync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
         },
       );
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.occupation(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _occupation(
-    _Occupation event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
     SyncOccupation occuSync = SyncOccupation();
     int next = event.value + 1;
-    if (!await _prefsClient.getOccupationSync()) {
-      if (await _prefsClient.getFirstOpen()) {
+    if (!await _prefs.getOccupationSync()) {
+      if (await _prefs.getFirstOpen()) {
         var data = await occuSync.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setOccupationSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.subOccupation(next));
+            _prefs.setOccupationSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
@@ -129,33 +177,32 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setOccupationSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.subOccupation(next));
+            _prefs.setOccupationSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.subOccupation(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _subOccupation(
-    _SubOccupation event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
     SyncSubOccupation subOccuSync = SyncSubOccupation();
-    if (!await _prefsClient.getSubOccupationSync()) {
-      if (await _prefsClient.getFirstOpen()) {
+    if (!await _prefs.getSubOccupationSync()) {
+      if (await _prefs.getFirstOpen()) {
         var data = await subOccuSync.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setSubOccupationSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.category(next));
+            _prefs.setSubOccupationSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
@@ -163,298 +210,436 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setSubOccupationSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.category(next));
+            _prefs.setSubOccupationSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.category(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _category(
-    _Category event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncCategory categorySync = SyncCategory();
-    if (!await _prefsClient.getCategorySync()) {
-      if (await _prefsClient.getFirstOpen()) {
-        var data = await categorySync.readJson();
+    SyncCategory syncCategory = SyncCategory();
+    if (!await _prefs.getCategorySync()) {
+      if (await _prefs.getFirstOpen()) {
+        var data = await syncCategory.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setCategorySync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.model(next));
+            _prefs.setCategorySync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
-        var data = await categorySync.process();
+        var data = await syncCategory.process();
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setSubOccupationSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.model(next));
+            _prefs.setSubOccupationSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.model(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _model(
-    _Model event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncModel modelSync = SyncModel();
-    if (!await _prefsClient.getModelSync()) {
-      if (await _prefsClient.getFirstOpen()) {
-        var data = await modelSync.readJson();
+    SyncModel syncModel = SyncModel();
+    if (!await _prefs.getModelSync()) {
+      if (await _prefs.getFirstOpen()) {
+        var data = await syncModel.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setModelSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.province(next));
+            _prefs.setModelSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
-        var data = await modelSync.process();
+        var data = await syncModel.process();
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setModelSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.province(next));
+            _prefs.setModelSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.province(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _province(
-    _Province event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    int next = event.value;
+    int next = event.value + 1;
     SyncProvince syncProvince = SyncProvince();
-    if (!await _prefsClient.getProvinceSync()) {
-      if (await _prefsClient.getFirstOpen()) {
+    if (!await _prefs.getProvinceSync()) {
+      if (await _prefs.getFirstOpen()) {
         var data = await syncProvince.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setProvinceSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.city(next));
+            _prefs.setProvinceSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
-        var data = await syncProvince.process();
+        var data;
+        String lastLogin = await _session.getLastLoginDate();
+        if (lastLogin == "") {
+          DateFormat formatter = DateFormat("dd-MMM-yyyy");
+          data = await syncProvince.process(formatter.format(DateTime.now()));
+        } else {
+          data = await syncProvince.process(lastLogin);
+        }
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setProvinceSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.city(next));
+            _prefs.setProvinceSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.city(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _city(
-    _City event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    int next = event.value;
+    int next = event.value + 1;
     SyncCity syncCity = SyncCity();
-    if (!await _prefsClient.getCitySync()) {
-      if (await _prefsClient.getFirstOpen()) {
+    if (!await _prefs.getCitySync()) {
+      if (await _prefs.getFirstOpen()) {
         var data = await syncCity.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setCitySync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.kecamatan(next));
+            _prefs.setCitySync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
-        var data = await syncCity.process();
+        var data;
+        String lastLogin = await _session.getLastLoginDate();
+        if (lastLogin == "") {
+          DateFormat formatter = DateFormat("dd-MMM-yyyy");
+          data = await syncCity.process(formatter.format(DateTime.now()));
+        } else {
+          data = await syncCity.process(lastLogin);
+        }
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setCitySync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.kecamatan(next));
+            _prefs.setCitySync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.kecamatan(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _kecamatan(
-    _Kecamatan event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    int next = event.value;
+    int next = event.value + 1;
     SyncKecamatan syncKecamatan = SyncKecamatan();
-    if (!await _prefsClient.getKecamatanSync()) {
-      if (await _prefsClient.getFirstOpen()) {
+    if (!await _prefs.getKecamatanSync()) {
+      if (await _prefs.getFirstOpen()) {
         var data = await syncKecamatan.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setKecamatanSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.kelurahan(next));
+            _prefs.setKecamatanSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
-        var data = await syncKecamatan.process();
+        var data;
+        String lastLogin = await _session.getLastLoginDate();
+        if (lastLogin == "") {
+          DateFormat formatter = DateFormat("dd-MMM-yyyy");
+          data = await syncKecamatan.process(formatter.format(DateTime.now()));
+        } else {
+          data = await syncKecamatan.process(lastLogin);
+        }
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setKecamatanSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.kelurahan(next));
+            _prefs.setKecamatanSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.kelurahan(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _kelurahan(
-    _Kelurahan event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    int next = event.value;
+    int next = event.value + 1;
     SyncKelurahan syncKelurahan = SyncKelurahan();
-    if (!await _prefsClient.getKelurahanSync()) {
-      if (await _prefsClient.getFirstOpen()) {
+    if (!await _prefs.getKelurahanSync()) {
+      if (await _prefs.getFirstOpen()) {
         var data = await syncKelurahan.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setKelurahanSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.zipCode(next));
+            _prefs.setKelurahanSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
-        var data = await syncKelurahan.process();
+        var data;
+        String lastLogin = await _session.getLastLoginDate();
+        if (lastLogin == "") {
+          DateFormat formatter = DateFormat("dd-MMM-yyyy");
+          data = await syncKelurahan.process(formatter.format(DateTime.now()));
+        } else {
+          data = await syncKelurahan.process(lastLogin);
+        }
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setKelurahanSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.zipCode(next));
+            _prefs.setKelurahanSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.zipCode(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _zipCode(
-    _ZipCode event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    int next = event.value;
+    int next = event.value + 1;
     SyncZipCode syncZipCode = SyncZipCode();
-    if (!await _prefsClient.getZipCodeSync()) {
-      if (await _prefsClient.getFirstOpen()) {
+    if (!await _prefs.getZipCodeSync()) {
+      if (await _prefs.getFirstOpen()) {
         var data = await syncZipCode.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefsClient.setZipCodeSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.slaOpportunity(next));
+            _prefs.setZipCodeSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       } else {
-        var data = await syncZipCode.process();
+        var data;
+        String lastLogin = await _session.getLastLoginDate();
+        if (lastLogin == "") {
+          DateFormat formatter = DateFormat("dd-MMM-yyyy");
+          data = await syncZipCode.process(formatter.format(DateTime.now()));
+        } else {
+          data = await syncZipCode.process(lastLogin);
+        }
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefsClient.setZipCodeSync(true);
-            emit(SplashState.successSync(next));
-            add(SplashEvent.slaOpportunity(next));
+            _prefs.setZipCodeSync(true);
+            _prefs.setTotalSync(next);
+            emit(SplashState.continueSync(next));
           },
         );
       }
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.slaOpportunity(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _slaOpportunity(
-    _SlaOpportunity event,
+    _StartSync event,
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefsClient.getSlaOpportunitySync()) {
-      SyncSlaOpportunity syncSlaOpportunity = SyncSlaOpportunity();
-      var data = await syncSlaOpportunity.process();
+    if (!await _prefs.getSlaOpportunitySync()) {
+      SyncSlaOpportunity slaOpportunity = SyncSlaOpportunity();
+      var data = await slaOpportunity.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefsClient.setSlaOpportunitySync(true);
-          emit(SplashState.successSync(next));
-          add(SplashEvent.priorityLeads(next));
+          _prefs.setSlaOpportunitySync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
         },
       );
     } else {
-      emit(SplashState.successSync(next));
-      add(SplashEvent.priorityLeads(next));
+      emit(SplashState.continueSync(next));
     }
   }
 
   FutureOr<void> _priorityLeads(
-      _PriorityLeads event, Emitter<SplashState> emit) {}
+    _StartSync event,
+    Emitter<SplashState> emit,
+  ) async {
+    int next = event.value + 1;
+    if (!await _prefs.getPriorityLeadsSync()) {
+      SyncPriortyLeads synPriorityLeads = SyncPriortyLeads();
+      var data = await synPriorityLeads.process();
+      data.fold(
+        (l) => emit(SplashState.failedSync("Error", l)),
+        (r) {
+          _prefs.setSlaOpportunitySync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
+        },
+      );
+    } else {
+      emit(SplashState.continueSync(next));
+    }
+  }
 
-  FutureOr<void> _parameterPriority(
-      _ParameterPriority event, Emitter<SplashState> emit) {}
+  FutureOr<void> _slaColor(
+    _StartSync event,
+    Emitter<SplashState> emit,
+  ) async {
+    int next = event.value + 1;
+    if (!await _prefs.getSlaColorSync()) {
+      SyncSlaColor syncSlaColor = SyncSlaColor();
+      var data = await syncSlaColor.process();
+      data.fold(
+        (l) => emit(SplashState.failedSync("Error", l)),
+        (r) {
+          _prefs.setSlaColorSync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
+        },
+      );
+    } else {
+      emit(SplashState.continueSync(next));
+    }
+  }
 
-  FutureOr<void> _slaColor(_SlaColor event, Emitter<SplashState> emit) {}
+  FutureOr<void> _holiday(
+    _StartSync event,
+    Emitter<SplashState> emit,
+  ) async {
+    int next = event.value + 1;
+    if (!await _prefs.getHolidaySync()) {
+      SyncHoliday syncHoliday = SyncHoliday();
+      var data = await syncHoliday.process();
+      data.fold(
+        (l) => emit(SplashState.failedSync("Error", l)),
+        (r) {
+          _prefs.setHolidaySync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
+        },
+      );
+    } else {
+      emit(SplashState.continueSync(next));
+    }
+  }
 
-  FutureOr<void> _holiday(_Holiday event, Emitter<SplashState> emit) {}
-
-  FutureOr<void> _timeSetup(_TimeSetup event, Emitter<SplashState> emit) {}
+  FutureOr<void> _timeSetup(
+    _StartSync event,
+    Emitter<SplashState> emit,
+  ) async {
+    int next = event.value + 1;
+    if (!await _prefs.getTimeSetupSync()) {
+      SyncTimeSetup syncTimeSetup = SyncTimeSetup();
+      var data = await syncTimeSetup.process();
+      data.fold(
+        (l) => emit(SplashState.failedSync("Error", l)),
+        (r) {
+          _prefs.setTimeSetupSync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
+        },
+      );
+    } else {
+      emit(SplashState.continueSync(next));
+    }
+  }
 
   FutureOr<void> _startEndLocation(
-      _StartEndLocation event, Emitter<SplashState> emit) {}
+    _StartSync event,
+    Emitter<SplashState> emit,
+  ) async {
+    int next = event.value + 1;
+    if (!await _prefs.getStartEndLocationSync()) {
+      SyncStartEndLocation startEndLocation = SyncStartEndLocation();
+      var data = await startEndLocation.process();
+      data.fold(
+        (l) => emit(SplashState.failedSync("Error", l)),
+        (r) {
+          _prefs.setStartEndLocationSync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
+        },
+      );
+    } else {
+      emit(SplashState.continueSync(next));
+    }
+  }
 
   FutureOr<void> _intervalLocation(
-      _IntervalLocation event, Emitter<SplashState> emit) {}
-
-  Future<void> _retry(
-    _TryAgain event,
+    _StartSync event,
     Emitter<SplashState> emit,
-  ) async {}
+  ) async {
+    int next = event.value + 1;
+    if (!await _prefs.getIntervalLocationSync()) {
+      SyncIntervalLocation intervalLocation = SyncIntervalLocation();
+      var data = await intervalLocation.process();
+      data.fold(
+        (l) => emit(SplashState.failedSync("Error", l)),
+        (r) {
+          _prefs.setIntervalLocationSync(true);
+          _prefs.setTotalSync(next);
+          emit(SplashState.continueSync(next));
+        },
+      );
+    } else {
+      emit(SplashState.continueSync(next));
+    }
+  }
+
+  _default(
+    _StartSync event,
+    Emitter<SplashState> emit,
+  ) async {
+    bool isLogin = await _session.getIsLogin();
+    print(await _prefs.getTotalSync());
+    emit(SplashState.completedSync(isLogin));
+  }
 }

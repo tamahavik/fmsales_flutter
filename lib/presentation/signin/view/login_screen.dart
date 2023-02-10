@@ -19,19 +19,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
 
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => SigninBloc(),
-      child: BlocConsumer<SigninBloc, SigninState>(
-        listener: _stateController,
-        builder: (context, state) {
-          return _buildSigninScreen(context, state);
-        },
-      ),
-    );
-  }
-
   void _stateController(BuildContext context, SigninState state) {
     state.maybeMap(
       orElse: () {},
@@ -55,7 +42,20 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Background _buildSigninScreen(BuildContext context, SigninState state) {
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => SigninBloc(),
+      child: BlocConsumer<SigninBloc, SigninState>(
+        listener: _stateController,
+        builder: (context, state) {
+          return _buildView(context, state);
+        },
+      ),
+    );
+  }
+
+  Background _buildView(BuildContext context, SigninState state) {
     return Background(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

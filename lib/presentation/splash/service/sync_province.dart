@@ -9,9 +9,10 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncProvince extends Synchronize {
-  Future<Either<String, List<Province>>> process() async {
+  Future<Either<String, List<Province>>> process(String date) async {
     try {
-      Response response = await dio.get(SYNC_PROVINCE);
+      Response response =
+          await dio.get(SYNC_PROVINCE.replaceAll("{date}", date));
       ApiResult result = ApiResult.fromJson(response.data);
       if (result.message == 'OK') {
         var obj = ApiResult.processJson(result.result) as List;

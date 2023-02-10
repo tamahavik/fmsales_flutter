@@ -9,9 +9,10 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncKelurahan extends Synchronize {
-  Future<Either<String, List<Kelurahan>>> process() async {
+  Future<Either<String, List<Kelurahan>>> process(String date) async {
     try {
-      Response response = await dio.get(SYNC_KELURAHAN);
+      Response response =
+          await dio.get(SYNC_KELURAHAN.replaceAll('{date}', date));
       ApiResult result = ApiResult.fromJson(response.data);
       if (result.message == 'OK') {
         var obj = ApiResult.processJson(result.result) as List;

@@ -15,13 +15,9 @@ _$_ZipCode _$$_ZipCodeFromJson(Map<String, dynamic> json) => _$_ZipCode(
       kecCode: json['kecCode'] as String?,
       kelCode: json['kelCode'] as String?,
       createBy: json['createBy'] as String?,
-      createDate: json['createDate'] == null
-          ? null
-          : DateTime.parse(json['createDate'] as String),
+      createDate: json['createDate'] as int?,
       updateBy: json['updateBy'] as String?,
-      updateDate: json['updateDate'] == null
-          ? null
-          : DateTime.parse(json['updateDate'] as String),
+      updateDate: json['updateDate'] as int?,
       action: json['action'] as String?,
     );
 
@@ -35,8 +31,8 @@ Map<String, dynamic> _$$_ZipCodeToJson(_$_ZipCode instance) =>
       'kecCode': instance.kecCode,
       'kelCode': instance.kelCode,
       'createBy': instance.createBy,
-      'createDate': instance.createDate?.toIso8601String(),
+      'createDate': instance.createDate,
       'updateBy': instance.updateBy,
-      'updateDate': instance.updateDate?.toIso8601String(),
+      'updateDate': instance.updateDate,
       'action': instance.action,
     };

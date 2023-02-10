@@ -12,12 +12,11 @@ enum SyncEnum {
   zipCode(10),
   slaOpportunity(11),
   priorityLeads(12),
-  parameterPriority(13),
-  slaColor(14),
-  holiday(15),
-  timeSetup(16),
-  startEndLocation(17),
-  intervalLocation(18);
+  slaColor(13),
+  holiday(14),
+  timeSetup(15),
+  startEndLocation(16),
+  intervalLocation(17);
 
   const SyncEnum(this.value);
   final int value;

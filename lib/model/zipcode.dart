@@ -15,9 +15,9 @@ class ZipCode with _$ZipCode {
     String? kecCode,
     String? kelCode,
     String? createBy,
-    DateTime? createDate,
+    int? createDate,
     String? updateBy,
-    DateTime? updateDate,
+    int? updateDate,
     String? action,
   }) = _ZipCode;
 

@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fmsales.danastra.ufi">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="ufi"
         android:name="${applicationName}"

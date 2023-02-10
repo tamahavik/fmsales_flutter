@@ -14,7 +14,13 @@ class SharedPreferencesClient {
   final _kKelurahanSync = "KELURAHAN_SYNC";
   final _kZipCodeSync = "ZIPCODE_SYNC";
   final _kSlaOpportunitySync = "SLA_OPPORTUNITY_SYNC";
-  final _kParameterPrioritySync = "PARAMETER_PRIORITY_SYNC";
+  final _kPriorityLeadsSync = "PRIORITY_LEADS_SYNC";
+  final _kSlaColorSync = "SLA_COLOR_SYNC";
+  final _kHolidaySync = "HOLIDAY_SYNC";
+  final _kTimeSetupSync = "TIME_SETUP_SYNC";
+  final _kStartEndLocationSync = "START_END_LOCATION_SYNC";
+  final _kIntervalLocationSync = "INTERVAL_LOCATION_SYNC";
+  final _kTotalSync = "TOTAL_SYNC";
 
   Future<void> setFirstOpen(bool value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -23,7 +29,7 @@ class SharedPreferencesClient {
 
   Future<bool> getFirstOpen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kFirstOpen) ?? false;
+    return prefs.getBool(_kFirstOpen) ?? true;
   }
 
   Future<void> setAppVersionSync(bool value) async {
@@ -146,13 +152,73 @@ class SharedPreferencesClient {
     return prefs.getBool(_kSlaOpportunitySync) ?? false;
   }
 
-  Future<void> setParameterPrioritySync(bool value) async {
+  Future<void> setSlaColorSync(bool value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kParameterPrioritySync, value);
+    await prefs.setBool(_kSlaColorSync, value);
   }
 
-  Future<bool> getParameterPrioritySync() async {
+  Future<bool> getSlaColorSync() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kParameterPrioritySync) ?? false;
+    return prefs.getBool(_kSlaColorSync) ?? false;
+  }
+
+  Future<void> setPriorityLeadsSync(bool value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_kPriorityLeadsSync, value);
+  }
+
+  Future<bool> getPriorityLeadsSync() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_kPriorityLeadsSync) ?? false;
+  }
+
+  Future<void> setHolidaySync(bool value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_kHolidaySync, value);
+  }
+
+  Future<bool> getHolidaySync() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_kHolidaySync) ?? false;
+  }
+
+  Future<void> setTimeSetupSync(bool value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_kTimeSetupSync, value);
+  }
+
+  Future<bool> getTimeSetupSync() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_kTimeSetupSync) ?? false;
+  }
+
+  Future<void> setStartEndLocationSync(bool value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_kStartEndLocationSync, value);
+  }
+
+  Future<bool> getStartEndLocationSync() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_kStartEndLocationSync) ?? false;
+  }
+
+  Future<void> setIntervalLocationSync(bool value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_kIntervalLocationSync, value);
+  }
+
+  Future<bool> getIntervalLocationSync() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_kIntervalLocationSync) ?? false;
+  }
+
+  Future<void> setTotalSync(int value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_kTotalSync, value);
+  }
+
+  Future<int> getTotalSync() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getInt(_kTotalSync) ?? 0;
   }
 }

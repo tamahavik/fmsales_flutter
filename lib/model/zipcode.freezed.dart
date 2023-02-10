@@ -28,9 +28,9 @@ mixin _$ZipCode {
   String? get kecCode => throw _privateConstructorUsedError;
   String? get kelCode => throw _privateConstructorUsedError;
   String? get createBy => throw _privateConstructorUsedError;
-  DateTime? get createDate => throw _privateConstructorUsedError;
+  int? get createDate => throw _privateConstructorUsedError;
   String? get updateBy => throw _privateConstructorUsedError;
-  DateTime? get updateDate => throw _privateConstructorUsedError;
+  int? get updateDate => throw _privateConstructorUsedError;
   String? get action => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -52,9 +52,9 @@ abstract class $ZipCodeCopyWith<$Res> {
       String? kecCode,
       String? kelCode,
       String? createBy,
-      DateTime? createDate,
+      int? createDate,
       String? updateBy,
-      DateTime? updateDate,
+      int? updateDate,
       String? action});
 }
 
@@ -120,7 +120,7 @@ class _$ZipCodeCopyWithImpl<$Res, $Val extends ZipCode>
       createDate: freezed == createDate
           ? _value.createDate
           : createDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as int?,
       updateBy: freezed == updateBy
           ? _value.updateBy
           : updateBy // ignore: cast_nullable_to_non_nullable
@@ -128,7 +128,7 @@ class _$ZipCodeCopyWithImpl<$Res, $Val extends ZipCode>
       updateDate: freezed == updateDate
           ? _value.updateDate
           : updateDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as int?,
       action: freezed == action
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
@@ -153,9 +153,9 @@ abstract class _$$_ZipCodeCopyWith<$Res> implements $ZipCodeCopyWith<$Res> {
       String? kecCode,
       String? kelCode,
       String? createBy,
-      DateTime? createDate,
+      int? createDate,
       String? updateBy,
-      DateTime? updateDate,
+      int? updateDate,
       String? action});
 }
 
@@ -218,7 +218,7 @@ class __$$_ZipCodeCopyWithImpl<$Res>
       createDate: freezed == createDate
           ? _value.createDate
           : createDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as int?,
       updateBy: freezed == updateBy
           ? _value.updateBy
           : updateBy // ignore: cast_nullable_to_non_nullable
@@ -226,7 +226,7 @@ class __$$_ZipCodeCopyWithImpl<$Res>
       updateDate: freezed == updateDate
           ? _value.updateDate
           : updateDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as int?,
       action: freezed == action
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
@@ -272,11 +272,11 @@ class _$_ZipCode implements _ZipCode {
   @override
   final String? createBy;
   @override
-  final DateTime? createDate;
+  final int? createDate;
   @override
   final String? updateBy;
   @override
-  final DateTime? updateDate;
+  final int? updateDate;
   @override
   final String? action;
 
@@ -352,9 +352,9 @@ abstract class _ZipCode implements ZipCode {
       final String? kecCode,
       final String? kelCode,
       final String? createBy,
-      final DateTime? createDate,
+      final int? createDate,
       final String? updateBy,
-      final DateTime? updateDate,
+      final int? updateDate,
       final String? action}) = _$_ZipCode;
 
   factory _ZipCode.fromJson(Map<String, dynamic> json) = _$_ZipCode.fromJson;
@@ -376,11 +376,11 @@ abstract class _ZipCode implements ZipCode {
   @override
   String? get createBy;
   @override
-  DateTime? get createDate;
+  int? get createDate;
   @override
   String? get updateBy;
   @override
-  DateTime? get updateDate;
+  int? get updateDate;
   @override
   String? get action;
   @override

@@ -9,9 +9,10 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncZipCode extends Synchronize {
-  Future<Either<String, List<ZipCode>>> process() async {
+  Future<Either<String, List<ZipCode>>> process(String date) async {
     try {
-      Response response = await dio.get(SYNC_ZIPCODE);
+      Response response =
+          await dio.get(SYNC_ZIPCODE.replaceAll('{date}', date));
       ApiResult result = ApiResult.fromJson(response.data);
       if (result.message == 'OK') {
         var obj = ApiResult.processJson(result.result) as List;
@@ -25,12 +26,12 @@ class SyncZipCode extends Synchronize {
 
   Future<Either<String, List<ZipCode>>> readJson() async {
     try {
-      final String load =
-          await rootBundle.loadString('assets/init/cities.json');
+      final String load = await rootBundle.loadString('assets/init/zip.json');
       final json = await jsonDecode(load) as List;
       var data = json.map((e) => ZipCode.fromJson(e)).toList();
       return right(data);
     } catch (e) {
+      print(e);
       return left("Terjadi kesalahan");
     }
   }
