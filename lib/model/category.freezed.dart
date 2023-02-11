@@ -20,8 +20,11 @@ Category _$CategoryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Category {
+  @HiveField(0)
   String? get objGroup => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get objectDescription => throw _privateConstructorUsedError;
+  @HiveField(2)
   String? get collType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +38,10 @@ abstract class $CategoryCopyWith<$Res> {
   factory $CategoryCopyWith(Category value, $Res Function(Category) then) =
       _$CategoryCopyWithImpl<$Res, Category>;
   @useResult
-  $Res call({String? objGroup, String? objectDescription, String? collType});
+  $Res call(
+      {@HiveField(0) String? objGroup,
+      @HiveField(1) String? objectDescription,
+      @HiveField(2) String? collType});
 }
 
 /// @nodoc
@@ -79,7 +85,10 @@ abstract class _$$_CategoryCopyWith<$Res> implements $CategoryCopyWith<$Res> {
       __$$_CategoryCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? objGroup, String? objectDescription, String? collType});
+  $Res call(
+      {@HiveField(0) String? objGroup,
+      @HiveField(1) String? objectDescription,
+      @HiveField(2) String? collType});
 }
 
 /// @nodoc
@@ -116,17 +125,24 @@ class __$$_CategoryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 0, adapterName: 'CategoryAdapter')
 class _$_Category implements _Category {
-  const _$_Category({this.objGroup, this.objectDescription, this.collType});
+  const _$_Category(
+      {@HiveField(0) this.objGroup,
+      @HiveField(1) this.objectDescription,
+      @HiveField(2) this.collType});
 
   factory _$_Category.fromJson(Map<String, dynamic> json) =>
       _$$_CategoryFromJson(json);
 
   @override
+  @HiveField(0)
   final String? objGroup;
   @override
+  @HiveField(1)
   final String? objectDescription;
   @override
+  @HiveField(2)
   final String? collType;
 
   @override
@@ -168,17 +184,20 @@ class _$_Category implements _Category {
 
 abstract class _Category implements Category {
   const factory _Category(
-      {final String? objGroup,
-      final String? objectDescription,
-      final String? collType}) = _$_Category;
+      {@HiveField(0) final String? objGroup,
+      @HiveField(1) final String? objectDescription,
+      @HiveField(2) final String? collType}) = _$_Category;
 
   factory _Category.fromJson(Map<String, dynamic> json) = _$_Category.fromJson;
 
   @override
+  @HiveField(0)
   String? get objGroup;
   @override
+  @HiveField(1)
   String? get objectDescription;
   @override
+  @HiveField(2)
   String? get collType;
   @override
   @JsonKey(ignore: true)
