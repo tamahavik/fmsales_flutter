@@ -13,6 +13,15 @@ Future<Widget> isAuthenticate() async {
   SessionManager session =
       SessionManager(instance: await SharedPreferences.getInstance());
 
+  int now = DateTime.now().millisecondsSinceEpoch;
+  int nextSync = await prefs.getNextSync();
+  print(nextSync);
+  print(now);
+  if (now >= nextSync) {
+    print('masuk');
+    await prefs.setTotalSync(0);
+  }
+
   int totalSync = SyncEnum.values.length;
   int totalSyncPref = await prefs.getTotalSync();
   bool isLogin = await session.getIsLogin();

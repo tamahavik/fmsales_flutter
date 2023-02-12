@@ -26,6 +26,7 @@ class SharedPreferencesClient {
   final _kTimeSetupSync = "TIME_SETUP_SYNC";
   final _kStartEndLocationSync = "START_END_LOCATION_SYNC";
   final _kIntervalLocationSync = "INTERVAL_LOCATION_SYNC";
+  final _kNextSync = "NEXT_SYNC";
   final _kTotalSync = "TOTAL_SYNC";
 
   Future<void> setFirstOpen(bool value) async {
@@ -178,6 +179,14 @@ class SharedPreferencesClient {
 
   Future<bool> getIntervalLocationSync() async {
     return instance.getBool(_kIntervalLocationSync) ?? false;
+  }
+
+  Future<void> setNextSync(int value) async {
+    await instance.setInt(_kNextSync, value);
+  }
+
+  Future<int> getNextSync() async {
+    return instance.getInt(_kNextSync) ?? 0;
   }
 
   Future<void> setTotalSync(int value) async {

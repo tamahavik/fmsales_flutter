@@ -671,6 +671,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
+    print(next);
     if (!await prefs.getIntervalLocationSync()) {
       SyncIntervalLocation intervalLocation = SyncIntervalLocation(dio: dio);
       var data = await intervalLocation.process();
@@ -692,6 +693,13 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     _StartSync event,
     Emitter<SplashState> emit,
   ) async {
+    DateTime now = DateTime.now();
+    DateTime dateNext = DateTime(now.year, now.month, now.day, 7, 0, 0, 0, 0);
+    dateNext = dateNext.add(const Duration(days: 1));
+    print(dateNext.millisecondsSinceEpoch);
+
+    await prefs.setNextSync(dateNext.millisecondsSinceEpoch);
+
     bool isLogin = await session.getIsLogin();
     emit(SplashState.completedSync(isLogin));
   }
