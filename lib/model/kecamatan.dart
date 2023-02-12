@@ -1,17 +1,19 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'kecamatan.freezed.dart';
+import 'package:isar/isar.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'kecamatan.g.dart';
 
-@freezed
-class Kecamatan with _$Kecamatan {
-  const factory Kecamatan({
-    String? kecCode,
-    String? kecamatan,
-    String? cityCode,
-    String? action,
-  }) = _Kecamatan;
+@JsonSerializable()
+@collection
+class Kecamatan {
+  Id? id = Isar.autoIncrement;
+  String? kecCode;
+  String? kecamatan;
+  String? cityCode;
+  String? action;
 
-  factory Kecamatan.fromJson(Map<String, dynamic> json) => _$KecamatanFromJson(json);
+  Kecamatan(this.kecCode, this.kecamatan, this.cityCode, this.action);
+
+  factory Kecamatan.fromJson(Map<String, dynamic> json) =>
+      _$KecamatanFromJson(json);
 }

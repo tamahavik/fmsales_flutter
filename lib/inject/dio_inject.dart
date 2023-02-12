@@ -4,7 +4,7 @@ import 'package:ufi/services/api_variable.dart';
 
 @module
 abstract class DioInject {
-  @lazySingleton
+  @singleton
   Dio get dio => Dio(
         BaseOptions(
           baseUrl: BASE_URL,

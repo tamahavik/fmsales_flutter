@@ -5,6 +5,21 @@ import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';
+import 'package:isar/isar.dart';
+import 'package:ufi/model/category.dart';
+import 'package:ufi/model/city.dart';
+import 'package:ufi/model/holiday.dart';
+import 'package:ufi/model/kecamatan.dart';
+import 'package:ufi/model/kelurahan.dart';
+import 'package:ufi/model/model.dart';
+import 'package:ufi/model/occupation.dart';
+import 'package:ufi/model/parameter.dart';
+import 'package:ufi/model/priority_leads.dart';
+import 'package:ufi/model/province.dart';
+import 'package:ufi/model/sla_color.dart';
+import 'package:ufi/model/sub_occupation.dart';
+import 'package:ufi/model/time_setup.dart';
+import 'package:ufi/model/zipcode.dart';
 import 'package:ufi/presentation/splash/service/sync_category.dart';
 import 'package:ufi/presentation/splash/service/sync_city.dart';
 import 'package:ufi/presentation/splash/service/sync_holiday.dart';
@@ -37,12 +52,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
   final SharedPreferencesClient prefs;
   final SessionManager session;
   final Dio dio;
+  final Isar isar;
 
   SplashBloc({
     required this.info,
     required this.prefs,
     required this.session,
     required this.dio,
+    required this.isar,
   }) : super(const _Initial()) {
     on<_StartSync>(_process);
     on<_TryAgain>(_retry);
@@ -129,6 +146,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       version.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          //TODO change this hardcode value
           if (r.value == "1.3.0") {
             prefs.setAppVersionSync(true);
             prefs.setTotalSync(next);
@@ -154,6 +172,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.parameters.putAll(r));
           prefs.setLovSync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -176,6 +195,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.occupations.putAll(r));
             prefs.setOccupationSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -186,6 +206,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.occupations.putAll(r));
             prefs.setOccupationSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -209,6 +230,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.subOccupations.putAll(r));
             prefs.setSubOccupationSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -219,6 +241,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.subOccupations.putAll(r));
             prefs.setSubOccupationSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -242,6 +265,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.categorys.putAll(r));
             prefs.setCategorySync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -252,6 +276,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.categorys.putAll(r));
             prefs.setSubOccupationSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -275,6 +300,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.models.putAll(r));
             prefs.setModelSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -285,6 +311,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.models.putAll(r));
             prefs.setModelSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -308,6 +335,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.provinces.putAll(r));
             prefs.setProvinceSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -325,6 +353,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.provinces.putAll(r));
             prefs.setProvinceSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -348,6 +377,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.citys.putAll(r));
             prefs.setCitySync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -365,6 +395,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.citys.putAll(r));
             prefs.setCitySync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -388,6 +419,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.kecamatans.putAll(r));
             prefs.setKecamatanSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -405,6 +437,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.kecamatans.putAll(r));
             prefs.setKecamatanSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -428,6 +461,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.kelurahans.putAll(r));
             prefs.setKelurahanSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -445,6 +479,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.kelurahans.putAll(r));
             prefs.setKelurahanSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -468,6 +503,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
+            isar.writeTxn(() async => await isar.zipCodes.putAll(r));
             prefs.setZipCodeSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -485,6 +521,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
+            isar.writeTxn(() async => await isar.zipCodes.putAll(r));
             prefs.setZipCodeSync(true);
             prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
@@ -507,6 +544,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.parameters.put(r));
           prefs.setSlaOpportunitySync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -528,6 +566,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.priorityLeads.putAll(r));
           prefs.setSlaOpportunitySync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -549,6 +588,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.slaColors.putAll(r));
           prefs.setSlaColorSync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -570,6 +610,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.holidays.putAll(r));
           prefs.setHolidaySync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -591,6 +632,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.timeSetups.put(r));
           prefs.setTimeSetupSync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -612,6 +654,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.parameters.put(r));
           prefs.setStartEndLocationSync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -633,6 +676,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
+          isar.writeTxn(() async => await isar.parameters.put(r));
           prefs.setIntervalLocationSync(true);
           prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
@@ -648,7 +692,6 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     bool isLogin = await session.getIsLogin();
-    print(await prefs.getTotalSync());
     emit(SplashState.completedSync(isLogin));
   }
 }

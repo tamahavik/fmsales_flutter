@@ -1,15 +1,17 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:isar/isar.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'occupation.g.dart';
-part 'occupation.freezed.dart';
 
-@freezed
-class Occupation with _$Occupation {
-  const factory Occupation({
-    String? occuCode,
-    String? occuDesc,
-    String? visible,
-  }) = _Occupation;
+@JsonSerializable()
+@collection
+class Occupation {
+  Id? id = Isar.autoIncrement;
+  String? occuCode;
+  String? occuDesc;
+  String? visible;
+
+  Occupation(this.occuCode, this.occuDesc, this.visible);
 
   factory Occupation.fromJson(Map<String, dynamic> json) =>
       _$OccupationFromJson(json);

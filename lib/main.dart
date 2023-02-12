@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ufi/inject/injectable.dart';
-import 'package:ufi/presentation/app/view/app.dart';
+import 'package:ufi/presentation/app/app.dart';
 import 'package:ufi/services/authentication.dart';
 
 Future<void> main() async {
@@ -11,7 +11,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  configuredDependency();
+  await configuredDependency();
   Widget mainWidget = await isAuthenticate();
   runApp(App(mainWidget: mainWidget));
 }

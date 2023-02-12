@@ -1,14 +1,16 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:isar/isar.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'holiday.g.dart';
-part 'holiday.freezed.dart';
 
-@freezed
-class Holiday with _$Holiday {
-  const factory Holiday({
-    String? holidayDate,
-    String? holidayName,
-  }) = _Holiday;
+@JsonSerializable()
+@collection
+class Holiday {
+  Id? id = Isar.autoIncrement;
+  String? holidayDate;
+  String? holidayName;
+
+  Holiday(this.holidayDate, this.holidayName);
 
   factory Holiday.fromJson(Map<String, dynamic> json) =>
       _$HolidayFromJson(json);

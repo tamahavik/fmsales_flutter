@@ -3,7 +3,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 @module
 abstract class PackageInfoInject {
-  @lazySingleton
+  @singleton
   @preResolve
-  Future<PackageInfo> get instance => PackageInfo.fromPlatform();
+  Future<PackageInfo> get packageInfo => PackageInfo.fromPlatform();
 }
