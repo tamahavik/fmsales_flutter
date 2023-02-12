@@ -22,18 +22,23 @@ const CitySchema = CollectionSchema(
       name: r'action',
       type: IsarType.string,
     ),
-    r'cityCode': PropertySchema(
+    r'city': PropertySchema(
       id: 1,
+      name: r'city',
+      type: IsarType.string,
+    ),
+    r'cityCode': PropertySchema(
+      id: 2,
       name: r'cityCode',
       type: IsarType.string,
     ),
     r'dati2': PropertySchema(
-      id: 2,
+      id: 3,
       name: r'dati2',
       type: IsarType.string,
     ),
     r'provCode': PropertySchema(
-      id: 3,
+      id: 4,
       name: r'provCode',
       type: IsarType.string,
     )
@@ -60,6 +65,12 @@ int _cityEstimateSize(
   var bytesCount = offsets.last;
   {
     final value = object.action;
+    if (value != null) {
+      bytesCount += 3 + value.length * 3;
+    }
+  }
+  {
+    final value = object.city;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
@@ -92,9 +103,10 @@ void _citySerialize(
   Map<Type, List<int>> allOffsets,
 ) {
   writer.writeString(offsets[0], object.action);
-  writer.writeString(offsets[1], object.cityCode);
-  writer.writeString(offsets[2], object.dati2);
-  writer.writeString(offsets[3], object.provCode);
+  writer.writeString(offsets[1], object.city);
+  writer.writeString(offsets[2], object.cityCode);
+  writer.writeString(offsets[3], object.dati2);
+  writer.writeString(offsets[4], object.provCode);
 }
 
 City _cityDeserialize(
@@ -104,11 +116,12 @@ City _cityDeserialize(
   Map<Type, List<int>> allOffsets,
 ) {
   final object = City(
-    reader.readStringOrNull(offsets[1]),
-    reader.readStringOrNull(offsets[3]),
     reader.readStringOrNull(offsets[2]),
+    reader.readStringOrNull(offsets[4]),
+    reader.readStringOrNull(offsets[3]),
     reader.readStringOrNull(offsets[0]),
   );
+  object.city = reader.readStringOrNull(offsets[1]);
   object.id = id;
   return object;
 }
@@ -127,6 +140,8 @@ P _cityDeserializeProp<P>(
     case 2:
       return (reader.readStringOrNull(offset)) as P;
     case 3:
+      return (reader.readStringOrNull(offset)) as P;
+    case 4:
       return (reader.readStringOrNull(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
@@ -360,6 +375,150 @@ extension CityQueryFilter on QueryBuilder<City, City, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         property: r'action',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'city',
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'city',
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityEqualTo(
+    String? value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'city',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityGreaterThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        include: include,
+        property: r'city',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityLessThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.lessThan(
+        include: include,
+        property: r'city',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityBetween(
+    String? lower,
+    String? upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.between(
+        property: r'city',
+        lower: lower,
+        includeLower: includeLower,
+        upper: upper,
+        includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'city',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'city',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityContains(String value,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'city',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityMatches(String pattern,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'city',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'city',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<City, City, QAfterFilterCondition> cityIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'city',
         value: '',
       ));
     });
@@ -885,6 +1044,18 @@ extension CityQuerySortBy on QueryBuilder<City, City, QSortBy> {
     });
   }
 
+  QueryBuilder<City, City, QAfterSortBy> sortByCity() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'city', Sort.asc);
+    });
+  }
+
+  QueryBuilder<City, City, QAfterSortBy> sortByCityDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'city', Sort.desc);
+    });
+  }
+
   QueryBuilder<City, City, QAfterSortBy> sortByCityCode() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'cityCode', Sort.asc);
@@ -932,6 +1103,18 @@ extension CityQuerySortThenBy on QueryBuilder<City, City, QSortThenBy> {
   QueryBuilder<City, City, QAfterSortBy> thenByActionDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'action', Sort.desc);
+    });
+  }
+
+  QueryBuilder<City, City, QAfterSortBy> thenByCity() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'city', Sort.asc);
+    });
+  }
+
+  QueryBuilder<City, City, QAfterSortBy> thenByCityDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'city', Sort.desc);
     });
   }
 
@@ -992,6 +1175,13 @@ extension CityQueryWhereDistinct on QueryBuilder<City, City, QDistinct> {
     });
   }
 
+  QueryBuilder<City, City, QDistinct> distinctByCity(
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'city', caseSensitive: caseSensitive);
+    });
+  }
+
   QueryBuilder<City, City, QDistinct> distinctByCityCode(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
@@ -1027,6 +1217,12 @@ extension CityQueryProperty on QueryBuilder<City, City, QQueryProperty> {
     });
   }
 
+  QueryBuilder<City, String?, QQueryOperations> cityProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'city');
+    });
+  }
+
   QueryBuilder<City, String?, QQueryOperations> cityCodeProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'cityCode');
@@ -1055,11 +1251,14 @@ City _$CityFromJson(Map<String, dynamic> json) => City(
       json['provCode'] as String?,
       json['dati2'] as String?,
       json['action'] as String?,
-    )..id = json['id'] as int?;
+    )
+      ..id = json['id'] as int?
+      ..city = json['city'] as String?;
 
 Map<String, dynamic> _$CityToJson(City instance) => <String, dynamic>{
       'id': instance.id,
       'cityCode': instance.cityCode,
+      'city': instance.city,
       'provCode': instance.provCode,
       'dati2': instance.dati2,
       'action': instance.action,

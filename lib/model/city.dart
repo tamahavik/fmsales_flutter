@@ -8,6 +8,7 @@ part 'city.g.dart';
 class City {
   Id? id = Isar.autoIncrement;
   String? cityCode;
+  String? city;
   String? provCode;
   String? dati2;
   String? action;

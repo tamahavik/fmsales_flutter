@@ -22,14 +22,14 @@ const CategorySchema = CollectionSchema(
       name: r'collType',
       type: IsarType.string,
     ),
-    r'objGroup': PropertySchema(
+    r'objectDescription': PropertySchema(
       id: 1,
-      name: r'objGroup',
+      name: r'objectDescription',
       type: IsarType.string,
     ),
-    r'objectDescription': PropertySchema(
+    r'objectGroup': PropertySchema(
       id: 2,
-      name: r'objectDescription',
+      name: r'objectGroup',
       type: IsarType.string,
     )
   },
@@ -60,13 +60,13 @@ int _categoryEstimateSize(
     }
   }
   {
-    final value = object.objGroup;
+    final value = object.objectDescription;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objectDescription;
+    final value = object.objectGroup;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
@@ -81,8 +81,8 @@ void _categorySerialize(
   Map<Type, List<int>> allOffsets,
 ) {
   writer.writeString(offsets[0], object.collType);
-  writer.writeString(offsets[1], object.objGroup);
-  writer.writeString(offsets[2], object.objectDescription);
+  writer.writeString(offsets[1], object.objectDescription);
+  writer.writeString(offsets[2], object.objectGroup);
 }
 
 Category _categoryDeserialize(
@@ -92,8 +92,8 @@ Category _categoryDeserialize(
   Map<Type, List<int>> allOffsets,
 ) {
   final object = Category(
-    reader.readStringOrNull(offsets[1]),
     reader.readStringOrNull(offsets[2]),
+    reader.readStringOrNull(offsets[1]),
     reader.readStringOrNull(offsets[0]),
   );
   object.id = id;
@@ -421,152 +421,6 @@ extension CategoryQueryFilter
     });
   }
 
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objGroup',
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objGroup',
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupEqualTo(
-    String? value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objGroup',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupGreaterThan(
-    String? value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'objGroup',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupLessThan(
-    String? value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'objGroup',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupBetween(
-    String? lower,
-    String? upper, {
-    bool includeLower = true,
-    bool includeUpper = true,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'objGroup',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupStartsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objGroup',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupEndsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objGroup',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupContains(
-      String value,
-      {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.contains(
-        property: r'objGroup',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupMatches(
-      String pattern,
-      {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.matches(
-        property: r'objGroup',
-        wildcard: pattern,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupIsEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objGroup',
-        value: '',
-      ));
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterFilterCondition> objGroupIsNotEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objGroup',
-        value: '',
-      ));
-    });
-  }
-
   QueryBuilder<Category, Category, QAfterFilterCondition>
       objectDescriptionIsNull() {
     return QueryBuilder.apply(this, (query) {
@@ -720,6 +574,155 @@ extension CategoryQueryFilter
       ));
     });
   }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'objectGroup',
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition>
+      objectGroupIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'objectGroup',
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupEqualTo(
+    String? value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'objectGroup',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition>
+      objectGroupGreaterThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        include: include,
+        property: r'objectGroup',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupLessThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.lessThan(
+        include: include,
+        property: r'objectGroup',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupBetween(
+    String? lower,
+    String? upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.between(
+        property: r'objectGroup',
+        lower: lower,
+        includeLower: includeLower,
+        upper: upper,
+        includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'objectGroup',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'objectGroup',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupContains(
+      String value,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'objectGroup',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupMatches(
+      String pattern,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'objectGroup',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition> objectGroupIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'objectGroup',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterFilterCondition>
+      objectGroupIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'objectGroup',
+        value: '',
+      ));
+    });
+  }
 }
 
 extension CategoryQueryObject
@@ -741,18 +744,6 @@ extension CategoryQuerySortBy on QueryBuilder<Category, Category, QSortBy> {
     });
   }
 
-  QueryBuilder<Category, Category, QAfterSortBy> sortByObjGroup() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGroup', Sort.asc);
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterSortBy> sortByObjGroupDesc() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGroup', Sort.desc);
-    });
-  }
-
   QueryBuilder<Category, Category, QAfterSortBy> sortByObjectDescription() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'objectDescription', Sort.asc);
@@ -762,6 +753,18 @@ extension CategoryQuerySortBy on QueryBuilder<Category, Category, QSortBy> {
   QueryBuilder<Category, Category, QAfterSortBy> sortByObjectDescriptionDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'objectDescription', Sort.desc);
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterSortBy> sortByObjectGroup() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'objectGroup', Sort.asc);
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterSortBy> sortByObjectGroupDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'objectGroup', Sort.desc);
     });
   }
 }
@@ -792,18 +795,6 @@ extension CategoryQuerySortThenBy
     });
   }
 
-  QueryBuilder<Category, Category, QAfterSortBy> thenByObjGroup() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGroup', Sort.asc);
-    });
-  }
-
-  QueryBuilder<Category, Category, QAfterSortBy> thenByObjGroupDesc() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGroup', Sort.desc);
-    });
-  }
-
   QueryBuilder<Category, Category, QAfterSortBy> thenByObjectDescription() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'objectDescription', Sort.asc);
@@ -813,6 +804,18 @@ extension CategoryQuerySortThenBy
   QueryBuilder<Category, Category, QAfterSortBy> thenByObjectDescriptionDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'objectDescription', Sort.desc);
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterSortBy> thenByObjectGroup() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'objectGroup', Sort.asc);
+    });
+  }
+
+  QueryBuilder<Category, Category, QAfterSortBy> thenByObjectGroupDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'objectGroup', Sort.desc);
     });
   }
 }
@@ -826,18 +829,18 @@ extension CategoryQueryWhereDistinct
     });
   }
 
-  QueryBuilder<Category, Category, QDistinct> distinctByObjGroup(
-      {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objGroup', caseSensitive: caseSensitive);
-    });
-  }
-
   QueryBuilder<Category, Category, QDistinct> distinctByObjectDescription(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'objectDescription',
           caseSensitive: caseSensitive);
+    });
+  }
+
+  QueryBuilder<Category, Category, QDistinct> distinctByObjectGroup(
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'objectGroup', caseSensitive: caseSensitive);
     });
   }
 }
@@ -856,16 +859,16 @@ extension CategoryQueryProperty
     });
   }
 
-  QueryBuilder<Category, String?, QQueryOperations> objGroupProperty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objGroup');
-    });
-  }
-
   QueryBuilder<Category, String?, QQueryOperations>
       objectDescriptionProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'objectDescription');
+    });
+  }
+
+  QueryBuilder<Category, String?, QQueryOperations> objectGroupProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'objectGroup');
     });
   }
 }
@@ -875,14 +878,14 @@ extension CategoryQueryProperty
 // **************************************************************************
 
 Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
-      json['objGroup'] as String?,
+      json['objectGroup'] as String?,
       json['objectDescription'] as String?,
       json['collType'] as String?,
     )..id = json['id'] as int?;
 
 Map<String, dynamic> _$CategoryToJson(Category instance) => <String, dynamic>{
       'id': instance.id,
-      'objGroup': instance.objGroup,
+      'objectGroup': instance.objectGroup,
       'objectDescription': instance.objectDescription,
       'collType': instance.collType,
     };

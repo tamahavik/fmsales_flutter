@@ -7,14 +7,14 @@ part 'model.g.dart';
 @collection
 class Model {
   Id? id = Isar.autoIncrement;
-  String? objCode;
-  String? objGrp;
-  String? objDescr;
-  String? objBrand;
-  String? objModel;
-  String? objType;
-  String? objSize;
-  String? objMake;
+  String? objectCode;
+  String? objectGroup;
+  String? objectDescription;
+  String? objectBrand;
+  String? objectModel;
+  String? objectType;
+  String? objectSize;
+  String? objectMake;
   String? branchId;
   String? categoryId;
   String? needAddColl;
@@ -22,14 +22,14 @@ class Model {
   String? isVehicle;
 
   Model(
-      this.objCode,
-      this.objGrp,
-      this.objDescr,
-      this.objBrand,
-      this.objModel,
-      this.objType,
-      this.objSize,
-      this.objMake,
+      this.objectCode,
+      this.objectGroup,
+      this.objectDescription,
+      this.objectBrand,
+      this.objectModel,
+      this.objectType,
+      this.objectSize,
+      this.objectMake,
       this.branchId,
       this.categoryId,
       this.needAddColl,

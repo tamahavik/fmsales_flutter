@@ -42,44 +42,44 @@ const ModelSchema = CollectionSchema(
       name: r'newUsed',
       type: IsarType.string,
     ),
-    r'objBrand': PropertySchema(
+    r'objectBrand': PropertySchema(
       id: 5,
-      name: r'objBrand',
+      name: r'objectBrand',
       type: IsarType.string,
     ),
-    r'objCode': PropertySchema(
+    r'objectCode': PropertySchema(
       id: 6,
-      name: r'objCode',
+      name: r'objectCode',
       type: IsarType.string,
     ),
-    r'objDescr': PropertySchema(
+    r'objectDescription': PropertySchema(
       id: 7,
-      name: r'objDescr',
+      name: r'objectDescription',
       type: IsarType.string,
     ),
-    r'objGrp': PropertySchema(
+    r'objectGroup': PropertySchema(
       id: 8,
-      name: r'objGrp',
+      name: r'objectGroup',
       type: IsarType.string,
     ),
-    r'objMake': PropertySchema(
+    r'objectMake': PropertySchema(
       id: 9,
-      name: r'objMake',
+      name: r'objectMake',
       type: IsarType.string,
     ),
-    r'objModel': PropertySchema(
+    r'objectModel': PropertySchema(
       id: 10,
-      name: r'objModel',
+      name: r'objectModel',
       type: IsarType.string,
     ),
-    r'objSize': PropertySchema(
+    r'objectSize': PropertySchema(
       id: 11,
-      name: r'objSize',
+      name: r'objectSize',
       type: IsarType.string,
     ),
-    r'objType': PropertySchema(
+    r'objectType': PropertySchema(
       id: 12,
-      name: r'objType',
+      name: r'objectType',
       type: IsarType.string,
     )
   },
@@ -134,49 +134,49 @@ int _modelEstimateSize(
     }
   }
   {
-    final value = object.objBrand;
+    final value = object.objectBrand;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objCode;
+    final value = object.objectCode;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objDescr;
+    final value = object.objectDescription;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objGrp;
+    final value = object.objectGroup;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objMake;
+    final value = object.objectMake;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objModel;
+    final value = object.objectModel;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objSize;
+    final value = object.objectSize;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
   {
-    final value = object.objType;
+    final value = object.objectType;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
@@ -195,14 +195,14 @@ void _modelSerialize(
   writer.writeString(offsets[2], object.isVehicle);
   writer.writeString(offsets[3], object.needAddColl);
   writer.writeString(offsets[4], object.newUsed);
-  writer.writeString(offsets[5], object.objBrand);
-  writer.writeString(offsets[6], object.objCode);
-  writer.writeString(offsets[7], object.objDescr);
-  writer.writeString(offsets[8], object.objGrp);
-  writer.writeString(offsets[9], object.objMake);
-  writer.writeString(offsets[10], object.objModel);
-  writer.writeString(offsets[11], object.objSize);
-  writer.writeString(offsets[12], object.objType);
+  writer.writeString(offsets[5], object.objectBrand);
+  writer.writeString(offsets[6], object.objectCode);
+  writer.writeString(offsets[7], object.objectDescription);
+  writer.writeString(offsets[8], object.objectGroup);
+  writer.writeString(offsets[9], object.objectMake);
+  writer.writeString(offsets[10], object.objectModel);
+  writer.writeString(offsets[11], object.objectSize);
+  writer.writeString(offsets[12], object.objectType);
 }
 
 Model _modelDeserialize(
@@ -1154,36 +1154,36 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandIsNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objBrand',
+        property: r'objectBrand',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandIsNotNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objBrand',
+        property: r'objectBrand',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandEqualTo(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandEqualTo(
     String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objBrand',
+        property: r'objectBrand',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandGreaterThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandGreaterThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1191,14 +1191,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
-        property: r'objBrand',
+        property: r'objectBrand',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandLessThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandLessThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1206,14 +1206,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
-        property: r'objBrand',
+        property: r'objectBrand',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandBetween(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandBetween(
     String? lower,
     String? upper, {
     bool includeLower = true,
@@ -1222,7 +1222,7 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
-        property: r'objBrand',
+        property: r'objectBrand',
         lower: lower,
         includeLower: includeLower,
         upper: upper,
@@ -1232,104 +1232,104 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandStartsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandStartsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objBrand',
+        property: r'objectBrand',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandEndsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandEndsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objBrand',
+        property: r'objectBrand',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandContains(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandContains(
       String value,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
-        property: r'objBrand',
+        property: r'objectBrand',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandMatches(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandMatches(
       String pattern,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
-        property: r'objBrand',
+        property: r'objectBrand',
         wildcard: pattern,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandIsEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandIsEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objBrand',
+        property: r'objectBrand',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objBrandIsNotEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectBrandIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objBrand',
+        property: r'objectBrand',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeIsNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objCode',
+        property: r'objectCode',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeIsNotNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objCode',
+        property: r'objectCode',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeEqualTo(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeEqualTo(
     String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objCode',
+        property: r'objectCode',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeGreaterThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeGreaterThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1337,14 +1337,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
-        property: r'objCode',
+        property: r'objectCode',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeLessThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeLessThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1352,14 +1352,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
-        property: r'objCode',
+        property: r'objectCode',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeBetween(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeBetween(
     String? lower,
     String? upper, {
     bool includeLower = true,
@@ -1368,7 +1368,7 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
-        property: r'objCode',
+        property: r'objectCode',
         lower: lower,
         includeLower: includeLower,
         upper: upper,
@@ -1378,104 +1378,106 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeStartsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeStartsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objCode',
+        property: r'objectCode',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeEndsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeEndsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objCode',
+        property: r'objectCode',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeContains(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeContains(
       String value,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
-        property: r'objCode',
+        property: r'objectCode',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeMatches(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeMatches(
       String pattern,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
-        property: r'objCode',
+        property: r'objectCode',
         wildcard: pattern,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeIsEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeIsEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objCode',
+        property: r'objectCode',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objCodeIsNotEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectCodeIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objCode',
+        property: r'objectCode',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrIsNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objDescr',
+        property: r'objectDescription',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrIsNotNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition>
+      objectDescriptionIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objDescr',
+        property: r'objectDescription',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrEqualTo(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionEqualTo(
     String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objDescr',
+        property: r'objectDescription',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrGreaterThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition>
+      objectDescriptionGreaterThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1483,14 +1485,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
-        property: r'objDescr',
+        property: r'objectDescription',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrLessThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionLessThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1498,14 +1500,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
-        property: r'objDescr',
+        property: r'objectDescription',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrBetween(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionBetween(
     String? lower,
     String? upper, {
     bool includeLower = true,
@@ -1514,7 +1516,7 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
-        property: r'objDescr',
+        property: r'objectDescription',
         lower: lower,
         includeLower: includeLower,
         upper: upper,
@@ -1524,104 +1526,105 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrStartsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionStartsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objDescr',
+        property: r'objectDescription',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrEndsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionEndsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objDescr',
+        property: r'objectDescription',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrContains(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionContains(
       String value,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
-        property: r'objDescr',
+        property: r'objectDescription',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrMatches(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionMatches(
       String pattern,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
-        property: r'objDescr',
+        property: r'objectDescription',
         wildcard: pattern,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrIsEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectDescriptionIsEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objDescr',
+        property: r'objectDescription',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objDescrIsNotEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition>
+      objectDescriptionIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objDescr',
+        property: r'objectDescription',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpIsNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objGrp',
+        property: r'objectGroup',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpIsNotNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objGrp',
+        property: r'objectGroup',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpEqualTo(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupEqualTo(
     String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objGrp',
+        property: r'objectGroup',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpGreaterThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupGreaterThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1629,14 +1632,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
-        property: r'objGrp',
+        property: r'objectGroup',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpLessThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupLessThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1644,14 +1647,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
-        property: r'objGrp',
+        property: r'objectGroup',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpBetween(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupBetween(
     String? lower,
     String? upper, {
     bool includeLower = true,
@@ -1660,7 +1663,7 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
-        property: r'objGrp',
+        property: r'objectGroup',
         lower: lower,
         includeLower: includeLower,
         upper: upper,
@@ -1670,249 +1673,104 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpStartsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupStartsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objGrp',
+        property: r'objectGroup',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpEndsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupEndsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objGrp',
+        property: r'objectGroup',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpContains(String value,
-      {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.contains(
-        property: r'objGrp',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpMatches(
-      String pattern,
-      {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.matches(
-        property: r'objGrp',
-        wildcard: pattern,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpIsEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objGrp',
-        value: '',
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objGrpIsNotEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objGrp',
-        value: '',
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objMake',
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objMake',
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeEqualTo(
-    String? value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objMake',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeGreaterThan(
-    String? value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.greaterThan(
-        include: include,
-        property: r'objMake',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeLessThan(
-    String? value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.lessThan(
-        include: include,
-        property: r'objMake',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeBetween(
-    String? lower,
-    String? upper, {
-    bool includeLower = true,
-    bool includeUpper = true,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.between(
-        property: r'objMake',
-        lower: lower,
-        includeLower: includeLower,
-        upper: upper,
-        includeUpper: includeUpper,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeStartsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objMake',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeEndsWith(
-    String value, {
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objMake',
-        value: value,
-        caseSensitive: caseSensitive,
-      ));
-    });
-  }
-
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeContains(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupContains(
       String value,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
-        property: r'objMake',
+        property: r'objectGroup',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeMatches(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupMatches(
       String pattern,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
-        property: r'objMake',
+        property: r'objectGroup',
         wildcard: pattern,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeIsEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupIsEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objMake',
+        property: r'objectGroup',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objMakeIsNotEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectGroupIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objMake',
+        property: r'objectGroup',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelIsNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objModel',
+        property: r'objectMake',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelIsNotNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objModel',
+        property: r'objectMake',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelEqualTo(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeEqualTo(
     String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objModel',
+        property: r'objectMake',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelGreaterThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeGreaterThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1920,14 +1778,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
-        property: r'objModel',
+        property: r'objectMake',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelLessThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeLessThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1935,14 +1793,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
-        property: r'objModel',
+        property: r'objectMake',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelBetween(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeBetween(
     String? lower,
     String? upper, {
     bool includeLower = true,
@@ -1951,7 +1809,7 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
-        property: r'objModel',
+        property: r'objectMake',
         lower: lower,
         includeLower: includeLower,
         upper: upper,
@@ -1961,104 +1819,104 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelStartsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeStartsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objModel',
+        property: r'objectMake',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelEndsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeEndsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objModel',
+        property: r'objectMake',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelContains(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeContains(
       String value,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
-        property: r'objModel',
+        property: r'objectMake',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelMatches(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeMatches(
       String pattern,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
-        property: r'objModel',
+        property: r'objectMake',
         wildcard: pattern,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelIsEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeIsEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objModel',
+        property: r'objectMake',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objModelIsNotEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectMakeIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objModel',
+        property: r'objectMake',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeIsNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objSize',
+        property: r'objectModel',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeIsNotNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objSize',
+        property: r'objectModel',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeEqualTo(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelEqualTo(
     String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objSize',
+        property: r'objectModel',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeGreaterThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelGreaterThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -2066,14 +1924,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
-        property: r'objSize',
+        property: r'objectModel',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeLessThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelLessThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -2081,14 +1939,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
-        property: r'objSize',
+        property: r'objectModel',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeBetween(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelBetween(
     String? lower,
     String? upper, {
     bool includeLower = true,
@@ -2097,7 +1955,7 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
-        property: r'objSize',
+        property: r'objectModel',
         lower: lower,
         includeLower: includeLower,
         upper: upper,
@@ -2107,104 +1965,104 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeStartsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelStartsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objSize',
+        property: r'objectModel',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeEndsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelEndsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objSize',
+        property: r'objectModel',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeContains(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelContains(
       String value,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
-        property: r'objSize',
+        property: r'objectModel',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeMatches(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelMatches(
       String pattern,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
-        property: r'objSize',
+        property: r'objectModel',
         wildcard: pattern,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeIsEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelIsEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objSize',
+        property: r'objectModel',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objSizeIsNotEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectModelIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objSize',
+        property: r'objectModel',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeIsNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
-        property: r'objType',
+        property: r'objectSize',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeIsNotNull() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
-        property: r'objType',
+        property: r'objectSize',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeEqualTo(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeEqualTo(
     String? value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objType',
+        property: r'objectSize',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeGreaterThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeGreaterThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -2212,14 +2070,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
-        property: r'objType',
+        property: r'objectSize',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeLessThan(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeLessThan(
     String? value, {
     bool include = false,
     bool caseSensitive = true,
@@ -2227,14 +2085,14 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
-        property: r'objType',
+        property: r'objectSize',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeBetween(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeBetween(
     String? lower,
     String? upper, {
     bool includeLower = true,
@@ -2243,7 +2101,7 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
-        property: r'objType',
+        property: r'objectSize',
         lower: lower,
         includeLower: includeLower,
         upper: upper,
@@ -2253,69 +2111,215 @@ extension ModelQueryFilter on QueryBuilder<Model, Model, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeStartsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeStartsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.startsWith(
-        property: r'objType',
+        property: r'objectSize',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeEndsWith(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeEndsWith(
     String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.endsWith(
-        property: r'objType',
+        property: r'objectSize',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeContains(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeContains(
       String value,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
-        property: r'objType',
+        property: r'objectSize',
         value: value,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeMatches(
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeMatches(
       String pattern,
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
-        property: r'objType',
+        property: r'objectSize',
         wildcard: pattern,
         caseSensitive: caseSensitive,
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeIsEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeIsEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
-        property: r'objType',
+        property: r'objectSize',
         value: '',
       ));
     });
   }
 
-  QueryBuilder<Model, Model, QAfterFilterCondition> objTypeIsNotEmpty() {
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectSizeIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
-        property: r'objType',
+        property: r'objectSize',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNull(
+        property: r'objectType',
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(const FilterCondition.isNotNull(
+        property: r'objectType',
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeEqualTo(
+    String? value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'objectType',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeGreaterThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        include: include,
+        property: r'objectType',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeLessThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.lessThan(
+        include: include,
+        property: r'objectType',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeBetween(
+    String? lower,
+    String? upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.between(
+        property: r'objectType',
+        lower: lower,
+        includeLower: includeLower,
+        upper: upper,
+        includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'objectType',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'objectType',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeContains(
+      String value,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'objectType',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeMatches(
+      String pattern,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'objectType',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'objectType',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<Model, Model, QAfterFilterCondition> objectTypeIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'objectType',
         value: '',
       ));
     });
@@ -2387,99 +2391,99 @@ extension ModelQuerySortBy on QueryBuilder<Model, Model, QSortBy> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjBrand() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectBrand() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objBrand', Sort.asc);
+      return query.addSortBy(r'objectBrand', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjBrandDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectBrandDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objBrand', Sort.desc);
+      return query.addSortBy(r'objectBrand', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjCode() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectCode() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objCode', Sort.asc);
+      return query.addSortBy(r'objectCode', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjCodeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectCodeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objCode', Sort.desc);
+      return query.addSortBy(r'objectCode', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjDescr() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectDescription() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objDescr', Sort.asc);
+      return query.addSortBy(r'objectDescription', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjDescrDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectDescriptionDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objDescr', Sort.desc);
+      return query.addSortBy(r'objectDescription', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjGrp() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectGroup() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGrp', Sort.asc);
+      return query.addSortBy(r'objectGroup', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjGrpDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectGroupDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGrp', Sort.desc);
+      return query.addSortBy(r'objectGroup', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjMake() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectMake() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objMake', Sort.asc);
+      return query.addSortBy(r'objectMake', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjMakeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectMakeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objMake', Sort.desc);
+      return query.addSortBy(r'objectMake', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjModel() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectModel() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objModel', Sort.asc);
+      return query.addSortBy(r'objectModel', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjModelDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectModelDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objModel', Sort.desc);
+      return query.addSortBy(r'objectModel', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjSize() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectSize() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objSize', Sort.asc);
+      return query.addSortBy(r'objectSize', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjSizeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectSizeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objSize', Sort.desc);
+      return query.addSortBy(r'objectSize', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjType() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectType() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objType', Sort.asc);
+      return query.addSortBy(r'objectType', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> sortByObjTypeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> sortByObjectTypeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objType', Sort.desc);
+      return query.addSortBy(r'objectType', Sort.desc);
     });
   }
 }
@@ -2557,99 +2561,99 @@ extension ModelQuerySortThenBy on QueryBuilder<Model, Model, QSortThenBy> {
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjBrand() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectBrand() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objBrand', Sort.asc);
+      return query.addSortBy(r'objectBrand', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjBrandDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectBrandDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objBrand', Sort.desc);
+      return query.addSortBy(r'objectBrand', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjCode() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectCode() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objCode', Sort.asc);
+      return query.addSortBy(r'objectCode', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjCodeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectCodeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objCode', Sort.desc);
+      return query.addSortBy(r'objectCode', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjDescr() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectDescription() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objDescr', Sort.asc);
+      return query.addSortBy(r'objectDescription', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjDescrDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectDescriptionDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objDescr', Sort.desc);
+      return query.addSortBy(r'objectDescription', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjGrp() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectGroup() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGrp', Sort.asc);
+      return query.addSortBy(r'objectGroup', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjGrpDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectGroupDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objGrp', Sort.desc);
+      return query.addSortBy(r'objectGroup', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjMake() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectMake() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objMake', Sort.asc);
+      return query.addSortBy(r'objectMake', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjMakeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectMakeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objMake', Sort.desc);
+      return query.addSortBy(r'objectMake', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjModel() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectModel() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objModel', Sort.asc);
+      return query.addSortBy(r'objectModel', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjModelDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectModelDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objModel', Sort.desc);
+      return query.addSortBy(r'objectModel', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjSize() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectSize() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objSize', Sort.asc);
+      return query.addSortBy(r'objectSize', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjSizeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectSizeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objSize', Sort.desc);
+      return query.addSortBy(r'objectSize', Sort.desc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjType() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectType() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objType', Sort.asc);
+      return query.addSortBy(r'objectType', Sort.asc);
     });
   }
 
-  QueryBuilder<Model, Model, QAfterSortBy> thenByObjTypeDesc() {
+  QueryBuilder<Model, Model, QAfterSortBy> thenByObjectTypeDesc() {
     return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'objType', Sort.desc);
+      return query.addSortBy(r'objectType', Sort.desc);
     });
   }
 }
@@ -2690,59 +2694,60 @@ extension ModelQueryWhereDistinct on QueryBuilder<Model, Model, QDistinct> {
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjBrand(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectBrand(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objBrand', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectBrand', caseSensitive: caseSensitive);
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjCode(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectCode(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objCode', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectCode', caseSensitive: caseSensitive);
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjDescr(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectDescription(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objDescr', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectDescription',
+          caseSensitive: caseSensitive);
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjGrp(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectGroup(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objGrp', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectGroup', caseSensitive: caseSensitive);
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjMake(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectMake(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objMake', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectMake', caseSensitive: caseSensitive);
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjModel(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectModel(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objModel', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectModel', caseSensitive: caseSensitive);
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjSize(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectSize(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objSize', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectSize', caseSensitive: caseSensitive);
     });
   }
 
-  QueryBuilder<Model, Model, QDistinct> distinctByObjType(
+  QueryBuilder<Model, Model, QDistinct> distinctByObjectType(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'objType', caseSensitive: caseSensitive);
+      return query.addDistinctBy(r'objectType', caseSensitive: caseSensitive);
     });
   }
 }
@@ -2784,51 +2789,51 @@ extension ModelQueryProperty on QueryBuilder<Model, Model, QQueryProperty> {
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objBrandProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectBrandProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objBrand');
+      return query.addPropertyName(r'objectBrand');
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objCodeProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectCodeProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objCode');
+      return query.addPropertyName(r'objectCode');
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objDescrProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectDescriptionProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objDescr');
+      return query.addPropertyName(r'objectDescription');
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objGrpProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectGroupProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objGrp');
+      return query.addPropertyName(r'objectGroup');
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objMakeProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectMakeProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objMake');
+      return query.addPropertyName(r'objectMake');
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objModelProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectModelProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objModel');
+      return query.addPropertyName(r'objectModel');
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objSizeProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectSizeProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objSize');
+      return query.addPropertyName(r'objectSize');
     });
   }
 
-  QueryBuilder<Model, String?, QQueryOperations> objTypeProperty() {
+  QueryBuilder<Model, String?, QQueryOperations> objectTypeProperty() {
     return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'objType');
+      return query.addPropertyName(r'objectType');
     });
   }
 }
@@ -2838,14 +2843,14 @@ extension ModelQueryProperty on QueryBuilder<Model, Model, QQueryProperty> {
 // **************************************************************************
 
 Model _$ModelFromJson(Map<String, dynamic> json) => Model(
-      json['objCode'] as String?,
-      json['objGrp'] as String?,
-      json['objDescr'] as String?,
-      json['objBrand'] as String?,
-      json['objModel'] as String?,
-      json['objType'] as String?,
-      json['objSize'] as String?,
-      json['objMake'] as String?,
+      json['objectCode'] as String?,
+      json['objectGroup'] as String?,
+      json['objectDescription'] as String?,
+      json['objectBrand'] as String?,
+      json['objectModel'] as String?,
+      json['objectType'] as String?,
+      json['objectSize'] as String?,
+      json['objectMake'] as String?,
       json['branchId'] as String?,
       json['categoryId'] as String?,
       json['needAddColl'] as String?,
@@ -2855,14 +2860,14 @@ Model _$ModelFromJson(Map<String, dynamic> json) => Model(
 
 Map<String, dynamic> _$ModelToJson(Model instance) => <String, dynamic>{
       'id': instance.id,
-      'objCode': instance.objCode,
-      'objGrp': instance.objGrp,
-      'objDescr': instance.objDescr,
-      'objBrand': instance.objBrand,
-      'objModel': instance.objModel,
-      'objType': instance.objType,
-      'objSize': instance.objSize,
-      'objMake': instance.objMake,
+      'objectCode': instance.objectCode,
+      'objectGroup': instance.objectGroup,
+      'objectDescription': instance.objectDescription,
+      'objectBrand': instance.objectBrand,
+      'objectModel': instance.objectModel,
+      'objectType': instance.objectType,
+      'objectSize': instance.objectSize,
+      'objectMake': instance.objectMake,
       'branchId': instance.branchId,
       'categoryId': instance.categoryId,
       'needAddColl': instance.needAddColl,

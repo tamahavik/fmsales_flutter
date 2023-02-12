@@ -7,11 +7,11 @@ part 'category.g.dart';
 @collection
 class Category {
   Id? id = Isar.autoIncrement;
-  String? objGroup;
+  String? objectGroup;
   String? objectDescription;
   String? collType;
 
-  Category(this.objGroup, this.objectDescription, this.collType);
+  Category(this.objectGroup, this.objectDescription, this.collType);
 
   factory Category.fromJson(Map<String, dynamic> json) =>
       _$CategoryFromJson(json);

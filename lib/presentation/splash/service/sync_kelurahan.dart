@@ -29,7 +29,7 @@ class SyncKelurahan extends Synchronize {
   Future<Either<String, List<Kelurahan>>> readJson() async {
     try {
       final String load =
-          await rootBundle.loadString('assets/init/cities.json');
+          await rootBundle.loadString('assets/init/kelurahan.json');
       final json = await jsonDecode(load) as List;
       var data = json.map((e) => Kelurahan.fromJson(e)).toList();
       return right(data);
