@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';
 import 'package:ufi/presentation/splash/service/sync_category.dart';
 import 'package:ufi/presentation/splash/service/sync_city.dart';
@@ -29,12 +31,19 @@ part 'splash_bloc.freezed.dart';
 part 'splash_event.dart';
 part 'splash_state.dart';
 
+@injectable
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
-  final DeviceInfo _info = DeviceInfo();
-  final SharedPreferencesClient _prefs = SharedPreferencesClient();
-  final SessionManager _session = SessionManager();
+  final DeviceInfo info;
+  final SharedPreferencesClient prefs;
+  final SessionManager session;
+  final Dio dio;
 
-  SplashBloc() : super(const _Initial()) {
+  SplashBloc({
+    required this.info,
+    required this.prefs,
+    required this.session,
+    required this.dio,
+  }) : super(const _Initial()) {
     on<_StartSync>(_process);
     on<_TryAgain>(_retry);
   }
@@ -113,16 +122,16 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getAppVersionSync()) {
-      SyncVersionApp appSync = SyncVersionApp();
+    if (!await prefs.getAppVersionSync()) {
+      SyncVersionApp appSync = SyncVersionApp(dio: dio);
       var version = await appSync.process();
-      String ver = await _info.getVersion();
+      String ver = await info.getVersion();
       version.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
           if (r.value == "1.3.0") {
-            _prefs.setAppVersionSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setAppVersionSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           } else {
             emit(SplashState.failedSync("Version", "Version Tidak sama"));
@@ -139,14 +148,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getLovSync()) {
-      SyncLov syncLov = SyncLov();
+    if (!await prefs.getLovSync()) {
+      SyncLov syncLov = SyncLov(dio: dio);
       var data = await syncLov.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setLovSync(true);
-          _prefs.setTotalSync(next);
+          prefs.setLovSync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -159,16 +168,16 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    SyncOccupation occuSync = SyncOccupation();
+    SyncOccupation occuSync = SyncOccupation(dio: dio);
     int next = event.value + 1;
-    if (!await _prefs.getOccupationSync()) {
-      if (await _prefs.getFirstOpen()) {
+    if (!await prefs.getOccupationSync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await occuSync.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setOccupationSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setOccupationSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -177,8 +186,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setOccupationSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setOccupationSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -193,15 +202,15 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncSubOccupation subOccuSync = SyncSubOccupation();
-    if (!await _prefs.getSubOccupationSync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncSubOccupation subOccuSync = SyncSubOccupation(dio: dio);
+    if (!await prefs.getSubOccupationSync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await subOccuSync.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setSubOccupationSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setSubOccupationSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -210,8 +219,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setSubOccupationSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setSubOccupationSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -226,15 +235,15 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncCategory syncCategory = SyncCategory();
-    if (!await _prefs.getCategorySync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncCategory syncCategory = SyncCategory(dio: dio);
+    if (!await prefs.getCategorySync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await syncCategory.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setCategorySync(true);
-            _prefs.setTotalSync(next);
+            prefs.setCategorySync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -243,8 +252,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setSubOccupationSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setSubOccupationSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -259,15 +268,15 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncModel syncModel = SyncModel();
-    if (!await _prefs.getModelSync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncModel syncModel = SyncModel(dio: dio);
+    if (!await prefs.getModelSync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await syncModel.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setModelSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setModelSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -276,8 +285,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setModelSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setModelSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -292,21 +301,21 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncProvince syncProvince = SyncProvince();
-    if (!await _prefs.getProvinceSync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncProvince syncProvince = SyncProvince(dio: dio);
+    if (!await prefs.getProvinceSync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await syncProvince.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setProvinceSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setProvinceSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
       } else {
         var data;
-        String lastLogin = await _session.getLastLoginDate();
+        String lastLogin = await session.getLastLoginDate();
         if (lastLogin == "") {
           DateFormat formatter = DateFormat("dd-MMM-yyyy");
           data = await syncProvince.process(formatter.format(DateTime.now()));
@@ -316,8 +325,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setProvinceSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setProvinceSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -332,21 +341,21 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncCity syncCity = SyncCity();
-    if (!await _prefs.getCitySync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncCity syncCity = SyncCity(dio: dio);
+    if (!await prefs.getCitySync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await syncCity.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setCitySync(true);
-            _prefs.setTotalSync(next);
+            prefs.setCitySync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
       } else {
         var data;
-        String lastLogin = await _session.getLastLoginDate();
+        String lastLogin = await session.getLastLoginDate();
         if (lastLogin == "") {
           DateFormat formatter = DateFormat("dd-MMM-yyyy");
           data = await syncCity.process(formatter.format(DateTime.now()));
@@ -356,8 +365,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setCitySync(true);
-            _prefs.setTotalSync(next);
+            prefs.setCitySync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -372,21 +381,21 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncKecamatan syncKecamatan = SyncKecamatan();
-    if (!await _prefs.getKecamatanSync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncKecamatan syncKecamatan = SyncKecamatan(dio: dio);
+    if (!await prefs.getKecamatanSync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await syncKecamatan.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setKecamatanSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setKecamatanSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
       } else {
         var data;
-        String lastLogin = await _session.getLastLoginDate();
+        String lastLogin = await session.getLastLoginDate();
         if (lastLogin == "") {
           DateFormat formatter = DateFormat("dd-MMM-yyyy");
           data = await syncKecamatan.process(formatter.format(DateTime.now()));
@@ -396,8 +405,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setKecamatanSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setKecamatanSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -412,21 +421,21 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncKelurahan syncKelurahan = SyncKelurahan();
-    if (!await _prefs.getKelurahanSync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncKelurahan syncKelurahan = SyncKelurahan(dio: dio);
+    if (!await prefs.getKelurahanSync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await syncKelurahan.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setKelurahanSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setKelurahanSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
       } else {
         var data;
-        String lastLogin = await _session.getLastLoginDate();
+        String lastLogin = await session.getLastLoginDate();
         if (lastLogin == "") {
           DateFormat formatter = DateFormat("dd-MMM-yyyy");
           data = await syncKelurahan.process(formatter.format(DateTime.now()));
@@ -436,8 +445,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setKelurahanSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setKelurahanSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -452,21 +461,21 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    SyncZipCode syncZipCode = SyncZipCode();
-    if (!await _prefs.getZipCodeSync()) {
-      if (await _prefs.getFirstOpen()) {
+    SyncZipCode syncZipCode = SyncZipCode(dio: dio);
+    if (!await prefs.getZipCodeSync()) {
+      if (await prefs.getFirstOpen()) {
         var data = await syncZipCode.readJson();
         data.fold(
           (l) => emit(SplashState.failedSync("Error", l)),
           (r) {
-            _prefs.setZipCodeSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setZipCodeSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
       } else {
         var data;
-        String lastLogin = await _session.getLastLoginDate();
+        String lastLogin = await session.getLastLoginDate();
         if (lastLogin == "") {
           DateFormat formatter = DateFormat("dd-MMM-yyyy");
           data = await syncZipCode.process(formatter.format(DateTime.now()));
@@ -476,8 +485,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         data.fold(
           (l) => SplashState.failedSync("Error", l),
           (r) {
-            _prefs.setZipCodeSync(true);
-            _prefs.setTotalSync(next);
+            prefs.setZipCodeSync(true);
+            prefs.setTotalSync(next);
             emit(SplashState.continueSync(next));
           },
         );
@@ -492,14 +501,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getSlaOpportunitySync()) {
-      SyncSlaOpportunity slaOpportunity = SyncSlaOpportunity();
+    if (!await prefs.getSlaOpportunitySync()) {
+      SyncSlaOpportunity slaOpportunity = SyncSlaOpportunity(dio: dio);
       var data = await slaOpportunity.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setSlaOpportunitySync(true);
-          _prefs.setTotalSync(next);
+          prefs.setSlaOpportunitySync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -513,14 +522,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getPriorityLeadsSync()) {
-      SyncPriortyLeads synPriorityLeads = SyncPriortyLeads();
+    if (!await prefs.getPriorityLeadsSync()) {
+      SyncPriortyLeads synPriorityLeads = SyncPriortyLeads(dio: dio);
       var data = await synPriorityLeads.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setSlaOpportunitySync(true);
-          _prefs.setTotalSync(next);
+          prefs.setSlaOpportunitySync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -534,14 +543,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getSlaColorSync()) {
-      SyncSlaColor syncSlaColor = SyncSlaColor();
+    if (!await prefs.getSlaColorSync()) {
+      SyncSlaColor syncSlaColor = SyncSlaColor(dio: dio);
       var data = await syncSlaColor.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setSlaColorSync(true);
-          _prefs.setTotalSync(next);
+          prefs.setSlaColorSync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -555,14 +564,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getHolidaySync()) {
-      SyncHoliday syncHoliday = SyncHoliday();
+    if (!await prefs.getHolidaySync()) {
+      SyncHoliday syncHoliday = SyncHoliday(dio: dio);
       var data = await syncHoliday.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setHolidaySync(true);
-          _prefs.setTotalSync(next);
+          prefs.setHolidaySync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -576,14 +585,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getTimeSetupSync()) {
-      SyncTimeSetup syncTimeSetup = SyncTimeSetup();
+    if (!await prefs.getTimeSetupSync()) {
+      SyncTimeSetup syncTimeSetup = SyncTimeSetup(dio: dio);
       var data = await syncTimeSetup.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setTimeSetupSync(true);
-          _prefs.setTotalSync(next);
+          prefs.setTimeSetupSync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -597,14 +606,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getStartEndLocationSync()) {
-      SyncStartEndLocation startEndLocation = SyncStartEndLocation();
+    if (!await prefs.getStartEndLocationSync()) {
+      SyncStartEndLocation startEndLocation = SyncStartEndLocation(dio: dio);
       var data = await startEndLocation.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setStartEndLocationSync(true);
-          _prefs.setTotalSync(next);
+          prefs.setStartEndLocationSync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -618,14 +627,14 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     int next = event.value + 1;
-    if (!await _prefs.getIntervalLocationSync()) {
-      SyncIntervalLocation intervalLocation = SyncIntervalLocation();
+    if (!await prefs.getIntervalLocationSync()) {
+      SyncIntervalLocation intervalLocation = SyncIntervalLocation(dio: dio);
       var data = await intervalLocation.process();
       data.fold(
         (l) => emit(SplashState.failedSync("Error", l)),
         (r) {
-          _prefs.setIntervalLocationSync(true);
-          _prefs.setTotalSync(next);
+          prefs.setIntervalLocationSync(true);
+          prefs.setTotalSync(next);
           emit(SplashState.continueSync(next));
         },
       );
@@ -638,8 +647,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     _StartSync event,
     Emitter<SplashState> emit,
   ) async {
-    bool isLogin = await _session.getIsLogin();
-    print(await _prefs.getTotalSync());
+    bool isLogin = await session.getIsLogin();
+    print(await prefs.getTotalSync());
     emit(SplashState.completedSync(isLogin));
   }
 }

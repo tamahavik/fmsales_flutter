@@ -6,6 +6,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncSlaOpportunity extends Synchronize {
+  SyncSlaOpportunity({required super.dio});
+
   Future<Either<String, Parameter>> process() async {
     try {
       Response response = await dio.get(SYNC_SLA_OPPORTUNITY);

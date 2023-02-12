@@ -6,6 +6,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncPriortyLeads extends Synchronize {
+  SyncPriortyLeads({required super.dio});
+
   Future<Either<String, List<PriorityLeads>>> process() async {
     try {
       Response response = await dio.get(SYNC_PRIORITY_LEADS);

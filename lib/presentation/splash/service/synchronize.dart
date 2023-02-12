@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:ufi/services/dio_client.dart';
+import 'package:injectable/injectable.dart';
 
+@factoryMethod
 abstract class Synchronize {
-  final Dio dio = DioClient().dio;
+  Dio dio;
+  Synchronize({required this.dio});
 }

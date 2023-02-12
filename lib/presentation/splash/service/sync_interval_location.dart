@@ -6,6 +6,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncIntervalLocation extends Synchronize {
+  SyncIntervalLocation({required super.dio});
+
   Future<Either<String, Parameter>> process() async {
     try {
       Response response = await dio.get(SYNC_INTERVAL_LOCATION);

@@ -1,6 +1,12 @@
+import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+@injectable
 class SharedPreferencesClient {
+  SharedPreferences instance;
+
+  SharedPreferencesClient({required this.instance});
+
   final _kFirstOpen = "FIRST_OPEN";
   final _kAppVersionSync = "APP_VERSION_SYNC";
   final _kLovSync = "LOV_SYNC";
@@ -23,202 +29,162 @@ class SharedPreferencesClient {
   final _kTotalSync = "TOTAL_SYNC";
 
   Future<void> setFirstOpen(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kFirstOpen, value);
+    await instance.setBool(_kFirstOpen, value);
   }
 
   Future<bool> getFirstOpen() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kFirstOpen) ?? true;
+    return instance.getBool(_kFirstOpen) ?? true;
   }
 
   Future<void> setAppVersionSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kAppVersionSync, value);
+    await instance.setBool(_kAppVersionSync, value);
   }
 
   Future<bool> getAppVersionSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kAppVersionSync) ?? false;
+    return instance.getBool(_kAppVersionSync) ?? false;
   }
 
   Future<void> setLovSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kLovSync, value);
+    await instance.setBool(_kLovSync, value);
   }
 
   Future<bool> getLovSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kLovSync) ?? false;
+    return instance.getBool(_kLovSync) ?? false;
   }
 
   Future<void> setOccupationSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kOccupationSync, value);
+    await instance.setBool(_kOccupationSync, value);
   }
 
   Future<bool> getOccupationSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kOccupationSync) ?? false;
+    return instance.getBool(_kOccupationSync) ?? false;
   }
 
   Future<void> setSubOccupationSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kSubOccupationSync, value);
+    await instance.setBool(_kSubOccupationSync, value);
   }
 
   Future<bool> getSubOccupationSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kSubOccupationSync) ?? false;
+    return instance.getBool(_kSubOccupationSync) ?? false;
   }
 
   Future<void> setCategorySync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kCategorySync, value);
+    await instance.setBool(_kCategorySync, value);
   }
 
   Future<bool> getCategorySync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kCategorySync) ?? false;
+    return instance.getBool(_kCategorySync) ?? false;
   }
 
   Future<void> setModelSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kModelSync, value);
+    await instance.setBool(_kModelSync, value);
   }
 
   Future<bool> getModelSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kModelSync) ?? false;
+    return instance.getBool(_kModelSync) ?? false;
   }
 
   Future<void> setProvinceSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kProvinceSync, value);
+    await instance.setBool(_kProvinceSync, value);
   }
 
   Future<bool> getProvinceSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kProvinceSync) ?? false;
+    return instance.getBool(_kProvinceSync) ?? false;
   }
 
   Future<void> setCitySync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kCitySync, value);
+    await instance.setBool(_kCitySync, value);
   }
 
   Future<bool> getCitySync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kCitySync) ?? false;
+    return instance.getBool(_kCitySync) ?? false;
   }
 
   Future<void> setKecamatanSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kKecamatanSync, value);
+    await instance.setBool(_kKecamatanSync, value);
   }
 
   Future<bool> getKecamatanSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kKecamatanSync) ?? false;
+    return instance.getBool(_kKecamatanSync) ?? false;
   }
 
   Future<void> setKelurahanSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kKelurahanSync, value);
+    await instance.setBool(_kKelurahanSync, value);
   }
 
   Future<bool> getKelurahanSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kKelurahanSync) ?? false;
+    return instance.getBool(_kKelurahanSync) ?? false;
   }
 
   Future<void> setZipCodeSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kZipCodeSync, value);
+    await instance.setBool(_kZipCodeSync, value);
   }
 
   Future<bool> getZipCodeSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kZipCodeSync) ?? false;
+    return instance.getBool(_kZipCodeSync) ?? false;
   }
 
   Future<void> setSlaOpportunitySync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kSlaOpportunitySync, value);
+    await instance.setBool(_kSlaOpportunitySync, value);
   }
 
   Future<bool> getSlaOpportunitySync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kSlaOpportunitySync) ?? false;
+    return instance.getBool(_kSlaOpportunitySync) ?? false;
   }
 
   Future<void> setSlaColorSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kSlaColorSync, value);
+    await instance.setBool(_kSlaColorSync, value);
   }
 
   Future<bool> getSlaColorSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kSlaColorSync) ?? false;
+    return instance.getBool(_kSlaColorSync) ?? false;
   }
 
   Future<void> setPriorityLeadsSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kPriorityLeadsSync, value);
+    await instance.setBool(_kPriorityLeadsSync, value);
   }
 
   Future<bool> getPriorityLeadsSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kPriorityLeadsSync) ?? false;
+    return instance.getBool(_kPriorityLeadsSync) ?? false;
   }
 
   Future<void> setHolidaySync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kHolidaySync, value);
+    await instance.setBool(_kHolidaySync, value);
   }
 
   Future<bool> getHolidaySync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kHolidaySync) ?? false;
+    return instance.getBool(_kHolidaySync) ?? false;
   }
 
   Future<void> setTimeSetupSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kTimeSetupSync, value);
+    await instance.setBool(_kTimeSetupSync, value);
   }
 
   Future<bool> getTimeSetupSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kTimeSetupSync) ?? false;
+    return instance.getBool(_kTimeSetupSync) ?? false;
   }
 
   Future<void> setStartEndLocationSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kStartEndLocationSync, value);
+    await instance.setBool(_kStartEndLocationSync, value);
   }
 
   Future<bool> getStartEndLocationSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kStartEndLocationSync) ?? false;
+    return instance.getBool(_kStartEndLocationSync) ?? false;
   }
 
   Future<void> setIntervalLocationSync(bool value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_kIntervalLocationSync, value);
+    await instance.setBool(_kIntervalLocationSync, value);
   }
 
   Future<bool> getIntervalLocationSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_kIntervalLocationSync) ?? false;
+    return instance.getBool(_kIntervalLocationSync) ?? false;
   }
 
   Future<void> setTotalSync(int value) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(_kTotalSync, value);
+    await instance.setInt(_kTotalSync, value);
   }
 
   Future<int> getTotalSync() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getInt(_kTotalSync) ?? 0;
+    return instance.getInt(_kTotalSync) ?? 0;
   }
 }

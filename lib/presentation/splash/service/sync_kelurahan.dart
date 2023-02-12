@@ -9,6 +9,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncKelurahan extends Synchronize {
+  SyncKelurahan({required super.dio});
+
   Future<Either<String, List<Kelurahan>>> process(String date) async {
     try {
       Response response =

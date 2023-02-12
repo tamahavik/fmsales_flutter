@@ -1,18 +1,21 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 import 'package:ufi/model/api_result.dart';
 import 'package:ufi/presentation/signin/model/signin_request.dart';
 import 'package:ufi/presentation/signin/model/signin_response.dart';
 import 'package:ufi/services/api_variable.dart';
-import 'package:ufi/services/dio_client.dart';
 
+@injectable
 class SigninService {
-  final Dio _dio = DioClient().dio;
+  final Dio dio;
+
+  SigninService({required this.dio});
 
   Future<Either<String, SigninResponse>> doLogin(
       {required SigninRequest request}) async {
     try {
-      Response response = await _dio.post(SIGN_IN,
+      Response response = await dio.post(SIGN_IN,
           data: request.toJson(),
           options: Options(
             headers: {

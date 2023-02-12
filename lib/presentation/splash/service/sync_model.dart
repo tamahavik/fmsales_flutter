@@ -9,6 +9,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncModel extends Synchronize {
+  SyncModel({required super.dio});
+
   Future<Either<String, List<Model>>> process() async {
     try {
       Response response = await dio.get(SYNC_MODEL);

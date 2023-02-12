@@ -6,6 +6,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncHoliday extends Synchronize {
+  SyncHoliday({required super.dio});
+
   Future<Either<String, List<Holiday>>> process() async {
     try {
       Response response = await dio.get(SYNC_HOLIDAY);

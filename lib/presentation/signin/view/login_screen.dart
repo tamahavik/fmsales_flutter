@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:ufi/components/background.dart';
+import 'package:ufi/inject/injectable.dart';
 import 'package:ufi/presentation/signin/bloc/signin_bloc.dart';
 import 'package:ufi/screen/home_navigator_screen.dart';
 import 'package:ufi/utils/string_text.dart' as string;
@@ -45,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SigninBloc(),
+      create: (context) => getIt<SigninBloc>(),
       child: BlocConsumer<SigninBloc, SigninState>(
         listener: _stateController,
         builder: (context, state) {

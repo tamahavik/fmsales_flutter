@@ -9,6 +9,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncProvince extends Synchronize {
+  SyncProvince({required super.dio});
+
   Future<Either<String, List<Province>>> process(String date) async {
     try {
       Response response =

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:ufi/components/background.dart';
 import 'package:ufi/enums/sync_enum.dart';
+import 'package:ufi/inject/injectable.dart';
 import 'package:ufi/presentation/signin/view/login_screen.dart';
 import 'package:ufi/presentation/splash/bloc/splash_bloc.dart';
 import 'package:ufi/screen/home_navigator_screen.dart';
@@ -52,7 +53,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SplashBloc()..add(SplashEvent.startSync(_value)),
+      create: (context) =>
+          getIt<SplashBloc>()..add(SplashEvent.startSync(_value)),
       child: BlocConsumer<SplashBloc, SplashState>(
         listener: _stateController,
         builder: (context, state) {

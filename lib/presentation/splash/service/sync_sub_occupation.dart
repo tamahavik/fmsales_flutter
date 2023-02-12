@@ -9,6 +9,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncSubOccupation extends Synchronize {
+  SyncSubOccupation({required super.dio});
+
   Future<Either<String, List<SubOccupation>>> process() async {
     try {
       Response response = await dio.get(SYNC_SUB_OCCUPATION);

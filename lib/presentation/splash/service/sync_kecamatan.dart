@@ -9,6 +9,8 @@ import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
 
 class SyncKecamatan extends Synchronize {
+  SyncKecamatan({required super.dio});
+
   Future<Either<String, List<Kecamatan>>> process(String date) async {
     try {
       Response response =
