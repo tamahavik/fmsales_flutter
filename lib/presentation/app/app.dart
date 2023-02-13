@@ -15,6 +15,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'roboto',
         elevatedButtonTheme: ElevatedButtonThemeData(

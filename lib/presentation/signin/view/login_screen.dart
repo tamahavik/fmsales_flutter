@@ -17,6 +17,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _hideText = true;
+  String _version = "";
   final TextEditingController _username = TextEditingController();
   final TextEditingController _password = TextEditingController();
 
@@ -39,6 +40,9 @@ class _LoginScreenState extends State<LoginScreen> {
               )
             ]),
       },
+      version: (value) {
+        _version = value.version;
+      },
       togglePassword: (value) => _hideText = value.visibility,
     );
   }
@@ -46,7 +50,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<SigninBloc>(),
+      create: (context) =>
+          getIt<SigninBloc>()..add(const SigninEvent.started()),
       child: BlocConsumer<SigninBloc, SigninState>(
         listener: _stateController,
         builder: (context, state) {
@@ -76,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
             style: style.kFormFieldWhiteFontStyle,
             cursorColor: Colors.white,
             keyboardType: TextInputType.text,
+            textInputAction: TextInputAction.next,
             decoration: InputDecoration(
               fillColor: Colors.white,
               focusedBorder: OutlineInputBorder(
@@ -103,6 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
               color: Colors.white,
             ),
             cursorColor: Colors.white,
+            textInputAction: TextInputAction.done,
             keyboardType: TextInputType.text,
             obscureText: _hideText,
             decoration: InputDecoration(
@@ -146,9 +153,9 @@ class _LoginScreenState extends State<LoginScreen> {
           const SizedBox(
             height: 30,
           ),
-          const Center(
+          Center(
             child: Text(
-              'v 3.0.0',
+              'v $_version',
               style: style.kVersionStyle,
             ),
           ),

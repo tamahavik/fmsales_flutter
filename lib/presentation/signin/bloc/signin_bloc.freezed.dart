@@ -510,6 +510,7 @@ mixin _$SigninState {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
+    required TResult Function(String version) version,
     required TResult Function(bool visibility) togglePassword,
   }) =>
       throw _privateConstructorUsedError;
@@ -519,6 +520,7 @@ mixin _$SigninState {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(String? message)? error,
+    TResult? Function(String version)? version,
     TResult? Function(bool visibility)? togglePassword,
   }) =>
       throw _privateConstructorUsedError;
@@ -528,6 +530,7 @@ mixin _$SigninState {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
+    TResult Function(String version)? version,
     TResult Function(bool visibility)? togglePassword,
     required TResult orElse(),
   }) =>
@@ -538,6 +541,7 @@ mixin _$SigninState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Version value) version,
     required TResult Function(_TogglePassword value) togglePassword,
   }) =>
       throw _privateConstructorUsedError;
@@ -547,6 +551,7 @@ mixin _$SigninState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Version value)? version,
     TResult? Function(_TogglePassword value)? togglePassword,
   }) =>
       throw _privateConstructorUsedError;
@@ -556,6 +561,7 @@ mixin _$SigninState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Version value)? version,
     TResult Function(_TogglePassword value)? togglePassword,
     required TResult orElse(),
   }) =>
@@ -627,6 +633,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
+    required TResult Function(String version) version,
     required TResult Function(bool visibility) togglePassword,
   }) {
     return initial();
@@ -639,6 +646,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(String? message)? error,
+    TResult? Function(String version)? version,
     TResult? Function(bool visibility)? togglePassword,
   }) {
     return initial?.call();
@@ -651,6 +659,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
+    TResult Function(String version)? version,
     TResult Function(bool visibility)? togglePassword,
     required TResult orElse(),
   }) {
@@ -667,6 +676,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Version value) version,
     required TResult Function(_TogglePassword value) togglePassword,
   }) {
     return initial(this);
@@ -679,6 +689,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Version value)? version,
     TResult? Function(_TogglePassword value)? togglePassword,
   }) {
     return initial?.call(this);
@@ -691,6 +702,7 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Version value)? version,
     TResult Function(_TogglePassword value)? togglePassword,
     required TResult orElse(),
   }) {
@@ -752,6 +764,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
+    required TResult Function(String version) version,
     required TResult Function(bool visibility) togglePassword,
   }) {
     return loading();
@@ -764,6 +777,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(String? message)? error,
+    TResult? Function(String version)? version,
     TResult? Function(bool visibility)? togglePassword,
   }) {
     return loading?.call();
@@ -776,6 +790,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
+    TResult Function(String version)? version,
     TResult Function(bool visibility)? togglePassword,
     required TResult orElse(),
   }) {
@@ -792,6 +807,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Version value) version,
     required TResult Function(_TogglePassword value) togglePassword,
   }) {
     return loading(this);
@@ -804,6 +820,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Version value)? version,
     TResult? Function(_TogglePassword value)? togglePassword,
   }) {
     return loading?.call(this);
@@ -816,6 +833,7 @@ class _$_Loading with DiagnosticableTreeMixin implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Version value)? version,
     TResult Function(_TogglePassword value)? togglePassword,
     required TResult orElse(),
   }) {
@@ -877,6 +895,7 @@ class _$_Success with DiagnosticableTreeMixin implements _Success {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
+    required TResult Function(String version) version,
     required TResult Function(bool visibility) togglePassword,
   }) {
     return success();
@@ -889,6 +908,7 @@ class _$_Success with DiagnosticableTreeMixin implements _Success {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(String? message)? error,
+    TResult? Function(String version)? version,
     TResult? Function(bool visibility)? togglePassword,
   }) {
     return success?.call();
@@ -901,6 +921,7 @@ class _$_Success with DiagnosticableTreeMixin implements _Success {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
+    TResult Function(String version)? version,
     TResult Function(bool visibility)? togglePassword,
     required TResult orElse(),
   }) {
@@ -917,6 +938,7 @@ class _$_Success with DiagnosticableTreeMixin implements _Success {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Version value) version,
     required TResult Function(_TogglePassword value) togglePassword,
   }) {
     return success(this);
@@ -929,6 +951,7 @@ class _$_Success with DiagnosticableTreeMixin implements _Success {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Version value)? version,
     TResult? Function(_TogglePassword value)? togglePassword,
   }) {
     return success?.call(this);
@@ -941,6 +964,7 @@ class _$_Success with DiagnosticableTreeMixin implements _Success {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Version value)? version,
     TResult Function(_TogglePassword value)? togglePassword,
     required TResult orElse(),
   }) {
@@ -1029,6 +1053,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
+    required TResult Function(String version) version,
     required TResult Function(bool visibility) togglePassword,
   }) {
     return error(message);
@@ -1041,6 +1066,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(String? message)? error,
+    TResult? Function(String version)? version,
     TResult? Function(bool visibility)? togglePassword,
   }) {
     return error?.call(message);
@@ -1053,6 +1079,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
+    TResult Function(String version)? version,
     TResult Function(bool visibility)? togglePassword,
     required TResult orElse(),
   }) {
@@ -1069,6 +1096,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Version value) version,
     required TResult Function(_TogglePassword value) togglePassword,
   }) {
     return error(this);
@@ -1081,6 +1109,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Version value)? version,
     TResult? Function(_TogglePassword value)? togglePassword,
   }) {
     return error?.call(this);
@@ -1093,6 +1122,7 @@ class _$_Error with DiagnosticableTreeMixin implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Version value)? version,
     TResult Function(_TogglePassword value)? togglePassword,
     required TResult orElse(),
   }) {
@@ -1109,6 +1139,170 @@ abstract class _Error implements SigninState {
   String? get message;
   @JsonKey(ignore: true)
   _$$_ErrorCopyWith<_$_Error> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_VersionCopyWith<$Res> {
+  factory _$$_VersionCopyWith(
+          _$_Version value, $Res Function(_$_Version) then) =
+      __$$_VersionCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String version});
+}
+
+/// @nodoc
+class __$$_VersionCopyWithImpl<$Res>
+    extends _$SigninStateCopyWithImpl<$Res, _$_Version>
+    implements _$$_VersionCopyWith<$Res> {
+  __$$_VersionCopyWithImpl(_$_Version _value, $Res Function(_$_Version) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? version = null,
+  }) {
+    return _then(_$_Version(
+      null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Version with DiagnosticableTreeMixin implements _Version {
+  const _$_Version(this.version);
+
+  @override
+  final String version;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'SigninState.version(version: $version)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SigninState.version'))
+      ..add(DiagnosticsProperty('version', version));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Version &&
+            (identical(other.version, version) || other.version == version));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, version);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_VersionCopyWith<_$_Version> get copyWith =>
+      __$$_VersionCopyWithImpl<_$_Version>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String? message) error,
+    required TResult Function(String version) version,
+    required TResult Function(bool visibility) togglePassword,
+  }) {
+    return version(this.version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function(String? message)? error,
+    TResult? Function(String version)? version,
+    TResult? Function(bool visibility)? togglePassword,
+  }) {
+    return version?.call(this.version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String? message)? error,
+    TResult Function(String version)? version,
+    TResult Function(bool visibility)? togglePassword,
+    required TResult orElse(),
+  }) {
+    if (version != null) {
+      return version(this.version);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Version value) version,
+    required TResult Function(_TogglePassword value) togglePassword,
+  }) {
+    return version(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Version value)? version,
+    TResult? Function(_TogglePassword value)? togglePassword,
+  }) {
+    return version?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    TResult Function(_Version value)? version,
+    TResult Function(_TogglePassword value)? togglePassword,
+    required TResult orElse(),
+  }) {
+    if (version != null) {
+      return version(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Version implements SigninState {
+  const factory _Version(final String version) = _$_Version;
+
+  String get version;
+  @JsonKey(ignore: true)
+  _$$_VersionCopyWith<_$_Version> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1191,6 +1385,7 @@ class _$_TogglePassword
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
+    required TResult Function(String version) version,
     required TResult Function(bool visibility) togglePassword,
   }) {
     return togglePassword(visibility);
@@ -1203,6 +1398,7 @@ class _$_TogglePassword
     TResult? Function()? loading,
     TResult? Function()? success,
     TResult? Function(String? message)? error,
+    TResult? Function(String version)? version,
     TResult? Function(bool visibility)? togglePassword,
   }) {
     return togglePassword?.call(visibility);
@@ -1215,6 +1411,7 @@ class _$_TogglePassword
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
+    TResult Function(String version)? version,
     TResult Function(bool visibility)? togglePassword,
     required TResult orElse(),
   }) {
@@ -1231,6 +1428,7 @@ class _$_TogglePassword
     required TResult Function(_Loading value) loading,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
+    required TResult Function(_Version value) version,
     required TResult Function(_TogglePassword value) togglePassword,
   }) {
     return togglePassword(this);
@@ -1243,6 +1441,7 @@ class _$_TogglePassword
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Version value)? version,
     TResult? Function(_TogglePassword value)? togglePassword,
   }) {
     return togglePassword?.call(this);
@@ -1255,6 +1454,7 @@ class _$_TogglePassword
     TResult Function(_Loading value)? loading,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
+    TResult Function(_Version value)? version,
     TResult Function(_TogglePassword value)? togglePassword,
     required TResult orElse(),
   }) {
