@@ -2,11 +2,13 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:ufi/model/api_result.dart';
 import 'package:ufi/model/parameter.dart';
-import 'package:ufi/presentation/splash/service/synchronize.dart';
 import 'package:ufi/services/api_variable.dart';
+import 'package:injectable/injectable.dart';
 
-class SyncVersionApp extends Synchronize {
-  SyncVersionApp({required super.dio});
+@injectable
+class SyncVersionApp {
+  final Dio dio;
+  SyncVersionApp({required this.dio});
 
   Future<Either<String, Parameter>> process() async {
     try {

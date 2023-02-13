@@ -15,10 +15,7 @@ Future<Widget> isAuthenticate() async {
 
   int now = DateTime.now().millisecondsSinceEpoch;
   int nextSync = await prefs.getNextSync();
-  print(nextSync);
-  print(now);
   if (now >= nextSync) {
-    print('masuk');
     await prefs.setTotalSync(0);
   }
 

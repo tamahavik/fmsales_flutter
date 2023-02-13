@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void _stateController(BuildContext context, SplashState state) {
     state.maybeMap(
       orElse: () {},
-      failedSync: (value) => {
+      failedAndCloseSync: (value) => {
         Get.defaultDialog(
             title: value.title,
             middleText: value.message,
@@ -31,6 +31,19 @@ class _SplashScreenState extends State<SplashScreen> {
               TextButton(
                 onPressed: () {
                   SystemNavigator.pop();
+                },
+                child: const Text("Close"),
+              )
+            ]),
+      },
+      failedAndWarnSync: (value) => {
+        Get.defaultDialog(
+            title: value.title,
+            middleText: value.message,
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Get.back();
                 },
                 child: const Text("Close"),
               )
@@ -58,13 +71,13 @@ class _SplashScreenState extends State<SplashScreen> {
       child: BlocConsumer<SplashBloc, SplashState>(
         listener: _stateController,
         builder: (context, state) {
-          return _buildView();
+          return _buildView(context, state);
         },
       ),
     );
   }
 
-  Scaffold _buildView() {
+  Scaffold _buildView(BuildContext context, SplashState state) {
     return Scaffold(
       body: Center(
         child: Background(
@@ -83,12 +96,9 @@ class _SplashScreenState extends State<SplashScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
-                    '${((_value / _max) * 100).floor()}%',
-                    style: const TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                    ),
+                  state.maybeMap(
+                    orElse: () => _normal(),
+                    failedAndWarnSync: (value) => _tryAgain(context, state),
                   ),
                   Container(
                     margin: const EdgeInsets.only(bottom: 30),
@@ -104,6 +114,35 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Text _normal() {
+    return Text(
+      '${((_value / _max) * 100).floor()}%',
+      style: const TextStyle(
+        fontSize: 12,
+        color: Colors.white,
+      ),
+    );
+  }
+
+  InkWell _tryAgain(BuildContext context, SplashState state) {
+    return InkWell(
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 5),
+        child: const Text(
+          'try again',
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      onTap: () {
+        print(_value);
+        context.read<SplashBloc>().add(SplashEvent.tryAgain(_value));
+      },
     );
   }
 }

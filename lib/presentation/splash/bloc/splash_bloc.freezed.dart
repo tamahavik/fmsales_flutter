@@ -16,22 +16,23 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SplashEvent {
+  int get value => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int value) startSync,
-    required TResult Function() tryAgain,
+    required TResult Function(int value) tryAgain,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int value)? startSync,
-    TResult? Function()? tryAgain,
+    TResult? Function(int value)? tryAgain,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int value)? startSync,
-    TResult Function()? tryAgain,
+    TResult Function(int value)? tryAgain,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +55,10 @@ mixin _$SplashEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SplashEventCopyWith<SplashEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -61,6 +66,8 @@ abstract class $SplashEventCopyWith<$Res> {
   factory $SplashEventCopyWith(
           SplashEvent value, $Res Function(SplashEvent) then) =
       _$SplashEventCopyWithImpl<$Res, SplashEvent>;
+  @useResult
+  $Res call({int value});
 }
 
 /// @nodoc
@@ -72,13 +79,28 @@ class _$SplashEventCopyWithImpl<$Res, $Val extends SplashEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$_StartSyncCopyWith<$Res> {
+abstract class _$$_StartSyncCopyWith<$Res>
+    implements $SplashEventCopyWith<$Res> {
   factory _$$_StartSyncCopyWith(
           _$_StartSync value, $Res Function(_$_StartSync) then) =
       __$$_StartSyncCopyWithImpl<$Res>;
+  @override
   @useResult
   $Res call({int value});
 }
@@ -139,7 +161,7 @@ class _$_StartSync implements _StartSync {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int value) startSync,
-    required TResult Function() tryAgain,
+    required TResult Function(int value) tryAgain,
   }) {
     return startSync(value);
   }
@@ -148,7 +170,7 @@ class _$_StartSync implements _StartSync {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int value)? startSync,
-    TResult? Function()? tryAgain,
+    TResult? Function(int value)? tryAgain,
   }) {
     return startSync?.call(value);
   }
@@ -157,7 +179,7 @@ class _$_StartSync implements _StartSync {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int value)? startSync,
-    TResult Function()? tryAgain,
+    TResult Function(int value)? tryAgain,
     required TResult orElse(),
   }) {
     if (startSync != null) {
@@ -201,17 +223,23 @@ class _$_StartSync implements _StartSync {
 abstract class _StartSync implements SplashEvent {
   const factory _StartSync(final int value) = _$_StartSync;
 
+  @override
   int get value;
+  @override
   @JsonKey(ignore: true)
   _$$_StartSyncCopyWith<_$_StartSync> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_TryAgainCopyWith<$Res> {
+abstract class _$$_TryAgainCopyWith<$Res>
+    implements $SplashEventCopyWith<$Res> {
   factory _$$_TryAgainCopyWith(
           _$_TryAgain value, $Res Function(_$_TryAgain) then) =
       __$$_TryAgainCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int value});
 }
 
 /// @nodoc
@@ -221,54 +249,78 @@ class __$$_TryAgainCopyWithImpl<$Res>
   __$$_TryAgainCopyWithImpl(
       _$_TryAgain _value, $Res Function(_$_TryAgain) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$_TryAgain(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_TryAgain implements _TryAgain {
-  const _$_TryAgain();
+  const _$_TryAgain(this.value);
+
+  @override
+  final int value;
 
   @override
   String toString() {
-    return 'SplashEvent.tryAgain()';
+    return 'SplashEvent.tryAgain(value: $value)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_TryAgain);
+        (other.runtimeType == runtimeType &&
+            other is _$_TryAgain &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TryAgainCopyWith<_$_TryAgain> get copyWith =>
+      __$$_TryAgainCopyWithImpl<_$_TryAgain>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int value) startSync,
-    required TResult Function() tryAgain,
+    required TResult Function(int value) tryAgain,
   }) {
-    return tryAgain();
+    return tryAgain(value);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int value)? startSync,
-    TResult? Function()? tryAgain,
+    TResult? Function(int value)? tryAgain,
   }) {
-    return tryAgain?.call();
+    return tryAgain?.call(value);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int value)? startSync,
-    TResult Function()? tryAgain,
+    TResult Function(int value)? tryAgain,
     required TResult orElse(),
   }) {
     if (tryAgain != null) {
-      return tryAgain();
+      return tryAgain(value);
     }
     return orElse();
   }
@@ -306,7 +358,14 @@ class _$_TryAgain implements _TryAgain {
 }
 
 abstract class _TryAgain implements SplashEvent {
-  const factory _TryAgain() = _$_TryAgain;
+  const factory _TryAgain(final int value) = _$_TryAgain;
+
+  @override
+  int get value;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TryAgainCopyWith<_$_TryAgain> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -315,7 +374,8 @@ mixin _$SplashState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int value) continueSync,
-    required TResult Function(String title, String message) failedSync,
+    required TResult Function(String title, String message) failedAndCloseSync,
+    required TResult Function(String title, String message) failedAndWarnSync,
     required TResult Function(bool isLogin) completedSync,
   }) =>
       throw _privateConstructorUsedError;
@@ -323,7 +383,8 @@ mixin _$SplashState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int value)? continueSync,
-    TResult? Function(String title, String message)? failedSync,
+    TResult? Function(String title, String message)? failedAndCloseSync,
+    TResult? Function(String title, String message)? failedAndWarnSync,
     TResult? Function(bool isLogin)? completedSync,
   }) =>
       throw _privateConstructorUsedError;
@@ -331,7 +392,8 @@ mixin _$SplashState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int value)? continueSync,
-    TResult Function(String title, String message)? failedSync,
+    TResult Function(String title, String message)? failedAndCloseSync,
+    TResult Function(String title, String message)? failedAndWarnSync,
     TResult Function(bool isLogin)? completedSync,
     required TResult orElse(),
   }) =>
@@ -340,7 +402,8 @@ mixin _$SplashState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_ContinueSync value) continueSync,
-    required TResult Function(_failedSync value) failedSync,
+    required TResult Function(_failedAndCloseSync value) failedAndCloseSync,
+    required TResult Function(_failedAndWarnSync value) failedAndWarnSync,
     required TResult Function(_CompletedSync value) completedSync,
   }) =>
       throw _privateConstructorUsedError;
@@ -348,7 +411,8 @@ mixin _$SplashState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_ContinueSync value)? continueSync,
-    TResult? Function(_failedSync value)? failedSync,
+    TResult? Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult? Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult? Function(_CompletedSync value)? completedSync,
   }) =>
       throw _privateConstructorUsedError;
@@ -356,7 +420,8 @@ mixin _$SplashState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_ContinueSync value)? continueSync,
-    TResult Function(_failedSync value)? failedSync,
+    TResult Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult Function(_CompletedSync value)? completedSync,
     required TResult orElse(),
   }) =>
@@ -420,7 +485,8 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int value) continueSync,
-    required TResult Function(String title, String message) failedSync,
+    required TResult Function(String title, String message) failedAndCloseSync,
+    required TResult Function(String title, String message) failedAndWarnSync,
     required TResult Function(bool isLogin) completedSync,
   }) {
     return initial();
@@ -431,7 +497,8 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int value)? continueSync,
-    TResult? Function(String title, String message)? failedSync,
+    TResult? Function(String title, String message)? failedAndCloseSync,
+    TResult? Function(String title, String message)? failedAndWarnSync,
     TResult? Function(bool isLogin)? completedSync,
   }) {
     return initial?.call();
@@ -442,7 +509,8 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int value)? continueSync,
-    TResult Function(String title, String message)? failedSync,
+    TResult Function(String title, String message)? failedAndCloseSync,
+    TResult Function(String title, String message)? failedAndWarnSync,
     TResult Function(bool isLogin)? completedSync,
     required TResult orElse(),
   }) {
@@ -457,7 +525,8 @@ class _$_Initial implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_ContinueSync value) continueSync,
-    required TResult Function(_failedSync value) failedSync,
+    required TResult Function(_failedAndCloseSync value) failedAndCloseSync,
+    required TResult Function(_failedAndWarnSync value) failedAndWarnSync,
     required TResult Function(_CompletedSync value) completedSync,
   }) {
     return initial(this);
@@ -468,7 +537,8 @@ class _$_Initial implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_ContinueSync value)? continueSync,
-    TResult? Function(_failedSync value)? failedSync,
+    TResult? Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult? Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult? Function(_CompletedSync value)? completedSync,
   }) {
     return initial?.call(this);
@@ -479,7 +549,8 @@ class _$_Initial implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_ContinueSync value)? continueSync,
-    TResult Function(_failedSync value)? failedSync,
+    TResult Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult Function(_CompletedSync value)? completedSync,
     required TResult orElse(),
   }) {
@@ -560,7 +631,8 @@ class _$_ContinueSync implements _ContinueSync {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int value) continueSync,
-    required TResult Function(String title, String message) failedSync,
+    required TResult Function(String title, String message) failedAndCloseSync,
+    required TResult Function(String title, String message) failedAndWarnSync,
     required TResult Function(bool isLogin) completedSync,
   }) {
     return continueSync(value);
@@ -571,7 +643,8 @@ class _$_ContinueSync implements _ContinueSync {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int value)? continueSync,
-    TResult? Function(String title, String message)? failedSync,
+    TResult? Function(String title, String message)? failedAndCloseSync,
+    TResult? Function(String title, String message)? failedAndWarnSync,
     TResult? Function(bool isLogin)? completedSync,
   }) {
     return continueSync?.call(value);
@@ -582,7 +655,8 @@ class _$_ContinueSync implements _ContinueSync {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int value)? continueSync,
-    TResult Function(String title, String message)? failedSync,
+    TResult Function(String title, String message)? failedAndCloseSync,
+    TResult Function(String title, String message)? failedAndWarnSync,
     TResult Function(bool isLogin)? completedSync,
     required TResult orElse(),
   }) {
@@ -597,7 +671,8 @@ class _$_ContinueSync implements _ContinueSync {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_ContinueSync value) continueSync,
-    required TResult Function(_failedSync value) failedSync,
+    required TResult Function(_failedAndCloseSync value) failedAndCloseSync,
+    required TResult Function(_failedAndWarnSync value) failedAndWarnSync,
     required TResult Function(_CompletedSync value) completedSync,
   }) {
     return continueSync(this);
@@ -608,7 +683,8 @@ class _$_ContinueSync implements _ContinueSync {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_ContinueSync value)? continueSync,
-    TResult? Function(_failedSync value)? failedSync,
+    TResult? Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult? Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult? Function(_CompletedSync value)? completedSync,
   }) {
     return continueSync?.call(this);
@@ -619,7 +695,8 @@ class _$_ContinueSync implements _ContinueSync {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_ContinueSync value)? continueSync,
-    TResult Function(_failedSync value)? failedSync,
+    TResult Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult Function(_CompletedSync value)? completedSync,
     required TResult orElse(),
   }) {
@@ -640,20 +717,20 @@ abstract class _ContinueSync implements SplashState {
 }
 
 /// @nodoc
-abstract class _$$_failedSyncCopyWith<$Res> {
-  factory _$$_failedSyncCopyWith(
-          _$_failedSync value, $Res Function(_$_failedSync) then) =
-      __$$_failedSyncCopyWithImpl<$Res>;
+abstract class _$$_failedAndCloseSyncCopyWith<$Res> {
+  factory _$$_failedAndCloseSyncCopyWith(_$_failedAndCloseSync value,
+          $Res Function(_$_failedAndCloseSync) then) =
+      __$$_failedAndCloseSyncCopyWithImpl<$Res>;
   @useResult
   $Res call({String title, String message});
 }
 
 /// @nodoc
-class __$$_failedSyncCopyWithImpl<$Res>
-    extends _$SplashStateCopyWithImpl<$Res, _$_failedSync>
-    implements _$$_failedSyncCopyWith<$Res> {
-  __$$_failedSyncCopyWithImpl(
-      _$_failedSync _value, $Res Function(_$_failedSync) _then)
+class __$$_failedAndCloseSyncCopyWithImpl<$Res>
+    extends _$SplashStateCopyWithImpl<$Res, _$_failedAndCloseSync>
+    implements _$$_failedAndCloseSyncCopyWith<$Res> {
+  __$$_failedAndCloseSyncCopyWithImpl(
+      _$_failedAndCloseSync _value, $Res Function(_$_failedAndCloseSync) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -662,7 +739,7 @@ class __$$_failedSyncCopyWithImpl<$Res>
     Object? title = null,
     Object? message = null,
   }) {
-    return _then(_$_failedSync(
+    return _then(_$_failedAndCloseSync(
       null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -677,8 +754,8 @@ class __$$_failedSyncCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_failedSync implements _failedSync {
-  const _$_failedSync(this.title, this.message);
+class _$_failedAndCloseSync implements _failedAndCloseSync {
+  const _$_failedAndCloseSync(this.title, this.message);
 
   @override
   final String title;
@@ -687,14 +764,14 @@ class _$_failedSync implements _failedSync {
 
   @override
   String toString() {
-    return 'SplashState.failedSync(title: $title, message: $message)';
+    return 'SplashState.failedAndCloseSync(title: $title, message: $message)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_failedSync &&
+            other is _$_failedAndCloseSync &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.message, message) || other.message == message));
   }
@@ -705,18 +782,20 @@ class _$_failedSync implements _failedSync {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_failedSyncCopyWith<_$_failedSync> get copyWith =>
-      __$$_failedSyncCopyWithImpl<_$_failedSync>(this, _$identity);
+  _$$_failedAndCloseSyncCopyWith<_$_failedAndCloseSync> get copyWith =>
+      __$$_failedAndCloseSyncCopyWithImpl<_$_failedAndCloseSync>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int value) continueSync,
-    required TResult Function(String title, String message) failedSync,
+    required TResult Function(String title, String message) failedAndCloseSync,
+    required TResult Function(String title, String message) failedAndWarnSync,
     required TResult Function(bool isLogin) completedSync,
   }) {
-    return failedSync(title, message);
+    return failedAndCloseSync(title, message);
   }
 
   @override
@@ -724,10 +803,11 @@ class _$_failedSync implements _failedSync {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int value)? continueSync,
-    TResult? Function(String title, String message)? failedSync,
+    TResult? Function(String title, String message)? failedAndCloseSync,
+    TResult? Function(String title, String message)? failedAndWarnSync,
     TResult? Function(bool isLogin)? completedSync,
   }) {
-    return failedSync?.call(title, message);
+    return failedAndCloseSync?.call(title, message);
   }
 
   @override
@@ -735,12 +815,13 @@ class _$_failedSync implements _failedSync {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int value)? continueSync,
-    TResult Function(String title, String message)? failedSync,
+    TResult Function(String title, String message)? failedAndCloseSync,
+    TResult Function(String title, String message)? failedAndWarnSync,
     TResult Function(bool isLogin)? completedSync,
     required TResult orElse(),
   }) {
-    if (failedSync != null) {
-      return failedSync(title, message);
+    if (failedAndCloseSync != null) {
+      return failedAndCloseSync(title, message);
     }
     return orElse();
   }
@@ -750,10 +831,11 @@ class _$_failedSync implements _failedSync {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_ContinueSync value) continueSync,
-    required TResult Function(_failedSync value) failedSync,
+    required TResult Function(_failedAndCloseSync value) failedAndCloseSync,
+    required TResult Function(_failedAndWarnSync value) failedAndWarnSync,
     required TResult Function(_CompletedSync value) completedSync,
   }) {
-    return failedSync(this);
+    return failedAndCloseSync(this);
   }
 
   @override
@@ -761,10 +843,11 @@ class _$_failedSync implements _failedSync {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_ContinueSync value)? continueSync,
-    TResult? Function(_failedSync value)? failedSync,
+    TResult? Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult? Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult? Function(_CompletedSync value)? completedSync,
   }) {
-    return failedSync?.call(this);
+    return failedAndCloseSync?.call(this);
   }
 
   @override
@@ -772,25 +855,188 @@ class _$_failedSync implements _failedSync {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_ContinueSync value)? continueSync,
-    TResult Function(_failedSync value)? failedSync,
+    TResult Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult Function(_CompletedSync value)? completedSync,
     required TResult orElse(),
   }) {
-    if (failedSync != null) {
-      return failedSync(this);
+    if (failedAndCloseSync != null) {
+      return failedAndCloseSync(this);
     }
     return orElse();
   }
 }
 
-abstract class _failedSync implements SplashState {
-  const factory _failedSync(final String title, final String message) =
-      _$_failedSync;
+abstract class _failedAndCloseSync implements SplashState {
+  const factory _failedAndCloseSync(final String title, final String message) =
+      _$_failedAndCloseSync;
 
   String get title;
   String get message;
   @JsonKey(ignore: true)
-  _$$_failedSyncCopyWith<_$_failedSync> get copyWith =>
+  _$$_failedAndCloseSyncCopyWith<_$_failedAndCloseSync> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_failedAndWarnSyncCopyWith<$Res> {
+  factory _$$_failedAndWarnSyncCopyWith(_$_failedAndWarnSync value,
+          $Res Function(_$_failedAndWarnSync) then) =
+      __$$_failedAndWarnSyncCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String title, String message});
+}
+
+/// @nodoc
+class __$$_failedAndWarnSyncCopyWithImpl<$Res>
+    extends _$SplashStateCopyWithImpl<$Res, _$_failedAndWarnSync>
+    implements _$$_failedAndWarnSyncCopyWith<$Res> {
+  __$$_failedAndWarnSyncCopyWithImpl(
+      _$_failedAndWarnSync _value, $Res Function(_$_failedAndWarnSync) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? message = null,
+  }) {
+    return _then(_$_failedAndWarnSync(
+      null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_failedAndWarnSync implements _failedAndWarnSync {
+  const _$_failedAndWarnSync(this.title, this.message);
+
+  @override
+  final String title;
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'SplashState.failedAndWarnSync(title: $title, message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_failedAndWarnSync &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, title, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_failedAndWarnSyncCopyWith<_$_failedAndWarnSync> get copyWith =>
+      __$$_failedAndWarnSyncCopyWithImpl<_$_failedAndWarnSync>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int value) continueSync,
+    required TResult Function(String title, String message) failedAndCloseSync,
+    required TResult Function(String title, String message) failedAndWarnSync,
+    required TResult Function(bool isLogin) completedSync,
+  }) {
+    return failedAndWarnSync(title, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int value)? continueSync,
+    TResult? Function(String title, String message)? failedAndCloseSync,
+    TResult? Function(String title, String message)? failedAndWarnSync,
+    TResult? Function(bool isLogin)? completedSync,
+  }) {
+    return failedAndWarnSync?.call(title, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int value)? continueSync,
+    TResult Function(String title, String message)? failedAndCloseSync,
+    TResult Function(String title, String message)? failedAndWarnSync,
+    TResult Function(bool isLogin)? completedSync,
+    required TResult orElse(),
+  }) {
+    if (failedAndWarnSync != null) {
+      return failedAndWarnSync(title, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_ContinueSync value) continueSync,
+    required TResult Function(_failedAndCloseSync value) failedAndCloseSync,
+    required TResult Function(_failedAndWarnSync value) failedAndWarnSync,
+    required TResult Function(_CompletedSync value) completedSync,
+  }) {
+    return failedAndWarnSync(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_ContinueSync value)? continueSync,
+    TResult? Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult? Function(_failedAndWarnSync value)? failedAndWarnSync,
+    TResult? Function(_CompletedSync value)? completedSync,
+  }) {
+    return failedAndWarnSync?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_ContinueSync value)? continueSync,
+    TResult Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult Function(_failedAndWarnSync value)? failedAndWarnSync,
+    TResult Function(_CompletedSync value)? completedSync,
+    required TResult orElse(),
+  }) {
+    if (failedAndWarnSync != null) {
+      return failedAndWarnSync(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _failedAndWarnSync implements SplashState {
+  const factory _failedAndWarnSync(final String title, final String message) =
+      _$_failedAndWarnSync;
+
+  String get title;
+  String get message;
+  @JsonKey(ignore: true)
+  _$$_failedAndWarnSyncCopyWith<_$_failedAndWarnSync> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -860,7 +1106,8 @@ class _$_CompletedSync implements _CompletedSync {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(int value) continueSync,
-    required TResult Function(String title, String message) failedSync,
+    required TResult Function(String title, String message) failedAndCloseSync,
+    required TResult Function(String title, String message) failedAndWarnSync,
     required TResult Function(bool isLogin) completedSync,
   }) {
     return completedSync(isLogin);
@@ -871,7 +1118,8 @@ class _$_CompletedSync implements _CompletedSync {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function(int value)? continueSync,
-    TResult? Function(String title, String message)? failedSync,
+    TResult? Function(String title, String message)? failedAndCloseSync,
+    TResult? Function(String title, String message)? failedAndWarnSync,
     TResult? Function(bool isLogin)? completedSync,
   }) {
     return completedSync?.call(isLogin);
@@ -882,7 +1130,8 @@ class _$_CompletedSync implements _CompletedSync {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(int value)? continueSync,
-    TResult Function(String title, String message)? failedSync,
+    TResult Function(String title, String message)? failedAndCloseSync,
+    TResult Function(String title, String message)? failedAndWarnSync,
     TResult Function(bool isLogin)? completedSync,
     required TResult orElse(),
   }) {
@@ -897,7 +1146,8 @@ class _$_CompletedSync implements _CompletedSync {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_ContinueSync value) continueSync,
-    required TResult Function(_failedSync value) failedSync,
+    required TResult Function(_failedAndCloseSync value) failedAndCloseSync,
+    required TResult Function(_failedAndWarnSync value) failedAndWarnSync,
     required TResult Function(_CompletedSync value) completedSync,
   }) {
     return completedSync(this);
@@ -908,7 +1158,8 @@ class _$_CompletedSync implements _CompletedSync {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_ContinueSync value)? continueSync,
-    TResult? Function(_failedSync value)? failedSync,
+    TResult? Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult? Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult? Function(_CompletedSync value)? completedSync,
   }) {
     return completedSync?.call(this);
@@ -919,7 +1170,8 @@ class _$_CompletedSync implements _CompletedSync {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_ContinueSync value)? continueSync,
-    TResult Function(_failedSync value)? failedSync,
+    TResult Function(_failedAndCloseSync value)? failedAndCloseSync,
+    TResult Function(_failedAndWarnSync value)? failedAndWarnSync,
     TResult Function(_CompletedSync value)? completedSync,
     required TResult orElse(),
   }) {

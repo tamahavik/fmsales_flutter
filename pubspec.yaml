@@ -80,6 +80,7 @@ dependencies:
   isar: ^3.0.5
   isar_flutter_libs: ^3.0.5
   workmanager: ^0.5.1
+  connectivity_plus: ^3.0.3
 
 dev_dependencies:
   flutter_test:
