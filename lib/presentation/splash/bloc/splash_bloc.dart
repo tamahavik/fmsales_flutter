@@ -138,6 +138,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getAppVersionSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -172,6 +173,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     }
 
     if (await prefs.getLovSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -200,6 +202,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
 
     int next = event.value + 1;
     if (await prefs.getOccupationSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -240,6 +243,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getSubOccupationSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -280,6 +284,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getCategorySync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -320,6 +325,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getModelSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -360,6 +366,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getProvinceSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -408,6 +415,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getCitySync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -456,6 +464,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getKecamatanSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -504,6 +513,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getKelurahanSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -552,6 +562,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getZipCodeSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -600,6 +611,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getSlaOpportunitySync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -627,6 +639,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getPriorityLeadsSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -654,6 +667,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getSlaColorSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -681,6 +695,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getHolidaySync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -708,6 +723,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getTimeSetupSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -735,6 +751,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getStartEndLocationSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
@@ -762,6 +779,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
     if (await prefs.getIntervalLocationSync()) {
+      prefs.setTotalSync(next);
       emit(SplashState.continueSync(next));
       return;
     }
