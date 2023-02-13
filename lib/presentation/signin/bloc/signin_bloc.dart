@@ -39,6 +39,7 @@ class SigninBloc extends Bloc<SigninEvent, SigninState> {
   ) async {
     String version = await deviceInfo.getVersion();
     emit(SigninState.version(version));
+    await permission.askPermissionApp();
   }
 
   Future<void> _doLogin(

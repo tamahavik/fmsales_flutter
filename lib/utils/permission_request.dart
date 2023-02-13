@@ -3,6 +3,14 @@ import 'package:permission_handler/permission_handler.dart';
 
 @injectable
 class PermissionRequest {
+  Future<void> askPermissionApp() async {
+    Map<Permission, PermissionStatus> statues = await [
+      Permission.location,
+      Permission.camera,
+      Permission.notification,
+    ].request();
+  }
+
   Future<void> askPermissionCamera() async {
     Permission status = Permission.camera;
     if (await status.isDenied) {
