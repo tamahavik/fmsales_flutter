@@ -20,24 +20,8 @@ import 'package:ufi/model/sla_color.dart';
 import 'package:ufi/model/sub_occupation.dart';
 import 'package:ufi/model/time_setup.dart';
 import 'package:ufi/model/zipcode.dart';
-import 'package:ufi/presentation/splash/service/sync_category.dart';
-import 'package:ufi/presentation/splash/service/sync_city.dart';
-import 'package:ufi/presentation/splash/service/sync_holiday.dart';
-import 'package:ufi/presentation/splash/service/sync_interval_location.dart';
-import 'package:ufi/presentation/splash/service/sync_kecamatan.dart';
-import 'package:ufi/presentation/splash/service/sync_kelurahan.dart';
-import 'package:ufi/presentation/splash/service/sync_lov.dart';
-import 'package:ufi/presentation/splash/service/sync_model.dart';
-import 'package:ufi/presentation/splash/service/sync_occupation.dart';
-import 'package:ufi/presentation/splash/service/sync_priority_leads.dart';
-import 'package:ufi/presentation/splash/service/sync_province.dart';
-import 'package:ufi/presentation/splash/service/sync_sla_color.dart';
-import 'package:ufi/presentation/splash/service/sync_sla_opportunity.dart';
-import 'package:ufi/presentation/splash/service/sync_start_end_location.dart';
-import 'package:ufi/presentation/splash/service/sync_sub_occupation.dart';
-import 'package:ufi/presentation/splash/service/sync_time_setup.dart';
-import 'package:ufi/presentation/splash/service/sync_version_app.dart';
-import 'package:ufi/presentation/splash/service/sync_zipcode.dart';
+import 'package:ufi/presentation/splash/service/api_sync_service.dart';
+import 'package:ufi/presentation/splash/service/file_sync_service.dart';
 import 'package:ufi/services/session_manager.dart';
 import 'package:ufi/services/shared_preferences._client.dart';
 import 'package:ufi/utils/device_info.dart';
@@ -55,6 +39,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
   final SessionManager session;
   final Dio dio;
   final Isar isar;
+  final ApiSyncService apiSyncService;
+  final FileSyncService fileSyncService;
 
   SplashBloc({
     required this.info,
@@ -62,6 +48,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     required this.session,
     required this.dio,
     required this.isar,
+    required this.apiSyncService,
+    required this.fileSyncService,
   }) : super(const _Initial()) {
     on<_StartSync>(_process);
     on<_TryAgain>(_retry);
@@ -154,8 +142,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncVersionApp appSync = SyncVersionApp(dio: dio);
-    var version = await appSync.process();
+    var version = await apiSyncService.versionApiSync();
     String ver = await info.getVersion();
     version.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
@@ -189,8 +176,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncLov syncLov = SyncLov(dio: dio);
-    var data = await syncLov.process();
+    var data = await apiSyncService.lovApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
@@ -218,9 +204,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncOccupation occuSync = SyncOccupation(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await occuSync.readJson();
+      var data = await fileSyncService.occupationFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -231,7 +216,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         },
       );
     } else {
-      var data = await occuSync.process();
+      var data = await apiSyncService.occupationApiSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -259,9 +244,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncSubOccupation subOccuSync = SyncSubOccupation(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await subOccuSync.readJson();
+      var data = await fileSyncService.subOccupationFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -272,7 +256,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         },
       );
     } else {
-      var data = await subOccuSync.process();
+      var data = await apiSyncService.subOccupationApiSync();
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
         (r) {
@@ -300,9 +284,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncCategory syncCategory = SyncCategory(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await syncCategory.readJson();
+      var data = await fileSyncService.categoryFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -313,7 +296,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         },
       );
     } else {
-      var data = await syncCategory.process();
+      var data = await apiSyncService.categoryApiSync();
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
         (r) {
@@ -341,9 +324,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncModel syncModel = SyncModel(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await syncModel.readJson();
+      var data = await fileSyncService.modelFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -354,7 +336,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
         },
       );
     } else {
-      var data = await syncModel.process();
+      var data = await apiSyncService.modelApiSync();
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
         (r) {
@@ -382,9 +364,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncProvince syncProvince = SyncProvince(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await syncProvince.readJson();
+      var data = await fileSyncService.provinceFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -399,9 +380,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       String lastLogin = await session.getLastLoginDate();
       if (lastLogin == "") {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
-        data = await syncProvince.process(formatter.format(DateTime.now()));
+        data = await apiSyncService
+            .provinceApiSync(formatter.format(DateTime.now()));
       } else {
-        data = await syncProvince.process(lastLogin);
+        data = await apiSyncService.provinceApiSync(lastLogin);
       }
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
@@ -430,9 +412,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncCity syncCity = SyncCity(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await syncCity.readJson();
+      var data = await fileSyncService.cityFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -447,9 +428,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       String lastLogin = await session.getLastLoginDate();
       if (lastLogin == "") {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
-        data = await syncCity.process(formatter.format(DateTime.now()));
+        data =
+            await apiSyncService.cityApiSync(formatter.format(DateTime.now()));
       } else {
-        data = await syncCity.process(lastLogin);
+        data = await apiSyncService.cityApiSync(lastLogin);
       }
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
@@ -478,9 +460,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncKecamatan syncKecamatan = SyncKecamatan(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await syncKecamatan.readJson();
+      var data = await fileSyncService.kecamatanFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -495,9 +476,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       String lastLogin = await session.getLastLoginDate();
       if (lastLogin == "") {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
-        data = await syncKecamatan.process(formatter.format(DateTime.now()));
+        data = await apiSyncService
+            .kecamatanApiSync(formatter.format(DateTime.now()));
       } else {
-        data = await syncKecamatan.process(lastLogin);
+        data = await apiSyncService.kecamatanApiSync(lastLogin);
       }
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
@@ -526,9 +508,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncKelurahan syncKelurahan = SyncKelurahan(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await syncKelurahan.readJson();
+      var data = await fileSyncService.kelurahanFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -543,9 +524,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       String lastLogin = await session.getLastLoginDate();
       if (lastLogin == "") {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
-        data = await syncKelurahan.process(formatter.format(DateTime.now()));
+        data = await apiSyncService
+            .kelurahanApiSync(formatter.format(DateTime.now()));
       } else {
-        data = await syncKelurahan.process(lastLogin);
+        data = await apiSyncService.kelurahanApiSync(lastLogin);
       }
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
@@ -574,9 +556,8 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncZipCode syncZipCode = SyncZipCode(dio: dio);
     if (await prefs.getFirstOpen()) {
-      var data = await syncZipCode.readJson();
+      var data = await fileSyncService.zipCodeFileSync();
       data.fold(
         (l) => emit(SplashState.failedAndWarnSync("Error", l)),
         (r) {
@@ -591,9 +572,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       String lastLogin = await session.getLastLoginDate();
       if (lastLogin == "") {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
-        data = await syncZipCode.process(formatter.format(DateTime.now()));
+        data = await apiSyncService
+            .zipCodeApiSync(formatter.format(DateTime.now()));
       } else {
-        data = await syncZipCode.process(lastLogin);
+        data = await apiSyncService.zipCodeApiSync(lastLogin);
       }
       data.fold(
         (l) => SplashState.failedAndWarnSync("Error", l),
@@ -622,8 +604,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncSlaOpportunity slaOpportunity = SyncSlaOpportunity(dio: dio);
-    var data = await slaOpportunity.process();
+    var data = await apiSyncService.slaOpportunityApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
@@ -650,8 +631,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncPriortyLeads synPriorityLeads = SyncPriortyLeads(dio: dio);
-    var data = await synPriorityLeads.process();
+    var data = await apiSyncService.priorityLeadsApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
@@ -678,8 +658,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncSlaColor syncSlaColor = SyncSlaColor(dio: dio);
-    var data = await syncSlaColor.process();
+    var data = await apiSyncService.slaColorApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
@@ -706,8 +685,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncHoliday syncHoliday = SyncHoliday(dio: dio);
-    var data = await syncHoliday.process();
+    var data = await apiSyncService.holidayApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
@@ -734,8 +712,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncTimeSetup syncTimeSetup = SyncTimeSetup(dio: dio);
-    var data = await syncTimeSetup.process();
+    var data = await apiSyncService.timeSetupApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
@@ -762,8 +739,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncStartEndLocation startEndLocation = SyncStartEndLocation(dio: dio);
-    var data = await startEndLocation.process();
+    var data = await apiSyncService.startEndLocationApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
@@ -790,8 +766,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       return;
     }
 
-    SyncIntervalLocation intervalLocation = SyncIntervalLocation(dio: dio);
-    var data = await intervalLocation.process();
+    var data = await apiSyncService.invervalLocationApiSync();
     data.fold(
       (l) => emit(SplashState.failedAndWarnSync("Error", l)),
       (r) {
