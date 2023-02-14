@@ -140,7 +140,6 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
       onTap: () {
-        print(_value);
         context.read<SplashBloc>().add(SplashEvent.tryAgain(_value));
       },
     );

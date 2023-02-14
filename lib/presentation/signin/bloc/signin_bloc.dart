@@ -62,31 +62,33 @@ class SigninBloc extends Bloc<SigninEvent, SigninState> {
     );
 
     final result = await service.doLogin(request: request);
-    result.fold(
-      (l) => emit(SigninState.error(l)),
-      (r) {
+    await result.fold(
+      (l) async => emit(SigninState.error(l)),
+      (r) async {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
-        session.setSession(
+        await session.setSession(
           r.token ?? "",
           r.refreshToken ?? "",
           r.fullName ?? "",
           r.userId ?? "",
         );
-        session.setDataBranch(Branch(
+        Branch branch = Branch(
           name: r.branchName,
           code: r.branchCode,
           isDaf: r.daf,
           employeeNumber: r.employeeNumber,
-        ));
-        session.setDataServOffice(ServOffice(
+        );
+        await session.setDataBranch(branch);
+        ServOffice servOffice = ServOffice(
           officeCode: r.branchCode,
           officeName: r.branchName,
           servOfficeCode: r.serviceOfficeCode,
           servOfficeName: r.serviceOfficeName,
           timeDiff: r.timeDiff,
-        ));
-        session.setFirstLogin(true);
-        session.setLastLoginDate(formatter.format(DateTime.now()));
+        );
+        await session.setDataServOffice(servOffice);
+        await session.setFirstLogin(true);
+        await session.setLastLoginDate(formatter.format(DateTime.now()));
         emit(const SigninState.success());
       },
     );

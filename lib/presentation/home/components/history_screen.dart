@@ -66,14 +66,12 @@ class _HistoryScreenState extends State<HistoryScreen> {
 
   @override
   void initState() {
-    print('init history');
     mapToMonth(history);
     super.initState();
   }
 
   @override
   void dispose() {
-    print('dispose history');
     super.dispose();
   }
 

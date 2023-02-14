@@ -76,4 +76,8 @@ class SessionManager {
     await instance.setString(_kServOfficeName, servOffice.servOfficeName ?? "");
     await instance.setInt(_kTimeDiff, servOffice.timeDiff ?? 0);
   }
+
+  Future<String> getFullName() async {
+    return instance.getString(_kFullName) ?? '';
+  }
 }
