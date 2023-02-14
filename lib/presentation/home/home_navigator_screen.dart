@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
 import 'package:ufi/enums/bottom_appbar_enum.dart';
 import 'package:ufi/inject/injectable.dart';
 import 'package:ufi/presentation/home/bloc/home_bloc.dart';
 import 'package:ufi/presentation/home/bloc/navigation_bloc.dart';
+import 'package:ufi/presentation/home/components/bottom_navigation_menu.dart';
+import 'package:ufi/presentation/home/components/floating_action.dart';
 import 'package:ufi/presentation/home/components/history_screen.dart';
 import 'package:ufi/presentation/home/components/home_screen.dart';
 import 'package:ufi/screen/verification_screen.dart';
@@ -71,72 +72,12 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
                   home: (value) => const HomeScreen(),
                   history: (value) => const HistoryScreen(),
                 ),
-                floatingActionButton: SpeedDial(
-                  animatedIcon: AnimatedIcons.menu_close,
-                  overlayColor: Colors.black,
-                  overlayOpacity: 0.5,
-                  spacing: 10,
-                  children: [
-                    SpeedDialChild(
-                      onTap: () => context
-                          .read<HomeBloc>()
-                          .add(const HomeEvent.verificationMenu()),
-                      child: const Icon(
-                        Icons.article_outlined,
-                        color: Colors.white,
-                      ),
-                      backgroundColor: Colors.blue[600],
-                    ),
-                    SpeedDialChild(
-                      visible: _currentIndex == BottomAppBarEnums.home,
-                      onTap: () {},
-                      backgroundColor: Colors.blue[600],
-                      child: const Icon(
-                        Icons.refresh,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+                floatingActionButton:
+                    FloatingAction(currentIndex: _currentIndex),
                 floatingActionButtonLocation:
                     FloatingActionButtonLocation.centerDocked,
-                bottomNavigationBar: BottomAppBar(
-                  color: Colors.blue[600],
-                  shape: const CircularNotchedRectangle(),
-                  notchMargin: 5,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: IconButton(
-                          onPressed: () => context
-                              .read<NavigationBloc>()
-                              .add(NavigationEvent.homeMenu(_currentIndex)),
-                          icon: const Icon(Icons.home),
-                          color: _currentIndex == BottomAppBarEnums.home
-                              ? Colors.white
-                              : Colors.grey[800],
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 50,
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: IconButton(
-                          onPressed: () => context
-                              .read<NavigationBloc>()
-                              .add(NavigationEvent.historyMenu(_currentIndex)),
-                          icon: const Icon(Icons.history),
-                          color: _currentIndex == BottomAppBarEnums.history
-                              ? Colors.white
-                              : Colors.grey[800],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                bottomNavigationBar:
+                    BottomNavigationMenu(currentIndex: _currentIndex),
               );
             },
           );
