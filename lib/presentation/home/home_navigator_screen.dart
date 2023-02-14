@@ -5,6 +5,7 @@ import 'package:ufi/enums/bottom_appbar_enum.dart';
 import 'package:ufi/inject/injectable.dart';
 import 'package:ufi/presentation/home/bloc/home_bloc.dart';
 import 'package:ufi/presentation/home/bloc/navigation_bloc.dart';
+import 'package:ufi/presentation/home/components/application_bar.dart';
 import 'package:ufi/presentation/home/components/bottom_navigation_menu.dart';
 import 'package:ufi/presentation/home/components/floating_action.dart';
 import 'package:ufi/presentation/home/components/history_screen.dart';
@@ -57,15 +58,9 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
             listener: _stateNavigationController,
             builder: (context, state) {
               return Scaffold(
-                appBar: AppBar(
-                  backgroundColor: Colors.blue[600],
-                  title: Text(_fullName),
-                  actions: [
-                    IconButton(
-                      icon: const Icon(Icons.logout),
-                      onPressed: () {},
-                    ),
-                  ],
+                appBar: PreferredSize(
+                  preferredSize: const Size.fromHeight(56),
+                  child: ApplicationBar(fullName: _fullName),
                 ),
                 body: state.map(
                   initial: (value) => const HomeScreen(),
