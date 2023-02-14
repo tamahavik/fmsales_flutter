@@ -25,7 +25,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     Emitter<HomeState> emit,
   ) async {
     String name = await session.getFullName();
-    print('this name is : $name');
     emit(HomeState.fullName(name));
   }
 

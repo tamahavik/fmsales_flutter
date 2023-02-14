@@ -33,9 +33,7 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
     state.map(
       initial: (value) {},
       fullName: (value) => {
-        print(_fullName),
         _fullName = value.fullName,
-        print(_fullName),
       },
       verification: (value) => Get.to(() => const VerificationScreen()),
     );
