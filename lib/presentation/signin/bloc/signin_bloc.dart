@@ -66,6 +66,12 @@ class SigninBloc extends Bloc<SigninEvent, SigninState> {
       (l) => emit(SigninState.error(l)),
       (r) {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
+        session.setSession(
+          r.token ?? "",
+          r.refreshToken ?? "",
+          r.fullName ?? "",
+          r.userId ?? "",
+        );
         session.setDataBranch(Branch(
           name: r.branchName,
           code: r.branchCode,
@@ -79,7 +85,6 @@ class SigninBloc extends Bloc<SigninEvent, SigninState> {
           servOfficeName: r.serviceOfficeName,
           timeDiff: r.timeDiff,
         ));
-        session.setIsLogin(true);
         session.setFirstLogin(true);
         session.setLastLoginDate(formatter.format(DateTime.now()));
         emit(const SigninState.success());

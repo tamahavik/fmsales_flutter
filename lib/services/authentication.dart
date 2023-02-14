@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ufi/enums/sync_enum.dart';
 import 'package:ufi/presentation/signin/view/login_screen.dart';
 import 'package:ufi/presentation/splash/view/splash_screen.dart';
-import 'package:ufi/screen/home_navigator_screen.dart';
+import 'package:ufi/presentation/home/home_navigator_screen.dart';
 import 'package:ufi/services/session_manager.dart';
 import 'package:ufi/services/shared_preferences._client.dart';
 

@@ -7,7 +7,7 @@ import 'package:ufi/enums/sync_enum.dart';
 import 'package:ufi/inject/injectable.dart';
 import 'package:ufi/presentation/signin/view/login_screen.dart';
 import 'package:ufi/presentation/splash/bloc/splash_bloc.dart';
-import 'package:ufi/screen/home_navigator_screen.dart';
+import 'package:ufi/presentation/home/home_navigator_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

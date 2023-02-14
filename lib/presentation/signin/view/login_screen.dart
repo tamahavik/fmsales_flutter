@@ -8,7 +8,7 @@ import 'package:ufi/presentation/signin/components/login_button.dart';
 import 'package:ufi/presentation/signin/components/login_button_loading.dart';
 import 'package:ufi/presentation/signin/components/password_field.dart';
 import 'package:ufi/presentation/signin/components/username_field.dart';
-import 'package:ufi/screen/home_navigator_screen.dart';
+import 'package:ufi/presentation/home/home_navigator_screen.dart';
 import 'package:ufi/utils/string_text.dart' as string;
 import 'package:ufi/utils/text_style.dart' as style;
 

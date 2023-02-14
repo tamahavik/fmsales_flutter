@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-import 'package:ufi/screen/history_screen.dart';
-import 'package:ufi/screen/home_screen.dart';
+import 'package:ufi/enums/bottom_appbar_enum.dart';
+import 'package:ufi/presentation/home/components/history_screen.dart';
+import 'package:ufi/presentation/home/components/home_screen.dart';
 import 'package:ufi/screen/verification_screen.dart';
-
-import '../enums/bottom_appbar_enum.dart';
 
 class HomeNavigationScreen extends StatefulWidget {
   const HomeNavigationScreen({super.key});

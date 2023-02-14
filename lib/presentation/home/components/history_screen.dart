@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:ufi/components/history_card.dart';
+import 'package:ufi/model/history_leads_detail.dart';
 import 'package:ufi/model/history_leads_header.dart';
 
-import '../components/history_card.dart';
-import '../model/history_leads_detail.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});

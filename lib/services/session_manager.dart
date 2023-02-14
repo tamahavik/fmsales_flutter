@@ -13,6 +13,11 @@ class SessionManager {
   final _kFirstLogin = "FIRST_LOGIN";
   final _kLastLoginDate = "LAST_LOGIN_DATE";
 
+  final _kAccessToken = "ACCESS_TOKEN";
+  final _kRefreshToken = "REFRESH_TOKEN";
+  final _kFullName = "FULL_NAME";
+  final _kUserName = "USER_NAME";
+
   final _kBranchCode = "BRANCH_CODE";
   final _kBranchName = "BRANCH_NAME";
   final _kBranchIsDaf = "BRANCH_IS_DAF";
@@ -46,6 +51,15 @@ class SessionManager {
 
   Future<String> getLastLoginDate() async {
     return instance.getString(_kLastLoginDate) ?? "";
+  }
+
+  Future<void> setSession(
+      String token, String refreshToken, String name, String username) async {
+    await setIsLogin(true);
+    await instance.setString(_kAccessToken, token);
+    await instance.setString(_kRefreshToken, refreshToken);
+    await instance.setString(_kFullName, name);
+    await instance.setString(_kUserName, username);
   }
 
   Future<void> setDataBranch(Branch branch) async {
