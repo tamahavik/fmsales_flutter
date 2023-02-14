@@ -5,6 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';
+import 'package:ufi/model/branch.dart';
+import 'package:ufi/model/serv_office.dart';
 import 'package:ufi/presentation/signin/model/signin_request.dart';
 import 'package:ufi/presentation/signin/service/signin_service.dart';
 import 'package:ufi/services/session_manager.dart';
@@ -12,7 +14,9 @@ import 'package:ufi/utils/device_info.dart';
 import 'package:ufi/utils/permission_request.dart';
 
 part 'signin_bloc.freezed.dart';
+
 part 'signin_event.dart';
+
 part 'signin_state.dart';
 
 @injectable
@@ -58,13 +62,25 @@ class SigninBloc extends Bloc<SigninEvent, SigninState> {
     );
 
     final result = await service.doLogin(request: request);
-
-    //TODO save to shared preference
     result.fold(
       (l) => emit(SigninState.error(l)),
       (r) {
         DateFormat formatter = DateFormat("dd-MMM-yyyy");
+        session.setDataBranch(Branch(
+          name: r.branchName,
+          code: r.branchCode,
+          isDaf: r.daf,
+          employeeNumber: r.employeeNumber,
+        ));
+        session.setDataServOffice(ServOffice(
+          officeCode: r.branchCode,
+          officeName: r.branchName,
+          servOfficeCode: r.serviceOfficeCode,
+          servOfficeName: r.serviceOfficeName,
+          timeDiff: r.timeDiff,
+        ));
         session.setIsLogin(true);
+        session.setFirstLogin(true);
         session.setLastLoginDate(formatter.format(DateTime.now()));
         emit(const SigninState.success());
       },
