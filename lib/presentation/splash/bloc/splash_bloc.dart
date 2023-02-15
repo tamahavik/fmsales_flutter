@@ -1,7 +1,7 @@
 import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';
@@ -29,7 +29,9 @@ import 'package:ufi/utils/network.dart';
 import 'package:ufi/utils/string_text.dart';
 
 part 'splash_bloc.freezed.dart';
+
 part 'splash_event.dart';
+
 part 'splash_state.dart';
 
 @injectable
@@ -37,7 +39,6 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
   final DeviceInfo info;
   final SharedPreferencesClient prefs;
   final SessionManager session;
-  final Dio dio;
   final Isar isar;
   final ApiSyncService apiSyncService;
   final FileSyncService fileSyncService;
@@ -46,7 +47,6 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     required this.info,
     required this.prefs,
     required this.session,
-    required this.dio,
     required this.isar,
     required this.apiSyncService,
     required this.fileSyncService,

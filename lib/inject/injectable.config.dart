@@ -86,7 +86,6 @@ Future<_i1.GetIt> init(
         info: gh<_i14.DeviceInfo>(),
         prefs: gh<_i11.SharedPreferencesClient>(),
         session: gh<_i15.SessionManager>(),
-        dio: gh<_i4.Dio>(),
         isar: gh<_i6.Isar>(),
         apiSyncService: gh<_i13.ApiSyncService>(),
         fileSyncService: gh<_i5.FileSyncService>(),
