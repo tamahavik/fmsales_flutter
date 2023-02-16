@@ -24,18 +24,7 @@ class _TodayScreenState extends State<TodayScreen> {
           child: ListView(
             dragStartBehavior: DragStartBehavior.down,
             children: const [
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
-              TaskCard(),
+
             ],
           ),
         );

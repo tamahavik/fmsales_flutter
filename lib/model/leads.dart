@@ -126,6 +126,8 @@ class Leads {
   int firstConco;
   @JsonKey(defaultValue: '')
   String colorFinal;
+  @JsonKey(defaultValue: '')
+  String alamatGenerated;
 
   /*
   * from user input
@@ -255,6 +257,7 @@ class Leads {
   @JsonKey(defaultValue: 0)
   int order;
 
+
   Leads(
       this.recommendedBusinessUnit,
       this.branchId,
@@ -313,6 +316,7 @@ class Leads {
       this.startDate,
       this.firstConco,
       this.colorFinal,
+      this.alamatGenerated,
       this.addressSurvey,
       this.rtRwSurvey,
       this.provinceSurvey,

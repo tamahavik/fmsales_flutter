@@ -96,6 +96,7 @@ class TodayBloc extends Bloc<TodayEvent, TodayState> {
           if (leads != null) {
             obj.id = leads.id;
           }
+          obj.alamatGenerated = await _db.generatedAlamat(obj);
           await _db.saveLeads(obj);
         }
       },

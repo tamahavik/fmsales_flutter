@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ufi/model/leads.dart';
 
 class TaskCard extends StatelessWidget {
-  const TaskCard({super.key});
+  final Leads _leads;
+
+  const TaskCard({super.key, required Leads leads}) : _leads = leads;
 
   @override
   Widget build(BuildContext context) {
@@ -17,20 +20,20 @@ class TaskCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  children: const [
+                  children: [
                     Text(
-                      'Customer Name',
-                      style: TextStyle(
+                      _leads.custName,
+                      style: const TextStyle(
                         color: Colors.blue,
                         fontSize: 18,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
-                      'Draft',
-                      style: TextStyle(
+                      _leads.statusTask,
+                      style: const TextStyle(
                           color: Colors.orange,
                           fontSize: 16,
                           fontStyle: FontStyle.italic),
@@ -41,7 +44,7 @@ class TaskCard extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        'FIFADA',
+                        _leads.dataSourceName.toUpperCase(),
                         style: TextStyle(
                           color: Colors.red,
                           fontSize: 12,
@@ -69,18 +72,20 @@ class TaskCard extends StatelessWidget {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text(
-                  '0854313515131',
-                  style: TextStyle(
+                  _leads.custNo.isEmpty
+                      ? _leads.mobileNoOne
+                      : '${_leads.custNo} | ${_leads.mobileNoOne}',
+                  style: const TextStyle(
                     fontSize: 14,
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 20),
+                  padding: const EdgeInsets.only(right: 20),
                   child: Text(
-                    'Priority: 3',
-                    style: TextStyle(
+                    'Priority: ${_leads.priority}',
+                    style: const TextStyle(
                         color: Colors.red,
                         fontSize: 12,
                         fontWeight: FontWeight.bold),
@@ -90,7 +95,7 @@ class TaskCard extends StatelessWidget {
             ),
           ),
           Visibility(
-            visible: false,
+            visible: _leads.remarkUh.isEmpty ? true : false,
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               padding: const EdgeInsets.all(5),
@@ -100,23 +105,23 @@ class TaskCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Pesan UH : ",
+                  const Text(
+                    'Pesan UH :',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.black,
                     ),
                   ),
                   Text(
-                    "HasilFu UH : ",
-                    style: TextStyle(
+                    'HasilFu UH : ${_leads.hasilFuUh}',
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Colors.black54,
                     ),
                   ),
                   Text(
-                    "Remark UH : asdasdasdasd\nasdadasdasdasdasd\nasdasdasdasdas ",
-                    style: TextStyle(
+                    'Remark UH : ${_leads.remarkUh}',
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Colors.black54,
                     ),
@@ -125,11 +130,11 @@ class TaskCard extends StatelessWidget {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: Text(
-              'JALAN GANG SENGGOL 3/2 Kel. Kayu Putih , Kec. Pulo Gadung , Kota Jakarta Timur, Prov DKI Jakarta',
-              style: TextStyle(
+              _leads.alamatGenerated,
+              style: const TextStyle(
                 color: Colors.black54,
                 fontSize: 14,
               ),
@@ -140,74 +145,3 @@ class TaskCard extends StatelessWidget {
     );
   }
 }
-
-
-// Column(
-//           children: [
-//             Expanded(
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 crossAxisAlignment: CrossAxisAlignment.center,
-//                 children: [
-//                   Text(
-//                     'CUSTOMER NAME',
-//                     style: TextStyle(
-//                       color: Colors.blue,
-//                       fontSize: 16,
-//                     ),
-//                   ),
-//                   Text(
-//                     'DATA SOURCE NAME',
-//                     style: TextStyle(
-//                       color: Colors.red,
-//                       fontSize: 12,
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             Expanded(
-//               child: Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text(
-//                     '084621316516',
-//                     style: TextStyle(
-//                       fontSize: 14,
-//                     ),
-//                   ),
-//                   Text(
-//                     'Priority : 3',
-//                     style: TextStyle(color: Colors.red, fontSize: 12),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             Container(
-//               margin: EdgeInsets.all(10),
-//               padding: EdgeInsets.all(5),
-//               width: double.infinity,
-//               color: Colors.yellow,
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Text("Pesan UH : "),
-//                   Text("HasilFu UH : "),
-//                   Text(
-//                       "Remark UH : asdasdasdasd\nasdadasdasdasdasd\nasdasdasdasdas\n "),
-//                 ],
-//               ),
-//             ),
-//             Expanded(
-//               child: Text(
-//                 'JALAN GANG SENGGOL 3/2 Kel. Kayu Putih , Kec. Pulo Gadung , Kota Jakarta Timur, Prov DKI Jakarta',
-//                 style: TextStyle(
-//                   color: Colors.black54,
-//                   fontSize: 14,
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),

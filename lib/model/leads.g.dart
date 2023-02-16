@@ -37,578 +37,583 @@ const LeadsSchema = CollectionSchema(
       name: r'alamatEnh',
       type: IsarType.string,
     ),
-    r'alamatLatLong': PropertySchema(
+    r'alamatGenerated': PropertySchema(
       id: 4,
+      name: r'alamatGenerated',
+      type: IsarType.string,
+    ),
+    r'alamatLatLong': PropertySchema(
+      id: 5,
       name: r'alamatLatLong',
       type: IsarType.string,
     ),
     r'anotherAsset': PropertySchema(
-      id: 5,
+      id: 6,
       name: r'anotherAsset',
       type: IsarType.string,
     ),
     r'area': PropertySchema(
-      id: 6,
+      id: 7,
       name: r'area',
       type: IsarType.string,
     ),
     r'birthDate': PropertySchema(
-      id: 7,
+      id: 8,
       name: r'birthDate',
       type: IsarType.long,
     ),
     r'birthPlace': PropertySchema(
-      id: 8,
+      id: 9,
       name: r'birthPlace',
       type: IsarType.string,
     ),
     r'bpkbName': PropertySchema(
-      id: 9,
+      id: 10,
       name: r'bpkbName',
       type: IsarType.string,
     ),
     r'branchId': PropertySchema(
-      id: 10,
+      id: 11,
       name: r'branchId',
       type: IsarType.string,
     ),
     r'branchName': PropertySchema(
-      id: 11,
+      id: 12,
       name: r'branchName',
       type: IsarType.string,
     ),
     r'businessUnit': PropertySchema(
-      id: 12,
+      id: 13,
       name: r'businessUnit',
       type: IsarType.string,
     ),
     r'cekMotor': PropertySchema(
-      id: 13,
+      id: 14,
       name: r'cekMotor',
       type: IsarType.string,
     ),
     r'city': PropertySchema(
-      id: 14,
+      id: 15,
       name: r'city',
       type: IsarType.string,
     ),
     r'citySurvey': PropertySchema(
-      id: 15,
+      id: 16,
       name: r'citySurvey',
       type: IsarType.string,
     ),
     r'collectmobileNoOne': PropertySchema(
-      id: 16,
+      id: 17,
       name: r'collectmobileNoOne',
       type: IsarType.string,
     ),
     r'collectmobileNoTwo': PropertySchema(
-      id: 17,
+      id: 18,
       name: r'collectmobileNoTwo',
       type: IsarType.string,
     ),
     r'colorFinal': PropertySchema(
-      id: 18,
+      id: 19,
       name: r'colorFinal',
       type: IsarType.string,
     ),
     r'contractNumber': PropertySchema(
-      id: 19,
+      id: 20,
       name: r'contractNumber',
       type: IsarType.string,
     ),
     r'currentMce': PropertySchema(
-      id: 20,
+      id: 21,
       name: r'currentMce',
       type: IsarType.string,
     ),
     r'custMainNo': PropertySchema(
-      id: 21,
+      id: 22,
       name: r'custMainNo',
       type: IsarType.string,
     ),
     r'custName': PropertySchema(
-      id: 22,
+      id: 23,
       name: r'custName',
       type: IsarType.string,
     ),
     r'custNo': PropertySchema(
-      id: 23,
+      id: 24,
       name: r'custNo',
       type: IsarType.string,
     ),
     r'dataSource': PropertySchema(
-      id: 24,
+      id: 25,
       name: r'dataSource',
       type: IsarType.string,
     ),
     r'dataSourceName': PropertySchema(
-      id: 25,
+      id: 26,
       name: r'dataSourceName',
       type: IsarType.string,
     ),
     r'dateModified': PropertySchema(
-      id: 26,
+      id: 27,
       name: r'dateModified',
       type: IsarType.long,
     ),
     r'dateSlaCreated': PropertySchema(
-      id: 27,
+      id: 28,
       name: r'dateSlaCreated',
       type: IsarType.string,
     ),
     r'enhLeadId': PropertySchema(
-      id: 28,
+      id: 29,
       name: r'enhLeadId',
       type: IsarType.long,
     ),
     r'finalDate': PropertySchema(
-      id: 29,
+      id: 30,
       name: r'finalDate',
       type: IsarType.long,
     ),
     r'firstConco': PropertySchema(
-      id: 30,
+      id: 31,
       name: r'firstConco',
       type: IsarType.long,
     ),
     r'fixedPhone': PropertySchema(
-      id: 31,
+      id: 32,
       name: r'fixedPhone',
       type: IsarType.string,
     ),
     r'fixedPhoneArea': PropertySchema(
-      id: 32,
+      id: 33,
       name: r'fixedPhoneArea',
       type: IsarType.string,
     ),
     r'flag': PropertySchema(
-      id: 33,
+      id: 34,
       name: r'flag',
       type: IsarType.string,
     ),
     r'flagOffline': PropertySchema(
-      id: 34,
+      id: 35,
       name: r'flagOffline',
       type: IsarType.string,
     ),
     r'flagSubmitDraft': PropertySchema(
-      id: 35,
+      id: 36,
       name: r'flagSubmitDraft',
       type: IsarType.string,
     ),
     r'followUp': PropertySchema(
-      id: 36,
+      id: 37,
       name: r'followUp',
       type: IsarType.string,
     ),
     r'followUpResult': PropertySchema(
-      id: 37,
+      id: 38,
       name: r'followUpResult',
       type: IsarType.string,
     ),
     r'gender': PropertySchema(
-      id: 38,
+      id: 39,
       name: r'gender',
       type: IsarType.string,
     ),
     r'hasilFu': PropertySchema(
-      id: 39,
+      id: 40,
       name: r'hasilFu',
       type: IsarType.string,
     ),
     r'hasilFuUh': PropertySchema(
-      id: 40,
+      id: 41,
       name: r'hasilFuUh',
       type: IsarType.string,
     ),
     r'img01': PropertySchema(
-      id: 41,
+      id: 42,
       name: r'img01',
       type: IsarType.string,
     ),
     r'img02': PropertySchema(
-      id: 42,
+      id: 43,
       name: r'img02',
       type: IsarType.string,
     ),
     r'img03': PropertySchema(
-      id: 43,
+      id: 44,
       name: r'img03',
       type: IsarType.string,
     ),
     r'img04': PropertySchema(
-      id: 44,
+      id: 45,
       name: r'img04',
       type: IsarType.string,
     ),
     r'job': PropertySchema(
-      id: 45,
+      id: 46,
       name: r'job',
       type: IsarType.string,
     ),
     r'kecamatan': PropertySchema(
-      id: 46,
+      id: 47,
       name: r'kecamatan',
       type: IsarType.string,
     ),
     r'kecamatanSurvey': PropertySchema(
-      id: 47,
+      id: 48,
       name: r'kecamatanSurvey',
       type: IsarType.string,
     ),
     r'kelurahan': PropertySchema(
-      id: 48,
+      id: 49,
       name: r'kelurahan',
       type: IsarType.string,
     ),
     r'kelurahanSurvey': PropertySchema(
-      id: 49,
+      id: 50,
       name: r'kelurahanSurvey',
       type: IsarType.string,
     ),
     r'keterangan': PropertySchema(
-      id: 50,
+      id: 51,
       name: r'keterangan',
       type: IsarType.string,
     ),
     r'lasStatusLeadId': PropertySchema(
-      id: 51,
+      id: 52,
       name: r'lasStatusLeadId',
       type: IsarType.long,
     ),
     r'lastBusinessUnit': PropertySchema(
-      id: 52,
+      id: 53,
       name: r'lastBusinessUnit',
       type: IsarType.string,
     ),
     r'lastPage': PropertySchema(
-      id: 53,
+      id: 54,
       name: r'lastPage',
       type: IsarType.long,
     ),
     r'lat1': PropertySchema(
-      id: 54,
+      id: 55,
       name: r'lat1',
       type: IsarType.long,
     ),
     r'lat2': PropertySchema(
-      id: 55,
+      id: 56,
       name: r'lat2',
       type: IsarType.long,
     ),
     r'lat6': PropertySchema(
-      id: 56,
+      id: 57,
       name: r'lat6',
       type: IsarType.double,
     ),
     r'loanAmount': PropertySchema(
-      id: 57,
+      id: 58,
       name: r'loanAmount',
       type: IsarType.long,
     ),
     r'loanPurpose': PropertySchema(
-      id: 58,
+      id: 59,
       name: r'loanPurpose',
       type: IsarType.string,
     ),
     r'long1': PropertySchema(
-      id: 59,
+      id: 60,
       name: r'long1',
       type: IsarType.long,
     ),
     r'long2': PropertySchema(
-      id: 60,
+      id: 61,
       name: r'long2',
       type: IsarType.long,
     ),
     r'long6': PropertySchema(
-      id: 61,
+      id: 62,
       name: r'long6',
       type: IsarType.double,
     ),
     r'memberId': PropertySchema(
-      id: 62,
+      id: 63,
       name: r'memberId',
       type: IsarType.string,
     ),
     r'merk': PropertySchema(
-      id: 63,
+      id: 64,
       name: r'merk',
       type: IsarType.string,
     ),
     r'mobileNoOne': PropertySchema(
-      id: 64,
+      id: 65,
       name: r'mobileNoOne',
       type: IsarType.string,
     ),
     r'mobileNoTwo': PropertySchema(
-      id: 65,
+      id: 66,
       name: r'mobileNoTwo',
       type: IsarType.string,
     ),
     r'newAlamat': PropertySchema(
-      id: 66,
+      id: 67,
       name: r'newAlamat',
       type: IsarType.string,
     ),
     r'nik': PropertySchema(
-      id: 67,
+      id: 68,
       name: r'nik',
       type: IsarType.string,
     ),
     r'noFifgroupCard': PropertySchema(
-      id: 68,
+      id: 69,
       name: r'noFifgroupCard',
       type: IsarType.string,
     ),
     r'noPol': PropertySchema(
-      id: 69,
+      id: 70,
       name: r'noPol',
       type: IsarType.string,
     ),
     r'object': PropertySchema(
-      id: 70,
+      id: 71,
       name: r'object',
       type: IsarType.string,
     ),
     r'objectCategory': PropertySchema(
-      id: 71,
+      id: 72,
       name: r'objectCategory',
       type: IsarType.string,
     ),
     r'officeCode': PropertySchema(
-      id: 72,
+      id: 73,
       name: r'officeCode',
       type: IsarType.string,
     ),
     r'officeName': PropertySchema(
-      id: 73,
+      id: 74,
       name: r'officeName',
       type: IsarType.string,
     ),
     r'officePhone': PropertySchema(
-      id: 74,
+      id: 75,
       name: r'officePhone',
       type: IsarType.string,
     ),
     r'officePhoneArea': PropertySchema(
-      id: 75,
+      id: 76,
       name: r'officePhoneArea',
       type: IsarType.string,
     ),
     r'order': PropertySchema(
-      id: 76,
+      id: 77,
       name: r'order',
       type: IsarType.long,
     ),
     r'phoneNo05': PropertySchema(
-      id: 77,
+      id: 78,
       name: r'phoneNo05',
       type: IsarType.string,
     ),
     r'phoneNo06': PropertySchema(
-      id: 78,
+      id: 79,
       name: r'phoneNo06',
       type: IsarType.string,
     ),
     r'phoneValid': PropertySchema(
-      id: 79,
+      id: 80,
       name: r'phoneValid',
       type: IsarType.string,
     ),
     r'phoneValue': PropertySchema(
-      id: 80,
+      id: 81,
       name: r'phoneValue',
       type: IsarType.string,
     ),
     r'photoKunjungan': PropertySchema(
-      id: 81,
+      id: 82,
       name: r'photoKunjungan',
       type: IsarType.string,
     ),
     r'plafondFgc': PropertySchema(
-      id: 82,
+      id: 83,
       name: r'plafondFgc',
       type: IsarType.string,
     ),
     r'platform': PropertySchema(
-      id: 83,
+      id: 84,
       name: r'platform',
       type: IsarType.string,
     ),
     r'posId': PropertySchema(
-      id: 84,
+      id: 85,
       name: r'posId',
       type: IsarType.string,
     ),
     r'posName': PropertySchema(
-      id: 85,
+      id: 86,
       name: r'posName',
       type: IsarType.string,
     ),
     r'potensiKetertarikan': PropertySchema(
-      id: 86,
+      id: 87,
       name: r'potensiKetertarikan',
       type: IsarType.string,
     ),
     r'priority': PropertySchema(
-      id: 87,
+      id: 88,
       name: r'priority',
       type: IsarType.string,
     ),
     r'province': PropertySchema(
-      id: 88,
+      id: 89,
       name: r'province',
       type: IsarType.string,
     ),
     r'provinceSurvey': PropertySchema(
-      id: 89,
+      id: 90,
       name: r'provinceSurvey',
       type: IsarType.string,
     ),
     r'recommendedBusinessUnit': PropertySchema(
-      id: 90,
+      id: 91,
       name: r'recommendedBusinessUnit',
       type: IsarType.string,
     ),
     r'remark': PropertySchema(
-      id: 91,
+      id: 92,
       name: r'remark',
       type: IsarType.string,
     ),
     r'remarkUh': PropertySchema(
-      id: 92,
+      id: 93,
       name: r'remarkUh',
       type: IsarType.string,
     ),
     r'rtRw': PropertySchema(
-      id: 93,
+      id: 94,
       name: r'rtRw',
       type: IsarType.string,
     ),
     r'rtRwSurvey': PropertySchema(
-      id: 94,
+      id: 95,
       name: r'rtRwSurvey',
       type: IsarType.string,
     ),
     r'slaLeadValue': PropertySchema(
-      id: 95,
+      id: 96,
       name: r'slaLeadValue',
       type: IsarType.string,
     ),
     r'slaOpportunityValue': PropertySchema(
-      id: 96,
+      id: 97,
       name: r'slaOpportunityValue',
       type: IsarType.string,
     ),
     r'source': PropertySchema(
-      id: 97,
+      id: 98,
       name: r'source',
       type: IsarType.long,
     ),
     r'startDate': PropertySchema(
-      id: 98,
+      id: 99,
       name: r'startDate',
       type: IsarType.long,
     ),
     r'statusFgc': PropertySchema(
-      id: 99,
+      id: 100,
       name: r'statusFgc',
       type: IsarType.string,
     ),
     r'statusLeadId': PropertySchema(
-      id: 100,
+      id: 101,
       name: r'statusLeadId',
       type: IsarType.long,
     ),
     r'statusTask': PropertySchema(
-      id: 101,
+      id: 102,
       name: r'statusTask',
       type: IsarType.string,
     ),
     r'subOccupation': PropertySchema(
-      id: 102,
+      id: 103,
       name: r'subOccupation',
       type: IsarType.string,
     ),
     r'subZipCode': PropertySchema(
-      id: 103,
+      id: 104,
       name: r'subZipCode',
       type: IsarType.string,
     ),
     r'suppCodeName': PropertySchema(
-      id: 104,
+      id: 105,
       name: r'suppCodeName',
       type: IsarType.string,
     ),
     r'tahunMotor': PropertySchema(
-      id: 105,
+      id: 106,
       name: r'tahunMotor',
       type: IsarType.string,
     ),
     r'time01': PropertySchema(
-      id: 106,
+      id: 107,
       name: r'time01',
       type: IsarType.long,
     ),
     r'time02': PropertySchema(
-      id: 107,
+      id: 108,
       name: r'time02',
       type: IsarType.long,
     ),
     r'time03': PropertySchema(
-      id: 108,
+      id: 109,
       name: r'time03',
       type: IsarType.long,
     ),
     r'time04': PropertySchema(
-      id: 109,
+      id: 110,
       name: r'time04',
       type: IsarType.long,
     ),
     r'timePhotoKunjungan': PropertySchema(
-      id: 110,
+      id: 111,
       name: r'timePhotoKunjungan',
       type: IsarType.long,
     ),
     r'tipe': PropertySchema(
-      id: 111,
+      id: 112,
       name: r'tipe',
       type: IsarType.string,
     ),
     r'top': PropertySchema(
-      id: 112,
+      id: 113,
       name: r'top',
       type: IsarType.long,
     ),
     r'vehicleDesc': PropertySchema(
-      id: 113,
+      id: 114,
       name: r'vehicleDesc',
       type: IsarType.string,
     ),
     r'vehicleType': PropertySchema(
-      id: 114,
+      id: 115,
       name: r'vehicleType',
       type: IsarType.string,
     ),
     r'vehicleYear': PropertySchema(
-      id: 115,
+      id: 116,
       name: r'vehicleYear',
       type: IsarType.string,
     ),
     r'visitDate': PropertySchema(
-      id: 116,
+      id: 117,
       name: r'visitDate',
       type: IsarType.long,
     ),
     r'zipCode': PropertySchema(
-      id: 117,
+      id: 118,
       name: r'zipCode',
       type: IsarType.string,
     ),
     r'zipCodeSurvey': PropertySchema(
-      id: 118,
+      id: 119,
       name: r'zipCodeSurvey',
       type: IsarType.string,
     )
@@ -637,6 +642,7 @@ int _leadsEstimateSize(
   bytesCount += 3 + object.addressSurvey.length * 3;
   bytesCount += 3 + object.addressValue.length * 3;
   bytesCount += 3 + object.alamatEnh.length * 3;
+  bytesCount += 3 + object.alamatGenerated.length * 3;
   bytesCount += 3 + object.alamatLatLong.length * 3;
   bytesCount += 3 + object.anotherAsset.length * 3;
   bytesCount += 3 + object.area.length * 3;
@@ -740,121 +746,122 @@ void _leadsSerialize(
   writer.writeString(offsets[1], object.addressSurvey);
   writer.writeString(offsets[2], object.addressValue);
   writer.writeString(offsets[3], object.alamatEnh);
-  writer.writeString(offsets[4], object.alamatLatLong);
-  writer.writeString(offsets[5], object.anotherAsset);
-  writer.writeString(offsets[6], object.area);
-  writer.writeLong(offsets[7], object.birthDate);
-  writer.writeString(offsets[8], object.birthPlace);
-  writer.writeString(offsets[9], object.bpkbName);
-  writer.writeString(offsets[10], object.branchId);
-  writer.writeString(offsets[11], object.branchName);
-  writer.writeString(offsets[12], object.businessUnit);
-  writer.writeString(offsets[13], object.cekMotor);
-  writer.writeString(offsets[14], object.city);
-  writer.writeString(offsets[15], object.citySurvey);
-  writer.writeString(offsets[16], object.collectmobileNoOne);
-  writer.writeString(offsets[17], object.collectmobileNoTwo);
-  writer.writeString(offsets[18], object.colorFinal);
-  writer.writeString(offsets[19], object.contractNumber);
-  writer.writeString(offsets[20], object.currentMce);
-  writer.writeString(offsets[21], object.custMainNo);
-  writer.writeString(offsets[22], object.custName);
-  writer.writeString(offsets[23], object.custNo);
-  writer.writeString(offsets[24], object.dataSource);
-  writer.writeString(offsets[25], object.dataSourceName);
-  writer.writeLong(offsets[26], object.dateModified);
-  writer.writeString(offsets[27], object.dateSlaCreated);
-  writer.writeLong(offsets[28], object.enhLeadId);
-  writer.writeLong(offsets[29], object.finalDate);
-  writer.writeLong(offsets[30], object.firstConco);
-  writer.writeString(offsets[31], object.fixedPhone);
-  writer.writeString(offsets[32], object.fixedPhoneArea);
-  writer.writeString(offsets[33], object.flag);
-  writer.writeString(offsets[34], object.flagOffline);
-  writer.writeString(offsets[35], object.flagSubmitDraft);
-  writer.writeString(offsets[36], object.followUp);
-  writer.writeString(offsets[37], object.followUpResult);
-  writer.writeString(offsets[38], object.gender);
-  writer.writeString(offsets[39], object.hasilFu);
-  writer.writeString(offsets[40], object.hasilFuUh);
-  writer.writeString(offsets[41], object.img01);
-  writer.writeString(offsets[42], object.img02);
-  writer.writeString(offsets[43], object.img03);
-  writer.writeString(offsets[44], object.img04);
-  writer.writeString(offsets[45], object.job);
-  writer.writeString(offsets[46], object.kecamatan);
-  writer.writeString(offsets[47], object.kecamatanSurvey);
-  writer.writeString(offsets[48], object.kelurahan);
-  writer.writeString(offsets[49], object.kelurahanSurvey);
-  writer.writeString(offsets[50], object.keterangan);
-  writer.writeLong(offsets[51], object.lasStatusLeadId);
-  writer.writeString(offsets[52], object.lastBusinessUnit);
-  writer.writeLong(offsets[53], object.lastPage);
-  writer.writeLong(offsets[54], object.lat1);
-  writer.writeLong(offsets[55], object.lat2);
-  writer.writeDouble(offsets[56], object.lat6);
-  writer.writeLong(offsets[57], object.loanAmount);
-  writer.writeString(offsets[58], object.loanPurpose);
-  writer.writeLong(offsets[59], object.long1);
-  writer.writeLong(offsets[60], object.long2);
-  writer.writeDouble(offsets[61], object.long6);
-  writer.writeString(offsets[62], object.memberId);
-  writer.writeString(offsets[63], object.merk);
-  writer.writeString(offsets[64], object.mobileNoOne);
-  writer.writeString(offsets[65], object.mobileNoTwo);
-  writer.writeString(offsets[66], object.newAlamat);
-  writer.writeString(offsets[67], object.nik);
-  writer.writeString(offsets[68], object.noFifgroupCard);
-  writer.writeString(offsets[69], object.noPol);
-  writer.writeString(offsets[70], object.object);
-  writer.writeString(offsets[71], object.objectCategory);
-  writer.writeString(offsets[72], object.officeCode);
-  writer.writeString(offsets[73], object.officeName);
-  writer.writeString(offsets[74], object.officePhone);
-  writer.writeString(offsets[75], object.officePhoneArea);
-  writer.writeLong(offsets[76], object.order);
-  writer.writeString(offsets[77], object.phoneNo05);
-  writer.writeString(offsets[78], object.phoneNo06);
-  writer.writeString(offsets[79], object.phoneValid);
-  writer.writeString(offsets[80], object.phoneValue);
-  writer.writeString(offsets[81], object.photoKunjungan);
-  writer.writeString(offsets[82], object.plafondFgc);
-  writer.writeString(offsets[83], object.platform);
-  writer.writeString(offsets[84], object.posId);
-  writer.writeString(offsets[85], object.posName);
-  writer.writeString(offsets[86], object.potensiKetertarikan);
-  writer.writeString(offsets[87], object.priority);
-  writer.writeString(offsets[88], object.province);
-  writer.writeString(offsets[89], object.provinceSurvey);
-  writer.writeString(offsets[90], object.recommendedBusinessUnit);
-  writer.writeString(offsets[91], object.remark);
-  writer.writeString(offsets[92], object.remarkUh);
-  writer.writeString(offsets[93], object.rtRw);
-  writer.writeString(offsets[94], object.rtRwSurvey);
-  writer.writeString(offsets[95], object.slaLeadValue);
-  writer.writeString(offsets[96], object.slaOpportunityValue);
-  writer.writeLong(offsets[97], object.source);
-  writer.writeLong(offsets[98], object.startDate);
-  writer.writeString(offsets[99], object.statusFgc);
-  writer.writeLong(offsets[100], object.statusLeadId);
-  writer.writeString(offsets[101], object.statusTask);
-  writer.writeString(offsets[102], object.subOccupation);
-  writer.writeString(offsets[103], object.subZipCode);
-  writer.writeString(offsets[104], object.suppCodeName);
-  writer.writeString(offsets[105], object.tahunMotor);
-  writer.writeLong(offsets[106], object.time01);
-  writer.writeLong(offsets[107], object.time02);
-  writer.writeLong(offsets[108], object.time03);
-  writer.writeLong(offsets[109], object.time04);
-  writer.writeLong(offsets[110], object.timePhotoKunjungan);
-  writer.writeString(offsets[111], object.tipe);
-  writer.writeLong(offsets[112], object.top);
-  writer.writeString(offsets[113], object.vehicleDesc);
-  writer.writeString(offsets[114], object.vehicleType);
-  writer.writeString(offsets[115], object.vehicleYear);
-  writer.writeLong(offsets[116], object.visitDate);
-  writer.writeString(offsets[117], object.zipCode);
-  writer.writeString(offsets[118], object.zipCodeSurvey);
+  writer.writeString(offsets[4], object.alamatGenerated);
+  writer.writeString(offsets[5], object.alamatLatLong);
+  writer.writeString(offsets[6], object.anotherAsset);
+  writer.writeString(offsets[7], object.area);
+  writer.writeLong(offsets[8], object.birthDate);
+  writer.writeString(offsets[9], object.birthPlace);
+  writer.writeString(offsets[10], object.bpkbName);
+  writer.writeString(offsets[11], object.branchId);
+  writer.writeString(offsets[12], object.branchName);
+  writer.writeString(offsets[13], object.businessUnit);
+  writer.writeString(offsets[14], object.cekMotor);
+  writer.writeString(offsets[15], object.city);
+  writer.writeString(offsets[16], object.citySurvey);
+  writer.writeString(offsets[17], object.collectmobileNoOne);
+  writer.writeString(offsets[18], object.collectmobileNoTwo);
+  writer.writeString(offsets[19], object.colorFinal);
+  writer.writeString(offsets[20], object.contractNumber);
+  writer.writeString(offsets[21], object.currentMce);
+  writer.writeString(offsets[22], object.custMainNo);
+  writer.writeString(offsets[23], object.custName);
+  writer.writeString(offsets[24], object.custNo);
+  writer.writeString(offsets[25], object.dataSource);
+  writer.writeString(offsets[26], object.dataSourceName);
+  writer.writeLong(offsets[27], object.dateModified);
+  writer.writeString(offsets[28], object.dateSlaCreated);
+  writer.writeLong(offsets[29], object.enhLeadId);
+  writer.writeLong(offsets[30], object.finalDate);
+  writer.writeLong(offsets[31], object.firstConco);
+  writer.writeString(offsets[32], object.fixedPhone);
+  writer.writeString(offsets[33], object.fixedPhoneArea);
+  writer.writeString(offsets[34], object.flag);
+  writer.writeString(offsets[35], object.flagOffline);
+  writer.writeString(offsets[36], object.flagSubmitDraft);
+  writer.writeString(offsets[37], object.followUp);
+  writer.writeString(offsets[38], object.followUpResult);
+  writer.writeString(offsets[39], object.gender);
+  writer.writeString(offsets[40], object.hasilFu);
+  writer.writeString(offsets[41], object.hasilFuUh);
+  writer.writeString(offsets[42], object.img01);
+  writer.writeString(offsets[43], object.img02);
+  writer.writeString(offsets[44], object.img03);
+  writer.writeString(offsets[45], object.img04);
+  writer.writeString(offsets[46], object.job);
+  writer.writeString(offsets[47], object.kecamatan);
+  writer.writeString(offsets[48], object.kecamatanSurvey);
+  writer.writeString(offsets[49], object.kelurahan);
+  writer.writeString(offsets[50], object.kelurahanSurvey);
+  writer.writeString(offsets[51], object.keterangan);
+  writer.writeLong(offsets[52], object.lasStatusLeadId);
+  writer.writeString(offsets[53], object.lastBusinessUnit);
+  writer.writeLong(offsets[54], object.lastPage);
+  writer.writeLong(offsets[55], object.lat1);
+  writer.writeLong(offsets[56], object.lat2);
+  writer.writeDouble(offsets[57], object.lat6);
+  writer.writeLong(offsets[58], object.loanAmount);
+  writer.writeString(offsets[59], object.loanPurpose);
+  writer.writeLong(offsets[60], object.long1);
+  writer.writeLong(offsets[61], object.long2);
+  writer.writeDouble(offsets[62], object.long6);
+  writer.writeString(offsets[63], object.memberId);
+  writer.writeString(offsets[64], object.merk);
+  writer.writeString(offsets[65], object.mobileNoOne);
+  writer.writeString(offsets[66], object.mobileNoTwo);
+  writer.writeString(offsets[67], object.newAlamat);
+  writer.writeString(offsets[68], object.nik);
+  writer.writeString(offsets[69], object.noFifgroupCard);
+  writer.writeString(offsets[70], object.noPol);
+  writer.writeString(offsets[71], object.object);
+  writer.writeString(offsets[72], object.objectCategory);
+  writer.writeString(offsets[73], object.officeCode);
+  writer.writeString(offsets[74], object.officeName);
+  writer.writeString(offsets[75], object.officePhone);
+  writer.writeString(offsets[76], object.officePhoneArea);
+  writer.writeLong(offsets[77], object.order);
+  writer.writeString(offsets[78], object.phoneNo05);
+  writer.writeString(offsets[79], object.phoneNo06);
+  writer.writeString(offsets[80], object.phoneValid);
+  writer.writeString(offsets[81], object.phoneValue);
+  writer.writeString(offsets[82], object.photoKunjungan);
+  writer.writeString(offsets[83], object.plafondFgc);
+  writer.writeString(offsets[84], object.platform);
+  writer.writeString(offsets[85], object.posId);
+  writer.writeString(offsets[86], object.posName);
+  writer.writeString(offsets[87], object.potensiKetertarikan);
+  writer.writeString(offsets[88], object.priority);
+  writer.writeString(offsets[89], object.province);
+  writer.writeString(offsets[90], object.provinceSurvey);
+  writer.writeString(offsets[91], object.recommendedBusinessUnit);
+  writer.writeString(offsets[92], object.remark);
+  writer.writeString(offsets[93], object.remarkUh);
+  writer.writeString(offsets[94], object.rtRw);
+  writer.writeString(offsets[95], object.rtRwSurvey);
+  writer.writeString(offsets[96], object.slaLeadValue);
+  writer.writeString(offsets[97], object.slaOpportunityValue);
+  writer.writeLong(offsets[98], object.source);
+  writer.writeLong(offsets[99], object.startDate);
+  writer.writeString(offsets[100], object.statusFgc);
+  writer.writeLong(offsets[101], object.statusLeadId);
+  writer.writeString(offsets[102], object.statusTask);
+  writer.writeString(offsets[103], object.subOccupation);
+  writer.writeString(offsets[104], object.subZipCode);
+  writer.writeString(offsets[105], object.suppCodeName);
+  writer.writeString(offsets[106], object.tahunMotor);
+  writer.writeLong(offsets[107], object.time01);
+  writer.writeLong(offsets[108], object.time02);
+  writer.writeLong(offsets[109], object.time03);
+  writer.writeLong(offsets[110], object.time04);
+  writer.writeLong(offsets[111], object.timePhotoKunjungan);
+  writer.writeString(offsets[112], object.tipe);
+  writer.writeLong(offsets[113], object.top);
+  writer.writeString(offsets[114], object.vehicleDesc);
+  writer.writeString(offsets[115], object.vehicleType);
+  writer.writeString(offsets[116], object.vehicleYear);
+  writer.writeLong(offsets[117], object.visitDate);
+  writer.writeString(offsets[118], object.zipCode);
+  writer.writeString(offsets[119], object.zipCodeSurvey);
 }
 
 Leads _leadsDeserialize(
@@ -864,125 +871,126 @@ Leads _leadsDeserialize(
   Map<Type, List<int>> allOffsets,
 ) {
   final object = Leads(
-    reader.readString(offsets[90]),
-    reader.readString(offsets[10]),
+    reader.readString(offsets[91]),
     reader.readString(offsets[11]),
-    reader.readString(offsets[6]),
-    reader.readString(offsets[84]),
+    reader.readString(offsets[12]),
+    reader.readString(offsets[7]),
     reader.readString(offsets[85]),
-    reader.readString(offsets[72]),
+    reader.readString(offsets[86]),
     reader.readString(offsets[73]),
-    reader.readString(offsets[23]),
-    reader.readString(offsets[21]),
-    reader.readString(offsets[62]),
-    reader.readString(offsets[68]),
-    reader.readString(offsets[52]),
-    reader.readString(offsets[69]),
-    reader.readString(offsets[114]),
-    reader.readString(offsets[115]),
-    reader.readString(offsets[9]),
-    reader.readString(offsets[64]),
-    reader.readString(offsets[65]),
-    reader.readString(offsets[16]),
-    reader.readString(offsets[17]),
-    reader.readString(offsets[32]),
-    reader.readString(offsets[31]),
-    reader.readString(offsets[75]),
     reader.readString(offsets[74]),
-    reader.readString(offsets[22]),
-    reader.readString(offsets[67]),
-    reader.readLong(offsets[7]),
-    reader.readString(offsets[8]),
-    reader.readString(offsets[45]),
-    reader.readString(offsets[102]),
-    reader.readString(offsets[0]),
-    reader.readString(offsets[93]),
-    reader.readString(offsets[88]),
-    reader.readString(offsets[14]),
-    reader.readString(offsets[46]),
-    reader.readString(offsets[48]),
-    reader.readString(offsets[117]),
-    reader.readString(offsets[103]),
-    reader.readLong(offsets[116]),
     reader.readString(offsets[24]),
-    reader.readString(offsets[33]),
-    reader.readString(offsets[83]),
-    reader.readString(offsets[38]),
-    reader.readString(offsets[19]),
-    reader.readString(offsets[87]),
-    reader.readLong(offsets[100]),
-    reader.readLong(offsets[51]),
-    reader.readString(offsets[39]),
-    reader.readString(offsets[92]),
-    reader.readString(offsets[40]),
-    reader.readLong(offsets[28]),
-    reader.readString(offsets[25]),
-    reader.readString(offsets[113]),
-    reader.readLong(offsets[98]),
-    reader.readLong(offsets[30]),
+    reader.readString(offsets[22]),
+    reader.readString(offsets[63]),
+    reader.readString(offsets[69]),
+    reader.readString(offsets[53]),
+    reader.readString(offsets[70]),
+    reader.readString(offsets[115]),
+    reader.readString(offsets[116]),
+    reader.readString(offsets[10]),
+    reader.readString(offsets[65]),
+    reader.readString(offsets[66]),
+    reader.readString(offsets[17]),
     reader.readString(offsets[18]),
-    reader.readString(offsets[1]),
+    reader.readString(offsets[33]),
+    reader.readString(offsets[32]),
+    reader.readString(offsets[76]),
+    reader.readString(offsets[75]),
+    reader.readString(offsets[23]),
+    reader.readString(offsets[68]),
+    reader.readLong(offsets[8]),
+    reader.readString(offsets[9]),
+    reader.readString(offsets[46]),
+    reader.readString(offsets[103]),
+    reader.readString(offsets[0]),
     reader.readString(offsets[94]),
     reader.readString(offsets[89]),
     reader.readString(offsets[15]),
     reader.readString(offsets[47]),
     reader.readString(offsets[49]),
     reader.readString(offsets[118]),
-    reader.readString(offsets[36]),
-    reader.readString(offsets[77]),
-    reader.readString(offsets[78]),
-    reader.readString(offsets[37]),
-    reader.readString(offsets[12]),
-    reader.readLong(offsets[57]),
-    reader.readString(offsets[58]),
-    reader.readString(offsets[71]),
-    reader.readString(offsets[70]),
     reader.readString(offsets[104]),
-    reader.readString(offsets[5]),
-    reader.readLong(offsets[112]),
-    reader.readString(offsets[91]),
+    reader.readLong(offsets[117]),
+    reader.readString(offsets[25]),
+    reader.readString(offsets[34]),
+    reader.readString(offsets[84]),
+    reader.readString(offsets[39]),
+    reader.readString(offsets[20]),
+    reader.readString(offsets[88]),
+    reader.readLong(offsets[101]),
+    reader.readLong(offsets[52]),
+    reader.readString(offsets[40]),
+    reader.readString(offsets[93]),
     reader.readString(offsets[41]),
+    reader.readLong(offsets[29]),
+    reader.readString(offsets[26]),
+    reader.readString(offsets[114]),
+    reader.readLong(offsets[99]),
+    reader.readLong(offsets[31]),
+    reader.readString(offsets[19]),
+    reader.readString(offsets[4]),
+    reader.readString(offsets[1]),
+    reader.readString(offsets[95]),
+    reader.readString(offsets[90]),
+    reader.readString(offsets[16]),
+    reader.readString(offsets[48]),
+    reader.readString(offsets[50]),
+    reader.readString(offsets[119]),
+    reader.readString(offsets[37]),
+    reader.readString(offsets[78]),
+    reader.readString(offsets[79]),
+    reader.readString(offsets[38]),
+    reader.readString(offsets[13]),
+    reader.readLong(offsets[58]),
+    reader.readString(offsets[59]),
+    reader.readString(offsets[72]),
+    reader.readString(offsets[71]),
+    reader.readString(offsets[105]),
+    reader.readString(offsets[6]),
+    reader.readLong(offsets[113]),
+    reader.readString(offsets[92]),
     reader.readString(offsets[42]),
     reader.readString(offsets[43]),
     reader.readString(offsets[44]),
-    reader.readString(offsets[81]),
-    reader.readLong(offsets[110]),
-    reader.readDouble(offsets[56]),
-    reader.readDouble(offsets[61]),
-    reader.readString(offsets[4]),
-    reader.readLong(offsets[106]),
+    reader.readString(offsets[45]),
+    reader.readString(offsets[82]),
+    reader.readLong(offsets[111]),
+    reader.readDouble(offsets[57]),
+    reader.readDouble(offsets[62]),
+    reader.readString(offsets[5]),
     reader.readLong(offsets[107]),
     reader.readLong(offsets[108]),
     reader.readLong(offsets[109]),
-    reader.readString(offsets[101]),
-    reader.readLong(offsets[53]),
-    reader.readLong(offsets[97]),
-    reader.readLong(offsets[26]),
+    reader.readLong(offsets[110]),
+    reader.readString(offsets[102]),
     reader.readLong(offsets[54]),
+    reader.readLong(offsets[98]),
+    reader.readLong(offsets[27]),
     reader.readLong(offsets[55]),
-    reader.readLong(offsets[59]),
+    reader.readLong(offsets[56]),
     reader.readLong(offsets[60]),
-    reader.readString(offsets[20]),
-    reader.readString(offsets[95]),
+    reader.readLong(offsets[61]),
+    reader.readString(offsets[21]),
     reader.readString(offsets[96]),
-    reader.readString(offsets[34]),
+    reader.readString(offsets[97]),
     reader.readString(offsets[35]),
-    reader.readString(offsets[27]),
-    reader.readString(offsets[111]),
-    reader.readString(offsets[63]),
-    reader.readString(offsets[50]),
+    reader.readString(offsets[36]),
+    reader.readString(offsets[28]),
+    reader.readString(offsets[112]),
+    reader.readString(offsets[64]),
+    reader.readString(offsets[51]),
     reader.readString(offsets[3]),
-    reader.readString(offsets[66]),
-    reader.readString(offsets[13]),
-    reader.readString(offsets[105]),
-    reader.readString(offsets[86]),
+    reader.readString(offsets[67]),
+    reader.readString(offsets[14]),
+    reader.readString(offsets[106]),
+    reader.readString(offsets[87]),
+    reader.readString(offsets[81]),
     reader.readString(offsets[80]),
-    reader.readString(offsets[79]),
     reader.readString(offsets[2]),
-    reader.readLong(offsets[29]),
-    reader.readString(offsets[99]),
-    reader.readString(offsets[82]),
-    reader.readLong(offsets[76]),
+    reader.readLong(offsets[30]),
+    reader.readString(offsets[100]),
+    reader.readString(offsets[83]),
+    reader.readLong(offsets[77]),
   );
   object.id = id;
   return object;
@@ -1010,9 +1018,9 @@ P _leadsDeserializeProp<P>(
     case 6:
       return (reader.readString(offset)) as P;
     case 7:
-      return (reader.readLong(offset)) as P;
-    case 8:
       return (reader.readString(offset)) as P;
+    case 8:
+      return (reader.readLong(offset)) as P;
     case 9:
       return (reader.readString(offset)) as P;
     case 10:
@@ -1048,17 +1056,17 @@ P _leadsDeserializeProp<P>(
     case 25:
       return (reader.readString(offset)) as P;
     case 26:
-      return (reader.readLong(offset)) as P;
-    case 27:
       return (reader.readString(offset)) as P;
-    case 28:
+    case 27:
       return (reader.readLong(offset)) as P;
+    case 28:
+      return (reader.readString(offset)) as P;
     case 29:
       return (reader.readLong(offset)) as P;
     case 30:
       return (reader.readLong(offset)) as P;
     case 31:
-      return (reader.readString(offset)) as P;
+      return (reader.readLong(offset)) as P;
     case 32:
       return (reader.readString(offset)) as P;
     case 33:
@@ -1098,29 +1106,29 @@ P _leadsDeserializeProp<P>(
     case 50:
       return (reader.readString(offset)) as P;
     case 51:
-      return (reader.readLong(offset)) as P;
-    case 52:
       return (reader.readString(offset)) as P;
-    case 53:
+    case 52:
       return (reader.readLong(offset)) as P;
+    case 53:
+      return (reader.readString(offset)) as P;
     case 54:
       return (reader.readLong(offset)) as P;
     case 55:
       return (reader.readLong(offset)) as P;
     case 56:
-      return (reader.readDouble(offset)) as P;
+      return (reader.readLong(offset)) as P;
     case 57:
-      return (reader.readLong(offset)) as P;
+      return (reader.readDouble(offset)) as P;
     case 58:
-      return (reader.readString(offset)) as P;
-    case 59:
       return (reader.readLong(offset)) as P;
+    case 59:
+      return (reader.readString(offset)) as P;
     case 60:
       return (reader.readLong(offset)) as P;
     case 61:
-      return (reader.readDouble(offset)) as P;
+      return (reader.readLong(offset)) as P;
     case 62:
-      return (reader.readString(offset)) as P;
+      return (reader.readDouble(offset)) as P;
     case 63:
       return (reader.readString(offset)) as P;
     case 64:
@@ -1148,9 +1156,9 @@ P _leadsDeserializeProp<P>(
     case 75:
       return (reader.readString(offset)) as P;
     case 76:
-      return (reader.readLong(offset)) as P;
-    case 77:
       return (reader.readString(offset)) as P;
+    case 77:
+      return (reader.readLong(offset)) as P;
     case 78:
       return (reader.readString(offset)) as P;
     case 79:
@@ -1190,15 +1198,15 @@ P _leadsDeserializeProp<P>(
     case 96:
       return (reader.readString(offset)) as P;
     case 97:
-      return (reader.readLong(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 98:
       return (reader.readLong(offset)) as P;
     case 99:
-      return (reader.readString(offset)) as P;
-    case 100:
       return (reader.readLong(offset)) as P;
-    case 101:
+    case 100:
       return (reader.readString(offset)) as P;
+    case 101:
+      return (reader.readLong(offset)) as P;
     case 102:
       return (reader.readString(offset)) as P;
     case 103:
@@ -1208,7 +1216,7 @@ P _leadsDeserializeProp<P>(
     case 105:
       return (reader.readString(offset)) as P;
     case 106:
-      return (reader.readLong(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 107:
       return (reader.readLong(offset)) as P;
     case 108:
@@ -1218,20 +1226,22 @@ P _leadsDeserializeProp<P>(
     case 110:
       return (reader.readLong(offset)) as P;
     case 111:
-      return (reader.readString(offset)) as P;
-    case 112:
       return (reader.readLong(offset)) as P;
-    case 113:
+    case 112:
       return (reader.readString(offset)) as P;
+    case 113:
+      return (reader.readLong(offset)) as P;
     case 114:
       return (reader.readString(offset)) as P;
     case 115:
       return (reader.readString(offset)) as P;
     case 116:
-      return (reader.readLong(offset)) as P;
-    case 117:
       return (reader.readString(offset)) as P;
+    case 117:
+      return (reader.readLong(offset)) as P;
     case 118:
+      return (reader.readString(offset)) as P;
+    case 119:
       return (reader.readString(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
@@ -1841,6 +1851,137 @@ extension LeadsQueryFilter on QueryBuilder<Leads, Leads, QFilterCondition> {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         property: r'alamatEnh',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedEqualTo(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'alamatGenerated',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedGreaterThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        include: include,
+        property: r'alamatGenerated',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedLessThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.lessThan(
+        include: include,
+        property: r'alamatGenerated',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedBetween(
+    String lower,
+    String upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.between(
+        property: r'alamatGenerated',
+        lower: lower,
+        includeLower: includeLower,
+        upper: upper,
+        includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'alamatGenerated',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'alamatGenerated',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedContains(
+      String value,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'alamatGenerated',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedMatches(
+      String pattern,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'alamatGenerated',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> alamatGeneratedIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'alamatGenerated',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition>
+      alamatGeneratedIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'alamatGenerated',
         value: '',
       ));
     });
@@ -14981,6 +15122,18 @@ extension LeadsQuerySortBy on QueryBuilder<Leads, Leads, QSortBy> {
     });
   }
 
+  QueryBuilder<Leads, Leads, QAfterSortBy> sortByAlamatGenerated() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'alamatGenerated', Sort.asc);
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterSortBy> sortByAlamatGeneratedDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'alamatGenerated', Sort.desc);
+    });
+  }
+
   QueryBuilder<Leads, Leads, QAfterSortBy> sortByAlamatLatLong() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'alamatLatLong', Sort.asc);
@@ -16411,6 +16564,18 @@ extension LeadsQuerySortThenBy on QueryBuilder<Leads, Leads, QSortThenBy> {
     });
   }
 
+  QueryBuilder<Leads, Leads, QAfterSortBy> thenByAlamatGenerated() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'alamatGenerated', Sort.asc);
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterSortBy> thenByAlamatGeneratedDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'alamatGenerated', Sort.desc);
+    });
+  }
+
   QueryBuilder<Leads, Leads, QAfterSortBy> thenByAlamatLatLong() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'alamatLatLong', Sort.asc);
@@ -17834,6 +17999,14 @@ extension LeadsQueryWhereDistinct on QueryBuilder<Leads, Leads, QDistinct> {
     });
   }
 
+  QueryBuilder<Leads, Leads, QDistinct> distinctByAlamatGenerated(
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'alamatGenerated',
+          caseSensitive: caseSensitive);
+    });
+  }
+
   QueryBuilder<Leads, Leads, QDistinct> distinctByAlamatLatLong(
       {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
@@ -18668,6 +18841,12 @@ extension LeadsQueryProperty on QueryBuilder<Leads, Leads, QQueryProperty> {
     });
   }
 
+  QueryBuilder<Leads, String, QQueryOperations> alamatGeneratedProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'alamatGenerated');
+    });
+  }
+
   QueryBuilder<Leads, String, QQueryOperations> alamatLatLongProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'alamatLatLong');
@@ -19422,6 +19601,7 @@ Leads _$LeadsFromJson(Map<String, dynamic> json) => Leads(
       json['startDate'] as int? ?? 0,
       json['firstConco'] as int? ?? 0,
       json['colorFinal'] as String? ?? '',
+      json['alamatGenerated'] as String? ?? '',
       json['addressSurvey'] as String? ?? '',
       json['rtRwSurvey'] as String? ?? '',
       json['provinceSurvey'] as String? ?? '',
@@ -19544,6 +19724,7 @@ Map<String, dynamic> _$LeadsToJson(Leads instance) => <String, dynamic>{
       'startDate': instance.startDate,
       'firstConco': instance.firstConco,
       'colorFinal': instance.colorFinal,
+      'alamatGenerated': instance.alamatGenerated,
       'addressSurvey': instance.addressSurvey,
       'rtRwSurvey': instance.rtRwSurvey,
       'provinceSurvey': instance.provinceSurvey,
