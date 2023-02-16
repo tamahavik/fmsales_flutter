@@ -5,6 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:ufi/database/master_database.dart';
 import 'package:ufi/enums/logout_enum.dart';
+import 'package:ufi/model/leads.dart';
 import 'package:ufi/presentation/today/repository/today_repository.dart';
 import 'package:ufi/repository/logout_repository.dart';
 import 'package:ufi/services/session_manager.dart';
@@ -76,18 +77,27 @@ class TodayBloc extends Bloc<TodayEvent, TodayState> {
         if (r) {
           await _db.deleteAllLeads();
           await _logoutRepository.doLogout(LogoutEnum.FORCE);
-        } else {}
+        } else {
+          await _distribution();
+        }
       },
     );
   }
 
   Future<void> _distribution() async {
     String employeeNumber = _session.getEmployeeNumber();
-    var distibution = await _todayRepository.getDistribution(employeeNumber);
-    distibution.fold(
-      (l) {},
-      (r) {
-
+    var distribution = await _todayRepository.getDistribution(employeeNumber);
+    await distribution.fold(
+      (l) async => print('failed to get distribution leads from server'),
+      (r) async {
+        for (var obj in r) {
+          Leads? leads = await _db.findByEnhLeadIdAndDataSource(
+              obj.enhLeadId, obj.dataSource);
+          if (leads != null) {
+            obj.id = leads.id;
+          }
+          await _db.saveLeads(obj);
+        }
       },
     );
   }

@@ -595,7 +595,7 @@ const LeadsSchema = CollectionSchema(
     r'vehicleYear': PropertySchema(
       id: 115,
       name: r'vehicleYear',
-      type: IsarType.long,
+      type: IsarType.string,
     ),
     r'visitDate': PropertySchema(
       id: 116,
@@ -724,6 +724,7 @@ int _leadsEstimateSize(
   bytesCount += 3 + object.tipe.length * 3;
   bytesCount += 3 + object.vehicleDesc.length * 3;
   bytesCount += 3 + object.vehicleType.length * 3;
+  bytesCount += 3 + object.vehicleYear.length * 3;
   bytesCount += 3 + object.zipCode.length * 3;
   bytesCount += 3 + object.zipCodeSurvey.length * 3;
   return bytesCount;
@@ -850,7 +851,7 @@ void _leadsSerialize(
   writer.writeLong(offsets[112], object.top);
   writer.writeString(offsets[113], object.vehicleDesc);
   writer.writeString(offsets[114], object.vehicleType);
-  writer.writeLong(offsets[115], object.vehicleYear);
+  writer.writeString(offsets[115], object.vehicleYear);
   writer.writeLong(offsets[116], object.visitDate);
   writer.writeString(offsets[117], object.zipCode);
   writer.writeString(offsets[118], object.zipCodeSurvey);
@@ -863,7 +864,6 @@ Leads _leadsDeserialize(
   Map<Type, List<int>> allOffsets,
 ) {
   final object = Leads(
-    id,
     reader.readString(offsets[90]),
     reader.readString(offsets[10]),
     reader.readString(offsets[11]),
@@ -879,7 +879,7 @@ Leads _leadsDeserialize(
     reader.readString(offsets[52]),
     reader.readString(offsets[69]),
     reader.readString(offsets[114]),
-    reader.readLong(offsets[115]),
+    reader.readString(offsets[115]),
     reader.readString(offsets[9]),
     reader.readString(offsets[64]),
     reader.readString(offsets[65]),
@@ -984,6 +984,7 @@ Leads _leadsDeserialize(
     reader.readString(offsets[82]),
     reader.readLong(offsets[76]),
   );
+  object.id = id;
   return object;
 }
 
@@ -1225,7 +1226,7 @@ P _leadsDeserializeProp<P>(
     case 114:
       return (reader.readString(offset)) as P;
     case 115:
-      return (reader.readLong(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 116:
       return (reader.readLong(offset)) as P;
     case 117:
@@ -14484,46 +14485,54 @@ extension LeadsQueryFilter on QueryBuilder<Leads, Leads, QFilterCondition> {
   }
 
   QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearEqualTo(
-      int value) {
+    String value, {
+    bool caseSensitive = true,
+  }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
         property: r'vehicleYear',
         value: value,
+        caseSensitive: caseSensitive,
       ));
     });
   }
 
   QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearGreaterThan(
-    int value, {
+    String value, {
     bool include = false,
+    bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         include: include,
         property: r'vehicleYear',
         value: value,
+        caseSensitive: caseSensitive,
       ));
     });
   }
 
   QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearLessThan(
-    int value, {
+    String value, {
     bool include = false,
+    bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.lessThan(
         include: include,
         property: r'vehicleYear',
         value: value,
+        caseSensitive: caseSensitive,
       ));
     });
   }
 
   QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearBetween(
-    int lower,
-    int upper, {
+    String lower,
+    String upper, {
     bool includeLower = true,
     bool includeUpper = true,
+    bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.between(
@@ -14532,6 +14541,75 @@ extension LeadsQueryFilter on QueryBuilder<Leads, Leads, QFilterCondition> {
         includeLower: includeLower,
         upper: upper,
         includeUpper: includeUpper,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.startsWith(
+        property: r'vehicleYear',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.endsWith(
+        property: r'vehicleYear',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearContains(
+      String value,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.contains(
+        property: r'vehicleYear',
+        value: value,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearMatches(
+      String pattern,
+      {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.matches(
+        property: r'vehicleYear',
+        wildcard: pattern,
+        caseSensitive: caseSensitive,
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.equalTo(
+        property: r'vehicleYear',
+        value: '',
+      ));
+    });
+  }
+
+  QueryBuilder<Leads, Leads, QAfterFilterCondition> vehicleYearIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(FilterCondition.greaterThan(
+        property: r'vehicleYear',
+        value: '',
       ));
     });
   }
@@ -18530,9 +18608,10 @@ extension LeadsQueryWhereDistinct on QueryBuilder<Leads, Leads, QDistinct> {
     });
   }
 
-  QueryBuilder<Leads, Leads, QDistinct> distinctByVehicleYear() {
+  QueryBuilder<Leads, Leads, QDistinct> distinctByVehicleYear(
+      {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'vehicleYear');
+      return query.addDistinctBy(r'vehicleYear', caseSensitive: caseSensitive);
     });
   }
 
@@ -19256,7 +19335,7 @@ extension LeadsQueryProperty on QueryBuilder<Leads, Leads, QQueryProperty> {
     });
   }
 
-  QueryBuilder<Leads, int, QQueryOperations> vehicleYearProperty() {
+  QueryBuilder<Leads, String, QQueryOperations> vehicleYearProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'vehicleYear');
     });
@@ -19286,7 +19365,6 @@ extension LeadsQueryProperty on QueryBuilder<Leads, Leads, QQueryProperty> {
 // **************************************************************************
 
 Leads _$LeadsFromJson(Map<String, dynamic> json) => Leads(
-      json['id'] as int,
       json['recommendedBusinessUnit'] as String? ?? '',
       json['branchId'] as String? ?? '',
       json['branchName'] as String? ?? '',
@@ -19302,7 +19380,7 @@ Leads _$LeadsFromJson(Map<String, dynamic> json) => Leads(
       json['lastBusinessUnit'] as String? ?? '',
       json['noPol'] as String? ?? '',
       json['vehicleType'] as String? ?? '',
-      json['vehicleYear'] as int? ?? 0,
+      json['vehicleYear'] as String? ?? '',
       json['bpkbName'] as String? ?? '',
       json['mobileNoOne'] as String? ?? '',
       json['mobileNoTwo'] as String? ?? '',
@@ -19409,7 +19487,6 @@ Leads _$LeadsFromJson(Map<String, dynamic> json) => Leads(
     );
 
 Map<String, dynamic> _$LeadsToJson(Leads instance) => <String, dynamic>{
-      'id': instance.id,
       'recommendedBusinessUnit': instance.recommendedBusinessUnit,
       'branchId': instance.branchId,
       'branchName': instance.branchName,

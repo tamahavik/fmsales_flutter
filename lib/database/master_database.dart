@@ -14,4 +14,20 @@ class MasterDatabase {
   Future<void> deleteAllLeads() async {
     await _isar.leads.clear();
   }
+
+  Future<Leads?> findByEnhLeadIdAndDataSource(
+    int enhLeadId,
+    String dataSource,
+  ) async {
+    return await _isar.leads
+        .filter()
+        .enhLeadIdEqualTo(enhLeadId)
+        .and()
+        .dataSourceEqualTo(dataSource)
+        .findFirst();
+  }
+
+  Future<void> saveLeads(Leads leads) async {
+    await _isar.writeTxn(() async => _isar.leads.put(leads));
+  }
 }

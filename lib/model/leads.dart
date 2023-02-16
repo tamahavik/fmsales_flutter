@@ -6,6 +6,7 @@ part 'leads.g.dart';
 @JsonSerializable()
 @collection
 class Leads {
+  @JsonKey(includeFromJson: false, includeToJson: false)
   Id id = Isar.autoIncrement;
 
   /*
@@ -41,8 +42,8 @@ class Leads {
   String noPol;
   @JsonKey(defaultValue: '')
   String vehicleType;
-  @JsonKey(defaultValue: 0)
-  int vehicleYear;
+  @JsonKey(defaultValue: '')
+  String vehicleYear;
   @JsonKey(defaultValue: '')
   String bpkbName;
   @JsonKey(defaultValue: '')
@@ -255,7 +256,6 @@ class Leads {
   int order;
 
   Leads(
-      this.id,
       this.recommendedBusinessUnit,
       this.branchId,
       this.branchName,
