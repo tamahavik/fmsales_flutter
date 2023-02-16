@@ -6,158 +6,285 @@ part 'leads.g.dart';
 @JsonSerializable()
 @collection
 class Leads {
-  Id? id = Isar.autoIncrement;
-  String? distId;
-  String? distDate;
-  int? expiredDate;
-  String? recommendedBusinessUnit;
-  String? officeCode;
-  String? officeName;
-  String? area;
-  String? posId;
-  String? posName;
-  String? customerNo;
-  String? customerMainNo;
-  String? memberId;
-  String? noFifgroupCard;
-  String? lastBusinessUnit;
-  String? gender;
-  String? noPol;
-  String? vehicleType;
-  int? vehicleYear;
-  int? statusLeadId;
-  String? mobileNo01;
-  String? mobileNo02;
-  String? fixedPhoneArea;
-  String? officePhoneArea;
-  String? collectMobileNo01;
-  String? collectMobileNo02;
-  String? fixedPhone;
-  String? officePhone;
-  String? customerName;
-  String? nik;
-  String? birthPlace;
-  String? birthDate;
-  String? job;
-  String? subOccupation;
-  String? address;
-  String? rtRw;
-  String? province;
-  String? city;
-  String? kecamatan;
-  String? kelurahan;
-  String? zipCode;
-  String? addressSurvey;
-  String? rtRwSurvey;
-  String? provinceSurvey;
-  String? citySurvey;
-  String? kecamatanSurvey;
-  String? kelurahanSurvey;
-  String? zipCodeSurvey;
-  String? dataSource;
-  String? visitDate;
-  String? flag;
-  String? platform = "K";
-  String? followUp;
-  String? phoneNo05;
-  String? phoneNo06;
-  String? followUpResult;
-  String? businessUnit;
-  int? loanAmount;
-  String? loanPurpose;
-  String? objectCategory;
-  String? object;
-  String? suppCodeName;
-  String? anotherAsset;
-  int? top = 0;
-  String? remark;
-  String? img01;
-  String? img02;
-  String? img03;
-  String? img04;
-  String? photoKunjungan;
-  int? timePhotoKunjungan;
-  double? lat6;
-  double? long6;
-  String? alamatLatLong;
-  int? time01;
-  int? time02;
-  int? time03;
-  int? time04;
-  String? statusTask;
-  int? lastPage = 0;
-  int? source;
-  int? dateModified;
-  int? lat1;
-  int? lat2;
-  int? long1;
-  int? long2;
-  String? currentMce;
-  String? slaLeadValue;
-  String? slaOpportunityValue;
-  String? contractNumber;
-  String? flagOffline;
-  String? branchId;
-  String? branchName;
-  String? bpkbName;
-  String? priority;
-  String? flagSubmitDraft;
-  String? dateSlaCreated;
-  String? remarkUh;
-  String? hasilFuUh;
-  String? tipe;
-  String? merk;
-  String? keterangan;
-  String? alamatEnh;
-  String? newAlamat;
-  String? cekMotor;
-  String? tahunMotor;
-  String? potensiKetertarikan;
-  String? phoneValue;
-  String? phoneValid;
-  String? addressValue;
-  String? dataSourceName;
-  String? vehicleDesc;
-  int? enhLeadId;
-  int? startDate;
-  int? finalDate;
-  String? colorFinal;
-  String? statusFgc;
-  String? plafondFgc;
-  int? order;
+  Id id = Isar.autoIncrement;
+
+  /*
+  * from API begin
+  */
+  @JsonKey(defaultValue: '')
+  String recommendedBusinessUnit;
+  @JsonKey(defaultValue: '')
+  String branchId;
+  @JsonKey(defaultValue: '')
+  String branchName;
+  @JsonKey(defaultValue: '')
+  String area;
+  @JsonKey(defaultValue: '')
+  String posId;
+  @JsonKey(defaultValue: '')
+  String posName;
+  @JsonKey(defaultValue: '')
+  String officeCode;
+  @JsonKey(defaultValue: '')
+  String officeName;
+  @JsonKey(defaultValue: '')
+  String custNo;
+  @JsonKey(defaultValue: '')
+  String custMainNo;
+  @JsonKey(defaultValue: '')
+  String memberId;
+  @JsonKey(defaultValue: '')
+  String noFifgroupCard;
+  @JsonKey(defaultValue: '')
+  String lastBusinessUnit;
+  @JsonKey(defaultValue: '')
+  String noPol;
+  @JsonKey(defaultValue: '')
+  String vehicleType;
+  @JsonKey(defaultValue: 0)
+  int vehicleYear;
+  @JsonKey(defaultValue: '')
+  String bpkbName;
+  @JsonKey(defaultValue: '')
+  String mobileNoOne;
+  @JsonKey(defaultValue: '')
+  String mobileNoTwo;
+  @JsonKey(defaultValue: '')
+  String collectmobileNoOne;
+  @JsonKey(defaultValue: '')
+  String collectmobileNoTwo;
+  @JsonKey(defaultValue: '')
+  String fixedPhoneArea;
+  @JsonKey(defaultValue: '')
+  String fixedPhone;
+  @JsonKey(defaultValue: '')
+  String officePhoneArea;
+  @JsonKey(defaultValue: '')
+  String officePhone;
+  @JsonKey(defaultValue: '')
+  String custName;
+  @JsonKey(defaultValue: '')
+  String nik;
+  @JsonKey(defaultValue: 0)
+  int birthDate;
+  @JsonKey(defaultValue: '')
+  String birthPlace;
+  @JsonKey(defaultValue: '')
+  String job;
+  @JsonKey(defaultValue: '')
+  String subOccupation;
+  @JsonKey(defaultValue: '')
+  String address;
+  @JsonKey(defaultValue: '')
+  String rtRw;
+  @JsonKey(defaultValue: '')
+  String province;
+  @JsonKey(defaultValue: '')
+  String city;
+  @JsonKey(defaultValue: '')
+  String kecamatan;
+  @JsonKey(defaultValue: '')
+  String kelurahan;
+  @JsonKey(defaultValue: '')
+  String zipCode;
+  @JsonKey(defaultValue: '')
+  String subZipCode;
+  @JsonKey(defaultValue: 0)
+  int visitDate;
+  @JsonKey(defaultValue: '')
+  String dataSource;
+  @JsonKey(defaultValue: '')
+  String flag;
+  @JsonKey(defaultValue: '')
+  String platform;
+  @JsonKey(defaultValue: '')
+  String gender;
+  @JsonKey(defaultValue: '')
+  String contractNumber;
+  @JsonKey(defaultValue: '')
+  String priority;
+  @JsonKey(defaultValue: 0)
+  int statusLeadId;
+  @JsonKey(defaultValue: 0)
+  int lasStatusLeadId;
+  @JsonKey(defaultValue: '')
+  String hasilFu;
+  @JsonKey(defaultValue: '')
+  String remarkUh;
+  @JsonKey(defaultValue: '')
+  String hasilFuUh;
+  @JsonKey(defaultValue: 0)
+  int enhLeadId;
+  @JsonKey(defaultValue: '')
+  String dataSourceName;
+  @JsonKey(defaultValue: '')
+  String vehicleDesc;
+  @JsonKey(defaultValue: 0)
+  int startDate;
+  @JsonKey(defaultValue: 0)
+  int firstConco;
+  @JsonKey(defaultValue: '')
+  String colorFinal;
+
+  /*
+  * from user input
+  */
+  @JsonKey(defaultValue: '')
+  String addressSurvey;
+  @JsonKey(defaultValue: '')
+  String rtRwSurvey;
+  @JsonKey(defaultValue: '')
+  String provinceSurvey;
+  @JsonKey(defaultValue: '')
+  String citySurvey;
+  @JsonKey(defaultValue: '')
+  String kecamatanSurvey;
+  @JsonKey(defaultValue: '')
+  String kelurahanSurvey;
+  @JsonKey(defaultValue: '')
+  String zipCodeSurvey;
+  @JsonKey(defaultValue: '')
+  String followUp;
+  @JsonKey(defaultValue: '')
+  String phoneNo05;
+  @JsonKey(defaultValue: '')
+  String phoneNo06;
+  @JsonKey(defaultValue: '')
+  String followUpResult;
+  @JsonKey(defaultValue: '')
+  String businessUnit;
+  @JsonKey(defaultValue: 0)
+  int loanAmount;
+  @JsonKey(defaultValue: '')
+  String loanPurpose;
+  @JsonKey(defaultValue: '')
+  String objectCategory;
+  @JsonKey(defaultValue: '')
+  String object;
+  @JsonKey(defaultValue: '')
+  String suppCodeName;
+  @JsonKey(defaultValue: '')
+  String anotherAsset;
+  @JsonKey(defaultValue: 0)
+  int top;
+  @JsonKey(defaultValue: '')
+  String remark;
+  @JsonKey(defaultValue: '')
+  String img01;
+  @JsonKey(defaultValue: '')
+  String img02;
+  @JsonKey(defaultValue: '')
+  String img03;
+  @JsonKey(defaultValue: '')
+  String img04;
+  @JsonKey(defaultValue: '')
+  String photoKunjungan;
+  @JsonKey(defaultValue: 0)
+  int timePhotoKunjungan;
+  @JsonKey(defaultValue: 0.0)
+  double lat6;
+  @JsonKey(defaultValue: 0.0)
+  double long6;
+  @JsonKey(defaultValue: '')
+  String alamatLatLong;
+  @JsonKey(defaultValue: 0)
+  int time01;
+  @JsonKey(defaultValue: 0)
+  int time02;
+  @JsonKey(defaultValue: 0)
+  int time03;
+  @JsonKey(defaultValue: 0)
+  int time04;
+  @JsonKey(defaultValue: '')
+  String statusTask;
+  @JsonKey(defaultValue: 0)
+  int lastPage = 0;
+  @JsonKey(defaultValue: 0)
+  int source;
+  @JsonKey(defaultValue: 0)
+  int dateModified;
+  @JsonKey(defaultValue: 0)
+  int lat1;
+  @JsonKey(defaultValue: 0)
+  int lat2;
+  @JsonKey(defaultValue: 0)
+  int long1;
+  @JsonKey(defaultValue: 0)
+  int long2;
+  @JsonKey(defaultValue: '')
+  String currentMce;
+  @JsonKey(defaultValue: '')
+  String slaLeadValue;
+  @JsonKey(defaultValue: '')
+  String slaOpportunityValue;
+  @JsonKey(defaultValue: '')
+  String flagOffline;
+  @JsonKey(defaultValue: '')
+  String flagSubmitDraft;
+  @JsonKey(defaultValue: '')
+  String dateSlaCreated;
+  @JsonKey(defaultValue: '')
+  String tipe;
+  @JsonKey(defaultValue: '')
+  String merk;
+  @JsonKey(defaultValue: '')
+  String keterangan;
+  @JsonKey(defaultValue: '')
+  String alamatEnh;
+  @JsonKey(defaultValue: '')
+  String newAlamat;
+  @JsonKey(defaultValue: '')
+  String cekMotor;
+  @JsonKey(defaultValue: '')
+  String tahunMotor;
+  @JsonKey(defaultValue: '')
+  String potensiKetertarikan;
+  @JsonKey(defaultValue: '')
+  String phoneValue;
+  @JsonKey(defaultValue: '')
+  String phoneValid;
+  @JsonKey(defaultValue: '')
+  String addressValue;
+  @JsonKey(defaultValue: 0)
+  int finalDate;
+  @JsonKey(defaultValue: '')
+  String statusFgc;
+  @JsonKey(defaultValue: '')
+  String plafondFgc;
+  @JsonKey(defaultValue: 0)
+  int order;
 
   Leads(
-      this.distId,
-      this.distDate,
-      this.expiredDate,
+      this.id,
       this.recommendedBusinessUnit,
-      this.officeCode,
-      this.officeName,
+      this.branchId,
+      this.branchName,
       this.area,
       this.posId,
       this.posName,
-      this.customerNo,
-      this.customerMainNo,
+      this.officeCode,
+      this.officeName,
+      this.custNo,
+      this.custMainNo,
       this.memberId,
       this.noFifgroupCard,
       this.lastBusinessUnit,
-      this.gender,
       this.noPol,
       this.vehicleType,
       this.vehicleYear,
-      this.statusLeadId,
-      this.mobileNo01,
-      this.mobileNo02,
+      this.bpkbName,
+      this.mobileNoOne,
+      this.mobileNoTwo,
+      this.collectmobileNoOne,
+      this.collectmobileNoTwo,
       this.fixedPhoneArea,
-      this.officePhoneArea,
-      this.collectMobileNo01,
-      this.collectMobileNo02,
       this.fixedPhone,
+      this.officePhoneArea,
       this.officePhone,
-      this.customerName,
+      this.custName,
       this.nik,
-      this.birthPlace,
       this.birthDate,
+      this.birthPlace,
       this.job,
       this.subOccupation,
       this.address,
@@ -167,6 +294,25 @@ class Leads {
       this.kecamatan,
       this.kelurahan,
       this.zipCode,
+      this.subZipCode,
+      this.visitDate,
+      this.dataSource,
+      this.flag,
+      this.platform,
+      this.gender,
+      this.contractNumber,
+      this.priority,
+      this.statusLeadId,
+      this.lasStatusLeadId,
+      this.hasilFu,
+      this.remarkUh,
+      this.hasilFuUh,
+      this.enhLeadId,
+      this.dataSourceName,
+      this.vehicleDesc,
+      this.startDate,
+      this.firstConco,
+      this.colorFinal,
       this.addressSurvey,
       this.rtRwSurvey,
       this.provinceSurvey,
@@ -174,10 +320,6 @@ class Leads {
       this.kecamatanSurvey,
       this.kelurahanSurvey,
       this.zipCodeSurvey,
-      this.dataSource,
-      this.visitDate,
-      this.flag,
-      this.platform,
       this.followUp,
       this.phoneNo05,
       this.phoneNo06,
@@ -215,16 +357,9 @@ class Leads {
       this.currentMce,
       this.slaLeadValue,
       this.slaOpportunityValue,
-      this.contractNumber,
       this.flagOffline,
-      this.branchId,
-      this.branchName,
-      this.bpkbName,
-      this.priority,
       this.flagSubmitDraft,
       this.dateSlaCreated,
-      this.remarkUh,
-      this.hasilFuUh,
       this.tipe,
       this.merk,
       this.keterangan,
@@ -236,12 +371,7 @@ class Leads {
       this.phoneValue,
       this.phoneValid,
       this.addressValue,
-      this.dataSourceName,
-      this.vehicleDesc,
-      this.enhLeadId,
-      this.startDate,
       this.finalDate,
-      this.colorFinal,
       this.statusFgc,
       this.plafondFgc,
       this.order);

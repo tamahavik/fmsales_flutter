@@ -12,7 +12,6 @@ import 'package:ufi/model/parameter_priority.dart';
 import 'package:ufi/model/priority_leads.dart';
 import 'package:ufi/model/province.dart';
 import 'package:ufi/model/sla_color.dart';
-import 'package:ufi/model/status_leads_open.dart';
 import 'package:ufi/model/sub_occupation.dart';
 import 'package:ufi/model/time_setup.dart';
 import 'package:ufi/model/zipcode.dart';
@@ -37,7 +36,6 @@ class Database {
         TimeSetupSchema,
         ZipCodeSchema,
         LeadsSchema,
-        StatusLeadsOpenSchema,
       ], name: Isar.defaultName);
     }
     return await Future.value(Isar.getInstance());

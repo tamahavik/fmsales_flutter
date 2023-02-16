@@ -3,8 +3,6 @@ import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:ufi/model/api_result.dart';
 import 'package:ufi/model/leads.dart';
-import 'package:ufi/model/status_leads_open.dart';
-import 'package:ufi/presentation/today/model/leads_distribution.dart';
 import 'package:ufi/services/api_variable.dart';
 
 @injectable
@@ -30,7 +28,7 @@ class TodayRepository {
     }
   }
 
-  Future<Either<String, List<LeadsDistribution>>> getDistribution(
+  Future<Either<String, List<Leads>>> getDistribution(
       String employeeNumber) async {
     try {
       Response response = await _dio.get(
@@ -40,51 +38,11 @@ class TodayRepository {
       ApiResult result = ApiResult.fromJson(response.data);
       if (result.message == 'OK') {
         var obj = ApiResult.processJson(result.result) as List;
-        return right(obj.map((e) => LeadsDistribution.fromJson(e)).toList());
+        return right(obj.map((e) => Leads.fromJson(e)).toList());
       }
       return left(result.result.toString());
     } on DioError catch (e) {
       return left(e.message);
-    }
-  }
-
-  Future<bool> pushStatus(StatusLeadsOpen obj) async {
-    try {
-      Response response = await _dio.put(PUT_STATUS_LEAD,
-          data: obj.toJson(),
-          options: Options(
-            headers: {
-              Headers.contentTypeHeader: Headers.jsonContentType,
-            },
-          ));
-      ApiResult result = ApiResult.fromJson(response.data);
-      if (result.message == 'OK') {
-        return true;
-      }
-      return false;
-    } on DioError catch (e) {
-      return true;
-    }
-  }
-
-  Future<Either<bool, bool>> pushDataLeads(Leads lead) async {
-    try {
-      Response response = await _dio.post(SUBMIT_FOLLOW_UP,
-          data: lead.toJson(),
-          options: Options(
-            headers: {
-              Headers.contentTypeHeader: Headers.jsonContentType,
-            },
-          ));
-      if (response.data != null) {
-        ApiResult result = ApiResult.fromJson(response.data);
-        if (result.message == 'OK') {
-          return right(true);
-        }
-      }
-      return right(false);
-    } on DioError catch (e) {
-      return left(false);
     }
   }
 }

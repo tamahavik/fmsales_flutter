@@ -25,4 +25,8 @@ const GET_DISTRIBUTION =
 const PUT_STATUS_LEAD = '/api/v1/android/leads/updateStatusLeadIdToOpenByMce';
 const SUBMIT_FOLLOW_UP = 'api/v1/android/leads/submit';
 const SIGN_OUT = '/api/v1/auth/logout';
+const UPLOAD_PHOTO = '/api/v1/upload/photokunjungan';
+const PULL_BY_UH = '/api/v1/android/sync/customer/pullByUH/{employeeNumber}';
+const CALLBACK_PULL_BY_UH =
+    '/api/v1/android/sync/customer/updateAfterPullByUHByCustMainNo';
 const MIN_SDK = 26;
