@@ -19,4 +19,10 @@ const SYNC_HOLIDAY = '/api/v1/android/master-holiday';
 const SYNC_TIME_SETUP = '/api/v1/android/master-setup';
 const SYNC_START_END_LOCATION = '/api/v1/android/sync/location/start-end';
 const SYNC_INTERVAL_LOCATION = '/api/v1/android/sync/location/interval';
+const CHECK_LOGIN = '/api/v1/android/cekLogin';
+const GET_DISTRIBUTION =
+    'api/v1/android/leads/getAndUpdateLeadsByStatusLeadIdAndAssignTo';
+const PUT_STATUS_LEAD = '/api/v1/android/leads/updateStatusLeadIdToOpenByMce';
+const SUBMIT_FOLLOW_UP = 'api/v1/android/leads/submit';
+const SIGN_OUT = '/api/v1/auth/logout';
 const MIN_SDK = 26;

@@ -20,18 +20,24 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() verificationMenu,
+    required TResult Function() handleLogout,
+    required TResult Function() showDialogLogout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? verificationMenu,
+    TResult? Function()? handleLogout,
+    TResult? Function()? showDialogLogout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? verificationMenu,
+    TResult Function()? handleLogout,
+    TResult Function()? showDialogLogout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +45,24 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_VerificationMenu value) verificationMenu,
+    required TResult Function(_HandleLogut value) handleLogout,
+    required TResult Function(_ShowDialogLogout value) showDialogLogout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_VerificationMenu value)? verificationMenu,
+    TResult? Function(_HandleLogut value)? handleLogout,
+    TResult? Function(_ShowDialogLogout value)? showDialogLogout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_VerificationMenu value)? verificationMenu,
+    TResult Function(_HandleLogut value)? handleLogout,
+    TResult Function(_ShowDialogLogout value)? showDialogLogout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -112,6 +124,8 @@ class _$_Started implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() verificationMenu,
+    required TResult Function() handleLogout,
+    required TResult Function() showDialogLogout,
   }) {
     return started();
   }
@@ -121,6 +135,8 @@ class _$_Started implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? verificationMenu,
+    TResult? Function()? handleLogout,
+    TResult? Function()? showDialogLogout,
   }) {
     return started?.call();
   }
@@ -130,6 +146,8 @@ class _$_Started implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? verificationMenu,
+    TResult Function()? handleLogout,
+    TResult Function()? showDialogLogout,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -143,6 +161,8 @@ class _$_Started implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_VerificationMenu value) verificationMenu,
+    required TResult Function(_HandleLogut value) handleLogout,
+    required TResult Function(_ShowDialogLogout value) showDialogLogout,
   }) {
     return started(this);
   }
@@ -152,6 +172,8 @@ class _$_Started implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_VerificationMenu value)? verificationMenu,
+    TResult? Function(_HandleLogut value)? handleLogout,
+    TResult? Function(_ShowDialogLogout value)? showDialogLogout,
   }) {
     return started?.call(this);
   }
@@ -161,6 +183,8 @@ class _$_Started implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_VerificationMenu value)? verificationMenu,
+    TResult Function(_HandleLogut value)? handleLogout,
+    TResult Function(_ShowDialogLogout value)? showDialogLogout,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -214,6 +238,8 @@ class _$_VerificationMenu implements _VerificationMenu {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() verificationMenu,
+    required TResult Function() handleLogout,
+    required TResult Function() showDialogLogout,
   }) {
     return verificationMenu();
   }
@@ -223,6 +249,8 @@ class _$_VerificationMenu implements _VerificationMenu {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? verificationMenu,
+    TResult? Function()? handleLogout,
+    TResult? Function()? showDialogLogout,
   }) {
     return verificationMenu?.call();
   }
@@ -232,6 +260,8 @@ class _$_VerificationMenu implements _VerificationMenu {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? verificationMenu,
+    TResult Function()? handleLogout,
+    TResult Function()? showDialogLogout,
     required TResult orElse(),
   }) {
     if (verificationMenu != null) {
@@ -245,6 +275,8 @@ class _$_VerificationMenu implements _VerificationMenu {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_VerificationMenu value) verificationMenu,
+    required TResult Function(_HandleLogut value) handleLogout,
+    required TResult Function(_ShowDialogLogout value) showDialogLogout,
   }) {
     return verificationMenu(this);
   }
@@ -254,6 +286,8 @@ class _$_VerificationMenu implements _VerificationMenu {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_VerificationMenu value)? verificationMenu,
+    TResult? Function(_HandleLogut value)? handleLogout,
+    TResult? Function(_ShowDialogLogout value)? showDialogLogout,
   }) {
     return verificationMenu?.call(this);
   }
@@ -263,6 +297,8 @@ class _$_VerificationMenu implements _VerificationMenu {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_VerificationMenu value)? verificationMenu,
+    TResult Function(_HandleLogut value)? handleLogout,
+    TResult Function(_ShowDialogLogout value)? showDialogLogout,
     required TResult orElse(),
   }) {
     if (verificationMenu != null) {
@@ -277,12 +313,242 @@ abstract class _VerificationMenu implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$_HandleLogutCopyWith<$Res> {
+  factory _$$_HandleLogutCopyWith(
+          _$_HandleLogut value, $Res Function(_$_HandleLogut) then) =
+      __$$_HandleLogutCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_HandleLogutCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_HandleLogut>
+    implements _$$_HandleLogutCopyWith<$Res> {
+  __$$_HandleLogutCopyWithImpl(
+      _$_HandleLogut _value, $Res Function(_$_HandleLogut) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_HandleLogut implements _HandleLogut {
+  const _$_HandleLogut();
+
+  @override
+  String toString() {
+    return 'HomeEvent.handleLogout()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_HandleLogut);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() verificationMenu,
+    required TResult Function() handleLogout,
+    required TResult Function() showDialogLogout,
+  }) {
+    return handleLogout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? verificationMenu,
+    TResult? Function()? handleLogout,
+    TResult? Function()? showDialogLogout,
+  }) {
+    return handleLogout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? verificationMenu,
+    TResult Function()? handleLogout,
+    TResult Function()? showDialogLogout,
+    required TResult orElse(),
+  }) {
+    if (handleLogout != null) {
+      return handleLogout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_VerificationMenu value) verificationMenu,
+    required TResult Function(_HandleLogut value) handleLogout,
+    required TResult Function(_ShowDialogLogout value) showDialogLogout,
+  }) {
+    return handleLogout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_VerificationMenu value)? verificationMenu,
+    TResult? Function(_HandleLogut value)? handleLogout,
+    TResult? Function(_ShowDialogLogout value)? showDialogLogout,
+  }) {
+    return handleLogout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_VerificationMenu value)? verificationMenu,
+    TResult Function(_HandleLogut value)? handleLogout,
+    TResult Function(_ShowDialogLogout value)? showDialogLogout,
+    required TResult orElse(),
+  }) {
+    if (handleLogout != null) {
+      return handleLogout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HandleLogut implements HomeEvent {
+  const factory _HandleLogut() = _$_HandleLogut;
+}
+
+/// @nodoc
+abstract class _$$_ShowDialogLogoutCopyWith<$Res> {
+  factory _$$_ShowDialogLogoutCopyWith(
+          _$_ShowDialogLogout value, $Res Function(_$_ShowDialogLogout) then) =
+      __$$_ShowDialogLogoutCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_ShowDialogLogoutCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_ShowDialogLogout>
+    implements _$$_ShowDialogLogoutCopyWith<$Res> {
+  __$$_ShowDialogLogoutCopyWithImpl(
+      _$_ShowDialogLogout _value, $Res Function(_$_ShowDialogLogout) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_ShowDialogLogout implements _ShowDialogLogout {
+  const _$_ShowDialogLogout();
+
+  @override
+  String toString() {
+    return 'HomeEvent.showDialogLogout()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_ShowDialogLogout);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() verificationMenu,
+    required TResult Function() handleLogout,
+    required TResult Function() showDialogLogout,
+  }) {
+    return showDialogLogout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? verificationMenu,
+    TResult? Function()? handleLogout,
+    TResult? Function()? showDialogLogout,
+  }) {
+    return showDialogLogout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? verificationMenu,
+    TResult Function()? handleLogout,
+    TResult Function()? showDialogLogout,
+    required TResult orElse(),
+  }) {
+    if (showDialogLogout != null) {
+      return showDialogLogout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_VerificationMenu value) verificationMenu,
+    required TResult Function(_HandleLogut value) handleLogout,
+    required TResult Function(_ShowDialogLogout value) showDialogLogout,
+  }) {
+    return showDialogLogout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_VerificationMenu value)? verificationMenu,
+    TResult? Function(_HandleLogut value)? handleLogout,
+    TResult? Function(_ShowDialogLogout value)? showDialogLogout,
+  }) {
+    return showDialogLogout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_VerificationMenu value)? verificationMenu,
+    TResult Function(_HandleLogut value)? handleLogout,
+    TResult Function(_ShowDialogLogout value)? showDialogLogout,
+    required TResult orElse(),
+  }) {
+    if (showDialogLogout != null) {
+      return showDialogLogout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShowDialogLogout implements HomeEvent {
+  const factory _ShowDialogLogout() = _$_ShowDialogLogout;
+}
+
+/// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(String fullName) fullName,
     required TResult Function() verification,
+    required TResult Function() dialogLogout,
+    required TResult Function() logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -290,6 +556,8 @@ mixin _$HomeState {
     TResult? Function()? initial,
     TResult? Function(String fullName)? fullName,
     TResult? Function()? verification,
+    TResult? Function()? dialogLogout,
+    TResult? Function()? logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -297,6 +565,8 @@ mixin _$HomeState {
     TResult Function()? initial,
     TResult Function(String fullName)? fullName,
     TResult Function()? verification,
+    TResult Function()? dialogLogout,
+    TResult Function()? logout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -305,6 +575,8 @@ mixin _$HomeState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_FullName value) fullName,
     required TResult Function(_Verification value) verification,
+    required TResult Function(_DialogLogout value) dialogLogout,
+    required TResult Function(_Logout value) logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -312,6 +584,8 @@ mixin _$HomeState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_FullName value)? fullName,
     TResult? Function(_Verification value)? verification,
+    TResult? Function(_DialogLogout value)? dialogLogout,
+    TResult? Function(_Logout value)? logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -319,6 +593,8 @@ mixin _$HomeState {
     TResult Function(_Initial value)? initial,
     TResult Function(_FullName value)? fullName,
     TResult Function(_Verification value)? verification,
+    TResult Function(_DialogLogout value)? dialogLogout,
+    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -381,6 +657,8 @@ class _$_Initial implements _Initial {
     required TResult Function() initial,
     required TResult Function(String fullName) fullName,
     required TResult Function() verification,
+    required TResult Function() dialogLogout,
+    required TResult Function() logout,
   }) {
     return initial();
   }
@@ -391,6 +669,8 @@ class _$_Initial implements _Initial {
     TResult? Function()? initial,
     TResult? Function(String fullName)? fullName,
     TResult? Function()? verification,
+    TResult? Function()? dialogLogout,
+    TResult? Function()? logout,
   }) {
     return initial?.call();
   }
@@ -401,6 +681,8 @@ class _$_Initial implements _Initial {
     TResult Function()? initial,
     TResult Function(String fullName)? fullName,
     TResult Function()? verification,
+    TResult Function()? dialogLogout,
+    TResult Function()? logout,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -415,6 +697,8 @@ class _$_Initial implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_FullName value) fullName,
     required TResult Function(_Verification value) verification,
+    required TResult Function(_DialogLogout value) dialogLogout,
+    required TResult Function(_Logout value) logout,
   }) {
     return initial(this);
   }
@@ -425,6 +709,8 @@ class _$_Initial implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_FullName value)? fullName,
     TResult? Function(_Verification value)? verification,
+    TResult? Function(_DialogLogout value)? dialogLogout,
+    TResult? Function(_Logout value)? logout,
   }) {
     return initial?.call(this);
   }
@@ -435,6 +721,8 @@ class _$_Initial implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_FullName value)? fullName,
     TResult Function(_Verification value)? verification,
+    TResult Function(_DialogLogout value)? dialogLogout,
+    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -516,6 +804,8 @@ class _$_FullName implements _FullName {
     required TResult Function() initial,
     required TResult Function(String fullName) fullName,
     required TResult Function() verification,
+    required TResult Function() dialogLogout,
+    required TResult Function() logout,
   }) {
     return fullName(this.fullName);
   }
@@ -526,6 +816,8 @@ class _$_FullName implements _FullName {
     TResult? Function()? initial,
     TResult? Function(String fullName)? fullName,
     TResult? Function()? verification,
+    TResult? Function()? dialogLogout,
+    TResult? Function()? logout,
   }) {
     return fullName?.call(this.fullName);
   }
@@ -536,6 +828,8 @@ class _$_FullName implements _FullName {
     TResult Function()? initial,
     TResult Function(String fullName)? fullName,
     TResult Function()? verification,
+    TResult Function()? dialogLogout,
+    TResult Function()? logout,
     required TResult orElse(),
   }) {
     if (fullName != null) {
@@ -550,6 +844,8 @@ class _$_FullName implements _FullName {
     required TResult Function(_Initial value) initial,
     required TResult Function(_FullName value) fullName,
     required TResult Function(_Verification value) verification,
+    required TResult Function(_DialogLogout value) dialogLogout,
+    required TResult Function(_Logout value) logout,
   }) {
     return fullName(this);
   }
@@ -560,6 +856,8 @@ class _$_FullName implements _FullName {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_FullName value)? fullName,
     TResult? Function(_Verification value)? verification,
+    TResult? Function(_DialogLogout value)? dialogLogout,
+    TResult? Function(_Logout value)? logout,
   }) {
     return fullName?.call(this);
   }
@@ -570,6 +868,8 @@ class _$_FullName implements _FullName {
     TResult Function(_Initial value)? initial,
     TResult Function(_FullName value)? fullName,
     TResult Function(_Verification value)? verification,
+    TResult Function(_DialogLogout value)? dialogLogout,
+    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
     if (fullName != null) {
@@ -629,6 +929,8 @@ class _$_Verification implements _Verification {
     required TResult Function() initial,
     required TResult Function(String fullName) fullName,
     required TResult Function() verification,
+    required TResult Function() dialogLogout,
+    required TResult Function() logout,
   }) {
     return verification();
   }
@@ -639,6 +941,8 @@ class _$_Verification implements _Verification {
     TResult? Function()? initial,
     TResult? Function(String fullName)? fullName,
     TResult? Function()? verification,
+    TResult? Function()? dialogLogout,
+    TResult? Function()? logout,
   }) {
     return verification?.call();
   }
@@ -649,6 +953,8 @@ class _$_Verification implements _Verification {
     TResult Function()? initial,
     TResult Function(String fullName)? fullName,
     TResult Function()? verification,
+    TResult Function()? dialogLogout,
+    TResult Function()? logout,
     required TResult orElse(),
   }) {
     if (verification != null) {
@@ -663,6 +969,8 @@ class _$_Verification implements _Verification {
     required TResult Function(_Initial value) initial,
     required TResult Function(_FullName value) fullName,
     required TResult Function(_Verification value) verification,
+    required TResult Function(_DialogLogout value) dialogLogout,
+    required TResult Function(_Logout value) logout,
   }) {
     return verification(this);
   }
@@ -673,6 +981,8 @@ class _$_Verification implements _Verification {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_FullName value)? fullName,
     TResult? Function(_Verification value)? verification,
+    TResult? Function(_DialogLogout value)? dialogLogout,
+    TResult? Function(_Logout value)? logout,
   }) {
     return verification?.call(this);
   }
@@ -683,6 +993,8 @@ class _$_Verification implements _Verification {
     TResult Function(_Initial value)? initial,
     TResult Function(_FullName value)? fullName,
     TResult Function(_Verification value)? verification,
+    TResult Function(_DialogLogout value)? dialogLogout,
+    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
     if (verification != null) {
@@ -694,4 +1006,242 @@ class _$_Verification implements _Verification {
 
 abstract class _Verification implements HomeState {
   const factory _Verification() = _$_Verification;
+}
+
+/// @nodoc
+abstract class _$$_DialogLogoutCopyWith<$Res> {
+  factory _$$_DialogLogoutCopyWith(
+          _$_DialogLogout value, $Res Function(_$_DialogLogout) then) =
+      __$$_DialogLogoutCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_DialogLogoutCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$_DialogLogout>
+    implements _$$_DialogLogoutCopyWith<$Res> {
+  __$$_DialogLogoutCopyWithImpl(
+      _$_DialogLogout _value, $Res Function(_$_DialogLogout) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_DialogLogout implements _DialogLogout {
+  const _$_DialogLogout();
+
+  @override
+  String toString() {
+    return 'HomeState.dialogLogout()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_DialogLogout);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String fullName) fullName,
+    required TResult Function() verification,
+    required TResult Function() dialogLogout,
+    required TResult Function() logout,
+  }) {
+    return dialogLogout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String fullName)? fullName,
+    TResult? Function()? verification,
+    TResult? Function()? dialogLogout,
+    TResult? Function()? logout,
+  }) {
+    return dialogLogout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String fullName)? fullName,
+    TResult Function()? verification,
+    TResult Function()? dialogLogout,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (dialogLogout != null) {
+      return dialogLogout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FullName value) fullName,
+    required TResult Function(_Verification value) verification,
+    required TResult Function(_DialogLogout value) dialogLogout,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return dialogLogout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FullName value)? fullName,
+    TResult? Function(_Verification value)? verification,
+    TResult? Function(_DialogLogout value)? dialogLogout,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return dialogLogout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FullName value)? fullName,
+    TResult Function(_Verification value)? verification,
+    TResult Function(_DialogLogout value)? dialogLogout,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (dialogLogout != null) {
+      return dialogLogout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DialogLogout implements HomeState {
+  const factory _DialogLogout() = _$_DialogLogout;
+}
+
+/// @nodoc
+abstract class _$$_LogoutCopyWith<$Res> {
+  factory _$$_LogoutCopyWith(_$_Logout value, $Res Function(_$_Logout) then) =
+      __$$_LogoutCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LogoutCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$_Logout>
+    implements _$$_LogoutCopyWith<$Res> {
+  __$$_LogoutCopyWithImpl(_$_Logout _value, $Res Function(_$_Logout) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Logout implements _Logout {
+  const _$_Logout();
+
+  @override
+  String toString() {
+    return 'HomeState.logout()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Logout);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String fullName) fullName,
+    required TResult Function() verification,
+    required TResult Function() dialogLogout,
+    required TResult Function() logout,
+  }) {
+    return logout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String fullName)? fullName,
+    TResult? Function()? verification,
+    TResult? Function()? dialogLogout,
+    TResult? Function()? logout,
+  }) {
+    return logout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String fullName)? fullName,
+    TResult Function()? verification,
+    TResult Function()? dialogLogout,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_FullName value) fullName,
+    required TResult Function(_Verification value) verification,
+    required TResult Function(_DialogLogout value) dialogLogout,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return logout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_FullName value)? fullName,
+    TResult? Function(_Verification value)? verification,
+    TResult? Function(_DialogLogout value)? dialogLogout,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return logout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_FullName value)? fullName,
+    TResult Function(_Verification value)? verification,
+    TResult Function(_DialogLogout value)? dialogLogout,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Logout implements HomeState {
+  const factory _Logout() = _$_Logout;
 }

@@ -82,6 +82,7 @@ dependencies:
   workmanager: ^0.5.1
   connectivity_plus: ^3.0.3
   permission_handler: ^10.2.0
+  focus_detector: ^2.0.1
 
 dev_dependencies:
   flutter_test:

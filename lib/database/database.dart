@@ -4,6 +4,7 @@ import 'package:ufi/model/city.dart';
 import 'package:ufi/model/holiday.dart';
 import 'package:ufi/model/kecamatan.dart';
 import 'package:ufi/model/kelurahan.dart';
+import 'package:ufi/model/leads.dart';
 import 'package:ufi/model/model.dart';
 import 'package:ufi/model/occupation.dart';
 import 'package:ufi/model/parameter.dart';
@@ -11,6 +12,7 @@ import 'package:ufi/model/parameter_priority.dart';
 import 'package:ufi/model/priority_leads.dart';
 import 'package:ufi/model/province.dart';
 import 'package:ufi/model/sla_color.dart';
+import 'package:ufi/model/status_leads_open.dart';
 import 'package:ufi/model/sub_occupation.dart';
 import 'package:ufi/model/time_setup.dart';
 import 'package:ufi/model/zipcode.dart';
@@ -34,6 +36,8 @@ class Database {
         SubOccupationSchema,
         TimeSetupSchema,
         ZipCodeSchema,
+        LeadsSchema,
+        StatusLeadsOpenSchema,
       ], name: Isar.defaultName);
     }
     return await Future.value(Isar.getInstance());

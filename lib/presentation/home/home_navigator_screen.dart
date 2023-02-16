@@ -9,7 +9,9 @@ import 'package:ufi/presentation/home/components/application_bar.dart';
 import 'package:ufi/presentation/home/components/bottom_navigation_menu.dart';
 import 'package:ufi/presentation/home/components/floating_action.dart';
 import 'package:ufi/presentation/home/components/history_screen.dart';
-import 'package:ufi/presentation/home/components/home_screen.dart';
+import 'package:ufi/presentation/splash/view/splash_screen.dart';
+import 'package:ufi/presentation/today/bloc/today_bloc.dart';
+import 'package:ufi/presentation/today/today_screen.dart';
 import 'package:ufi/screen/verification_screen.dart';
 
 class HomeNavigationScreen extends StatefulWidget {
@@ -25,19 +27,53 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
 
   void _stateNavigationController(BuildContext context, NavigationState state) {
     state.map(
-      initial: (value) => _currentIndex = BottomAppBarEnums.home,
-      home: (value) => _currentIndex = BottomAppBarEnums.home,
-      history: (value) => _currentIndex = BottomAppBarEnums.history,
+      initial: (value) {
+        context.read<TodayBloc>().add(const TodayEvent.started(true));
+        _currentIndex = BottomAppBarEnums.home;
+      },
+      home: (value) {
+        context.read<TodayBloc>().add(const TodayEvent.started(true));
+        _currentIndex = BottomAppBarEnums.home;
+      },
+      history: (value) async {
+        context.read<TodayBloc>().add(const TodayEvent.cancelTimer());
+        _currentIndex = BottomAppBarEnums.history;
+      },
     );
   }
 
   void _stateHomeController(BuildContext context, HomeState state) {
     state.map(
       initial: (value) {},
-      fullName: (value) => {
-        _fullName = value.fullName,
+      fullName: (value) => _fullName = value.fullName,
+      verification: (value) async {
+        context.read<TodayBloc>().add(const TodayEvent.cancelTimer());
+        await Navigator.of(context)
+            .push(MaterialPageRoute(
+                builder: (context) => const VerificationScreen()))
+            .then((value) =>
+                context.read<TodayBloc>().add(const TodayEvent.started(true)));
       },
-      verification: (value) => Get.to(() => const VerificationScreen()),
+      dialogLogout: (value) {
+        Get.defaultDialog(
+            title: "Sign Out",
+            middleText: "Apakah anda ingin keluar?",
+            actions: [
+              TextButton(
+                onPressed: () => Get.back(),
+                child: const Text("Close"),
+              ),
+              TextButton(
+                onPressed: () => context
+                    .read<HomeBloc>()
+                    .add(const HomeEvent.handleLogout()),
+                child: const Text("Ok"),
+              ),
+            ]);
+      },
+      logout: (value) => Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => const SplashScreen()),
+          (route) => false),
     );
   }
 
@@ -46,10 +82,12 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-            lazy: true,
             create: (context) =>
                 getIt<HomeBloc>()..add(const HomeEvent.started())),
         BlocProvider(create: (context) => getIt<NavigationBloc>()),
+        BlocProvider(
+            create: (context) =>
+                getIt<TodayBloc>()..add(const TodayEvent.started(true))),
       ],
       child: BlocConsumer<HomeBloc, HomeState>(
         listener: _stateHomeController,
@@ -60,11 +98,15 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
               return Scaffold(
                 appBar: PreferredSize(
                   preferredSize: const Size.fromHeight(56),
-                  child: ApplicationBar(fullName: _fullName),
+                  child: ApplicationBar(
+                      fullName: _fullName,
+                      onPress: () => context
+                          .read<HomeBloc>()
+                          .add(const HomeEvent.showDialogLogout())),
                 ),
                 body: state.map(
-                  initial: (value) => const HomeScreen(),
-                  home: (value) => const HomeScreen(),
+                  initial: (value) => const TodayScreen(),
+                  home: (value) => const TodayScreen(),
                   history: (value) => const HistoryScreen(),
                 ),
                 floatingActionButton:

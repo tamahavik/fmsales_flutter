@@ -1,0 +1,4 @@
+enum LogoutEnum {
+  FORCE,
+  USER;
+}

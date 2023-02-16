@@ -4,8 +4,11 @@ class ApplicationBar extends StatelessWidget {
   const ApplicationBar({
     super.key,
     required String fullName,
-  }) : _fullName = fullName;
+    required VoidCallback onPress,
+  })  : _fullName = fullName,
+        _onPress = onPress;
 
+  final VoidCallback _onPress;
   final String _fullName;
 
   @override
@@ -16,7 +19,7 @@ class ApplicationBar extends StatelessWidget {
       actions: [
         IconButton(
           icon: const Icon(Icons.logout),
-          onPressed: () {},
+          onPressed: _onPress,
         ),
       ],
     );

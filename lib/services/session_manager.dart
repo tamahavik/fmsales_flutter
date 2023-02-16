@@ -80,4 +80,16 @@ class SessionManager {
   Future<String> getFullName() async {
     return instance.getString(_kFullName) ?? '';
   }
+
+  String getEmployeeNumber() {
+    return instance.getString(_kEmployeeNumber) ?? '';
+  }
+
+  String getRefreshToken() {
+    return instance.getString(_kRefreshToken) ?? '';
+  }
+
+  Future<bool> clearSharedPreference() {
+    return instance.clear();
+  }
 }
