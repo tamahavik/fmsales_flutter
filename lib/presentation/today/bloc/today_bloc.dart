@@ -13,9 +13,7 @@ import 'package:ufi/utils/device_info.dart';
 import 'package:ufi/utils/periodic_timer.dart';
 
 part 'today_bloc.freezed.dart';
-
 part 'today_event.dart';
-
 part 'today_state.dart';
 
 @injectable
@@ -41,6 +39,7 @@ class TodayBloc extends Bloc<TodayEvent, TodayState> {
         super(const TodayState.initial()) {
     on<_Started>(_init);
     on<_CancelTimer>(_cancelTimer);
+    on<_LoadLeads>(_loadLeads);
   }
 
   FutureOr<void> _init(
@@ -65,6 +64,14 @@ class TodayBloc extends Bloc<TodayEvent, TodayState> {
     Emitter<TodayState> emit,
   ) {
     timer?.cancel();
+  }
+
+  FutureOr<void> _loadLeads(
+    _LoadLeads event,
+    Emitter<TodayState> emit,
+  ) async {
+    List<Leads> allLeads = await _db.loadLeads();
+    emit(TodayState.success(allLeads));
   }
 
   Future<void> _backgroundProcess() async {

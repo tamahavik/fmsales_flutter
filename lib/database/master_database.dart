@@ -19,6 +19,10 @@ class MasterDatabase {
     await _isar.leads.clear();
   }
 
+  Future<List<Leads>> loadLeads() async {
+    return await _isar.leads.where().findAll();
+  }
+
   Future<Leads?> findByEnhLeadIdAndDataSource(
     int enhLeadId,
     String dataSource,

@@ -20,18 +20,21 @@ mixin _$TodayEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() cancelTimer,
+    required TResult Function() loadLeads,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? cancelTimer,
+    TResult? Function()? loadLeads,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? cancelTimer,
+    TResult Function()? loadLeads,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$TodayEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_CancelTimer value) cancelTimer,
+    required TResult Function(_LoadLeads value) loadLeads,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_CancelTimer value)? cancelTimer,
+    TResult? Function(_LoadLeads value)? loadLeads,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_CancelTimer value)? cancelTimer,
+    TResult Function(_LoadLeads value)? loadLeads,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,6 +119,7 @@ class _$_Started implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() cancelTimer,
+    required TResult Function() loadLeads,
   }) {
     return started();
   }
@@ -122,6 +129,7 @@ class _$_Started implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? cancelTimer,
+    TResult? Function()? loadLeads,
   }) {
     return started?.call();
   }
@@ -131,6 +139,7 @@ class _$_Started implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? cancelTimer,
+    TResult Function()? loadLeads,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -144,6 +153,7 @@ class _$_Started implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_CancelTimer value) cancelTimer,
+    required TResult Function(_LoadLeads value) loadLeads,
   }) {
     return started(this);
   }
@@ -153,6 +163,7 @@ class _$_Started implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_CancelTimer value)? cancelTimer,
+    TResult? Function(_LoadLeads value)? loadLeads,
   }) {
     return started?.call(this);
   }
@@ -162,6 +173,7 @@ class _$_Started implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_CancelTimer value)? cancelTimer,
+    TResult Function(_LoadLeads value)? loadLeads,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -215,6 +227,7 @@ class _$_CancelTimer implements _CancelTimer {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() cancelTimer,
+    required TResult Function() loadLeads,
   }) {
     return cancelTimer();
   }
@@ -224,6 +237,7 @@ class _$_CancelTimer implements _CancelTimer {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? cancelTimer,
+    TResult? Function()? loadLeads,
   }) {
     return cancelTimer?.call();
   }
@@ -233,6 +247,7 @@ class _$_CancelTimer implements _CancelTimer {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? cancelTimer,
+    TResult Function()? loadLeads,
     required TResult orElse(),
   }) {
     if (cancelTimer != null) {
@@ -246,6 +261,7 @@ class _$_CancelTimer implements _CancelTimer {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_CancelTimer value) cancelTimer,
+    required TResult Function(_LoadLeads value) loadLeads,
   }) {
     return cancelTimer(this);
   }
@@ -255,6 +271,7 @@ class _$_CancelTimer implements _CancelTimer {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_CancelTimer value)? cancelTimer,
+    TResult? Function(_LoadLeads value)? loadLeads,
   }) {
     return cancelTimer?.call(this);
   }
@@ -264,6 +281,7 @@ class _$_CancelTimer implements _CancelTimer {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_CancelTimer value)? cancelTimer,
+    TResult Function(_LoadLeads value)? loadLeads,
     required TResult orElse(),
   }) {
     if (cancelTimer != null) {
@@ -278,36 +296,156 @@ abstract class _CancelTimer implements TodayEvent {
 }
 
 /// @nodoc
+abstract class _$$_LoadLeadsCopyWith<$Res> {
+  factory _$$_LoadLeadsCopyWith(
+          _$_LoadLeads value, $Res Function(_$_LoadLeads) then) =
+      __$$_LoadLeadsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadLeadsCopyWithImpl<$Res>
+    extends _$TodayEventCopyWithImpl<$Res, _$_LoadLeads>
+    implements _$$_LoadLeadsCopyWith<$Res> {
+  __$$_LoadLeadsCopyWithImpl(
+      _$_LoadLeads _value, $Res Function(_$_LoadLeads) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_LoadLeads implements _LoadLeads {
+  const _$_LoadLeads();
+
+  @override
+  String toString() {
+    return 'TodayEvent.loadLeads()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadLeads);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() cancelTimer,
+    required TResult Function() loadLeads,
+  }) {
+    return loadLeads();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? cancelTimer,
+    TResult? Function()? loadLeads,
+  }) {
+    return loadLeads?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? cancelTimer,
+    TResult Function()? loadLeads,
+    required TResult orElse(),
+  }) {
+    if (loadLeads != null) {
+      return loadLeads();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_CancelTimer value) cancelTimer,
+    required TResult Function(_LoadLeads value) loadLeads,
+  }) {
+    return loadLeads(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_CancelTimer value)? cancelTimer,
+    TResult? Function(_LoadLeads value)? loadLeads,
+  }) {
+    return loadLeads?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_CancelTimer value)? cancelTimer,
+    TResult Function(_LoadLeads value)? loadLeads,
+    required TResult orElse(),
+  }) {
+    if (loadLeads != null) {
+      return loadLeads(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadLeads implements TodayEvent {
+  const factory _LoadLeads() = _$_LoadLeads;
+}
+
+/// @nodoc
 mixin _$TodayState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function(List<Leads> leads) success,
+    required TResult Function() failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function(List<Leads> leads)? success,
+    TResult? Function()? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function(List<Leads> leads)? success,
+    TResult Function()? failed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Failed value) failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Failed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Success value)? success,
+    TResult Function(_Failed value)? failed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -369,6 +507,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function(List<Leads> leads) success,
+    required TResult Function() failed,
   }) {
     return initial();
   }
@@ -377,6 +517,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function(List<Leads> leads)? success,
+    TResult? Function()? failed,
   }) {
     return initial?.call();
   }
@@ -385,6 +527,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function(List<Leads> leads)? success,
+    TResult Function()? failed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -397,6 +541,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Failed value) failed,
   }) {
     return initial(this);
   }
@@ -405,6 +551,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Failed value)? failed,
   }) {
     return initial?.call(this);
   }
@@ -413,6 +561,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_Success value)? success,
+    TResult Function(_Failed value)? failed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -424,4 +574,254 @@ class _$_Initial implements _Initial {
 
 abstract class _Initial implements TodayState {
   const factory _Initial() = _$_Initial;
+}
+
+/// @nodoc
+abstract class _$$_SuccessCopyWith<$Res> {
+  factory _$$_SuccessCopyWith(
+          _$_Success value, $Res Function(_$_Success) then) =
+      __$$_SuccessCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Leads> leads});
+}
+
+/// @nodoc
+class __$$_SuccessCopyWithImpl<$Res>
+    extends _$TodayStateCopyWithImpl<$Res, _$_Success>
+    implements _$$_SuccessCopyWith<$Res> {
+  __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? leads = null,
+  }) {
+    return _then(_$_Success(
+      null == leads
+          ? _value._leads
+          : leads // ignore: cast_nullable_to_non_nullable
+              as List<Leads>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Success implements _Success {
+  const _$_Success(final List<Leads> leads) : _leads = leads;
+
+  final List<Leads> _leads;
+  @override
+  List<Leads> get leads {
+    if (_leads is EqualUnmodifiableListView) return _leads;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_leads);
+  }
+
+  @override
+  String toString() {
+    return 'TodayState.success(leads: $leads)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Success &&
+            const DeepCollectionEquality().equals(other._leads, _leads));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_leads));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+      __$$_SuccessCopyWithImpl<_$_Success>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<Leads> leads) success,
+    required TResult Function() failed,
+  }) {
+    return success(leads);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<Leads> leads)? success,
+    TResult? Function()? failed,
+  }) {
+    return success?.call(leads);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<Leads> leads)? success,
+    TResult Function()? failed,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(leads);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Failed value) failed,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Failed value)? failed,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Success value)? success,
+    TResult Function(_Failed value)? failed,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Success implements TodayState {
+  const factory _Success(final List<Leads> leads) = _$_Success;
+
+  List<Leads> get leads;
+  @JsonKey(ignore: true)
+  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_FailedCopyWith<$Res> {
+  factory _$$_FailedCopyWith(_$_Failed value, $Res Function(_$_Failed) then) =
+      __$$_FailedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_FailedCopyWithImpl<$Res>
+    extends _$TodayStateCopyWithImpl<$Res, _$_Failed>
+    implements _$$_FailedCopyWith<$Res> {
+  __$$_FailedCopyWithImpl(_$_Failed _value, $Res Function(_$_Failed) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Failed implements _Failed {
+  const _$_Failed();
+
+  @override
+  String toString() {
+    return 'TodayState.failed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Failed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<Leads> leads) success,
+    required TResult Function() failed,
+  }) {
+    return failed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<Leads> leads)? success,
+    TResult? Function()? failed,
+  }) {
+    return failed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<Leads> leads)? success,
+    TResult Function()? failed,
+    required TResult orElse(),
+  }) {
+    if (failed != null) {
+      return failed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Failed value) failed,
+  }) {
+    return failed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Failed value)? failed,
+  }) {
+    return failed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Success value)? success,
+    TResult Function(_Failed value)? failed,
+    required TResult orElse(),
+  }) {
+    if (failed != null) {
+      return failed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Failed implements TodayState {
+  const factory _Failed() = _$_Failed;
 }

@@ -4,4 +4,5 @@ part of 'today_bloc.dart';
 class TodayEvent with _$TodayEvent {
   const factory TodayEvent.started() = _Started;
   const factory TodayEvent.cancelTimer() = _CancelTimer;
+  const factory TodayEvent.loadLeads() = _LoadLeads;
 }
