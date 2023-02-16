@@ -28,11 +28,11 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
   void _stateNavigationController(BuildContext context, NavigationState state) {
     state.map(
       initial: (value) {
-        context.read<TodayBloc>().add(const TodayEvent.started(true));
+        context.read<TodayBloc>().add(const TodayEvent.started());
         _currentIndex = BottomAppBarEnums.home;
       },
       home: (value) {
-        context.read<TodayBloc>().add(const TodayEvent.started(true));
+        context.read<TodayBloc>().add(const TodayEvent.started());
         _currentIndex = BottomAppBarEnums.home;
       },
       history: (value) async {
@@ -52,7 +52,7 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
             .push(MaterialPageRoute(
                 builder: (context) => const VerificationScreen()))
             .then((value) =>
-                context.read<TodayBloc>().add(const TodayEvent.started(true)));
+                context.read<TodayBloc>().add(const TodayEvent.started()));
       },
       dialogLogout: (value) {
         Get.defaultDialog(
@@ -87,7 +87,7 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
         BlocProvider(create: (context) => getIt<NavigationBloc>()),
         BlocProvider(
             create: (context) =>
-                getIt<TodayBloc>()..add(const TodayEvent.started(true))),
+                getIt<TodayBloc>()..add(const TodayEvent.started())),
       ],
       child: BlocConsumer<HomeBloc, HomeState>(
         listener: _stateHomeController,

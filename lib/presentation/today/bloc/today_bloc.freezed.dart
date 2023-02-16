@@ -18,19 +18,19 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$TodayEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool fireNow) started,
+    required TResult Function() started,
     required TResult Function() cancelTimer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool fireNow)? started,
+    TResult? Function()? started,
     TResult? Function()? cancelTimer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool fireNow)? started,
+    TResult Function()? started,
     TResult Function()? cancelTimer,
     required TResult orElse(),
   }) =>
@@ -79,8 +79,6 @@ abstract class _$$_StartedCopyWith<$Res> {
   factory _$$_StartedCopyWith(
           _$_Started value, $Res Function(_$_Started) then) =
       __$$_StartedCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool fireNow});
 }
 
 /// @nodoc
@@ -89,78 +87,54 @@ class __$$_StartedCopyWithImpl<$Res>
     implements _$$_StartedCopyWith<$Res> {
   __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? fireNow = null,
-  }) {
-    return _then(_$_Started(
-      null == fireNow
-          ? _value.fireNow
-          : fireNow // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$_Started implements _Started {
-  const _$_Started(this.fireNow);
-
-  @override
-  final bool fireNow;
+  const _$_Started();
 
   @override
   String toString() {
-    return 'TodayEvent.started(fireNow: $fireNow)';
+    return 'TodayEvent.started()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Started &&
-            (identical(other.fireNow, fireNow) || other.fireNow == fireNow));
+        (other.runtimeType == runtimeType && other is _$_Started);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, fireNow);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
-      __$$_StartedCopyWithImpl<_$_Started>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool fireNow) started,
+    required TResult Function() started,
     required TResult Function() cancelTimer,
   }) {
-    return started(fireNow);
+    return started();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool fireNow)? started,
+    TResult? Function()? started,
     TResult? Function()? cancelTimer,
   }) {
-    return started?.call(fireNow);
+    return started?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool fireNow)? started,
+    TResult Function()? started,
     TResult Function()? cancelTimer,
     required TResult orElse(),
   }) {
     if (started != null) {
-      return started(fireNow);
+      return started();
     }
     return orElse();
   }
@@ -198,12 +172,7 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements TodayEvent {
-  const factory _Started(final bool fireNow) = _$_Started;
-
-  bool get fireNow;
-  @JsonKey(ignore: true)
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _Started() = _$_Started;
 }
 
 /// @nodoc
@@ -244,7 +213,7 @@ class _$_CancelTimer implements _CancelTimer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(bool fireNow) started,
+    required TResult Function() started,
     required TResult Function() cancelTimer,
   }) {
     return cancelTimer();
@@ -253,7 +222,7 @@ class _$_CancelTimer implements _CancelTimer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool fireNow)? started,
+    TResult? Function()? started,
     TResult? Function()? cancelTimer,
   }) {
     return cancelTimer?.call();
@@ -262,7 +231,7 @@ class _$_CancelTimer implements _CancelTimer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool fireNow)? started,
+    TResult Function()? started,
     TResult Function()? cancelTimer,
     required TResult orElse(),
   }) {
@@ -313,38 +282,32 @@ mixin _$TodayState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? logout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Logout value) logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Logout value)? logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -406,7 +369,6 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() logout,
   }) {
     return initial();
   }
@@ -415,7 +377,6 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? logout,
   }) {
     return initial?.call();
   }
@@ -424,7 +385,6 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? logout,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -437,7 +397,6 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Logout value) logout,
   }) {
     return initial(this);
   }
@@ -446,7 +405,6 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Logout value)? logout,
   }) {
     return initial?.call(this);
   }
@@ -455,7 +413,6 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -467,104 +424,4 @@ class _$_Initial implements _Initial {
 
 abstract class _Initial implements TodayState {
   const factory _Initial() = _$_Initial;
-}
-
-/// @nodoc
-abstract class _$$_LogoutCopyWith<$Res> {
-  factory _$$_LogoutCopyWith(_$_Logout value, $Res Function(_$_Logout) then) =
-      __$$_LogoutCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_LogoutCopyWithImpl<$Res>
-    extends _$TodayStateCopyWithImpl<$Res, _$_Logout>
-    implements _$$_LogoutCopyWith<$Res> {
-  __$$_LogoutCopyWithImpl(_$_Logout _value, $Res Function(_$_Logout) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_Logout implements _Logout {
-  const _$_Logout();
-
-  @override
-  String toString() {
-    return 'TodayState.logout()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Logout);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() logout,
-  }) {
-    return logout();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? logout,
-  }) {
-    return logout?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? logout,
-    required TResult orElse(),
-  }) {
-    if (logout != null) {
-      return logout();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Logout value) logout,
-  }) {
-    return logout(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Logout value)? logout,
-  }) {
-    return logout?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Logout value)? logout,
-    required TResult orElse(),
-  }) {
-    if (logout != null) {
-      return logout(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Logout implements TodayState {
-  const factory _Logout() = _$_Logout;
 }

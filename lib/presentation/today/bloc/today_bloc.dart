@@ -54,7 +54,7 @@ class TodayBloc extends Bloc<TodayEvent, TodayState> {
         (timer) async {
           await _backgroundProcess();
         },
-        fireNow: event.fireNow,
+        fireNow: true,
       );
     } catch (e) {
       print(e);
