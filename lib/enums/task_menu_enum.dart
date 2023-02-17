@@ -1,0 +1,4 @@
+enum TaskMenuEnum {
+  call,
+  navigate;
+}

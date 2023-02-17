@@ -13,7 +13,9 @@ import 'package:ufi/utils/device_info.dart';
 import 'package:ufi/utils/periodic_timer.dart';
 
 part 'today_bloc.freezed.dart';
+
 part 'today_event.dart';
+
 part 'today_state.dart';
 
 @injectable
@@ -75,6 +77,7 @@ class TodayBloc extends Bloc<TodayEvent, TodayState> {
   }
 
   Future<void> _backgroundProcess() async {
+    print('bg process running');
     String employeeNumber = _session.getEmployeeNumber();
     String deviceId = await _deviceInfo.getDeviceId();
     var login = await _todayRepository.checkLogin(employeeNumber, deviceId);
@@ -106,6 +109,7 @@ class TodayBloc extends Bloc<TodayEvent, TodayState> {
           obj.alamatGenerated = await _db.generatedAlamat(obj);
           await _db.saveLeads(obj);
         }
+        add(const TodayEvent.loadLeads());
       },
     );
   }

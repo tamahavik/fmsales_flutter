@@ -15,28 +15,39 @@ class FloatingAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SpeedDial(
+      icon: Icons.menu,
+      activeIcon: Icons.close,
+      foregroundColor: Theme.of(context).colorScheme.onPrimary,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       animatedIcon: AnimatedIcons.menu_close,
-      overlayColor: Colors.black,
-      overlayOpacity: 0.5,
+      overlayOpacity: 0.1,
+      iconTheme: Theme.of(context).iconTheme.copyWith(
+            color: Theme.of(context).colorScheme.onPrimary,
+          ),
       spacing: 10,
       children: [
         SpeedDialChild(
-          onTap: () => context
-              .read<HomeBloc>()
-              .add(const HomeEvent.verificationMenu()),
-          child: const Icon(
+          onTap: () =>
+              context.read<HomeBloc>().add(const HomeEvent.verificationMenu()),
+          shape: const CircleBorder(),
+          label: 'New Customer',
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          foregroundColor: Theme.of(context).colorScheme.onPrimary,
+          child: Icon(
             Icons.article_outlined,
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.onPrimary,
           ),
-          backgroundColor: Colors.blue[600],
         ),
         SpeedDialChild(
-          visible: _currentIndex == BottomAppBarEnums.home,
           onTap: () {},
-          backgroundColor: Colors.blue[600],
-          child: const Icon(
+          shape: const CircleBorder(),
+          label: 'Sync Leads',
+          visible: _currentIndex == BottomAppBarEnums.home,
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          foregroundColor: Theme.of(context).colorScheme.onPrimary,
+          child: Icon(
             Icons.refresh,
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.onPrimary,
           ),
         ),
       ],

@@ -14,7 +14,6 @@ class ApplicationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.blue[600],
       title: Text(_fullName),
       actions: [
         IconButton(

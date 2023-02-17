@@ -104,15 +104,15 @@ class _HomeNavigationScreenState extends State<HomeNavigationScreen> {
                           .read<HomeBloc>()
                           .add(const HomeEvent.showDialogLogout())),
                 ),
-                body: state.map(
-                  initial: (value) => const TodayScreen(),
-                  home: (value) => const TodayScreen(),
-                  history: (value) => const HistoryScreen(),
+                body: IndexedStack(
+                  index: _currentIndex.value,
+                  children: const [
+                    TodayScreen(),
+                    HistoryScreen(),
+                  ],
                 ),
                 floatingActionButton:
                     FloatingAction(currentIndex: _currentIndex),
-                floatingActionButtonLocation:
-                    FloatingActionButtonLocation.centerDocked,
                 bottomNavigationBar:
                     BottomNavigationMenu(currentIndex: _currentIndex),
               );

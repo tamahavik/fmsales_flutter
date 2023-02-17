@@ -4,7 +4,6 @@ import 'package:ufi/components/history_card.dart';
 import 'package:ufi/model/history_leads_detail.dart';
 import 'package:ufi/model/history_leads_header.dart';
 
-
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});
 
@@ -76,11 +75,14 @@ class _HistoryScreenState extends State<HistoryScreen> {
   }
 
   Widget _buildExpandableTile(List<Widget> items, String title) {
-    return ExpansionTile(
-      title: Text(
-        title,
+    return Theme(
+      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+      child: ExpansionTile(
+        title: Text(
+          title,
+        ),
+        children: items,
       ),
-      children: items,
     );
   }
 

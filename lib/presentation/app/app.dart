@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:ufi/components/remove_scroll_glow.dart';
+import 'package:ufi/utils/color_schemes.dart';
 
 class App extends StatefulWidget {
   final Widget mainWidget;
+
   const App({super.key, required this.mainWidget});
 
   @override
@@ -14,14 +14,25 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        useMaterial3: true,
         fontFamily: 'roboto',
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xFF10B0E6),
+        colorScheme: lightColorScheme,
+        appBarTheme: AppBarTheme(
+          titleTextStyle: TextStyle(
+            color: lightColorScheme.onPrimary,
+            fontSize: 20,
+            fontFamily: 'roboto',
           ),
+          backgroundColor: lightColorScheme.primary,
+          iconTheme: IconThemeData(
+            color: lightColorScheme.onPrimary,
+          ),
+        ),
+        iconTheme: IconThemeData(
+          color: lightColorScheme.onPrimary,
         ),
       ),
       builder: (context, child) {
