@@ -5,6 +5,7 @@ import 'package:ufi/model/kecamatan.dart';
 import 'package:ufi/model/kelurahan.dart';
 import 'package:ufi/model/leads.dart';
 import 'package:ufi/model/province.dart';
+import 'package:ufi/presentation/today/model/pull_leads.dart';
 
 @injectable
 class MasterDatabase {
@@ -39,6 +40,30 @@ class MasterDatabase {
     await _isar.writeTxn(() async => _isar.leads.put(leads));
   }
 
+  Future<Leads?> pullDataLeads(PullLeads leads) async {
+    if (leads.dataSource == 'C') {
+      Leads? dbLeads = await _isar.leads
+          .filter()
+          .custNoEqualTo(leads.custNo)
+          .and()
+          .dataSourceEqualTo('C')
+          .findFirst();
+      return dbLeads;
+    } else {
+      Leads? dbLeads = await _isar.leads
+          .filter()
+          .custNameEqualTo(leads.custName)
+          .and()
+          .birthDateEqualTo(leads.birthDate)
+          .findFirst();
+      return dbLeads;
+    }
+  }
+
+  Future<void> deleteLeadsById(Id id) async {
+    await _isar.writeTxn(() async => await _isar.leads.delete(id));
+  }
+
   Future<String> generatedAlamat(Leads leads) async {
     var kelurahan = await _isar.kelurahans
         .filter()
@@ -54,6 +79,7 @@ class MasterDatabase {
         .filter()
         .provCodeEqualTo(leads.province)
         .findFirst();
-    return '${leads.address}, ${leads.rtRw} ${kelurahan?.kelurahan} ${kecamatan?.kecamatan} ${city?.city} ${province?.provinsi}';
+    String address = '${leads.address}, ${leads.rtRw} ${kelurahan?.kelurahan ?? ''} ${kecamatan?.kecamatan ?? ''} ${city?.city ?? ''} ${province?.provinsi ?? ''}';
+    return address.trim();
   }
 }

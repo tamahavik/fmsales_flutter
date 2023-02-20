@@ -38,14 +38,20 @@ class _TodayScreenState extends State<TodayScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-      child: BlocListener<TodayBloc, TodayState>(
-        listener: _stateController,
-        child: BlocBuilder<TodayBloc, TodayState>(
-          builder: (context, state) {
-            return _buildView();
-          },
+    return RefreshIndicator(
+      onRefresh: () async =>
+          context.read<TodayBloc>().add(const TodayEvent.pullToRefresh()),
+      color: Theme.of(context).colorScheme.primaryContainer,
+      displacement: 20,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+        child: BlocListener<TodayBloc, TodayState>(
+          listener: _stateController,
+          child: BlocBuilder<TodayBloc, TodayState>(
+            builder: (context, state) {
+              return _buildView();
+            },
+          ),
         ),
       ),
     );

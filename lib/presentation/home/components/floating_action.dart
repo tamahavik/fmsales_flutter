@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:ufi/enums/bottom_appbar_enum.dart';
 import 'package:ufi/presentation/home/bloc/home_bloc.dart';
+import 'package:ufi/presentation/today/bloc/today_bloc.dart';
 
 class FloatingAction extends StatelessWidget {
   const FloatingAction({
@@ -39,7 +40,8 @@ class FloatingAction extends StatelessWidget {
           ),
         ),
         SpeedDialChild(
-          onTap: () {},
+          onTap: () =>
+              context.read<TodayBloc>().add(const TodayEvent.synchronize()),
           shape: const CircleBorder(),
           label: 'Sync Leads',
           visible: _currentIndex == BottomAppBarEnums.home,

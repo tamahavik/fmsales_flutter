@@ -29,4 +29,5 @@ const UPLOAD_PHOTO = '/api/v1/upload/photokunjungan';
 const PULL_BY_UH = '/api/v1/android/sync/customer/pullByUH/{employeeNumber}';
 const CALLBACK_PULL_BY_UH =
     '/api/v1/android/sync/customer/updateAfterPullByUHByCustMainNo';
+const SYNC_MULTIPLE_DEVICE = '/api/v1/android/leads/getSyncMultipleDevice';
 const MIN_SDK = 26;

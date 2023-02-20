@@ -18,11 +18,14 @@ class TaskCard extends StatelessWidget {
           children: [
             TaskHeader(leads: _leads),
             RemarkUh(leads: _leads),
-            Text(
-              _leads.alamatGenerated,
-              style: const TextStyle(
-                color: Colors.black54,
-                fontSize: 14,
+            Container(
+              margin: const EdgeInsets.only(right: 5),
+              child: Text(
+                _leads.alamatGenerated,
+                style: const TextStyle(
+                  color: Colors.black54,
+                  fontSize: 14,
+                ),
               ),
             ),
           ],

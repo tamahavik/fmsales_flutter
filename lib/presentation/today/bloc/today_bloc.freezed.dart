@@ -21,6 +21,8 @@ mixin _$TodayEvent {
     required TResult Function() started,
     required TResult Function() cancelTimer,
     required TResult Function() loadLeads,
+    required TResult Function() synchronize,
+    required TResult Function() pullToRefresh,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +30,8 @@ mixin _$TodayEvent {
     TResult? Function()? started,
     TResult? Function()? cancelTimer,
     TResult? Function()? loadLeads,
+    TResult? Function()? synchronize,
+    TResult? Function()? pullToRefresh,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +39,8 @@ mixin _$TodayEvent {
     TResult Function()? started,
     TResult Function()? cancelTimer,
     TResult Function()? loadLeads,
+    TResult Function()? synchronize,
+    TResult Function()? pullToRefresh,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +49,8 @@ mixin _$TodayEvent {
     required TResult Function(_Started value) started,
     required TResult Function(_CancelTimer value) cancelTimer,
     required TResult Function(_LoadLeads value) loadLeads,
+    required TResult Function(_Synchronize value) synchronize,
+    required TResult Function(_PullToRefresh value) pullToRefresh,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +58,8 @@ mixin _$TodayEvent {
     TResult? Function(_Started value)? started,
     TResult? Function(_CancelTimer value)? cancelTimer,
     TResult? Function(_LoadLeads value)? loadLeads,
+    TResult? Function(_Synchronize value)? synchronize,
+    TResult? Function(_PullToRefresh value)? pullToRefresh,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +67,8 @@ mixin _$TodayEvent {
     TResult Function(_Started value)? started,
     TResult Function(_CancelTimer value)? cancelTimer,
     TResult Function(_LoadLeads value)? loadLeads,
+    TResult Function(_Synchronize value)? synchronize,
+    TResult Function(_PullToRefresh value)? pullToRefresh,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +132,8 @@ class _$_Started implements _Started {
     required TResult Function() started,
     required TResult Function() cancelTimer,
     required TResult Function() loadLeads,
+    required TResult Function() synchronize,
+    required TResult Function() pullToRefresh,
   }) {
     return started();
   }
@@ -130,6 +144,8 @@ class _$_Started implements _Started {
     TResult? Function()? started,
     TResult? Function()? cancelTimer,
     TResult? Function()? loadLeads,
+    TResult? Function()? synchronize,
+    TResult? Function()? pullToRefresh,
   }) {
     return started?.call();
   }
@@ -140,6 +156,8 @@ class _$_Started implements _Started {
     TResult Function()? started,
     TResult Function()? cancelTimer,
     TResult Function()? loadLeads,
+    TResult Function()? synchronize,
+    TResult Function()? pullToRefresh,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -154,6 +172,8 @@ class _$_Started implements _Started {
     required TResult Function(_Started value) started,
     required TResult Function(_CancelTimer value) cancelTimer,
     required TResult Function(_LoadLeads value) loadLeads,
+    required TResult Function(_Synchronize value) synchronize,
+    required TResult Function(_PullToRefresh value) pullToRefresh,
   }) {
     return started(this);
   }
@@ -164,6 +184,8 @@ class _$_Started implements _Started {
     TResult? Function(_Started value)? started,
     TResult? Function(_CancelTimer value)? cancelTimer,
     TResult? Function(_LoadLeads value)? loadLeads,
+    TResult? Function(_Synchronize value)? synchronize,
+    TResult? Function(_PullToRefresh value)? pullToRefresh,
   }) {
     return started?.call(this);
   }
@@ -174,6 +196,8 @@ class _$_Started implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(_CancelTimer value)? cancelTimer,
     TResult Function(_LoadLeads value)? loadLeads,
+    TResult Function(_Synchronize value)? synchronize,
+    TResult Function(_PullToRefresh value)? pullToRefresh,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -228,6 +252,8 @@ class _$_CancelTimer implements _CancelTimer {
     required TResult Function() started,
     required TResult Function() cancelTimer,
     required TResult Function() loadLeads,
+    required TResult Function() synchronize,
+    required TResult Function() pullToRefresh,
   }) {
     return cancelTimer();
   }
@@ -238,6 +264,8 @@ class _$_CancelTimer implements _CancelTimer {
     TResult? Function()? started,
     TResult? Function()? cancelTimer,
     TResult? Function()? loadLeads,
+    TResult? Function()? synchronize,
+    TResult? Function()? pullToRefresh,
   }) {
     return cancelTimer?.call();
   }
@@ -248,6 +276,8 @@ class _$_CancelTimer implements _CancelTimer {
     TResult Function()? started,
     TResult Function()? cancelTimer,
     TResult Function()? loadLeads,
+    TResult Function()? synchronize,
+    TResult Function()? pullToRefresh,
     required TResult orElse(),
   }) {
     if (cancelTimer != null) {
@@ -262,6 +292,8 @@ class _$_CancelTimer implements _CancelTimer {
     required TResult Function(_Started value) started,
     required TResult Function(_CancelTimer value) cancelTimer,
     required TResult Function(_LoadLeads value) loadLeads,
+    required TResult Function(_Synchronize value) synchronize,
+    required TResult Function(_PullToRefresh value) pullToRefresh,
   }) {
     return cancelTimer(this);
   }
@@ -272,6 +304,8 @@ class _$_CancelTimer implements _CancelTimer {
     TResult? Function(_Started value)? started,
     TResult? Function(_CancelTimer value)? cancelTimer,
     TResult? Function(_LoadLeads value)? loadLeads,
+    TResult? Function(_Synchronize value)? synchronize,
+    TResult? Function(_PullToRefresh value)? pullToRefresh,
   }) {
     return cancelTimer?.call(this);
   }
@@ -282,6 +316,8 @@ class _$_CancelTimer implements _CancelTimer {
     TResult Function(_Started value)? started,
     TResult Function(_CancelTimer value)? cancelTimer,
     TResult Function(_LoadLeads value)? loadLeads,
+    TResult Function(_Synchronize value)? synchronize,
+    TResult Function(_PullToRefresh value)? pullToRefresh,
     required TResult orElse(),
   }) {
     if (cancelTimer != null) {
@@ -336,6 +372,8 @@ class _$_LoadLeads implements _LoadLeads {
     required TResult Function() started,
     required TResult Function() cancelTimer,
     required TResult Function() loadLeads,
+    required TResult Function() synchronize,
+    required TResult Function() pullToRefresh,
   }) {
     return loadLeads();
   }
@@ -346,6 +384,8 @@ class _$_LoadLeads implements _LoadLeads {
     TResult? Function()? started,
     TResult? Function()? cancelTimer,
     TResult? Function()? loadLeads,
+    TResult? Function()? synchronize,
+    TResult? Function()? pullToRefresh,
   }) {
     return loadLeads?.call();
   }
@@ -356,6 +396,8 @@ class _$_LoadLeads implements _LoadLeads {
     TResult Function()? started,
     TResult Function()? cancelTimer,
     TResult Function()? loadLeads,
+    TResult Function()? synchronize,
+    TResult Function()? pullToRefresh,
     required TResult orElse(),
   }) {
     if (loadLeads != null) {
@@ -370,6 +412,8 @@ class _$_LoadLeads implements _LoadLeads {
     required TResult Function(_Started value) started,
     required TResult Function(_CancelTimer value) cancelTimer,
     required TResult Function(_LoadLeads value) loadLeads,
+    required TResult Function(_Synchronize value) synchronize,
+    required TResult Function(_PullToRefresh value) pullToRefresh,
   }) {
     return loadLeads(this);
   }
@@ -380,6 +424,8 @@ class _$_LoadLeads implements _LoadLeads {
     TResult? Function(_Started value)? started,
     TResult? Function(_CancelTimer value)? cancelTimer,
     TResult? Function(_LoadLeads value)? loadLeads,
+    TResult? Function(_Synchronize value)? synchronize,
+    TResult? Function(_PullToRefresh value)? pullToRefresh,
   }) {
     return loadLeads?.call(this);
   }
@@ -390,6 +436,8 @@ class _$_LoadLeads implements _LoadLeads {
     TResult Function(_Started value)? started,
     TResult Function(_CancelTimer value)? cancelTimer,
     TResult Function(_LoadLeads value)? loadLeads,
+    TResult Function(_Synchronize value)? synchronize,
+    TResult Function(_PullToRefresh value)? pullToRefresh,
     required TResult orElse(),
   }) {
     if (loadLeads != null) {
@@ -401,6 +449,246 @@ class _$_LoadLeads implements _LoadLeads {
 
 abstract class _LoadLeads implements TodayEvent {
   const factory _LoadLeads() = _$_LoadLeads;
+}
+
+/// @nodoc
+abstract class _$$_SynchronizeCopyWith<$Res> {
+  factory _$$_SynchronizeCopyWith(
+          _$_Synchronize value, $Res Function(_$_Synchronize) then) =
+      __$$_SynchronizeCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_SynchronizeCopyWithImpl<$Res>
+    extends _$TodayEventCopyWithImpl<$Res, _$_Synchronize>
+    implements _$$_SynchronizeCopyWith<$Res> {
+  __$$_SynchronizeCopyWithImpl(
+      _$_Synchronize _value, $Res Function(_$_Synchronize) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Synchronize implements _Synchronize {
+  const _$_Synchronize();
+
+  @override
+  String toString() {
+    return 'TodayEvent.synchronize()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Synchronize);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() cancelTimer,
+    required TResult Function() loadLeads,
+    required TResult Function() synchronize,
+    required TResult Function() pullToRefresh,
+  }) {
+    return synchronize();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? cancelTimer,
+    TResult? Function()? loadLeads,
+    TResult? Function()? synchronize,
+    TResult? Function()? pullToRefresh,
+  }) {
+    return synchronize?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? cancelTimer,
+    TResult Function()? loadLeads,
+    TResult Function()? synchronize,
+    TResult Function()? pullToRefresh,
+    required TResult orElse(),
+  }) {
+    if (synchronize != null) {
+      return synchronize();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_CancelTimer value) cancelTimer,
+    required TResult Function(_LoadLeads value) loadLeads,
+    required TResult Function(_Synchronize value) synchronize,
+    required TResult Function(_PullToRefresh value) pullToRefresh,
+  }) {
+    return synchronize(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_CancelTimer value)? cancelTimer,
+    TResult? Function(_LoadLeads value)? loadLeads,
+    TResult? Function(_Synchronize value)? synchronize,
+    TResult? Function(_PullToRefresh value)? pullToRefresh,
+  }) {
+    return synchronize?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_CancelTimer value)? cancelTimer,
+    TResult Function(_LoadLeads value)? loadLeads,
+    TResult Function(_Synchronize value)? synchronize,
+    TResult Function(_PullToRefresh value)? pullToRefresh,
+    required TResult orElse(),
+  }) {
+    if (synchronize != null) {
+      return synchronize(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Synchronize implements TodayEvent {
+  const factory _Synchronize() = _$_Synchronize;
+}
+
+/// @nodoc
+abstract class _$$_PullToRefreshCopyWith<$Res> {
+  factory _$$_PullToRefreshCopyWith(
+          _$_PullToRefresh value, $Res Function(_$_PullToRefresh) then) =
+      __$$_PullToRefreshCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_PullToRefreshCopyWithImpl<$Res>
+    extends _$TodayEventCopyWithImpl<$Res, _$_PullToRefresh>
+    implements _$$_PullToRefreshCopyWith<$Res> {
+  __$$_PullToRefreshCopyWithImpl(
+      _$_PullToRefresh _value, $Res Function(_$_PullToRefresh) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_PullToRefresh implements _PullToRefresh {
+  const _$_PullToRefresh();
+
+  @override
+  String toString() {
+    return 'TodayEvent.pullToRefresh()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_PullToRefresh);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() cancelTimer,
+    required TResult Function() loadLeads,
+    required TResult Function() synchronize,
+    required TResult Function() pullToRefresh,
+  }) {
+    return pullToRefresh();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? cancelTimer,
+    TResult? Function()? loadLeads,
+    TResult? Function()? synchronize,
+    TResult? Function()? pullToRefresh,
+  }) {
+    return pullToRefresh?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? cancelTimer,
+    TResult Function()? loadLeads,
+    TResult Function()? synchronize,
+    TResult Function()? pullToRefresh,
+    required TResult orElse(),
+  }) {
+    if (pullToRefresh != null) {
+      return pullToRefresh();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_CancelTimer value) cancelTimer,
+    required TResult Function(_LoadLeads value) loadLeads,
+    required TResult Function(_Synchronize value) synchronize,
+    required TResult Function(_PullToRefresh value) pullToRefresh,
+  }) {
+    return pullToRefresh(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_CancelTimer value)? cancelTimer,
+    TResult? Function(_LoadLeads value)? loadLeads,
+    TResult? Function(_Synchronize value)? synchronize,
+    TResult? Function(_PullToRefresh value)? pullToRefresh,
+  }) {
+    return pullToRefresh?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_CancelTimer value)? cancelTimer,
+    TResult Function(_LoadLeads value)? loadLeads,
+    TResult Function(_Synchronize value)? synchronize,
+    TResult Function(_PullToRefresh value)? pullToRefresh,
+    required TResult orElse(),
+  }) {
+    if (pullToRefresh != null) {
+      return pullToRefresh(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PullToRefresh implements TodayEvent {
+  const factory _PullToRefresh() = _$_PullToRefresh;
 }
 
 /// @nodoc
