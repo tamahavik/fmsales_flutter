@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ufi/components/empty_container.dart';
 import 'package:ufi/model/leads.dart';
+import 'package:ufi/presentation/followup1/form1_screen.dart';
 import 'package:ufi/presentation/today/bloc/today_bloc.dart';
 import 'package:ufi/presentation/today/components/task_card.dart';
 
@@ -30,8 +31,21 @@ class _TodayScreenState extends State<TodayScreen> {
     return ListView.builder(
       dragStartBehavior: DragStartBehavior.down,
       itemCount: _leads.length,
-      itemBuilder: (context, index) => TaskCard(
-        leads: _leads[index],
+      itemBuilder: (context, index) => InkWell(
+        onTap: () async {
+          context.read<TodayBloc>().add(const TodayEvent.cancelTimer());
+          await Navigator.of(context)
+              .push(MaterialPageRoute(
+                builder: (context) => Form1Screen(
+                  leads: _leads[index],
+                ),
+              ))
+              .then((value) =>
+                  context.read<TodayBloc>().add(const TodayEvent.started()));
+        },
+        child: TaskCard(
+          leads: _leads[index],
+        ),
       ),
     );
   }
@@ -41,7 +55,7 @@ class _TodayScreenState extends State<TodayScreen> {
     return RefreshIndicator(
       onRefresh: () async =>
           context.read<TodayBloc>().add(const TodayEvent.pullToRefresh()),
-      color: Theme.of(context).colorScheme.primaryContainer,
+      color: Theme.of(context).colorScheme.primary,
       displacement: 20,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
