@@ -8,17 +8,21 @@ class CostumeFormField extends StatelessWidget {
     String? initialValue,
     bool visible = true,
     int? maxLines = 1,
-  })  : _label = label,
+    required Function(String?) callback,
+  })
+      : _label = label,
         _hint = hint,
         _initialValue = initialValue,
         _visible = visible,
-        _maxLines = maxLines;
+        _maxLines = maxLines,
+        _callBack = callback;
 
   final String _label;
   final String _hint;
   final String? _initialValue;
   final bool _visible;
   final int? _maxLines;
+  final Function(String?) _callBack;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +31,7 @@ class CostumeFormField extends StatelessWidget {
       child: Visibility(
         visible: _visible,
         child: TextFormField(
+          onSaved: (newValue) => _callBack(newValue),
           maxLines: _maxLines,
           initialValue: _initialValue,
           style: const TextStyle(
@@ -38,15 +43,24 @@ class CostumeFormField extends StatelessWidget {
             hintText: _hint,
             labelText: _label,
             floatingLabelStyle: TextStyle(
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme
+                  .of(context)
+                  .colorScheme
+                  .primary,
               fontSize: 16,
             ),
             labelStyle: TextStyle(
-              color: Theme.of(context).colorScheme.outlineVariant,
+              color: Theme
+                  .of(context)
+                  .colorScheme
+                  .outlineVariant,
               fontSize: 13,
             ),
             hintStyle: TextStyle(
-              color: Theme.of(context).colorScheme.outlineVariant,
+              color: Theme
+                  .of(context)
+                  .colorScheme
+                  .outlineVariant,
               fontSize: 13,
             ),
           ),

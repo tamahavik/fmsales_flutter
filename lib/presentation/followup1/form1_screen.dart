@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ufi/components/costume_dropdown_form.dart';
 import 'package:ufi/components/costume_form_field.dart';
-import 'package:ufi/enums/gender_enum.dart';
+import 'package:ufi/components/gender_radio_button.dart';
 import 'package:ufi/model/leads.dart';
 
 class Form1Screen extends StatefulWidget {
@@ -14,7 +14,6 @@ class Form1Screen extends StatefulWidget {
 
 class _Form1ScreenState extends State<Form1Screen> {
   final int _form = 1;
-  String? _gender;
   String? _followUpValue;
   String? _followUpResultValue;
   String? _buValue = 'UFI';
@@ -24,6 +23,7 @@ class _Form1ScreenState extends State<Form1Screen> {
     "Tidak Tertarik",
     "Peluang"
   ];
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -39,137 +39,136 @@ class _Form1ScreenState extends State<Form1Screen> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              CostumeFormField(
-                hint: 'Customer No (Main)',
-                label: 'Customer No (Main)',
-                initialValue: widget._leads.custMainNo,
-              ),
-              CostumeFormField(
-                hint: 'Nama Kostumer',
-                label: 'Nama Kostumer',
-                initialValue: widget._leads.custName,
-              ),
-              CostumeFormField(
-                hint: 'Nomor HP 1',
-                label: 'Nomor HP 1',
-                initialValue: widget._leads.mobileNoOne,
-              ),
-              CostumeFormField(
-                hint: 'Nomor HP 2',
-                label: 'Nomor HP 2',
-                initialValue: widget._leads.mobileNoTwo,
-              ),
-              CostumeFormField(
-                hint: 'Alamat',
-                label: 'Alamat',
-                initialValue: widget._leads.alamatGenerated,
-                maxLines: null,
-              ),
-              CostumeFormField(
-                hint: 'Status FGC',
-                label: 'Status FGC',
-                initialValue: widget._leads.statusFgc,
-              ),
-              CostumeFormField(
-                hint: 'Plafond FGC',
-                label: 'Plafond FGC',
-                initialValue: widget._leads.plafondFgc,
-              ),
-              Text('Gender'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: RadioListTile(
-                      title: Text(GenderEnum.male.value),
-                      value: GenderEnum.male.value,
-                      contentPadding: const EdgeInsets.all(0),
-                      groupValue: _gender,
-                      onChanged: (value) => {
-                        setState(() {
-                          _gender = value;
-                        })
-                      },
-                    ),
-                  ),
-                  Expanded(
-                    child: RadioListTile(
-                      title: Text(GenderEnum.female.value),
-                      value: GenderEnum.female.value,
-                      contentPadding: const EdgeInsets.all(0),
-                      groupValue: _gender,
-                      onChanged: (value) => {
-                        setState(() {
-                          _gender = value;
-                        })
-                      },
-                    ),
-                  )
-                ],
-              ),
-              CostumeDropdownForm(
-                hint: 'Follow Up',
-                label: 'Follow Up',
-                value: _followUpValue,
-                items: _followUpBy,
-                onChange: (value) => {
-                  setState(() {
-                    _followUpValue = value;
-                  })
-                },
-              ),
-              CostumeDropdownForm(
-                hint: 'Follow Up Result',
-                label: 'Follow Up Result',
-                value: _followUpResultValue,
-                items: _followUpResult,
-                onChange: (value) => {
-                  setState(() {
-                    _followUpResultValue = value;
-                  })
-                },
-              ),
-              CostumeFormField(
-                hint: 'Tempat Lahir',
-                label: 'Tempat Lahir',
-                initialValue: widget._leads.birthPlace,
-                maxLines: null,
-              ),
-              CostumeFormField(
-                hint: 'Tanggal Lahir',
-                label: 'Tanggal Lahir',
-                initialValue: widget._leads.birthDate.toString(),
-              ),
-              CostumeFormField(
-                hint: 'Tanggal Visit',
-                label: 'Tanggal Visit',
-                initialValue: widget._leads.visitDate.toString(),
-              ),
-              CostumeFormField(
-                hint: 'No KTP',
-                label: 'No KTP',
-                initialValue: widget._leads.nik,
-              ),
-              CostumeDropdownForm(
-                hint: 'Product Required (BU yang diinginkan)',
-                label: 'Product Required (BU yang diinginkan)',
-                value: _buValue,
-                items: [_buValue ?? ''],
-                enable: true,
-                onChange: null,
-              ),
-              CostumeFormField(
-                hint: 'Remark',
-                label: 'Remark',
-                initialValue: widget._leads.remark,
-              ),
-            ],
+        child: Form(
+          key: _formKey,
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                CostumeFormField(
+                  hint: 'Customer No (Main)',
+                  label: 'Customer No (Main)',
+                  initialValue: widget._leads.custMainNo,
+                  callback: (p0) => widget._leads.custMainNo = p0 ?? '',
+                ),
+                CostumeFormField(
+                  hint: 'Nama Kostumer',
+                  label: 'Nama Kostumer',
+                  initialValue: widget._leads.custName,
+                  callback: (p0) => widget._leads.custName = p0 ?? '',
+                ),
+                CostumeFormField(
+                  hint: 'Nomor HP 1',
+                  label: 'Nomor HP 1',
+                  initialValue: widget._leads.mobileNoOne,
+                  callback: (p0) => widget._leads.mobileNoOne = p0 ?? '',
+                ),
+                CostumeFormField(
+                  hint: 'Nomor HP 2',
+                  label: 'Nomor HP 2',
+                  initialValue: widget._leads.mobileNoTwo,
+                  callback: (p0) => widget._leads.mobileNoTwo = p0 ?? '',
+                ),
+                CostumeFormField(
+                  hint: 'Alamat',
+                  label: 'Alamat',
+                  initialValue: widget._leads.alamatGenerated,
+                  maxLines: null,
+                  callback: (p0) => widget._leads.alamatGenerated = p0 ?? '',
+                ),
+                CostumeFormField(
+                  hint: 'Status FGC',
+                  label: 'Status FGC',
+                  initialValue: widget._leads.statusFgc,
+                  callback: (p0) => widget._leads.statusFgc = p0 ?? '',
+                ),
+                CostumeFormField(
+                  hint: 'Plafond FGC',
+                  label: 'Plafond FGC',
+                  initialValue: widget._leads.plafondFgc,
+                  callback: (p0) => widget._leads.plafondFgc = p0 ?? '',
+                ),
+                GenderRadioButton(
+                  callback: (p0) => {
+                    setState(() => widget._leads.gender = p0 ?? ''),
+                  },
+                ),
+                CostumeDropdownForm(
+                  hint: 'Follow Up',
+                  label: 'Follow Up',
+                  value: _followUpValue,
+                  items: _followUpBy,
+                  onChange: (value) => {
+                    setState(() {
+                      _followUpValue = value;
+                    })
+                  },
+                ),
+                CostumeDropdownForm(
+                  hint: 'Follow Up Result',
+                  label: 'Follow Up Result',
+                  value: _followUpResultValue,
+                  items: _followUpResult,
+                  onChange: (value) => {
+                    setState(() {
+                      _followUpResultValue = value;
+                    })
+                  },
+                ),
+                CostumeFormField(
+                  hint: 'Tempat Lahir',
+                  label: 'Tempat Lahir',
+                  initialValue: widget._leads.birthPlace,
+                  maxLines: null,
+                  callback: (p0) => widget._leads.birthPlace = p0 ?? '',
+                ),
+                CostumeFormField(
+                  hint: 'Tanggal Lahir',
+                  label: 'Tanggal Lahir',
+                  initialValue: widget._leads.birthDate.toString(),
+                  callback: (p0) =>
+                      widget._leads.birthDate = int.parse(p0 ?? '0'),
+                ),
+                CostumeFormField(
+                  hint: 'Tanggal Visit',
+                  label: 'Tanggal Visit',
+                  initialValue: widget._leads.visitDate.toString(),
+                  callback: (p0) =>
+                      widget._leads.visitDate = int.parse(p0 ?? '0'),
+                ),
+                CostumeFormField(
+                  hint: 'No KTP',
+                  label: 'No KTP',
+                  initialValue: widget._leads.nik,
+                  callback: (p0) => widget._leads.nik = p0 ?? '',
+                ),
+                CostumeDropdownForm(
+                  hint: 'Product Required (BU yang diinginkan)',
+                  label: 'Product Required (BU yang diinginkan)',
+                  value: _buValue,
+                  items: [_buValue ?? ''],
+                  enable: false,
+                  onChange: null,
+                ),
+                CostumeFormField(
+                  hint: 'Remark',
+                  label: 'Remark',
+                  initialValue: widget._leads.remark,
+                  callback: (p0) => widget._leads.remark = p0 ?? '',
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        if (_formKey.currentState!.validate()) {
+                          _formKey.currentState!.save();
+                          print('gender : ' + widget._leads.gender);
+                        }
+                      });
+                    },
+                    child: Text('Next'))
+              ],
+            ),
           ),
         ),
       ),
