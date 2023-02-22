@@ -26,11 +26,16 @@ class CostumeFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 15),
-      child: Visibility(
-        visible: _visible,
+    return Visibility(
+      visible: _visible,
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 15),
         child: TextFormField(
+          validator: (value) {
+            if (value == null || value.isEmpty){
+              return 'tidak boleh kosong';
+            }
+          },
           onSaved: (newValue) => _callBack(newValue),
           maxLines: _maxLines,
           initialValue: _initialValue,
