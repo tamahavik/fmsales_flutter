@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CostumeDropdownForm extends StatelessWidget {
+class CostumeDropdownForm extends StatefulWidget {
   const CostumeDropdownForm({
     super.key,
     required String hint,
@@ -9,14 +9,14 @@ class CostumeDropdownForm extends StatelessWidget {
     bool visible = true,
     bool enable = true,
     required List<String> items,
-    Function(String?)? onChange,
+    Function(String?)? callback,
   })  : _label = label,
         _hint = hint,
         _value = value,
         _visible = visible,
         _enable = enable,
         _items = items,
-        _onChange = onChange;
+        _callback = callback;
 
   final String _hint;
   final String _label;
@@ -24,20 +24,28 @@ class CostumeDropdownForm extends StatelessWidget {
   final bool _visible;
   final bool _enable;
   final List<String> _items;
-  final Function(String?)? _onChange;
+  final Function(String?)? _callback;
+
+  @override
+  State<CostumeDropdownForm> createState() => _CostumeDropdownFormState();
+}
+
+class _CostumeDropdownFormState extends State<CostumeDropdownForm> {
+  String? _value;
 
   @override
   Widget build(BuildContext context) {
+    _value = widget._value;
     return Container(
       margin: const EdgeInsets.only(bottom: 15),
       child: Visibility(
-        visible: _visible,
+        visible: widget._visible,
         child: DropdownButtonFormField(
           decoration: InputDecoration(
-            enabled: _enable,
+            enabled: widget._enable,
             border: const OutlineInputBorder(),
-            hintText: _hint,
-            labelText: _label,
+            hintText: widget._hint,
+            labelText: widget._label,
             floatingLabelStyle: TextStyle(
               color: Theme.of(context).colorScheme.primary,
               fontSize: 16,
@@ -54,13 +62,20 @@ class CostumeDropdownForm extends StatelessWidget {
           isExpanded: true,
           hint: const Text('- Silahkan Pilih -'),
           value: _value,
-          items: _items.map((e) {
+          items: widget._items.map((e) {
             return DropdownMenuItem(
               value: e,
               child: Text(e),
             );
           }).toList(),
-          onChanged: _onChange,
+          onChanged: widget._callback == null ? null : (value) {
+            setState(() {
+              _value = value as String?;
+            });
+            if (widget._callback != null) {
+              widget._callback!(value as String?);
+            }
+          },
         ),
       ),
     );

@@ -99,22 +99,14 @@ class _Form1ScreenState extends State<Form1Screen> {
                   label: 'Follow Up',
                   value: _followUpValue,
                   items: _followUpBy,
-                  onChange: (value) => {
-                    setState(() {
-                      _followUpValue = value;
-                    })
-                  },
+                  callback: (p0) => widget._leads.followUp = p0 ?? '',
                 ),
                 CostumeDropdownForm(
                   hint: 'Follow Up Result',
                   label: 'Follow Up Result',
                   value: _followUpResultValue,
                   items: _followUpResult,
-                  onChange: (value) => {
-                    setState(() {
-                      _followUpResultValue = value;
-                    })
-                  },
+                  callback: (p0) => widget._leads.followUpResult = p0 ?? '',
                 ),
                 CostumeFormField(
                   hint: 'Tempat Lahir',
@@ -149,7 +141,7 @@ class _Form1ScreenState extends State<Form1Screen> {
                   value: _buValue,
                   items: [_buValue ?? ''],
                   enable: false,
-                  onChange: null,
+                  callback: null,
                 ),
                 CostumeFormField(
                   hint: 'Remark',
@@ -162,7 +154,8 @@ class _Form1ScreenState extends State<Form1Screen> {
                       setState(() {
                         if (_formKey.currentState!.validate()) {
                           _formKey.currentState!.save();
-                          print('gender : ' + widget._leads.gender);
+                          print('folowup : ' + widget._leads.followUp);
+                          print('folowupresult : ' + widget._leads.followUpResult);
                         }
                       });
                     },
