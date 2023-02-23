@@ -126,12 +126,16 @@ class _Form1ScreenState extends State<Form1Screen> {
                   label: 'Follow Up',
                   items: FOLLOW_UP,
                   isError: _errorFollowUp,
+                  initialValue: FOLLOW_UP.indexWhere(
+                      (element) => element.value == widget._leads.followUp),
                 ),
                 CostumeSelectedChips(
                   callback: (p0) => widget._leads.followUpResult = p0 ?? '',
                   label: 'Follow Up Result',
                   items: FOLLOW_UP_RESULT,
                   isError: _errorFollowUpResult,
+                  initialValue: FOLLOW_UP_RESULT.indexWhere((element) =>
+                      element.value == widget._leads.followUpResult),
                 ),
                 CostumeFormField(
                   hint: 'Tempat Lahir',
