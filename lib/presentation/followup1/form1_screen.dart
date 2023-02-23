@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ufi/components/chips_gender.dart';
 import 'package:ufi/components/costume_dropdown_form.dart';
 import 'package:ufi/components/costume_form_field.dart';
-import 'package:ufi/components/gender_radio_button.dart';
 import 'package:ufi/model/leads.dart';
 
 class Form1Screen extends StatefulWidget {
@@ -89,22 +89,24 @@ class _Form1ScreenState extends State<Form1Screen> {
                   initialValue: widget._leads.plafondFgc,
                   callback: (p0) => widget._leads.plafondFgc = p0 ?? '',
                 ),
-                GenderRadioButton(
-                  callback: (p0) => {
-                    setState(() => widget._leads.gender = p0 ?? ''),
-                  },
+                ChipsGender(
+                  callback: (p0) => widget._leads.gender = p0 ?? '',
                 ),
                 CostumeDropdownForm(
                   hint: 'Follow Up',
                   label: 'Follow Up',
-                  value: _followUpValue,
+                  value: widget._leads.followUp.isEmpty
+                      ? null
+                      : widget._leads.followUp,
                   items: _followUpBy,
                   callback: (p0) => widget._leads.followUp = p0 ?? '',
                 ),
                 CostumeDropdownForm(
                   hint: 'Follow Up Result',
                   label: 'Follow Up Result',
-                  value: _followUpResultValue,
+                  value: widget._leads.followUpResult.isEmpty
+                      ? null
+                      : widget._leads.followUpResult,
                   items: _followUpResult,
                   callback: (p0) => widget._leads.followUpResult = p0 ?? '',
                 ),
@@ -154,8 +156,7 @@ class _Form1ScreenState extends State<Form1Screen> {
                       setState(() {
                         if (_formKey.currentState!.validate()) {
                           _formKey.currentState!.save();
-                          print('folowup : ' + widget._leads.followUp);
-                          print('folowupresult : ' + widget._leads.followUpResult);
+                          print('folowup : ' + widget._leads.gender);
                         }
                       });
                     },
