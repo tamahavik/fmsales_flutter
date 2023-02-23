@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ufi/components/chips_gender.dart';
-import 'package:ufi/components/costume_dropdown_form.dart';
+import 'package:ufi/components/constume_chips.dart';
 import 'package:ufi/components/costume_form_field.dart';
 import 'package:ufi/model/leads.dart';
+import 'package:ufi/utils/default_value.dart';
 
 class Form1Screen extends StatefulWidget {
   const Form1Screen({super.key, required Leads leads}) : _leads = leads;
@@ -14,16 +14,40 @@ class Form1Screen extends StatefulWidget {
 
 class _Form1ScreenState extends State<Form1Screen> {
   final int _form = 1;
-  String? _followUpValue;
-  String? _followUpResultValue;
-  String? _buValue = 'UFI';
-  final List<String> _followUpBy = ["Telepon", "Visit"];
-  final List<String> _followUpResult = [
-    "Tertarik",
-    "Tidak Tertarik",
-    "Peluang"
-  ];
   final _formKey = GlobalKey<FormState>();
+  bool _errorGender = false;
+  bool _errorFollowUp = false;
+  bool _errorFollowUpResult = false;
+
+  bool _validateChips() {
+    bool isError = false;
+    setState(() {
+      if (widget._leads.gender.isEmpty) {
+        isError = true;
+        _errorGender = true;
+      } else {
+        isError = false;
+        _errorGender = false;
+      }
+
+      if (widget._leads.followUp.isEmpty) {
+        isError = true;
+        _errorFollowUp = true;
+      } else {
+        isError = false;
+        _errorFollowUp = false;
+      }
+
+      if (widget._leads.followUpResult.isEmpty) {
+        isError = true;
+        _errorFollowUpResult = true;
+      } else {
+        isError = false;
+        _errorFollowUpResult = false;
+      }
+    });
+    return isError;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,26 +113,25 @@ class _Form1ScreenState extends State<Form1Screen> {
                   initialValue: widget._leads.plafondFgc,
                   callback: (p0) => widget._leads.plafondFgc = p0 ?? '',
                 ),
-                ChipsGender(
+                CostumeSelectedChips(
                   callback: (p0) => widget._leads.gender = p0 ?? '',
+                  label: 'Gender',
+                  items: GENDER,
+                  isError: _errorGender,
+                  initialValue: GENDER.indexWhere(
+                      (element) => element.value == widget._leads.gender),
                 ),
-                CostumeDropdownForm(
-                  hint: 'Follow Up',
-                  label: 'Follow Up',
-                  value: widget._leads.followUp.isEmpty
-                      ? null
-                      : widget._leads.followUp,
-                  items: _followUpBy,
+                CostumeSelectedChips(
                   callback: (p0) => widget._leads.followUp = p0 ?? '',
+                  label: 'Follow Up',
+                  items: FOLLOW_UP,
+                  isError: _errorFollowUp,
                 ),
-                CostumeDropdownForm(
-                  hint: 'Follow Up Result',
-                  label: 'Follow Up Result',
-                  value: widget._leads.followUpResult.isEmpty
-                      ? null
-                      : widget._leads.followUpResult,
-                  items: _followUpResult,
+                CostumeSelectedChips(
                   callback: (p0) => widget._leads.followUpResult = p0 ?? '',
+                  label: 'Follow Up Result',
+                  items: FOLLOW_UP_RESULT,
+                  isError: _errorFollowUpResult,
                 ),
                 CostumeFormField(
                   hint: 'Tempat Lahir',
@@ -137,13 +160,12 @@ class _Form1ScreenState extends State<Form1Screen> {
                   initialValue: widget._leads.nik,
                   callback: (p0) => widget._leads.nik = p0 ?? '',
                 ),
-                CostumeDropdownForm(
-                  hint: 'Product Required (BU yang diinginkan)',
+                CostumeSelectedChips(
+                  callback: (p0) => widget._leads.businessUnit = p0 ?? '',
                   label: 'Product Required (BU yang diinginkan)',
-                  value: _buValue,
-                  items: [_buValue ?? ''],
+                  items: BU,
                   enable: false,
-                  callback: null,
+                  initialValue: 0,
                 ),
                 CostumeFormField(
                   hint: 'Remark',
@@ -154,7 +176,8 @@ class _Form1ScreenState extends State<Form1Screen> {
                 ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        if (_formKey.currentState!.validate()) {
+                        if (_validateChips() &&
+                            _formKey.currentState!.validate()) {
                           _formKey.currentState!.save();
                           print('folowup : ' + widget._leads.gender);
                         }
